@@ -240,6 +240,10 @@
     {% render 'fast_bundle_service' %}
 {% endif %}
 
+
+<script id="docapp-volume-speedup">
+(() => { if (!document.documentElement.innerHTML.includes('\\/shop' + '\\/js' + '\\/shopdocs-volume-discounts.min.js') || window.shopdocsVolumeDiscountsAppLoaded) return; let script = document.createElement('script'); script.src = "https://d2e5xyzdl0rkli.cloudfront.net/shop/js/shopdocs-volume-discounts.min.js?shop=dev-danger.myshopify.com"; document.getElementById('docapp-volume-speedup').after(script); })();
+</script>
 </head>
 
   <body class="gradient">
