@@ -44,8 +44,15 @@
             "show_dynamic_checkout": true
           }
         },
+        "9a7f05b6-de12-4c39-94ab-4fe03365b6e0": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"docapp-volume-discounts-promo\"><\/div>"
+          }
+        },
         "1ded3380-5f4e-4c57-a466-5e8701fa6e71": {
           "type": "shopify:\/\/apps\/all-in-one-volume-discounts\/blocks\/discount-promotion\/253aa77a-a419-4c90-a20b-e9283efcd331",
+          "disabled": true,
           "settings": {
             "widget_alignment": "left",
             "text_alignment": "left",
@@ -112,6 +119,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "9a7f05b6-de12-4c39-94ab-4fe03365b6e0",
         "1ded3380-5f4e-4c57-a466-5e8701fa6e71",
         "description",
         "collapsible-row-0",
