@@ -142,7 +142,57 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "a43b7004-1b7b-4a3f-bf67-1d92c0d2e119": {
+            "type": "list-menu",
+            "settings": {
+              "list_menu_name": "Menu Name",
+              "list_menu_heading": "Menu Heading",
+              "menu_title1": "Menu 1",
+              "menu_link1": "",
+              "menu_title2": "Menu 2",
+              "menu_link2": "",
+              "menu_title3": "Menu 3",
+              "menu_link3": "",
+              "menu_title4": "Menu 4",
+              "menu_link4": "",
+              "menu_title5": "Menu 5",
+              "menu_link5": "",
+              "menu_title6": "Menu 6",
+              "menu_link6": "",
+              "menu_title7": "Menu 7",
+              "menu_link7": "",
+              "menu_title8": "Menu 8",
+              "menu_link8": "",
+              "ad_block_title": "Ad Title",
+              "ad_img1_link": "",
+              "ad_img2_link": "",
+              "ad_img3_link": ""
+            }
+          },
+          "f424a81e-3cc9-4c2e-afee-1af870cbd77a": {
+            "type": "collections-menu",
+            "settings": {
+              "collections_menu_name": "Menu Name",
+              "collections_menu_heading": "Menu Heading"
+            }
+          },
+          "a9f44952-b7d1-4ba8-a032-b311a74e8ea2": {
+            "type": "single-collection-menu",
+            "settings": {
+              "single-collection_menu_name": "Menu Name",
+              "single-collection_menu_heading": "Menu Heading",
+              "single-collection-menu_coolection_1": "esenciales"
+            }
+          }
+        },
+        "block_order": [
+          "a43b7004-1b7b-4a3f-bf67-1d92c0d2e119",
+          "f424a81e-3cc9-4c2e-afee-1af870cbd77a",
+          "a9f44952-b7d1-4ba8-a032-b311a74e8ea2"
+        ],
         "settings": {
+          "menu_themex": "lightblack",
           "color_scheme": "background-1",
           "logo_position": "middle-left",
           "menu": "belevels",
