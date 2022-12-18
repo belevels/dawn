@@ -170,13 +170,6 @@
               "ad_img3_link": ""
             }
           },
-          "f424a81e-3cc9-4c2e-afee-1af870cbd77a": {
-            "type": "collections-menu",
-            "settings": {
-              "collections_menu_name": "Menu Name",
-              "collections_menu_heading": "Menu Heading"
-            }
-          },
           "a9f44952-b7d1-4ba8-a032-b311a74e8ea2": {
             "type": "single-collection-menu",
             "settings": {
@@ -184,12 +177,28 @@
               "single-collection_menu_heading": "Menu Heading",
               "single-collection-menu_coolection_1": "esenciales"
             }
+          },
+          "096ccb10-972f-4e38-9cb7-e8935a047f75": {
+            "type": "collections-tabs-menu",
+            "settings": {
+              "collection_tab_menu_name": "Productos",
+              "collection_tab_title_1": "Fórmulas maestras",
+              "collections-tabs_1": "formulas-maestras",
+              "collection_tab_title_2": "Salud femenina",
+              "collections-tabs_2": "salud-femenina",
+              "collection_tab_title_3": "shoes",
+              "collections-tabs_3": "",
+              "collection_tab_title_4": "bags",
+              "collections-tabs_4": "",
+              "collection_tab_title_5": "jwellary",
+              "collections-tabs_5": ""
+            }
           }
         },
         "block_order": [
           "a43b7004-1b7b-4a3f-bf67-1d92c0d2e119",
-          "f424a81e-3cc9-4c2e-afee-1af870cbd77a",
-          "a9f44952-b7d1-4ba8-a032-b311a74e8ea2"
+          "a9f44952-b7d1-4ba8-a032-b311a74e8ea2",
+          "096ccb10-972f-4e38-9cb7-e8935a047f75"
         ],
         "settings": {
           "menu_themex": "lightblack",
