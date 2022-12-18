@@ -81,6 +81,32 @@
     }
   }
 </style>
+
+{%- style -%}
+  .header {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .section-header {
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-header {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- comment -%}Be Levels - start mod: custom mega menu {%- endcomment -%}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -534,31 +560,6 @@
         margin-left: 5px;
     }
 {% endstyle %}
-{%- style -%}
-  .header {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-  }
-
-  .section-header {
-    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
-  }
-
-  @media screen and (min-width: 990px) {
-    .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-{%- comment -%}Be Levels - start mod: custom mega menu {%- endcomment -%}
 {%- comment -%}Be Levels - end mod: custom mega menu {%- endcomment -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -1655,6 +1656,28 @@
   </script>
 {%- endif -%}
 
+{%- comment -%}Be Levels - start mod: custom mega menu {%- endcomment -%}
+<script>
+  function openCollection(evt, collectionName) {
+    var i, collectiontabcontent, collectiontablinks;
+    
+    collectiontabcontent = document.getElementsByClassName("collectiontabcontent");
+    for (i = 0; i < collectiontabcontent.length; i++) {
+      collectiontabcontent[i].style.display = "none";
+    }
+    collectiontablinks = document.getElementsByClassName("collectiontablinks");
+    for (i = 0; i < collectiontablinks.length; i++) {
+      collectiontablinks[i].className = collectiontablinks[i].className.replace(" collectionactive", "");
+    }
+    document.getElementById(collectionName).style.display = "block";
+    evt.currentTarget.className += " collectionactive";
+
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+{%- comment -%}Be Levels - end mod: custom mega menu {%- endcomment -%}
 {% schema %}
 {
   "name": "t:sections.header.name",
