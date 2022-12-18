@@ -146,10 +146,10 @@
           "a43b7004-1b7b-4a3f-bf67-1d92c0d2e119": {
             "type": "list-menu",
             "settings": {
-              "list_menu_name": "Menu Name",
+              "list_menu_name": "Menu Name 1",
               "list_menu_heading": "Menu Heading",
               "menu_title1": "Menu 1",
-              "menu_link1": "",
+              "menu_link1": "footer",
               "menu_title2": "Menu 2",
               "menu_link2": "",
               "menu_title3": "Menu 3",
