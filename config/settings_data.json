@@ -197,20 +197,11 @@
               "single-collection-menu_coolection_1": "keto-food"
             }
           },
-          "b6f63d12-809f-4ed1-bc52-4389cd3c9e76": {
-            "type": "collections-tabs-menu",
+          "82376d6d-533d-445a-9b37-bec418f342d6": {
+            "type": "collections-menu",
             "settings": {
-              "collection_tab_menu_name": "Menu name",
-              "collection_tab_title_1": "Deporte",
-              "collections-tabs_1": "deporte",
-              "collection_tab_title_2": "Keto & Food",
-              "collections-tabs_2": "keto-food",
-              "collection_tab_title_3": "shoes",
-              "collections-tabs_3": "",
-              "collection_tab_title_4": "bags",
-              "collections-tabs_4": "",
-              "collection_tab_title_5": "jwellary",
-              "collections-tabs_5": ""
+              "collections_menu_name": "Menu Name",
+              "collections_menu_heading": "Menu Heading"
             }
           }
         },
@@ -218,7 +209,7 @@
           "096ccb10-972f-4e38-9cb7-e8935a047f75",
           "fac3468b-4ee1-4943-828e-1d6f1afd06b2",
           "a77a8bd7-3f57-4708-90c1-3f95e2ff840d",
-          "b6f63d12-809f-4ed1-bc52-4389cd3c9e76"
+          "82376d6d-533d-445a-9b37-bec418f342d6"
         ],
         "settings": {
           "menu_themex": "lightblack",
