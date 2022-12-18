@@ -188,11 +188,20 @@
               "ad_img3": "shopify:\/\/shop_images\/home-levels.jpg",
               "ad_img3_link": "#"
             }
+          },
+          "a77a8bd7-3f57-4708-90c1-3f95e2ff840d": {
+            "type": "single-collection-menu",
+            "settings": {
+              "single-collection_menu_name": "Menu Name",
+              "single-collection_menu_heading": "Menu Heading",
+              "single-collection-menu_coolection_1": "essentials"
+            }
           }
         },
         "block_order": [
           "096ccb10-972f-4e38-9cb7-e8935a047f75",
-          "fac3468b-4ee1-4943-828e-1d6f1afd06b2"
+          "fac3468b-4ee1-4943-828e-1d6f1afd06b2",
+          "a77a8bd7-3f57-4708-90c1-3f95e2ff840d"
         ],
         "settings": {
           "menu_themex": "lightblack",
