@@ -411,6 +411,7 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- comment-%}
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
@@ -509,6 +510,7 @@
         </nav>
       {%- endif -%}
     {%- endif -%}
+  {%- endcomment-%}
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
