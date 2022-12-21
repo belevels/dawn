@@ -109,6 +109,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "3455fb61-09a5-442b-a6f0-eb10850ce03d": {
+          "type": "shopify:\/\/apps\/quantity-breaks-discounts\/blocks\/table-discount-block\/a8198207-c94c-43c6-8e51-f4d802fff7f3",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -118,6 +123,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "3455fb61-09a5-442b-a6f0-eb10850ce03d",
         "buy_buttons",
         "9a7f05b6-de12-4c39-94ab-4fe03365b6e0",
         "1ded3380-5f4e-4c57-a466-5e8701fa6e71",
