@@ -13,7 +13,9 @@
         background-size: 11%;
         background-position: center center;
       }
-      .{{- product.handle -}} .card__content {
+      .{{- product.handle -}}:after {
+        content:  url( '{{ product.handle | append: '.svg' | asset_url }}' );
+        width: 50px;
         background-color: {{ CustomColor1 }}; 
       }
     {%- endif -%}
