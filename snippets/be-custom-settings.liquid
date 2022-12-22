@@ -16,6 +16,7 @@
       .{{- product.handle -}}::before {
         content:  url( '{{ product.handle | append: '.svg' | asset_url }}' );
         width: 50px;
+        position: absolute;
       }
     {%- endif -%}
   {%- endfor -%}
