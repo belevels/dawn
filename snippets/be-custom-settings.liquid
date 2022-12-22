@@ -7,7 +7,7 @@
       .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
         background-image: radial-gradient(circle, {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.99 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.99 | color_to_rgb }} 100%);
-
+        background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-repeat: repeat;
         background-attachment: scroll;
         background-size: 11%;
