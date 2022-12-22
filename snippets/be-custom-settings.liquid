@@ -14,9 +14,13 @@
         background-position: center center;
       }
       .{{- product.handle -}}::before {
-        content:  url( '{{ product.handle | append: '.svg' | asset_url }}' );
-        width: 50px;
+        content:  '';
+        width: 100%;
+        height: 100%;
         position: absolute;
+        background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
+        background-size: 11%;
+        background-repeat: repeat;
       }
     {%- endif -%}
   {%- endfor -%}
