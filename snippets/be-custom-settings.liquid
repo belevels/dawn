@@ -6,7 +6,8 @@
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
-        background: radial-gradient(circle, {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.99 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.99 | color_to_rgb }} 100%);
+        background-color: radial-gradient(circle, {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.99 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.99 | color_to_rgb }} 100%);
+        background-image: url( '{{ product.handle | asset_url }}' );
       }
     {%- endif -%}
   {%- endfor -%}
