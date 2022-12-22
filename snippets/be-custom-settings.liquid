@@ -1,10 +1,9 @@
 {% style %}
   {%- for product in collections['all'].products -%}
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+    {%- assign CustomColor1 = product.metafields.Seccion.CustomColor1 | color_to_rgb -%}
   .{{- product.handle -}} {
-    background-color: {{- product.metafields.Seccion.CustomColor1 | color_to_rgb -}};
-    {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- endif -%}
+    background-color: {{ CustomColor1 }};
   }
   {%- endif -%}
   {%- endfor -%}
