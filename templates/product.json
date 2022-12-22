@@ -266,7 +266,7 @@
       "settings": {
         "product": "chill-mood",
         "color_scheme": "accent-2",
-        "secondary_background": true,
+        "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": false,
         "media_fit": "contain",
