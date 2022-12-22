@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "f64752b2-609f-4334-8ceb-b749f25d9bb1": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -87,6 +92,7 @@
       },
       "block_order": [
         "title",
+        "f64752b2-609f-4334-8ceb-b749f25d9bb1",
         "vendor",
         "price",
         "variant_picker",
@@ -218,6 +224,11 @@
             "heading_size": "h1"
           }
         },
+        "25b06ed9-e2e8-4053-823d-9d9c842f9d5f": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "template--16613022433507__a25ba71a-f884-4c95-ab24-76181211e0c9-1671716989c9e6e317-0": {
           "type": "text",
           "settings": {
@@ -256,6 +267,7 @@
       },
       "block_order": [
         "template--16613022433507__a25ba71a-f884-4c95-ab24-76181211e0c9-1671716989c9e6e317-1",
+        "25b06ed9-e2e8-4053-823d-9d9c842f9d5f",
         "template--16613022433507__a25ba71a-f884-4c95-ab24-76181211e0c9-1671716989c9e6e317-0",
         "template--16613022433507__a25ba71a-f884-4c95-ab24-76181211e0c9-1671716989c9e6e317-2",
         "template--16613022433507__a25ba71a-f884-4c95-ab24-76181211e0c9-1671716989c9e6e317-3",
@@ -265,7 +277,7 @@
       ],
       "settings": {
         "product": "chill-mood",
-        "color_scheme": "accent-2",
+        "color_scheme": "background-2",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": false,
@@ -274,8 +286,8 @@
         "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     }
   },
