@@ -7,11 +7,6 @@
       .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
         background-image: linear-gradient(0deg, {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.99 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.99 | color_to_rgb }} 100%);
-        {%- comment -%}background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );{%- endcomment -%}
-        background-repeat: repeat;
-        background-attachment: scroll;
-        background-size: 11%;
-        background-position: center center;
       }
       .{{- product.handle -}}::before {
         content:  '';
@@ -19,6 +14,8 @@
         height: 100%;
         position: absolute;
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
+        background-size: contain;
+        background-position: -5rem -5rem;        
         background-size: 16.5%;
         background-repeat: repeat;
         opacity: .5;
