@@ -39,6 +39,69 @@
     %}
 
     {% style %}
+      @font-face {
+        font-family: "Graphik";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "Graphik-Regular.woff2" | asset_url }}) format("woff2");
+              url({{ "Graphik-Regular.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "Graphik";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "Graphik-Bold.woff2" | asset_url }}) format("woff2");
+              url({{ "Graphik-Bold.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "Graphik";
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "Graphik-Thin.woff2" | asset_url }}) format("woff2");
+              url({{ "Graphik-Thin.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "Graphik";
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+        src:  url({{ "Graphik-RegularItalic.woff2" | asset_url }}) format("woff2");
+              url({{ "Graphik-RegularItalic.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "Graphik";
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+        src:  url({{ "Graphik-BoldItalic.woff2" | asset_url }}) format("woff2");
+              url({{ "Graphik-BoldItalic.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "DM Sans";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "DMSans-Regular.woff2" | asset_url }}) format("woff2");
+              url({{ "DMSans-Regular.woff" | asset_url }}) format("woff");
+      }
+
+      @font-face {
+        font-family: "DM Sans";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "DMSans-Bold.woff2" | asset_url }}) format("woff2");
+              url({{ "DMSans-Bold.woff" | asset_url }}) format("woff");
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -46,12 +109,12 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: "Graphik", {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: "Graphik", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -187,6 +250,7 @@
       *::before,
       *::after {
         box-sizing: inherit;
+        letter-spacing: 0 !important;
       }
 
       html {
@@ -214,6 +278,17 @@
           font-size: 1.6rem;
         }
       }
+      /* Button - default */
+      .button,
+      .shopify-challenge__button,
+      .customer button,
+      button.shopify-payment-button__button--unbranded,
+      .shopify-payment-button [role="button"],
+      .cart__dynamic-checkout-buttons [role='button'],
+      .cart__dynamic-checkout-buttons iframe,
+      .quantity {
+        font-family: "DM Sans", {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }} !important;
+      }      
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
