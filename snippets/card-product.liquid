@@ -35,6 +35,7 @@
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
+        {{ card_product.handle }}
         card
         card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
@@ -42,7 +43,6 @@
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
-        {{ card_product.handle }}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
