@@ -3,7 +3,7 @@
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
     {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
   .{{- product.handle -}} {
-    background-color: {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }};
+    background-color: {{ product.metafields.Seccion.CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }};
   }
   {%- endif -%}
   {%- endfor -%}
