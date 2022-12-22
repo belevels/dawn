@@ -240,14 +240,6 @@
     {% render 'fast_bundle_service' %}
 {% endif %}
 
-
-<script id="docapp-volume-speedup">
-(() => { if (!document.documentElement.innerHTML.includes('\\/shop' + '\\/js' + '\\/shopdocs-volume-discounts.min.js') || window.shopdocsVolumeDiscountsAppLoaded) return; let script = document.createElement('script'); script.src = "https://d2e5xyzdl0rkli.cloudfront.net/shop/js/shopdocs-volume-discounts.min.js?shop=dev-danger.myshopify.com"; document.getElementById('docapp-volume-speedup').after(script); })();
-</script>
-
-<script>(() => {const installerKey = 'docapp-volume-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
-
-<script>(() => {const previewKey = 'docapp-volume-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-volume-inst-test')}));}})();</script>
 </head>
 
   <body class="gradient">
@@ -307,6 +299,5 @@
     {%- endif -%}
   {% render 'amai_stp-cart-snippet' %}
 {% render 'amai_stp-product-snippet' %}
-{% render 'amai_stp-theme-snippet' %}
 </body>
 </html>
