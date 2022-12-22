@@ -3,7 +3,7 @@
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
     .{{- product.handle -}} {
       background-color: {{- product.metafields.Seccion.CustomColor1 -}};
-    }
+    }\r\n
     {%- endif -%}
   {%- endfor -%}
 {% endstyle %}
