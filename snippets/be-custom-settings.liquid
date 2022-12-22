@@ -1,9 +1,9 @@
 {% style %}
   {%- for product in collections['all'].products -%}
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-    {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 | color_to_rgb }}{%- endcapture -%}
+    {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
   .{{- product.handle -}} {
-    background-color: {{ CustomColor1 }};
+    background-color: {{ CustomColor1 | color_to_rgb }};
   }
   {%- endif -%}
   {%- endfor -%}
