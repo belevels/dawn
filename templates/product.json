@@ -278,7 +278,7 @@
       "settings": {
         "product": "chill-mood",
         "color_scheme": "background-2",
-        "secondary_background": false,
+        "secondary_background": true,
         "media_size": "small",
         "constrain_to_viewport": false,
         "media_fit": "contain",
