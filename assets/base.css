@@ -141,6 +141,7 @@
 :root,
 .color-icon-text {
   --color-icon: rgb(var(--color-base-text));
+  --color-icon: rgb(var(--color-foreground));
 }
 
 .color-icon-accent-1 {
