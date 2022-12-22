@@ -15,9 +15,8 @@
         position: absolute;
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: contain;
-        background-position: -5rem -5rem;        
-        background-size: 16.5%;
-        background-repeat: repeat;
+        background-position: -5rem -5rem;
+        background-repeat: no-repeat;
         opacity: .5;
       }
       .{{- product.handle -}}.card .card__information {
