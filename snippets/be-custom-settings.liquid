@@ -1,7 +1,7 @@
 {% style %}
   {%- for product in collections['all'].products -%}
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-    {%- assign CustomColor1 = product.metafields.Seccion.CustomColor1 -%}
+    {%- assign CustomColor1 = product.metafields.Seccion.CustomColor1 | color_modify: 'alpha', 0.85 -%}
   .{{- product.handle -}} {
     background-color: {{ CustomColor1 }};
   }
