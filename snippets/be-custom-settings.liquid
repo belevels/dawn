@@ -1,9 +1,9 @@
 {% style %}
-{%- for product in collections['all'].products -%}
-{%- if product.metafields.Seccion.CustomColor1 != blank -%}
-.{{- product.handle -}} {
-background-color: {{- product.metafields.Seccion.CustomColor1 -}};
-}
-{%- endif -%}
-{%- endfor -%}
+  {%- for product in collections['all'].products -%}
+  {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+  .{{- product.handle -}} {
+    background-color: {{- product.metafields.Seccion.CustomColor1 -}};
+  }
+  {%- endif -%}
+  {%- endfor -%}
 {% endstyle %}
