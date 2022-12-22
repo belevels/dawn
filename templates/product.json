@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "f64752b2-609f-4334-8ceb-b749f25d9bb1": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -87,6 +92,7 @@
       },
       "block_order": [
         "title",
+        "f64752b2-609f-4334-8ceb-b749f25d9bb1",
         "vendor",
         "price",
         "variant_picker",
