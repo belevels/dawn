@@ -3,6 +3,9 @@
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
   .{{- product.handle -}} {
     background-color: {{- product.metafields.Seccion.CustomColor1 -}};
+    {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
+    background-color: radial-gradient(circle, {{- product.metafields.Seccion.CustomColor1 -}} 0%, {{- product.metafields.Seccion.CustomColor2 -}} 50%, {{- product.metafields.Seccion.CustomColor3 -}} 100%);
+    {%- endif -%}
   }
   {%- endif -%}
   {%- endfor -%}
