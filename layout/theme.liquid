@@ -289,7 +289,19 @@
       .quantity {
         font-family: "DM Sans", {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }} !important;
         justify-content: flex-start !important;
-      }      
+      }
+      .button span {
+        padding-right: 40px;
+        margin-right: auto;
+      }
+      .button: span:after {
+        content: url({{ 'icon-arrow-white.svg' | asset_url }}) !important;
+        position: absolute;
+        right: 3.5rem;
+      }
+      .button--secondary span:after {
+        content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
