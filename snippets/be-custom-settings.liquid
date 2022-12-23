@@ -1,4 +1,15 @@
 {% style %}
+
+{% assign productCollections = product.collections | map: "handle" %}
+  {% if productCollections contains 'esenciales' %} 
+    {% comment %} DoSomething {% endcomment %}
+    .color-background-2 {
+      background-color: {{ CustomColor1 }};
+      background-image: linear-gradient(0deg, rgba(214,196,186,1) 0%, rgba(235,217,201,1) 50%, rgba(242,232,224,1) 100%);      
+    }
+  {% endif %}
+
+
   {%- for product in collections['all'].products -%}
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
@@ -6,7 +17,7 @@
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
-        background-image: linear-gradient(0deg, {{ CustomColor1 | color_modify: 'alpha', 0.99 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.99 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.99 | color_to_rgb }} 100%);
+        background-image: linear-gradient(0deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
       }
       .{{- product.handle -}}.card * {
         --color-icon: #ffffff;
