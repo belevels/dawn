@@ -37,7 +37,7 @@
         background-repeat: no-repeat;
       }
       .{{- product.handle -}}.card .card__information {
-        background: {{ CustomColor1 }};
+        background: {{ CustomColor1 | color_modify: 'alpha', 0.5 }};
       }
     {%- endif -%}
   {%- endfor -%}
