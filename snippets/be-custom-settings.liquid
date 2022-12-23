@@ -21,8 +21,8 @@
       .{{- product.handle -}} .header-wrapper,
       .header-wrapper,
       .{{- product.handle -}} #MainContent > section {
-        background-color: {{ CustomColor1 | color_modify: 'alpha', 1 }};
-        background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
+        background-color: {{ CustomColor1 | color_desaturate: 30 }};
+
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
