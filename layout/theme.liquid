@@ -313,7 +313,19 @@
     </script>
   </head>
 
-  <body class="gradient">
+  {%- liquid
+    comment
+    Be Levels - start mod: Custom colors
+    endcomment
+    if request.page_type == "collection"
+      assign customClass = collection.handle | prepend: " "
+    elsif request.page_type == "product"
+      assign customClass = product.handle | prepend: " "
+      elsif request.page_type == "page"
+      assign customClass = page.handle | prepend: " "
+    endif
+  -%}
+  <body class="gradient{{ customClass }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -321,22 +333,10 @@
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
-    {%- liquid
-      comment
-      Be Levels - start mod: Custom colors
-      endcomment
-      if request.page_type == "collection"
-        assign customClass = collection.handle | prepend: " "
-      elsif request.page_type == "product"
-        assign customClass = product.handle | prepend: " "
-        elsif request.page_type == "page"
-        assign customClass = page.handle | prepend: " "
-      endif
-    -%}
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none{{ customClass }}" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
