@@ -80,10 +80,16 @@
   }
 
   .localization-selector {
-    font-size: 12px;
+    font-size: 1.125rem;
     color: rgb(var(--color-link));
-    padding: 4px;
-    border-color: transparent;
     border-radius: 40px;
+    background: var(--color-background);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: .1rem solid rgba(var(--color-link),.55);
+  }
+  .localization-selector:hover {
+    border-color: rgba(var(--color-link),1);
   }
 {% endstyle %}
