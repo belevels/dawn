@@ -20,7 +20,7 @@
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section {
-        background-color: {{ CustomColor1 }};
+        background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
       }
       .{{- product.handle -}}.cardx * {
@@ -32,7 +32,7 @@
         width: 15%;
         height: 15%;
         position: absolute;
-        background-color: {{ CustomColor1 }};
+        background-color: {{ CustomColor3 }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: contain;
         background-repeat: no-repeat;
@@ -46,7 +46,7 @@
         height: 80%;
         margin: 10%;
         position: absolute;
-        background-color: {{ CustomColor1 }};
+        background-color: {{ CustomColor3 }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: 100%;
         background-repeat: no-repeat;
