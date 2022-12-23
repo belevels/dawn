@@ -18,9 +18,9 @@
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-      .{{- product.handle -}}x {
+      .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
-        background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
+        background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 0.25 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.25 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.25 | color_to_rgb }} 100%);
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
@@ -41,7 +41,7 @@
         z-index: 1;
         border-radius: 100%;
       }
-      .{{- product.handle -}}.card .card__informationx {
+      .{{- product.handle -}}.card .card__information {
         background: {{ CustomColor1 | color_modify: 'alpha', 0.5 }};
       }
     {%- endif -%}
