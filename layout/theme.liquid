@@ -293,21 +293,21 @@
       .button--primary:hover::after {
         box-shadow: none !important;
       }
-      .button span {
+      .button div {
         padding-right: 40px;
         margin-right: auto;
       }
-      .button span::after {
+      .button div::after {
         content: url({{ 'icon-arrow-white.svg' | asset_url }}) !important;
         position: absolute;
         right: 3.5rem;
         transform: translateX(-0.25rem);
         transition: transform .1s ease;
       }
-      .button:hover span::after {
+      .button:hover div::after {
         transform: translateX(-0.05rem);
       }
-      .button--secondary span::after {
+      .button--secondary div::after {
         content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
       }
     {% endstyle %}
