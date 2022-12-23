@@ -807,6 +807,12 @@
   </script>
 {%- endif -%}
 
+{%- liquid
+  comment
+  Be Levels - start mod
+  Agregamos logo_svg y custom_url
+  endcomment
+-%}
 {% schema %}
 {
   "name": "t:sections.header.name",
@@ -871,6 +877,23 @@
       ],
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector_in_header",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_svg",
+      "default": true,
+      "label": "Usar versión svg del logo"
+    },
+    {
+      "type": "text",
+      "id": "custom_url",
+      "label": "Usar url personalizada en el logo"
     },
     {
       "type": "link_list",
