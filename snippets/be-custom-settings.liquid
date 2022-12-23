@@ -1,5 +1,5 @@
 {% style %}
-
+{%- for product in collections['all'].products -%}
 {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' %} 
     {% comment %} DoSomething {% endcomment %}
@@ -10,7 +10,7 @@
   {% endif %}
 
 
-  {%- for product in collections['all'].products -%}
+  
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
