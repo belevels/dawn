@@ -322,6 +322,9 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
     {%- liquid
+      comment
+      Be Levels - start mod: Custom colors
+      endcomment
       if request.page_type == "collection"
         assign customClass = collection.handle | prepend: " "
       elsif request.page_type == "product"
