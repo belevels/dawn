@@ -41,15 +41,14 @@
       }
       .{{- product.handle -}}.card::before {
         content: '';
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
+        margin: 10%;
         position: absolute;
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: contain;
         background-repeat: no-repeat;
-        top: 0%;
-        left: 0%;
         opacity: 0.125;
       }      
       .{{- product.handle -}}.card .card__information,
