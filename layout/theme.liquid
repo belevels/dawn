@@ -294,12 +294,12 @@
         padding-right: 40px;
         margin-right: auto;
       }
-      .button: span:after {
+      .button: span::after {
         content: url({{ 'icon-arrow-white.svg' | asset_url }}) !important;
         position: absolute;
         right: 3.5rem;
       }
-      .button--secondary span:after {
+      .button--secondary span::after {
         content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
       }
     {% endstyle %}
