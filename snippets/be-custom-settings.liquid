@@ -32,7 +32,7 @@
         width: 15%;
         height: 15%;
         position: absolute;
-        background-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
+        background-color: {{ CustomColor1 }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: contain;
         background-repeat: no-repeat;
@@ -46,7 +46,7 @@
         height: 80%;
         margin: 10%;
         position: absolute;
-        background-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
+        background-color: {{ CustomColor1 }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: 100%;
         background-repeat: no-repeat;
