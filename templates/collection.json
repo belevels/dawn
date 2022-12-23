@@ -18,7 +18,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": false,
