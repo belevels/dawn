@@ -21,8 +21,8 @@
       .{{- product.handle -}} .header-wrapper,
       .header-wrapper,
       .{{- product.handle -}} #MainContent > section {
-        background-color: {{ CustomColor1 | color_desaturate: 30 }};
-
+        background-color: {{ CustomColor1 | color_lighten: 30 }};
+        
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
