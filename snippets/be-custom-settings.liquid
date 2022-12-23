@@ -18,7 +18,8 @@
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-      .{{- product.handle -}} > section {
+      .{{- product.handle -}} > section,
+      .{{- product.handle -}} > section .global-media-settings {
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0.125 }};
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 0.125 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.125 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.125 | color_to_rgb }} 100%);
       }
