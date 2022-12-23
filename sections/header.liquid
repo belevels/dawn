@@ -36,6 +36,11 @@
     max-width: {{ settings.logo_width }}px;
   }
 
+  .scrolled-past-header .header-wrapper {
+    background: rgb(var(--color-background));
+    background: var(--gradient-background);
+  }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo {
       width: 75%;
