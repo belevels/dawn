@@ -26,7 +26,7 @@
         border-color: {{ CustomColor1 }};
         border-width: var(--border-width);
         border-style: solid;
-        border-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
+        border-color: {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }};
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
