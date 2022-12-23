@@ -20,8 +20,8 @@
     <img src="{{ 'logo.svg' | asset_url }}" 
       class= "header__heading-logo motion-reduce" 
       widths= "50, 100, 150, 200, 250, 300, 400, 500" 
+      width="{{ logo_width }}" 
       height="{{ logo_height }}" 
-      style ="width: {{ logo_width }}px; height: {{ logo_height }}px" 
       alt="{{ logo_alt }}"
     />
   {%- else -%}
