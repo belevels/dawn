@@ -18,7 +18,7 @@
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-      .{{ product.handle }} .header-wrapper.color-background-2,
+      .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section {
         background-color: {{ CustomColor1 | color_lighten: 50 }};
         
