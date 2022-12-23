@@ -22,9 +22,8 @@
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0.25 }};
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 0.25 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.25 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.25 | color_to_rgb }} 100%);
       }
-      .{{- product.handle -}}.cardx * {
-        --color-icon: #ffffff;
-        color: #ffffff;
+      .{{- product.handle -}}.card * {
+        background: #ffffff;
       }
       .{{- product.handle -}}.card::after {
         content: '';
@@ -45,7 +44,8 @@
         height: 100%;
         position: absolute;
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
-        background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );background-size: 180%;
+        background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
+        background-size: 180%;
         background-repeat: no-repeat;
         opacity: 0.05;
         background-position-x: right;
