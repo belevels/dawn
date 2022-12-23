@@ -151,7 +151,7 @@
           "color_scheme": "background-1",
           "logo_position": "middle-left",
           "enable_language_selector_in_header": true,
-          "logo_svg": false,
+          "logo_svg": true,
           "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega",
