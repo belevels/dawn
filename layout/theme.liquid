@@ -290,6 +290,9 @@
         justify-content: flex-start !important;
         padding: 0 2rem !important;
       }
+      .button:hover {
+        box-shadow: none !important;
+      }
       .button span {
         padding-right: 40px;
         margin-right: auto;
@@ -303,7 +306,6 @@
       }
       .button:hover span::after {
         transform: translateX(-0.05rem);
-        box-shadow: none !important;
       }
       .button--secondary span::after {
         content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
