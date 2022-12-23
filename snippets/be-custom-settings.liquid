@@ -28,12 +28,12 @@
       }
       .{{- product.handle -}}::before {
         content: '';
-        width: 100px;
-        height: 100px;
+        width: 64px;
+        height: 64px;
         position: absolute;
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0.25 | color_to_rgb }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
-        background-size: 64px;
+        background-size: 42px;
         background-position: center center;
         background-repeat: no-repeat;
         top: 2rem;
