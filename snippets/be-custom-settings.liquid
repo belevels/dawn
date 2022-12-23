@@ -28,11 +28,12 @@
       }
       .{{- product.handle -}}::before {
         content:  '';
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
+        margin: 0 10%;
         position: absolute;
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
-        background-size: 80%;
+        background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
       }
