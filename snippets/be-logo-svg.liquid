@@ -11,7 +11,7 @@
   endif
 -%}
 <a href="{{ logo_url }}" class="header__heading-link link link--text focus-inset">
-  {%- if section.settings.logo != blank -%}
+  {%- if settings.logo != blank -%}
     {%- liquid
       assign logo_alt = settings.logo.alt | default: shop.name | escape
       assign logo_width = settings.logo_width
