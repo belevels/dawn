@@ -540,6 +540,18 @@
     {%- endif -%}
 
     <div class="header__icons">
+      {%- liquid
+        comment
+        Be Levels - start mod
+        Duplicamos el selector de idiomas en el header
+        endcomment
+      -%}
+      {%- liquid
+        if section.settings.enable_language_selector_in_header and localization.available_languages.size > 1
+          render 'be-selector-idioma'
+        endif
+      -%}
+      {%- comment -%}Be Levels - end mod{%- endcomment -%}
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -810,7 +822,7 @@
 {%- liquid
   comment
   Be Levels - start mod
-  Agregamos logo_svg y custom_url
+  Agregamos enable_language_selector_in_header, logo_svg y custom_url
   endcomment
 -%}
 {% schema %}
@@ -894,7 +906,7 @@
       "type": "text",
       "id": "custom_url",
       "label": "Url personalizada en el logo",
-      "info": "Incluir <code>https://</code>"
+      "info": "Incluir https://"
     },
     {
       "type": "link_list",
