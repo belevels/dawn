@@ -150,6 +150,9 @@
         "settings": {
           "color_scheme": "background-1",
           "logo_position": "middle-left",
+          "enable_language_selector_in_header": true,
+          "logo_svg": false,
+          "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega",
           "sticky_header_type": "reduce-logo-size",
