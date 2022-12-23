@@ -23,7 +23,7 @@
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
       }
       .{{- product.handle -}}.card {
-        border-color: {{ CustomColor1 }};
+        border: var(--border-width) solid rgba({{ CustomColor1 | color_to_rgb }},var(--border-opacity));
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
