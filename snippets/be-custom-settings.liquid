@@ -22,7 +22,7 @@
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0.25 }};
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 0.25 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 0.25 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 0.25 | color_to_rgb }} 100%);
       }
-      .{{- product.handle -}}.cardx * {
+      .{{- product.handle -}}.card * {
         --color-icon: #ffffff;
         color: #ffffff;
       }
