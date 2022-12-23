@@ -30,7 +30,6 @@
         content: '';
         width: 75px;
         height: 75px;
-        margin: 0 10%;
         position: absolute;
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: contain;
@@ -39,8 +38,6 @@
         top: 2rem;
         left: 2rem;
         z-index: 1;
-        background-color: #fff;
-        border-radius: 50px;
       }
       .{{- product.handle -}}.card .card__informationx {
         background: {{ CustomColor1 | color_modify: 'alpha', 0.5 }};
