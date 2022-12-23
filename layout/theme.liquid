@@ -323,13 +323,15 @@
     {%- endif -%}
     {%- liquid
       if request.page_type == "collection"
-      assign customClass = collection.handle
+        assign customClass = collection.handle | prepend: " "
+      elsif request.page_type == "product"
+        assign customClass = product.handle | prepend: " "
       endif
     -%}
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none {{ customClass }}" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none{{ customClass }}" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
