@@ -28,8 +28,8 @@
       }
       .{{- product.handle -}}.card::after {
         content: '';
-        width: 18%;
-        height: 18%;
+        width: 15%;
+        height: 15%;
         position: absolute;
         background-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
