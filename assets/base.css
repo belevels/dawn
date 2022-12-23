@@ -2848,6 +2848,7 @@ details-disclosure > details {
   border-radius: var(--media-radius);
   overflow: visible !important;
   background-color: rgb(var(--color-background));
+  background-color: rgba(var(--color-background), 0);
 }
 
 .global-media-settings:after {
