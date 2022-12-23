@@ -41,7 +41,8 @@
         z-index: 1;
         border-radius: 100%;
       }
-      .{{- product.handle -}}.card .card__information {
+      .{{- product.handle -}}.card .card__information,
+      .{{- product.handle -}}.card .quick-add {
         background: {{ CustomColor1 | color_modify: 'alpha', 0.25 }};
       }
     {%- endif -%}
