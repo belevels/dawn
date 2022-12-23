@@ -5,7 +5,7 @@
     {% comment %} DoSomething {% endcomment %}
     .{{- product.handle -}}.color-background-2 {
       background-color: #F2E8E0;
-      background-image: linear-gradient(0deg, rgba(214,196,186,1) 0%, rgba(235,217,201,1) 50%, rgba(242,232,224,1) 100%);
+      background-image: radial-gradient(circle, rgba(214,196,186,1) 0%, rgba(235,217,201,1) 50%, rgba(242,232,224,1) 100%);
     }
   {% endif %}
 
@@ -17,7 +17,7 @@
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       .{{- product.handle -}} {
         background-color: {{ CustomColor1 }};
-        background-image: linear-gradient(0deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
+        background-image: radial-gradient(circle, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
       }
       .{{- product.handle -}}.card * {
         --color-icon: #ffffff;
