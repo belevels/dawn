@@ -321,10 +321,15 @@
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
+    {%- liquid
+      if request.page_type == "collection"
+      assign customClass = collection.handle
+      endif
+    -%}
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none {{ product.handle }}" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none {{ customClass }}" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
