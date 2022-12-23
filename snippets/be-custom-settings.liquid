@@ -22,7 +22,7 @@
         background-color: {{ CustomColor1 }};
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
       }
-      .{{- product.handle -}}.card * {
+      .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
         color: #ffffff;
       }
@@ -33,7 +33,7 @@
         position: absolute;
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
         background-size: 80%;
-        background-position: left top;
+        background-position: center center;
         background-repeat: no-repeat;
       }
       .{{- product.handle -}}.card .card__informationx {
