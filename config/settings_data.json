@@ -12,7 +12,7 @@
     "colors_outline_button_labels": "#000000",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
-    "colors_background_2": "#f4f4f4",
+    "colors_background_2": "#fafaf8",
     "gradient_background_2": "",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -134,7 +134,7 @@
             "settings": {
               "text": "Welcome to our store",
               "text_alignment": "center",
-              "color_scheme": "background-1",
+              "color_scheme": "accent-1",
               "link": ""
             }
           }
