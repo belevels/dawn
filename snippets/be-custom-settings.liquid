@@ -23,8 +23,10 @@
         background-image: linear-gradient(333deg, {{ CustomColor1 | color_modify: 'alpha', 1 | color_to_rgb }} 0%, {{ CustomColor2 | color_modify: 'alpha', 1 | color_to_rgb }} 50%, {{ CustomColor3 | color_modify: 'alpha', 1 | color_to_rgb }} 100%);
       }
       .{{- product.handle -}}.card {
-
-        border: var(--border-width) solid {{ CustomColor1 | color_modify: 'alpha', 'var(--border-opacity)' | color_to_rgb }};
+        border-color: {{ CustomColor1 }};
+        border-width: var(--border-width);
+        border-style: solid;
+        border-color: {{ CustomColor1 | color_modify: 'alpha', 0 | color_to_rgb }};
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
