@@ -28,17 +28,18 @@
       }
       .{{- product.handle -}}::before {
         content: '';
-        width: 64px;
-        height: 64px;
+        width: 100px;
+        height: 100px;
         position: absolute;
-        background-color: #ffffff;
+        background-color: {{ CustomColor3 }};
         background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
-        background-size: contain;
+        background-size: 64px;
         background-position: center center;
         background-repeat: no-repeat;
         top: 2rem;
         left: 2rem;
         z-index: 1;
+        border-radius: 100%;
       }
       .{{- product.handle -}}.card .card__informationx {
         background: {{ CustomColor1 | color_modify: 'alpha', 0.5 }};
