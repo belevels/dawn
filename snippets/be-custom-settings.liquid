@@ -27,8 +27,9 @@
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
         {% if product.metafields.Seccion.TextColor %}
-        --color-icon: #ffffff;
         --color-foreground: #ffffff;
+        --color-icon: #ffffff;
+        color: rgba(255, 255, 255, .85) !important;
         {% endif %}
       }
       .{{- product.handle -}}.cardx::after {
