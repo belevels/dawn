@@ -102,6 +102,15 @@
               url({{ "DMSans-Bold.woff" | asset_url }}) format("woff");
       }
 
+      @font-face {
+        font-family: "Cy Black";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src:  url({{ "Cy-Black.woff2" | asset_url }}) format("woff2");
+              url({{ "Cy-Black.woff" | asset_url }}) format("woff");
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -277,6 +286,9 @@
         body {
           font-size: 1.6rem;
         }
+      }
+      .product__title {
+        font-family: "Cy Black", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
       }
       /* Button - default */
       .button,
