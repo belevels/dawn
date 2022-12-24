@@ -1,4 +1,11 @@
 {% style %}
+*:focus-visible {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: none;
+    background: none !important;
+}
+
 {%- for product in collections['all'].products -%}
 {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' %} 
