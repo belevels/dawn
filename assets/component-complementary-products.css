@@ -112,12 +112,13 @@ product-recommendations.is-accordion + .accordion {
 .complementary-products__container .card--horizontal .quick-add {
   margin: 0;
   max-width: 20rem;
+  border: 0.1rem solid;
+  border-radius: var(--buttons-radius-outset);
 }
 
 .complementary-products__container .quick-add__submit {
   padding: 1.5rem 0;
   min-height: inherit;
-  border: 0.1rem solid;
 }
 
 .complementary-products__container .quick-add__submit .icon-plus {
