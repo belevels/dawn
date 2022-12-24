@@ -21,14 +21,15 @@
       .{{ product.handle }} .highlight li:after {
         background-color: {{ CustomColor1 }};
       }
+      .{{ product.handle }} *,
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
         {% if product.metafields.Seccion.TextColor %}
-        --color-foreground: #ffffff;
-        --color-icon: #ffffff;
+        --color-foreground: #ffffff !important;
+        --color-icon: #ffffff !important;
         color: rgba(255, 255, 255, .85) !important;
         {% endif %}
       }
