@@ -26,9 +26,9 @@
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;
-        {%- if product.metafields.Seccion.TextColor -%}
+        {% if product.metafields.Seccion.TextColor == true %}
         color: #ffffff;
-        {%- endif -%}
+        {% endif %}
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
