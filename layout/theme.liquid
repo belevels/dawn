@@ -290,10 +290,10 @@
         justify-content: flex-start !important;
         padding: 0 2rem !important;
       }
-      .button--primary:hover::after {
+      .button--primary:not(.quick-add__submit):hover::after {
         box-shadow: none !important;
       }
-      .button span {
+      .button:not(.quick-add__submit) span {
         padding-right: 40px;
         margin-right: auto;
       }
