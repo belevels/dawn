@@ -831,9 +831,6 @@ summary::-webkit-details-marker {
   outline-offset: 0.3rem;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-    outline: 0;
-    outline-offset: 0;
-    box-shadow: none;
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
