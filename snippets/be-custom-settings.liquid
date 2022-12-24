@@ -21,7 +21,8 @@
       .{{ product.handle }} .highlight li:after {
         background-color: {{ CustomColor1 }};
       }
-      .{{ product.handle }} * {
+      .{{ product.handle }} .header-wrapper:not(".shopify-section-header-sticky.scrolled-past-header") *,
+      .{{ product.handle }} #MainContent > section * {
         {% if product.metafields.Seccion.TextColor %}
         --color-foreground: #ffffff !important;
         --color-icon: #ffffff !important;
