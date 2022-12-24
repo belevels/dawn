@@ -72,8 +72,8 @@
             "make_collapsible_row": false,
             "icon": "price_tag",
             "product_list_limit": 3,
-            "products_per_page": 1,
-            "pagination_style": "counter",
+            "products_per_page": 3,
+            "pagination_style": "dots",
             "image_ratio": "square",
             "enable_quick_add": true
           }
