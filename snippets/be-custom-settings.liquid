@@ -49,9 +49,6 @@
           --color-link: 255, 255, 255;
           --color-base-outline-button-labels: 255, 255, 255;
         }
-        .{{ product.handle }} #be-buttons-box .price--large {
-          background-color: white;
-        }
     {% endif %}
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
@@ -59,6 +56,11 @@
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
       }
+      
+      .{{ product.handle }} #be-buttons-box .price--large {
+          background-color: {{ CustomColor3 | color_to_hex }}
+      }
+
       .{{ product.handle }} .product__info-wrapper .product__title h1::after {
         content: '';
         width: 3rem;
