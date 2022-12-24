@@ -31,6 +31,7 @@
         color: rgba(var(--color-foreground),.75);
         {% endif %}
       }
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) svg,
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector {
         {% if product.metafields.Seccion.TextColor %}
@@ -38,6 +39,7 @@
         --color-foreground: 255, 255, 255;
         --color-link: 255, 255, 255;
         --color-base-outline-button-labels: 255, 255, 255;
+        fill: #ffffff;
         {% endif %}        
       }
       .{{ product.handle }} .header-wrapper,
