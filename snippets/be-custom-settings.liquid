@@ -8,6 +8,10 @@
       .{{ product.handle }} #be-buttons-box {
       background-color: #F2E8E0;
       }
+      .{{ product.handle }} .product__info-container .product__description ul li::after,
+      .{{ product.handle }} .highlight li:after {
+        background-color: #D6C4BA;
+      }
   {% endif %}
   
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
