@@ -23,7 +23,7 @@
         "13d80d86-f4b5-4887-bb6f-8f3a38b9212f": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"be-buttons-box\">"
+            "custom_liquid": "<div id=\"be-buttons-box\">"
           }
         },
         "price": {
@@ -40,7 +40,7 @@
         "4a8baa26-f4a8-4b0d-85da-bf7c57a5b180": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"be-add-to-cart-box\">"
+            "custom_liquid": "<div id=\"be-add-to-cart-box\">"
           }
         },
         "quantity_selector": {
