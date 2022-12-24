@@ -11,12 +11,6 @@
         background: rgba(234,218,202,.5);
       }
   {% endif %}
-
-    {%- if product.metafields.Seccion.TextColor -%}
-      .{{ product.handle }}.card * {
-        --color-foreground: #ffffff;
-      }
-    {%- endif -%}
   
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
@@ -31,7 +25,10 @@
       .{{ product.handle }} #MainContent > section,
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
-        border-bottom-width: 0;        
+        border-bottom-width: 0;
+        {%- if product.metafields.Seccion.TextColor -%}
+        color: #ffffff;
+        {%- endif -%}
       }
       .{{- product.handle -}}.cardx * {
         --color-icon: #ffffff;
