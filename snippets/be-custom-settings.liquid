@@ -23,15 +23,12 @@
       }
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
-      .{{ product.handle }} #MainContent > section *,
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
-        --color-icon: #ffffff;
-        color: #ffffff;
       }
       {% if product.metafields.Seccion.TextColor == true %}
-      .{{- product.handle -}} * {
+      .{{ product.handle }} #MainContent > section * {
         --color-icon: #ffffff;
         color: #ffffff;
       }
