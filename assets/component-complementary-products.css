@@ -135,6 +135,7 @@ product-recommendations.is-accordion + .accordion {
 
 .complementary-products__container .quick-add__submit:not(.animate-arrow) .icon-wrap {
   transition: transform var(--duration-short) ease;
+  display: none;
 }
 
 .complementary-products__container .quick-add__submit:not(.animate-arrow):hover .icon-wrap {
