@@ -136,3 +136,10 @@
     flex: 0;
   }
 {% endstyle %}
+{% javascript %}
+$(document).on('change', '.js-variant-id-text', function() {
+  let
+    variant_id = this.value;
+    console.log('variant_id = ' + this.value);
+})
+{% endjavascript %}
