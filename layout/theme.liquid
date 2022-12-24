@@ -304,10 +304,10 @@
         transform: translateX(-0.25rem);
         transition: transform .1s ease;
       }
-      .button:hover span::after {
+      .button:not(.quick-add__submit):hover span::after {
         transform: translateX(-0.05rem);
       }
-      .button--secondary span::after {
+      .button--secondary:not(.quick-add__submit) span::after {
         content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
       }
     {% endstyle %}
