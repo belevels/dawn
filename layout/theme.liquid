@@ -285,10 +285,15 @@
       button.shopify-payment-button__button--unbranded,
       .shopify-payment-button [role="button"],
       .cart__dynamic-checkout-buttons [role='button'],
-      .cart__dynamic-checkout-buttons iframe {
+      .cart__dynamic-checkout-buttons iframe,
+      .quick-add__submit {
         font-family: "DM Sans", {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }} !important;
         justify-content: flex-start !important;
         padding: 0 2rem !important;
+      }
+      .quick-add__submit {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
       .button--primary:hover::after {
         box-shadow: none !important;
