@@ -262,6 +262,15 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "c84a9fa5-608b-4fb9-b509-0a8dd685bf17": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "Color = {{variant.metafields.Producto.CustomColor1}}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -269,6 +278,7 @@
     "image-with-text",
     "multicolumn",
     "related-products",
-    "3830137d-5330-4f64-8e9c-24069322bfb7"
+    "3830137d-5330-4f64-8e9c-24069322bfb7",
+    "c84a9fa5-608b-4fb9-b509-0a8dd685bf17"
   ]
 }
