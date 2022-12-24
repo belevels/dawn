@@ -3,7 +3,9 @@
 {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' %} 
     {% comment %} DoSomething {% endcomment %}
-    .{{- product.handle -}} #MainContent > section {
+    .{{ product.handle }} .header-wrapper,
+      .{{ product.handle }} #MainContent > section,
+      .{{ product.handle }} #be-buttons-box {
       background-color: #F2E8E0;
       }
   {% endif %}
