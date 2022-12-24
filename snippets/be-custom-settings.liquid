@@ -264,25 +264,6 @@
       mask-size: cover;
       background-color: rgba(var(--color-foreground),.75);
     }
-    .{{- product.handle -}}.card::before {
-      content: '';
-      width: 80%;
-      height: 80%;
-      margin: 10%;
-      position: absolute;
-      background-image: url( '{{ product.handle | append: '.svg' | asset_url }}' );
-      background-size: 100%;
-      background-repeat: no-repeat;
-      opacity: 0.05;
-      background-position-x: right;
-      background-position-y: top;
-    }
-    .{{- product.handle -}}.card .card__information,
-    .{{- product.handle -}}.card .quick-add {
-      background: #ffffff;
-      margin: 0;
-      padding: 1.3rem;
-    }
     {% if productCollections contains 'esenciales' %} 
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
