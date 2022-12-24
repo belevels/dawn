@@ -18,12 +18,14 @@
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+
       .{{ product.handle }} .product__info-container .product__description ul li::after,
       .{{ product.handle }} .highlight li:after {
         background-color: {{ CustomColor1 }};
       }
       .{{ product.handle }} .header-wrapper,
-      .{{ product.handle }} #MainContent > section {
+      .{{ product.handle }} #MainContent > section,
+      .{{ product.handle }} .be-buttons-box {
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
       }
@@ -108,4 +110,6 @@
   .product__text.subtitle {
     margin-top: 0;
   }
+
+  .be-buttons-box {}
 {% endstyle %}
