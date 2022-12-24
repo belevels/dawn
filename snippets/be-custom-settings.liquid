@@ -2,6 +2,7 @@
 {%- for product in collections['all'].products -%}
 {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' %}
+    {%- capture CustomColor3 -%}rgba(242, 232, 224, 1){%- endcapture -%}
     {%- assign CustomColor3 = 'rgba(242, 232, 224, 1)' -%}
   {% endif %}
   
