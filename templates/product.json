@@ -20,6 +20,12 @@
             "text_style": "subtitle"
           }
         },
+        "13d80d86-f4b5-4887-bb6f-8f3a38b9212f": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-buttons-box\">"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -40,6 +46,12 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
+          }
+        },
+        "ded235c1-f933-4d78-9993-e10f453810a2": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/div><!-- .be-buttons-box -->"
           }
         },
         "description": {
@@ -94,10 +106,12 @@
         "title",
         "f64752b2-609f-4334-8ceb-b749f25d9bb1",
         "vendor",
+        "13d80d86-f4b5-4887-bb6f-8f3a38b9212f",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "ded235c1-f933-4d78-9993-e10f453810a2",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
