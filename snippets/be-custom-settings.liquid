@@ -11,6 +11,12 @@
         background: rgba(234,218,202,.5);
       }
   {% endif %}
+
+    {%- if product.metafields.Seccion.TextColor -%}
+      .{{ product.handle }} * {
+        color: rgba(255,255,255,.85);
+      }
+    {%- endif -%}
   
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
