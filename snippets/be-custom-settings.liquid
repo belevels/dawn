@@ -58,8 +58,11 @@
       }
       
       .{{ product.handle }} #be-buttons-box .price--large {
-          background-color: {{ CustomColor3 | color_lighten: 42 | color_to_hex }};
+          background-color: rgba(255, 255, 255, 0.85);
           border: 0;
+          width: fit-content;
+          margin-top: -2.5rem;
+          margin-bottom: 1.5rem;
         }
         
       .{{ product.handle }} .product__info-wrapper .product__title h1::after {
