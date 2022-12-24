@@ -13,11 +13,20 @@
   {% endif %}
 
 
+
   
     {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
       {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+
+      {%- for variant in product.variants -%}
+        {% assign variantCustomColor1 = variant.metafields.Producto.CustomColor1 %}
+        {% if variantCustomColor1 %}
+          {% assign customColor1 = variantCustomColor1 %}
+        {% endif %}
+      {% endfor %}
+      
 
       .{{ product.handle }} .product__info-container .product__description ul li::after,
       .{{ product.handle }} .highlight li:after {
