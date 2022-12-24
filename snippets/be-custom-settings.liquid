@@ -25,15 +25,14 @@
       .{{ product.handle }} #MainContent > section,
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
-        border-bottom-width: 0;
-        
-        color: #ffffff;
-        
+        border-bottom-width: 0;        
       }
-      .{{- product.handle -}}.cardx * {
+      {% if product.metafields.Seccion.TextColor == true %}
+      .{{- product.handle -}}.card * {
         --color-icon: #ffffff;
         color: #ffffff;
       }
+      {% endif %}
       .{{- product.handle -}}.cardx::after {
         content: '';
         width: 15%;
@@ -139,10 +138,3 @@
     flex: 0;
   }
 {% endstyle %}
-{% javascript %}
-$(document).on('change', '.js-variant-id-text', function() {
-  let
-    variant_id = this.value;
-    console.log('variant_id = ' + this.value);
-})
-{% endjavascript %}
