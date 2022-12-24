@@ -58,7 +58,7 @@
       }
       
       .{{ product.handle }} #be-buttons-box .price--large {
-          background-color: {{ CustomColor3 | color_to_hex }}
+          background-color: {{ CustomColor3 | color_to_hex | color_modify: 'alpha', 0.125 | color_to_hex }}
       }
 
       .{{ product.handle }} .product__info-wrapper .product__title h1::after {
