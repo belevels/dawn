@@ -339,7 +339,7 @@
     Be Levels - start mod: Custom colors
     endcomment
     if request.page_type == "collection"
-      assign customClass = collection.handle | prepend: " "
+      assign customClass2 = collection.handle | prepend: " "
     elsif request.page_type == "product"
       assign customClass = product.handle | prepend: " "
       elsif request.page_type == "page"
