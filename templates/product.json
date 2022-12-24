@@ -3,7 +3,7 @@
     "c84a9fa5-608b-4fb9-b509-0a8dd685bf17": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- for variant in product.variants -%}\n{% assign customColor1 = variant.metafields.Producto.CustomColor1 %}\n{% if variant == product.selected_or_first_available_variant %}\nColor = {{ customColor1 }}\n{% endif %}\n{% endfor %}",
+        "custom_liquid": "{%- for variant in product.variants -%}\n{% assign customColor1 = variant.metafields.Producto.CustomColor1 %}\n{% if variant == product.selected_or_first_available_variant %}\n<p class=\"test\">Color = {{ customColor1 }}<\/p>\n{% endif %}\n{% endfor %}",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
