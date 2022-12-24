@@ -64,6 +64,19 @@
           "type": "description",
           "settings": {
           }
+        },
+        "708407bb-67d8-4ff2-83aa-5df90ed0dc16": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Combínalo con",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 3,
+            "products_per_page": 1,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
         }
       },
       "block_order": [
@@ -77,7 +90,8 @@
         "quantity_selector",
         "buy_buttons",
         "ded235c1-f933-4d78-9993-e10f453810a2",
-        "description"
+        "description",
+        "708407bb-67d8-4ff2-83aa-5df90ed0dc16"
       ],
       "settings": {
         "enable_sticky_info": true,
