@@ -27,12 +27,12 @@
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;        
       }
-      {% if product.metafields.Seccion.TextColor == true %}
+
       .{{- product.handle -}} #MainContent > section * {
         --color-icon: #ffffff;
         color: #ffffff;
       }
-      {% endif %}
+
       .{{- product.handle -}}.cardx::after {
         content: '';
         width: 15%;
