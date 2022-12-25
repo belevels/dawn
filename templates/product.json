@@ -3,7 +3,7 @@
     "a0c27ae1-f9e7-4567-b576-68c7def87daf": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- if product.metafields.Seccion.CustomColor3 -%}\n          <p><b>Color (default): <\/b> {{ product.metafields.Seccion.CustomColor3 }} <div style=\"display: inline-block; background-color:{{ product.metafields.Seccion.CustomColor3 }};width:10px;\">&nbsp;<\/div><\/p>\n          <p><b>Color (red): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'red' }}<\/p>\n          <p><b>Color (blue): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'blue' }}<\/p>\n          <p><b>Color (green): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'green' }}<\/p>\n          {%- endif -%}",
+        "custom_liquid": "{%- if product.metafields.Seccion.CustomColor3 -%}\n    {% capture bg %}\n    '{{ product.metafields.Seccion.CustomColor3 }}' | color_modify: 'alpha', 0.125\n    {% endcapture %}\n          <p>Color bg: {{ bg }}<\/p>\n          <p><b>Color (default): <\/b> {{ product.metafields.Seccion.CustomColor3 }} <div style=\"display: inline-block; background-color:{{ product.metafields.Seccion.CustomColor3 }};width:10px;\">&nbsp;<\/div><\/p>\n          <p><b>Color (red): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'red' }}<\/p>\n          <p><b>Color (blue): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'blue' }}<\/p>\n          <p><b>Color (green): <\/b> {{ product.metafields.Seccion.CustomColor3 | color_extract: 'green' }}<\/p>\n  {%- endif -%}",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
