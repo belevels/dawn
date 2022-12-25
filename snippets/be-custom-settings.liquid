@@ -149,14 +149,15 @@
   .fa-ul li br {
     display: none;
   }
-  {% comment %}
+  
   {%- for product in collections['all'].products -%}
     {% assign productCollections = product.collections | map: "handle" %}
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
-
+  {%- endfor -%}
+    {% comment %}
     {% if productCollections contains 'esenciales' %} 
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
