@@ -219,6 +219,9 @@
   .fa-ul li br {
     display: none;
   }
+  .card.card--horizontal {
+    align-items: center;
+  }
 
   {% assign productCollections = product.collections | map: "handle" %}
     {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
