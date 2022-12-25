@@ -185,7 +185,7 @@
     }
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+    {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
       --gradient-background: {{ customColor3 }};
