@@ -5,10 +5,12 @@
     box-shadow: none;
     background: none !important;
   }
+  .shopify-section-header-sticky:not(.scrolled-past-header) .header-wrapper--border-bottom {
+    border-bottom-width: 0;
+  }
   .shopify-section-header-sticky.scrolled-past-header .header-wrapper {
     background: rgb(var(--color-background));
     background: var(--gradient-background);
-    border-bottom-width: .1rem;
   }
   .global-media-settings {
     background-color: rgba(var(--color-background), 0);
@@ -192,9 +194,6 @@
       .{{ product.handle }} #MainContent > section,
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
-      }
-      .{{ product.handle }} .header-wrapper--border-bottom {
-        border-color: {{ CustomColor3 }};
       }
       .{{ product.handle }} #be-buttons-box,
       .{{ product.handle }} #be-buttons-box .price--large {
