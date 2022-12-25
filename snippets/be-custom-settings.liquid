@@ -185,7 +185,7 @@
     }
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+    {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 | color_modify: 'alpha', 1 }}{%- endcapture -%}
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
       --gradient-background: {{ customColor3 }};
