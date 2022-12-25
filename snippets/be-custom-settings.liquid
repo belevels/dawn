@@ -253,8 +253,7 @@
         border-color: rgba(214, 196, 186, 1);
       }
       .{{ product.handle }} .product__info-container .product__description ul li::after,
-      .{{ product.handle }} .highlight li:after,
-      .{{ product.handle }} .accordion__content {
+      .{{ product.handle }} .highlight li:after {
         background-color: rgba(214, 196, 186, 1);
       }
     {% endif %}
@@ -269,7 +268,8 @@
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child,
-    .{{ product.handle }} .be-buttons-box {
+    .{{ product.handle }} .be-buttons-box,
+    .{{ product.handle }} .accordion__content {
       --gradient-base-background-1: {{ customColor3 }};
       background: {{ customColor3 }};
     }
