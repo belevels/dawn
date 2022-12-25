@@ -239,7 +239,7 @@
     {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
     .{{ product.handle }} .product__info-container .product__description ul li::after,
     .{{ product.handle }} .highlight li:after {
-      background-color: {{ CustomColor1 }};
+      background-color: {{ customColor1 }};
     }
   {%- endif -%}
   {% if product.metafields.Seccion.TextColor %}
