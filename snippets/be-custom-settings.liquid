@@ -188,7 +188,7 @@
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 | prepend: "'" | append: "'" -%}
     .{{ product.handle }} {
       --color-base-background-1: {{ customColor3 | color_extract: 'red' }}, {{ customColor3 | color_extract: 'green' }}, {{ customColor3 | color_extract: 'blue' }};
-      --gradient-base-background-1: {{ customColor3 | color_to_hex }}
+      --gradient-base-background-1: {{ customColor3 }}
       --color-background: var(--color-base-background-1);
       --gradient-background: var(--gradient-base-background-1);
       background: {{ customColor3 }};
