@@ -52,6 +52,8 @@
             <span>
               {%- if product.selected_or_first_available_variant.available -%}
                 {{ 'products.product.add_to_cart' | t }}
+              {%- elsif product_form_id == 'ecopack_product_form_id' -%}
+              {{ 'products.product.add_to_cart' | t }} EcoPack
               {%- else -%}
                 {{ 'products.product.sold_out' | t }}
               {%- endif -%}
