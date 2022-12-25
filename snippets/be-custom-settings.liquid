@@ -251,6 +251,10 @@
       --gradient-base-background-1: {{ customColor3 }};
       background: {{ customColor3 }};
     }
+    .{{ product.handle }} #be-buttons-box,
+      .{{ product.handle }} #be-buttons-box .price--large {
+        border-color: {{ customColor3 }};
+      }
   {%- endif -%}
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
     {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
@@ -258,10 +262,6 @@
     .{{ product.handle }} .highlight li:after {
       background-color: {{ customColor1 }};
     }
-    .{{ product.handle }} #be-buttons-box,
-      .{{ product.handle }} #be-buttons-box .price--large {
-        border-color: {{ customColor1 | color_modify: 'alpha', 0.13 }};
-      }
   {%- endif -%}
   {% if product.metafields.Seccion.TextColor %}
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
