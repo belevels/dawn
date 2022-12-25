@@ -321,14 +321,16 @@
       }
       .button span::after {
         content: '';
+        width: 18px;
+        height: 11px;
         -webkit-mask: url({{ 'icon-arrow.svg' | asset_url }}) no-repeat 100% 100%;
         mask: url({{ 'icon-arrow.svg' | asset_url }}) no-repeat 100% 100%;
         -webkit-mask-size: cover;
         mask-size: cover;
-        background-color: rgba(var(--color-foreground),.75);
-
+        background-color: rgba(var(--color-background),.75);
         position: absolute;
         right: 2rem;
+        top: 18px;
         transform: translateX(-0.25rem);
         transition: transform .1s ease;
       }
@@ -339,7 +341,7 @@
         box-shadow: none !important;
       }
       .button--secondary span::after {
-        content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
+        background-color: rgba(var(--color-foreground),.75);
       }
       .complementary-products__container .quick-add__submit {
         padding: 1rem 2rem !important;
