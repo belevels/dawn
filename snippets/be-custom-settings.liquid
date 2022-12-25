@@ -138,32 +138,34 @@
     z-index: 0;
     opacity: .5;
   }
+  #be-buttons-box .price--large {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 0;
+      width: fit-content;
+      margin-top: -2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .product__info-wrapper .product__title h1::after {
+      content: '';
+      width: 3rem;
+      height: 3rem;
+      margin-left: 1rem;
+      position: absolute;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: rgba(var(--color-foreground),.75);
+    }
   .product__info-container .product__description ul li i.fa-li,
   .fa-ul li br {
     display: none;
   }
   {%- for product in collections['all'].products -%}
     {% assign productCollections = product.collections | map: "handle" %}
-
-    .{{ product.handle }} #be-buttons-box .price--large {
-      background-color: rgba(255, 255, 255, 0.85);
-      border: 0;
-      width: fit-content;
-      margin-top: -2.5rem;
-      margin-bottom: 1.5rem;
-    }
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
-      content: '';
-      width: 3rem;
-      height: 3rem;
-      margin-left: 1rem;
-      position: absolute;
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: rgba(var(--color-foreground),.75);
     }
+
     {% if productCollections contains 'esenciales' %} 
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
@@ -194,8 +196,10 @@
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;  
       }
-      {% if product.metafields.Seccion.TextColor %}
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
+    {%- endif -%}
+
+    {% if product.metafields.Seccion.TextColor %}
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
         .{{ product.handle }} #MainContent > section * {
           --color-base-text: 255, 255, 255;
@@ -220,88 +224,6 @@
         .{{ product.handle }} #be-buttons-box {
           border: 0.1rem solid rgba(var(--color-foreground),.55);  
         }
-      {% endif %}
-    {%- endif -%}
-  {%- endfor -%}
-  {%- for product in collections['all'].products -%}
-    {% assign productCollections = product.collections | map: "handle" %}
-
-    .{{ product.handle }} #be-buttons-box .price--large {
-      background-color: rgba(255, 255, 255, 0.85);
-      border: 0;
-      width: fit-content;
-      margin-top: -2.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .{{ product.handle }} .product__info-wrapper .product__title h1::after {
-      content: '';
-      width: 3rem;
-      height: 3rem;
-      margin-left: 1rem;
-      position: absolute;
-      -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
-      mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: rgba(var(--color-foreground),.75);
-    }
-    {% if productCollections contains 'esenciales' %} 
-      .{{ product.handle }} .header-wrapper,
-      .{{ product.handle }} #MainContent > section,
-      .{{ product.handle }} #be-buttons-box {
-        background-color: rgba(214, 196, 186, 0.5);
-      }
-      .{{ product.handle }} .product__info-container .product__description ul li::after,
-      .{{ product.handle }} .highlight li:after {
-        background-color: rgba(214, 196, 186, 1);
-      }
     {% endif %}
-    
-    {%- if product.metafields.Seccion.CustomColor1 != blank and product.metafields.Seccion.CustomColor2 != blank and product.metafields.Seccion.CustomColor3 != blank -%}
-      {%- capture CustomColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-      {%- capture CustomColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-      {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-
-      .{{ product.handle }} .product__info-container .product__description ul li::after,
-      .{{ product.handle }} .highlight li:after {
-        background-color: {{ CustomColor1 }};
-      }
-      .{{- product.handle -}}.card::before {
-        background-color: {{ CustomColor3 }};
-      }
-      .{{ product.handle }} .header-wrapper,
-      .{{ product.handle }} #MainContent > section,
-      .{{ product.handle }} #be-buttons-box {
-        background-color: {{ CustomColor3 }};
-        border-bottom-width: 0;  
-      }
-      {% if product.metafields.Seccion.TextColor %}
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
-        .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section * {
-          --color-base-text: 255, 255, 255;
-          --color-foreground: 255, 255, 255;
-          --color-base-outline-button-labels: 255, 255, 255;
-          color: rgba(var(--color-foreground),.75);
-        }
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
-          filter: invert(1);
-        }
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector {
-          --color-base-text: 255, 255, 255;
-          --color-foreground: 255, 255, 255;
-          --color-link: 255, 255, 255;
-          --color-base-outline-button-labels: 255, 255, 255;
-        }
-        .{{ product.handle }} #be-buttons-box .price--large {
-          background-color: {{ CustomColor3 }};
-          border: 0.1rem solid rgba(var(--color-foreground),.55);
-        }
-        .{{ product.handle }} #be-buttons-box {
-          border: 0.1rem solid rgba(var(--color-foreground),.55);  
-        }
-      {% endif %}
-    {%- endif -%}
   {%- endfor -%}
 {% endstyle %}
