@@ -228,7 +228,7 @@
     z-index: 0;
     opacity: .5;
   }
-  .{{ product.handle }}::after,
+  ..{{ product.handle }}::before,
     .product__info-wrapper .product__title h1::after {
       content: '';
       width: 3rem;
@@ -239,7 +239,7 @@
       mask-size: cover;
       background-color: rgba(var(--color-foreground),.75);
     }
-    .{{ product.handle }}::after {
+    ..{{ product.handle }}::before {
       width: 50%;
       height: 50%;
     }
@@ -270,7 +270,7 @@
     {% endif %}
   
   {%- for product in collections['all'].products -%}
-    .{{ product.handle }}::after,
+    ..{{ product.handle }}::before,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
