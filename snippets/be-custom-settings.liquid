@@ -56,7 +56,7 @@
     letter-spacing: .13rem;
     margin: -2.5rem 1rem 1.5rem;
     padding: 0.5rem 1.5rem 0;
-    border: 0.1rem solid rgba(var(--color-background), var(--text-boxes-border-opacity));
+    border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.85);
     width: fit-content;
@@ -193,6 +193,9 @@
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
         border-bottom-width: 0;  
+      }
+      #be-buttons-box .price--large {
+        border-color: {{ CustomColor1 }};
       }
     {%- endif -%}
 
