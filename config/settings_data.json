@@ -155,7 +155,7 @@
           "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega",
-          "sticky_header_type": "reduce-logo-size",
+          "sticky_header_type": "on-scroll-up",
           "show_line_separator": false,
           "mobile_logo_position": "left",
           "margin_bottom": 0,
