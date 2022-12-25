@@ -228,7 +228,7 @@
     z-index: 0;
     opacity: .5;
   }
-  ..{{ product.handle }}::before,
+  .{{ product.handle }} #MainContent > section::after,
     .product__info-wrapper .product__title h1::after {
       content: '';
       width: 3rem;
@@ -239,9 +239,10 @@
       mask-size: cover;
       background-color: rgba(var(--color-foreground),.75);
     }
-    ..{{ product.handle }}::before {
+    .{{ product.handle }} #MainContent > section::after {
       width: 50%;
       height: 50%;
+      top: 0;
     }
   .product__info-container .product__description ul li i.fa-li,
   .fa-ul li br {
@@ -270,7 +271,7 @@
     {% endif %}
   
   {%- for product in collections['all'].products -%}
-    ..{{ product.handle }}::before,
+    .{{ product.handle }} #MainContent > section::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
