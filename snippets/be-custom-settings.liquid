@@ -188,7 +188,7 @@
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
-      --gradient-background: var(--gradient-base-background-1);
+      --gradient-background: {{ customColor3 }};
     }
   {%- endif -%}
     {% comment %}
