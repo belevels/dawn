@@ -245,7 +245,8 @@
     {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
-      .{{ product.handle }} .be-buttons-box {
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .accordion__content {
         background-color: rgba(214, 196, 186, 0.5);
       }
       .{{ product.handle }} .be-buttons-box,
