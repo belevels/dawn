@@ -219,8 +219,9 @@
   .fa-ul li br {
     display: none;
   }
-  .card.card--horizontal {
-    align-items: center !important;
+  .complementary-products__container .card.card--horizontal {
+    align-items: center;
+    padding: 0;
   }
 
   {% assign productCollections = product.collections | map: "handle" %}
