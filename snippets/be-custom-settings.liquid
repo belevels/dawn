@@ -194,8 +194,8 @@
       --color-background: var(--color-base-background-1);
       --gradient-background: var(--gradient-base-background-1);
       background: {{ product.metafields.Seccion.CustomColor3 }};
-      color: {{ settings.colors_background_1 }};
-      color: {{ product.metafields.Seccion.CustomColor3 }};
+      color: {{ settings.colors_background_1.red }};
+      color: {{ product.metafields.Seccion.CustomColor3.red }};
     }
   {%- endif -%}
     {% comment %}
