@@ -22,7 +22,7 @@
   .shopify-payment-button [role="button"],
   .cart__dynamic-checkout-buttons [role='button'],
   .cart__dynamic-checkout-buttons iframe,
-  .complementary-products__container.quick-add__submit {
+  .complementary-products__container .quick-add__submit {
     font-family: "DM Sans", {{ settings.type_body_font.family}}, {{ settings.type_body_font.fallback_families}} !important;
     justify-content: flex-start !important;
     padding: 0 2rem;
@@ -46,7 +46,7 @@
     transform: translateX(-0.25rem);
     transition: transform.1s ease;
   }
-  .complementary-products__container.quick-add__submit span::after {
+  .complementary-products__container .quick-add__submit span::after {
     width: 1rem;
     height: 0.66rem;
     top: 1.5rem;
@@ -60,7 +60,7 @@
   .button--secondary span::after {
     background-color: rgba(var(--color-foreground),.85);
   }
-  .complementary-products__container.quick-add__submit {
+  .complementary-products__container .quick-add__submit {
     padding: 1rem 2rem !important;
   }
   .global-media-settings {
