@@ -290,6 +290,10 @@
       .product__title * {
         font-family: "Cy Black", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
       }
+      /* Be Levels - start mod */
+      .shopify-section-header-sticky:not(.scrolled-past-header) .header-wrapper--border-bottom {
+        border-bottom-color: transparent;
+      }      
       /* Button - default */
       .button,
       .shopify-challenge__button,
