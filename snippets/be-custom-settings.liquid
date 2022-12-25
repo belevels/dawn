@@ -1,7 +1,9 @@
 {% style %}
+  /*
   .global-media-settings {
     background-color: rgba(var(--color-background), 0);
   }
+  */
   .localization-selector + .disclosure__list-wrapper {
     top: 100% !important;
     bottom: unset !important;
@@ -147,6 +149,7 @@
   .fa-ul li br {
     display: none;
   }
+  {% comment %}
   {%- for product in collections['all'].products -%}
     {% assign productCollections = product.collections | map: "handle" %}
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
@@ -223,4 +226,5 @@
         }
     {% endif %}
   {%- endfor -%}
+  {% endcomment %}
 {% endstyle %}
