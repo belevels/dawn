@@ -1,5 +1,68 @@
 {% style %}
-
+  *:focus-visible {
+    outline: 0;
+    outline-offset: 0;
+    box-shadow: none;
+    background: none !important;
+  }
+  .product__title h1,
+  .product-card-wrapper.card__heading {
+    font-family: "Cy Black", {{ settings.type_header_font.family}}, {{ settings.type_header_font.fallback_families}}
+  }
+  .shopify-section-header-sticky.scrolled-past-header.header-wrapper {
+    background: rgb(var(--color-background));
+    background: var(--gradient-background);
+    border-bottom:.1rem solid rgba(var(--color-foreground),.08);
+  } 
+  /* Button - default */
+  .button,
+  .shopify-challenge__button,
+  .customer button,
+  button.shopify-payment-button__button--unbranded,
+  .shopify-payment-button [role="button"],
+  .cart__dynamic-checkout-buttons [role='button'],
+  .cart__dynamic-checkout-buttons iframe,
+  .complementary-products__container.quick-add__submit {
+    font-family: "DM Sans", {{ settings.type_body_font.family}}, {{ settings.type_body_font.fallback_families}} !important;
+    justify-content: flex-start !important;
+    padding: 0 2rem;
+  }
+  .button span {
+    padding-right: 40px;
+    margin-right: auto;
+  }
+  .button span::after {
+    content: '';
+    width: 1.5rem;
+    height: 1rem;
+    -webkit-mask: url({{ 'icon-arrow.svg' | asset_url}}) no-repeat 100% 100%;
+    mask: url({{ 'icon-arrow.svg' | asset_url}}) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-background),.85);
+    position: absolute;
+    right: 2rem;
+    top: 1.75rem;
+    transform: translateX(-0.25rem);
+    transition: transform.1s ease;
+  }
+  .complementary-products__container.quick-add__submit span::after {
+    width: 1rem;
+    height: 0.66rem;
+    top: 1.5rem;
+  }
+  .button:hover span::after {
+    transform: translateX(-0.05rem);
+  }
+  .button--primary:hover::after {
+    box-shadow: none !important;
+  }
+  .button--secondary span::after {
+    background-color: rgba(var(--color-foreground),.85);
+  }
+  .complementary-products__container.quick-add__submit {
+    padding: 1rem 2rem !important;
+  }
   .global-media-settings {
     background-color: rgba(var(--color-background), 0);
   }
