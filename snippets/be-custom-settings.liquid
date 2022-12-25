@@ -228,6 +228,7 @@
     z-index: 0;
     opacity: .5;
   }
+  .{{ product.handle }} #MainContent > section::after,
     .product__info-wrapper .product__title h1::after {
       content: '';
       width: 3rem;
@@ -265,6 +266,7 @@
     {% endif %}
   
   {%- for product in collections['all'].products -%}
+    .{{ product.handle }} #MainContent > section::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
