@@ -60,6 +60,9 @@
   .button--secondary span::after {
     background-color: rgba(var(--color-foreground),.85);
   }
+  .quick-add__submit.button--secondary {
+    background: transparent !important; 
+  }
   .complementary-products__container .quick-add__submit {
     padding: 1rem 2rem !important;
   }
@@ -283,9 +286,6 @@
         }
         .{{ product.handle }} #be-buttons-box {
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
-        }
-        .quick-add__submit.button--secondary {
-          background: transparent !important; 
         }
     {% endif %}
     {% comment %}
