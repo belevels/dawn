@@ -54,15 +54,21 @@
             "show_dynamic_checkout": false
           }
         },
-        "ded235c1-f933-4d78-9993-e10f453810a2": {
+        "8e1c2210-045a-4ea5-bb6e-77e3aafc114a": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->\n<\/div><!-- .be-buttons-box -->"
+            "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
         "334ee9e7-eeaa-4929-824c-272fa9e518d9": {
           "type": "ecopack_quantity_selector",
           "settings": {
+          }
+        },
+        "ded235c1-f933-4d78-9993-e10f453810a2": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/div><!-- .be-buttons-box -->"
           }
         },
         "description": {
@@ -94,8 +100,9 @@
         "4a8baa26-f4a8-4b0d-85da-bf7c57a5b180",
         "quantity_selector",
         "buy_buttons",
-        "ded235c1-f933-4d78-9993-e10f453810a2",
+        "8e1c2210-045a-4ea5-bb6e-77e3aafc114a",
         "334ee9e7-eeaa-4929-824c-272fa9e518d9",
+        "ded235c1-f933-4d78-9993-e10f453810a2",
         "description",
         "c924c946-d892-4e61-8549-95f2fac54981"
       ],
