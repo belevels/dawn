@@ -240,9 +240,11 @@
       background-color: rgba(var(--color-foreground),.75);
     }
     .{{ product.handle }} #MainContent > section .product::after {
-      width: 50%;
-      height: 50%;
-      top: 0;
+      max-width: 50rem;
+      max-height: 50rem;
+      width: 90%;
+      height: 90%;
+      margin: 0;
     }
   .product__info-container .product__description ul li i.fa-li,
   .fa-ul li br {
@@ -281,6 +283,7 @@
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child,
+    .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .be-buttons-box,
     .{{ product.handle }} .accordion__content {
       --gradient-base-background-1: {{ customColor3 }};
