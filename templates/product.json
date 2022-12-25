@@ -23,7 +23,7 @@
         "13d80d86-f4b5-4887-bb6f-8f3a38b9212f": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"be-buttons-box\">"
+            "custom_liquid": "<div id=\"be-buttons-box\" class=\"be-buttons-box\">"
           }
         },
         "price": {
