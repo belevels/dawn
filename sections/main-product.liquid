@@ -65,7 +65,7 @@
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-        {%- assign ecopack_product_form_id = 'ecopack-product-form' -%}
+        {%- assign ecopack_product_form_id = 'ecopack-product-form' | append: section.id -%}
 
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -414,7 +414,7 @@
                   </button>
                 </quantity-input>
               </div>
-              {%- render 'buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
+              {%- render 'be-ecopack-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
