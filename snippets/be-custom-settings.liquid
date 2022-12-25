@@ -184,6 +184,12 @@
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
   {%- endfor -%}
+  {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+    {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+    .{{ product.handle }} {
+      --gradient-base-background-1: {{ customColor3 }};
+    }
+  {%- endif -%}
     {% comment %}
     {% assign productCollections = product.collections | map: "handle" %}
     {% if productCollections contains 'esenciales' %} 
