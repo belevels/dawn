@@ -187,9 +187,10 @@
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} {
-      --color-base-background-1: {{ '#222222' | color_extract: 'red' }}, {{ '#222222' | color_extract: 'green' }}, {{ '#222222' | color_extract: 'blue' }};
+      --color-base-background-1: {{ customColor3 | color_extract: 'red' }}, {{ customColor3 | color_extract: 'green' }}, {{ customColor3 | color_extract: 'blue' }};
       --color-background: var(--color-base-background-1);
       --gradient-background: var(--gradient-base-background-1);
+      background: {{ customColor3 }};
     }
   {%- endif -%}
     {% comment %}
