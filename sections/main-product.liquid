@@ -400,10 +400,10 @@
                     class="quantity__input" 
                     type="number"
                     name="quantity"
-                    id="Quantity-{{ section.id }}"
+                    id="EcoPack-Quantity-{{ section.id }}"
                     min="2"
                     value="2"
-                    form="{{ product_form_id }}"
+                    form="{{ ecopack_product_form_id }}"
                   >
                   <button class="quantity__button no-js-hidden" name="plus" type="button">
                     <span class="visually-hidden">
@@ -413,6 +413,7 @@
                   </button>
                 </quantity-input>
               </div>
+              {%- render 'buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
