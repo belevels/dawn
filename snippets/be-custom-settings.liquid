@@ -189,7 +189,7 @@
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
       --gradient-background: {{ customColor3 }};
-      background: {{ customColor3 | color_to_hex }};
+      background: {{ {% customColor3 %} | color_to_hex }};
     }
   {%- endif -%}
     {% comment %}
