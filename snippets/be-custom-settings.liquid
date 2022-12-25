@@ -185,11 +185,11 @@
     }
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- assign customColor3 = product.metafields.Seccion.CustomColor3 | color_modify: 'alpha', 1 -%}
+    {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
       --gradient-background: {{ customColor3 }};
-      background: {{ customColor3 }};
+      background: {{ customColor3 | color_modify: 'alpha', 1 }};
     }
   {%- endif -%}
     {% comment %}
