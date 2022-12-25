@@ -226,10 +226,7 @@
           --color-base-outline-button-labels: 255, 255, 255;
         }
         .{{ product.handle }} #be-buttons-box .price--large {
-          border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
-        }
-        .{{ product.handle }} #be-buttons-box {
-          border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+          background-color: {{ CustomColor1 | color_modify: 'alpha', 0.125 }};
         }
     {% endif %}
   {%- endfor -%}
