@@ -44,8 +44,7 @@
   }
   #be-buttons-box {
     padding: 1rem;
-    border: 0.1rem solid rgba(var(--color-foreground),.55);
-    border: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+    border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
     border-radius: 20px;
   }
   #be-buttons-box .form__label {
@@ -221,10 +220,10 @@
         }
         .{{ product.handle }} #be-buttons-box .price--large {
           background-color: {{ CustomColor3 }};
-          border: 0.1rem solid rgba(var(--color-foreground),.55);
+          border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
         .{{ product.handle }} #be-buttons-box {
-          border: 0.1rem solid rgba(var(--color-foreground),.55);  
+          border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
     {% endif %}
   {%- endfor -%}
