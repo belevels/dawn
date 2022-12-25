@@ -186,10 +186,11 @@
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+    {%- assign background = product.metafields.Seccion.CustomColor3 | color_modify: 'alpha', 0.125 | prepend: "'" | append: "'" -%}
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child {
       --gradient-base-background-1: {{ customColor3 }};
-      background: {{ customColor3 | color_modify: 'alpha', 0.85 }};
+      background: {{ background }};
     }
   {%- endif -%}
     {% comment %}
