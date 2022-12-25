@@ -291,8 +291,8 @@
         font-family: "Cy Black", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
       }
       /* Be Levels - start mod */
-      .shopify-section-header-sticky:not(.scrolled-past-header) .header-wrapper--border-bottom {
-        border-bottom: .1rem solid rgba(var(--color-foreground),0);
+      .shopify-section-header-sticky .scrolled-past-header .header-wrapper--border-bottom {
+        border-bottom: .1rem solid rgba(var(--color-foreground),.08);
       }      
       /* Button - default */
       .button,
