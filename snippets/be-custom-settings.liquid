@@ -284,6 +284,9 @@
         .{{ product.handle }} #be-buttons-box {
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
+        .quick-add__submit.button--secondary {
+          background: transparent !important; 
+        }
     {% endif %}
     {% comment %}
     {% assign productCollections = product.collections | map: "handle" %}
