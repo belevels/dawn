@@ -69,12 +69,12 @@
           "type": "complementary",
           "settings": {
             "block_heading": "Combínalo con",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
+            "make_collapsible_row": true,
+            "icon": "heart",
             "product_list_limit": 3,
             "products_per_page": 3,
             "pagination_style": "counter",
-            "image_ratio": "square",
+            "image_ratio": "portrait",
             "enable_quick_add": true
           }
         }
