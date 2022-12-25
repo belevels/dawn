@@ -287,11 +287,19 @@
           font-size: 1.6rem;
         }
       }
+      /* Be Levels - start mod */
+      *:focus-visible {
+        outline: 0;
+        outline-offset: 0;
+        box-shadow: none;
+        background: none !important;
+      }
       .product__title * {
         font-family: "Cy Black", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
       }
-      /* Be Levels - start mod */
       .shopify-section-header-sticky.scrolled-past-header .header-wrapper {
+        background: rgb(var(--color-background));
+        background: var(--gradient-background);
         border-bottom: .1rem solid rgba(var(--color-foreground),.08);
       }      
       /* Button - default */
@@ -307,18 +315,17 @@
         justify-content: flex-start !important;
         padding: 0 2rem;
       }
-      .complementary-products__container .quick-add__submit {
-        padding: 1rem 2rem !important;
-      }
-      .button--primary:hover::after {
-        box-shadow: none !important;
-      }
       .button span {
         padding-right: 40px;
         margin-right: auto;
       }
       .button span::after {
-        content: url({{ 'icon-arrow-white.svg' | asset_url }}) !important;
+        -webkit-mask: url({{ 'icon-arrow.svg' | asset_url }}) no-repeat 100% 100%;
+        mask: url({{ 'icon-arrow.svg' | asset_url }}) no-repeat 100% 100%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: rgba(var(--color-foreground),.75);
+
         position: absolute;
         right: 2rem;
         transform: translateX(-0.25rem);
@@ -327,8 +334,14 @@
       .button:hover span::after {
         transform: translateX(-0.05rem);
       }
+      .button--primary:hover::after {
+        box-shadow: none !important;
+      }
       .button--secondary span::after {
         content: url({{ 'icon-arrow.svg' | asset_url }}) !important;
+      }
+      .complementary-products__container .quick-add__submit {
+        padding: 1rem 2rem !important;
       }
     {% endstyle %}
 
@@ -359,7 +372,7 @@
     Be Levels - start mod: Custom colors
     endcomment
     if request.page_type == "collection"
-      assign customClass2 = collection.handle | prepend: " "
+      assign customClass = collection.handle | prepend: " "
     elsif request.page_type == "product"
       assign customClass = product.handle | prepend: " "
       elsif request.page_type == "page"
