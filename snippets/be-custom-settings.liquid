@@ -186,9 +186,10 @@
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+    .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child {
       --gradient-base-background-1: {{ customColor3 }};
-      background: {{ product.metafields.Seccion.CustomColor3 }};
+      background: {{ customColor3 }};
     }
   {%- endif -%}
     {% comment %}
