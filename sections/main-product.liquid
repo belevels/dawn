@@ -416,7 +416,9 @@
                 </quantity-input>
               </div>
               </div>
-              {%- render 'be-ecopack-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
+              <div>
+                {%- render 'be-ecopack-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
+              </div>
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
