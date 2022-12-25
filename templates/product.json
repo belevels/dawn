@@ -74,7 +74,7 @@
             "product_list_limit": 3,
             "products_per_page": 3,
             "pagination_style": "counter",
-            "image_ratio": "square",
+            "image_ratio": "portrait",
             "enable_quick_add": true
           }
         }
