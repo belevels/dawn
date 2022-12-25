@@ -156,7 +156,7 @@
           "menu": "belevels",
           "menu_type_desktop": "mega",
           "sticky_header_type": "reduce-logo-size",
-          "show_line_separator": true,
+          "show_line_separator": false,
           "mobile_logo_position": "left",
           "margin_bottom": 0,
           "padding_top": 0,
