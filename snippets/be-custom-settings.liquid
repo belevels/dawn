@@ -189,10 +189,12 @@
     {%- assign customColorChannels = product.metafields.Seccion.CustomColor3 | prepend: "'" | append: "'" -%}
     .{{ product.handle }} {
       --color-base-background-1: {{ customColorChannels | color_extract: 'red' }}, {{ customColorChannels | color_extract: 'green' }}, {{ customColorChannels | color_extract: 'blue' }};
+      --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
       --gradient-base-background-1: {{ customColor3 }};
       --color-background: var(--color-base-background-1);
       --gradient-background: var(--gradient-base-background-1);
       background: {{ product.metafields.Seccion.CustomColor3 }};
+      color: {{ settings.colors_background_1 }};
     }
   {%- endif -%}
     {% comment %}
