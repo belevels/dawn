@@ -260,7 +260,7 @@
     }
     .{{ product.handle }} #be-buttons-box,
       .{{ product.handle }} #be-buttons-box .price--large {
-        border-color: {{ customColor1 }};
+        border-color: {{ customColor1 | color_modify: 'alpha', 0.13 }};
       }
   {%- endif -%}
   {% if product.metafields.Seccion.TextColor %}
