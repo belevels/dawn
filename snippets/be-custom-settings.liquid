@@ -189,7 +189,7 @@
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child {
       --gradient-base-background-1: {{ customColor3 }};
-      background: {{ customColor3 }};
+      background: rgba(var({{ customColor3 }}), 0.125);
     }
   {%- endif -%}
     {% comment %}
