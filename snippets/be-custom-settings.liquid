@@ -193,7 +193,9 @@
       .{{ product.handle }} #be-buttons-box {
         background-color: {{ CustomColor3 }};
       }
-      .{{ product.handle }} .header-wrapper--border-bottom,
+      .{{ product.handle }} .header-wrapper--border-bottom {
+        border-color: {{ CustomColor3 }};
+      }
       .{{ product.handle }} #be-buttons-box,
       .{{ product.handle }} #be-buttons-box .price--large {
         border-color: {{ CustomColor1 | color_modify: 'alpha', 0.25 }};
