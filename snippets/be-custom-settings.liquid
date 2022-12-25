@@ -185,11 +185,11 @@
     }
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- capture CustomColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+    {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     .{{ product.handle }} {
       --color-background: {{ customColor3 }};
       --gradient-background: {{ customColor3 }};
-      background: {{ customColor3 | color_modify: 'alpha', 0.99 }};
+      background: {{ customColor3 }};
     }
   {%- endif -%}
     {% comment %}
