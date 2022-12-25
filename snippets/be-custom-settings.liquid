@@ -190,7 +190,7 @@
       --color-base-background-1: {{ customColor3 | color_extract: 'red' }}, {{ customColor3 | color_extract: 'green' }}, {{ customColor3 | color_extract: 'blue' }};
       --color-background: var(--color-base-background-1);
       --gradient-background: var(--gradient-base-background-1);
-      background: {{ customColor3 }};
+      background: {{ customColor3 | color_to_hex }};
     }
   {%- endif -%}
     {% comment %}
