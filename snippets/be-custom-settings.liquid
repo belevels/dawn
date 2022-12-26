@@ -230,7 +230,7 @@
   }
     #MainContent > section .product::after,
     .product__info-wrapper .product__title h1::after,
-    .card__heading::before {
+    .card__heading div::after {
       content: '';
       width: 3rem;
       height: 3rem;
@@ -293,7 +293,7 @@
   {%- for product in collections['all'].products -%}
     .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-    .{{ product.handle }} .card__heading::before {
+    .{{ product.handle }} .card__heading div::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
