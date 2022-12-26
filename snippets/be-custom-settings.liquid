@@ -119,9 +119,6 @@
     border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
     border-radius: 20px;
   }
-  .be-buttons-box .form__label {
-    display: none;
-  }
   .be-buttons-box .price--large {
     font-size: 1.6rem;
     line-height: calc(1 + .6 / var(--font-body-scale));
@@ -265,6 +262,10 @@
   }
   .complementary-products__container .card .card__content .quick-add {
     width: 100%;
+  }
+  .product__media-wrapper .slider-buttons,
+  .be-buttons-box .form__label {
+    display: none;
   }
   {% assign productCollections = product.collections | map: "handle" %}
     {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
