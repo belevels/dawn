@@ -354,11 +354,11 @@
   {%- endif -%}
   {% if product.metafields.Seccion.TextColor %}
     .{{ product.handle }} #MainContent > section:first-child {
-      background: linear-gradient(180deg, {{ customColor3 }}, {{ customColor2 }} 100%);
+      background: {{ customColor3 }};
     }
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section * {
+        .{{ product.handle }} #MainContent > section:first-child {
           --color-base-text: 255, 255, 255;
           --color-foreground: 255, 255, 255;
           --color-base-outline-button-labels: 255, 255, 255;
