@@ -335,7 +335,7 @@
       {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
       .{{ product.handle }} .product__info-container .product__description ul li::after,
       .{{ product.handle }} .highlight li:after,
-      #be-ecopack-add-to-cart-box .button {
+      .{{ product.handle }} #be-ecopack-add-to-cart-box .button {
         background-color: {{ customColor1 }};
       }
     {%- endif -%}
