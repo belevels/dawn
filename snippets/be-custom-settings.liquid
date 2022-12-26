@@ -254,9 +254,16 @@
   }
   .complementary-products__container .card.card--horizontal {
     align-items: center;
-    padding: 0;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
   }
-
+  .complementary-products__container .card .card__content {
+    margin-right: 2rem;
+  }
+  .complementary-products__container .card .card__content .quick-add {
+    max-width: 100%;
+    width: 100%;
+  }
   {% assign productCollections = product.collections | map: "handle" %}
     {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
       .{{ product.handle }} .header-wrapper,
