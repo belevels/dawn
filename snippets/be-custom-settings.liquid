@@ -27,16 +27,19 @@
     justify-content: flex-start !important;
     padding: 0 2rem;
   }
-  .button span {
+  .button span,
+  .quick-add__submit div {
     padding-right: 40px;
     margin-right: auto;
   }
   @media screen and (max-width: 749px) {
-    .button span {
+    .button span,
+    .quick-add__submit div {
       padding-right: 0;
     }
   }
-  .button span::after {
+  .button span::after,
+  .quick-add__submit div::after {
     content: '';
     width: 1.5rem;
     height: 1rem;
