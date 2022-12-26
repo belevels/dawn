@@ -142,7 +142,7 @@
       "settings": {
         "title": "Fórmulas maestras",
         "heading_size": "h0",
-        "description": "<p>Desarrolladas con cariño para ti.<\/p>",
+        "description": "<p>Desarrolladas con cariño para&nbsp;ti.<\/p>",
         "show_description": false,
         "description_style": "subtitle",
         "collection": "formulas-maestras",
