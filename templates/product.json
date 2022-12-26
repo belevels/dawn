@@ -146,7 +146,7 @@
         "show_description": false,
         "description_style": "subtitle",
         "collection": "formulas-maestras",
-        "products_to_show": 5,
+        "products_to_show": 25,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": true,
