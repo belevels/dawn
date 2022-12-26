@@ -11,7 +11,7 @@
     "colors_text": "#000000",
     "colors_outline_button_labels": "#000000",
     "colors_background_1": "#ffffff",
-    "gradient_background_1": "",
+    "gradient_background_1": "linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%)",
     "colors_background_2": "#fafaf8",
     "gradient_background_2": "",
     "type_header_font": "assistant_n4",
