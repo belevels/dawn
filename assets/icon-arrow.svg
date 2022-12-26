@@ -1,12 +1,10 @@
-<svg shape-rendering="crispEdges" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;shape-rendering: crispEdges;}
-</style>
-<g>
-	<path class="st0" d="M347.5,112.9c8.3-8.4,21.8-8.4,30.2-0.1l0,0.1l128,128c8.4,8.3,8.4,21.8,0.1,30.2l-0.1,0l-128,128
-		c-8.3,8.3-21.9,8.3-30.2,0c-8.3-8.3-8.3-21.9,0-30.2L460.5,256L347.5,143.1C339.2,134.8,339.2,121.3,347.5,112.9L347.5,112.9z"/>
-	<path class="st0" d="M0,256c0-11.8,9.6-21.3,21.3-21.3h448c11.8,0,21.3,9.6,21.3,21.3c0,11.8-9.6,21.3-21.3,21.3h-448
-		C9.6,277.3,0,267.8,0,256z"/>
-</g>
+<svg
+  viewBox="0 0 14 10"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  class="icon icon-arrow"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
 </svg>
