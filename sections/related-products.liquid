@@ -20,7 +20,18 @@
     }
   }
 {%- endstyle -%}
-
+{%- liquid
+  comment
+  Be Levels - start mod: Custom colors
+  endcomment
+  if request.page_type == "collection"
+    assign customClass = collection.handle | prepend: " "
+  elsif request.page_type == "product"
+    assign customClass = product.handle | prepend: " "
+    elsif request.page_type == "page"
+    assign customClass = page.handle | prepend: " "
+  endif
+-%}
 <div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden {{ customClass }}">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate"
