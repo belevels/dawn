@@ -366,12 +366,14 @@
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
           filter: invert(1);
         }
-        .{{ product.handle }} .be-buttons-box .price--large {
+        .{{ product.handle }} .be-buttons-box .price--large,
+        .collection .{{ product.handle }}.card--card {
           background-color: {{ customColor3 }};
         }
         .{{ product.handle }} .be-buttons-box .price--large,
         .{{ product.handle }} .be-buttons-box,
-        .{{ product.handle }} .card--card {
+        .{{ product.handle }} .card--card,
+        .collection .{{ product.handle }}.card--card {
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
     {% endif %}
