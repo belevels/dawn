@@ -275,7 +275,7 @@
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-product-url="{{ card_product.url }}"
                 >
-                  {{ 'products.product.choose_options' | t }}
+                  <span>{{ 'products.product.choose_options' | t }}</span>
                   {%- if horizontal_quick_add -%}
                     <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                   {%- endif -%}
