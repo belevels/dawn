@@ -308,7 +308,7 @@
     }
     .{{ product.handle }} #MainContent > section:first-child {
       background: linear-gradient(180deg, {{ customColor3 }}, rgba(255, 255, 255, 1) 100%);
-  }
+    }
     .{{ product.handle }} .be-buttons-box,
     .{{ product.handle }} .be-buttons-box .price--large,
     .{{ product.handle }} .card--card {
@@ -323,6 +323,9 @@
     }
   {%- endif -%}
   {% if product.metafields.Seccion.TextColor %}
+    .{{ product.handle }} #MainContent > section:first-child {
+      background: linear-gradient(180deg, {{ customColor3 }}, rgba(255, 255, 255, 0.5) 100%);
+    }
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
         .{{ product.handle }} #MainContent > section * {
