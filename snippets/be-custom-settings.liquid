@@ -8,8 +8,11 @@
     box-shadow: none !important;
     background: none !important;
   }
-  *:hover,
-  *::after:hover {
+  button:not([disabled]):hover::after, 
+  .button:not([disabled]):hover::after, 
+  .shopify-challenge__button:hover::after, 
+  .customer button:hover::after, 
+  .shopify-payment-button__button--unbranded:hover::after {
     box-shadow: none !important;
   }
   .product__title h1,
