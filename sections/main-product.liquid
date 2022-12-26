@@ -419,6 +419,19 @@
                   {%- render 'be-ecopack-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
                 </div>  
               </div>
+            {%- comment -%}
+              Be Levels - start mod: agregamos cantidad minima para Eco Pack
+            {%- endcomment -%}              
+            {%- when 'download-report' -%}
+              {%-liquid
+                assign urlContent = product.metafields.c_f.lookbook_description 
+                assign urlContent = urlContent | strip_html
+              -%}
+              {%- if urlContent != blank -%}
+                <a class="share-button__button full-unstyled-link" role="button" href="{{ urlContent }}" alt="{{ 'belevels.products.download_report' | t }}" download="{{ urlContent | split: '/' | last }}" target="_blank">
+                  {%- render 'icon-download' -%}&nbsp;{{ 'belevels.products.download_report' | t }}
+                </a>
+              {%- endif -%}  
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
@@ -1884,6 +1897,10 @@
       "type": "ecopack_quantity_selector",
       "name": "Eco Pack: Cantidad",
       "limit": 1
+    },
+    {
+      "type": "download-report",
+      "name": "Descargar reporte"
     }
   ],
   "settings": [
