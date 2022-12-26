@@ -201,8 +201,7 @@
             <div class="short-description text rte">
               {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
               <small>{{ shortDescription }}</small>
-            </div>
-          </div>            
+            </div>            
 
             {% render 'price', product: card_product, price_class: '' %}
           </div>
