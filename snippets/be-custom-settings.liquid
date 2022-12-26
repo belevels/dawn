@@ -298,7 +298,9 @@
   {%- endfor -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
-    .{{ product.handle }} .header-wrapper,
+    .{{ product.handle }} .header-wrapper {
+      background: transparent;
+    }
     .{{ product.handle }} #MainContent > section:first-child,
     .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .be-buttons-box,
