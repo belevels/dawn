@@ -323,16 +323,14 @@
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
-  {%- endfor -%}
+  
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child,
     .{{ product.handle }} #MainContent > section .product::after,
-
     .product-card-wrapper .{{ product.handle }}.card::after,
     product-recommendations .product-card-wrapper .{{ product.handle }}.card::after,
-
     .{{ product.handle }} .be-buttons-box,
     .{{ product.handle }} .accordion__content {
       --gradient-base-background-1: {{ customColor3 }};
@@ -386,4 +384,5 @@
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
     {% endif %}
+  {%- endfor -%}
 {% endstyle %}
