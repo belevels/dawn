@@ -442,5 +442,40 @@
       "copy_code_success": "El código se copió correctamente",
       "print_gift_card": "Imprimir"
     }
+  },
+  "belevels": {
+    "general": {
+      "all_right_reserved": "Todos los derechos reservados"
+    },
+    "products": {
+      "product_not_available_in": "Producto no disponible en",
+      "download_report": "Descargar informe",
+      "show_more": "Ver más",
+      "judge_section_title": "Opiniones de nuestros clientes"
+    },
+    "comparador": {
+      "review": "opinión",
+      "reviews": "opiniones",
+      "your_goal": "Tu Objetivo",
+      "why_is_it_unique": "Porqué es único",
+      "user_rating": "Valoración de los usuarios",
+      "when_to_use_it": "Cuándo usarlo",
+      "how_to_use_it": "Cómo usarlo",
+      "see_product": "Ver producto",
+      "based_on": "basado en"
+    },
+    "club": {
+      "for_you_belever": "Para tí #belever",
+      "hello": "Hola",
+      "you_have": "Dispones de",
+      "spend": "Canjear",
+      "earn": "Obtener",
+      "be_coin": " Be Coin",
+      "be_coins": " Be Coins",
+      "message": "Únete a nuestro programa de fidelidad, ahorra y disfruta de sus ventajas.",
+      "login": "Iniciar sesión",
+      "sign_in": "Crear cuenta",
+      "video_footer_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bd361fc64b5b4ad5bfeaf8f6e7134c17.mp4"
+    }
   }
 }
