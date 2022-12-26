@@ -355,27 +355,28 @@
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
       .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-      .{{ product.handle }} #MainContent > section:first-child .button {
+      .{{ product.handle }} #MainContent > section:first-child,
+      .collection .{{ product.handle }}.card .button {
         --color-base-text: 255, 255, 255;
         --color-link: rgba(var(--color-foreground),.75);
         --color-foreground: 255, 255, 255;
         --color-base-outline-button-labels: 255, 255, 255;
         color: rgba(var(--color-foreground),.75);
         fill: rgba(var(--color-foreground),.75);
-        }
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
-          filter: invert(1);
-        }
-        .{{ product.handle }} .be-buttons-box .price--large,
-        .collection .{{ product.handle }}.card .button {
-          background-color: {{ customColor3 }};
-        }
-        .{{ product.handle }} .be-buttons-box .price--large,
-        .{{ product.handle }} .be-buttons-box,
-        .{{ product.handle }} .card--card,
-        .collection .{{ product.handle }}.card .button {
-          border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
-        }
+      }
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
+        filter: invert(1);
+      }
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .collection .{{ product.handle }}.card .button {
+        background-color: {{ customColor3 }};
+      }
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .card--card,
+      .collection .{{ product.handle }}.card .button {
+        border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+      }
     {% endif %}
   {%- endfor -%}
 {% endstyle %}
