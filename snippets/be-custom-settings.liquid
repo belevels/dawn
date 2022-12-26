@@ -297,7 +297,7 @@
   {%- for product in collections['all'].products -%}
     .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-    .{{ product.handle }} .{{ product.handle }} .card__heading span::after {
+    .{{ product.handle }} .card__heading span::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
