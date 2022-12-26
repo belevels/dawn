@@ -139,13 +139,12 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
-        "heading": "You may also like",
+        "heading": "Inspirado en tu historial de navegación",
         "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "color_scheme": "background-2",
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
