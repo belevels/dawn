@@ -234,7 +234,7 @@
 
     #MainContent > section .product::after,
     .product__info-wrapper .product__title h1::after,
-    .product-card-wrapper .card::after,
+    .product-card-wrapper .card .card__media::after,
     product-recommendations .product-card-wrapper .card::after,
     .product-card-wrapper .card__heading span::after {
       content: '';
@@ -246,8 +246,8 @@
       mask-size: cover;
       background-color: rgba(var(--color-foreground),.75);
     }
-    .product-card-wrapper .card::after,
-    product-recommendations .product-card-wrapper .card::after,
+    .product-card-wrapper .card .card__media::after,
+    product-recommendations .product-card-wrapper .card .card__media::after,
     #MainContent > section .product::after {
       max-width: 50rem;
       max-height: 50rem;
@@ -257,8 +257,8 @@
       z-index: -3;
       opacity: .5;
     }
-    .product-card-wrapper .card::after,
-    product-recommendations .product-card-wrapper .card::after {
+    .product-card-wrapper .card .card__media::after,
+    product-recommendations .product-card-wrapper .card .card__media::after {
       width: 80%;
       height: 80%;
       opacity: .5;
@@ -270,7 +270,7 @@
         margin: -10rem 1.5rem 0;
       }
     }
-    product-recommendations .product-card-wrapper .card::after {
+    product-recommendations .product-card-wrapper .card .card__media::after {
       margin-top: 1.5rem;
       opacity: .125;
     }
@@ -322,8 +322,8 @@
   {%- for product in collections['all'].products -%}
     .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-    .product-card-wrapper .{{ product.handle }}.card::after,
-    product-recommendations .product-card-wrapper .{{ product.handle }}.card::after,
+    .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+    product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
     .product-card-wrapper .{{ product.handle }} .card__heading span::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
@@ -334,8 +334,8 @@
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child,
     .{{ product.handle }} #MainContent > section .product::after,
-    .product-card-wrapper .{{ product.handle }}.card::after,
-    product-recommendations .product-card-wrapper .{{ product.handle }}.card::after,
+    .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+    product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
     .{{ product.handle }} .be-buttons-box,
     .{{ product.handle }} .accordion__content {
       --gradient-base-background-1: {{ customColor3 }};
