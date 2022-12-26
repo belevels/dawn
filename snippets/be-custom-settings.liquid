@@ -230,7 +230,7 @@
   }
     #MainContent > section .product::after,
     .product__info-wrapper .product__title h1::after,
-    .card__heading span::after {
+    .product-card-wrapper .card__heading span::after {
       content: '';
       width: 3rem;
       height: 3rem;
@@ -249,7 +249,7 @@
       z-index: -3;
       opacity: .5;
     }
-    .card__heading span::after {
+    .product-card-wrapper .card__heading span::after {
       width: 1.75rem;
       height: 1.75rem;
     }    
@@ -297,7 +297,7 @@
   {%- for product in collections['all'].products -%}
     .{{ product.handle }} #MainContent > section .product::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-    product-recommendations .{{ product.handle }} .card__heading span::after {
+    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
