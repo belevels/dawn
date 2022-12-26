@@ -232,7 +232,7 @@
     z-index: 0;
   }
 
-    #MainContent > section .product .product__media-wrapper::before,
+    #MainContent > section .product .product__media-wrapper::after,
     .product__info-wrapper .product__title h1::after,
     .product-card-wrapper .card .card__media::after,
     product-recommendations .product-card-wrapper .card .card__media::after,
@@ -248,7 +248,7 @@
     }
     .product-card-wrapper .card .card__media::after,
     product-recommendations .product-card-wrapper .card .card__media::after,
-    #MainContent > section .product .product__media-wrapper::before {
+    #MainContent > section .product .product__media-wrapper::after {
       width: 90%;
       height: 90%;
       margin: 2rem 1.5rem;
@@ -318,7 +318,7 @@
     {% endif %}
   
   {%- for product in collections['all'].products -%}
-    .{{ product.handle }} #MainContent > section .product .product__media-wrapper::before,
+    .{{ product.handle }} #MainContent > section .product .product__media-wrapper::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
     .product-card-wrapper .{{ product.handle }}.card .card__media::after,
     product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
@@ -331,7 +331,7 @@
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} .header-wrapper,
     .{{ product.handle }} #MainContent > section:first-child,
-    .{{ product.handle }} #MainContent > section .product .product__media-wrapper::before,
+    .{{ product.handle }} #MainContent > section .product .product__media-wrapper::after,
     .product-card-wrapper .{{ product.handle }}.card .card__media::after,
     product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
     .{{ product.handle }} .be-buttons-box,
