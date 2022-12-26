@@ -3,10 +3,13 @@
   --buttons-border-offset: 0;
 }
   *:focus-visible {
-    outline: 0;
-    outline-offset: 0;
-    box-shadow: none;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
     background: none !important;
+  }
+  *:hover {
+    box-shadow: none !important;
   }
   .product__title h1,
   .product-card-wrapper .card__heading {
