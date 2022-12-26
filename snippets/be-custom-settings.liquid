@@ -342,7 +342,8 @@
     {%- endif -%}
     {% if product.metafields.Seccion.TextColor %}
       .{{ product.handle }} #MainContent > section:first-child,
-      .{{ product.handle }} #MainContent > section:first-child .card {
+      .{{ product.handle }} #MainContent > section:first-child .card,
+      .{{ product.handle }} #MainContent > section:first-child .quick-add__submit {
         background: {{ customColor3 }};
       }
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
