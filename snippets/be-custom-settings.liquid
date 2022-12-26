@@ -52,7 +52,7 @@
     right: 2rem;
     top: 1.5rem;
     transform: translateX(-0.25rem);
-    transition: transform.1s ease;
+    transition: transform 0.1s ease;
   }
   .complementary-products__container .quick-add__submit span::after {
     width: 1rem;
@@ -136,7 +136,6 @@
     background: rgb(var(--color-background));
     width: fit-content;
   }
-
   #be-add-to-cart-box,
   #be-ecopack-add-to-cart-box {
     display: flex;
@@ -236,43 +235,34 @@
   .product-card-wrapper .card {
     z-index: 0;
   }
-
-    #MainContent > section .product .product__media::after,
-    .product__info-wrapper .product__title h1::after,
-    .product-card-wrapper .card .card__media::after,
-    product-recommendations .product-card-wrapper .card .card__media::after,
-    .product-card-wrapper .card__heading span::after {
-      content: '';
-      width: 3rem;
-      height: 3rem;
-      margin-left: 0.25rem;
-      position: absolute;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: rgba(var(--color-foreground),.75);
-    }
-    .product-card-wrapper .card .card__media::after,
-    product-recommendations .product-card-wrapper .card .card__media::after,
-    #MainContent > section .product .product__media::after {
-      width: 80%;
-      height: 80%;
-      margin: 10%;
-      z-index: -3;
-      opacity: 0.75;
-      top: 0;
-    }/*
-    .product-card-wrapper .card .card__media::after,
-    product-recommendations .product-card-wrapper .card .card__media::after {
-      width: 80%;
-      height: 80%;
-      opacity: .5;
-      margin: 4rem;
-      opacity: .08;
-    }*/
-    .product-card-wrapper .card__heading span::after {
-      width: 1.75rem;
-      height: 1.75rem;
-    }    
+  #MainContent > section .product .product__media::after,
+  .product__info-wrapper .product__title h1::after,
+  .product-card-wrapper .card .card__media::after,
+  product-recommendations .product-card-wrapper .card .card__media::after,
+  .product-card-wrapper .card__heading span::after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.25rem;
+    position: absolute;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-foreground),.75);
+  }
+  .product-card-wrapper .card .card__media::after,
+  product-recommendations .product-card-wrapper .card .card__media::after,
+  #MainContent > section .product .product__media::after {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    z-index: -3;
+    opacity: 0.75;
+    top: 0;
+  }
+  .product-card-wrapper .card__heading span::after {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
   .product__info-container .product__description ul li i.fa-li,
   .fa-ul li br {
     display: none;
@@ -298,7 +288,7 @@
     margin-top: .75rem;
   }
   {% assign productCollections = product.collections | map: "handle" %}
-    {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
+  {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
       .{{ product.handle }} .header-wrapper,
       .{{ product.handle }} #MainContent > section,
       .{{ product.handle }} .be-buttons-box {
@@ -313,8 +303,7 @@
         background-color: rgba(214, 196, 186, 1);
       }
     {% endif %}
-  
-  {%- for product in collections['all'].products -%}
+    {%- for product in collections['all'].products -%}
     .{{ product.handle }} #MainContent > section .product .product__media::after,
     .{{ product.handle }} .product__info-wrapper .product__title h1::after,
     .product-card-wrapper .{{ product.handle }}.card .card__media::after,
@@ -323,57 +312,52 @@
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
-
-  {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
-    .{{ product.handle }} .header-wrapper,
-    .{{ product.handle }} #MainContent > section:first-child,
-    .{{ product.handle }} #MainContent > section .product .product__media::after,
-    .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-    product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-    .{{ product.handle }} .be-buttons-box,
-    .{{ product.handle }} .accordion__content {
-      --gradient-base-background-1: {{ customColor3 }};
-      background: {{ customColor3 }};
-    }
-    .{{ product.handle }} #MainContent > section:first-child {
-      background: linear-gradient(180deg, {{ customColor3 }}, rgba(255, 255, 255, 1) 100%);
-    }
-    .{{ product.handle }} .be-buttons-box,
-    .{{ product.handle }} .be-buttons-box .price--large,
-    .{{ product.handle }} .card--card {
-      border-color: {{ customColor3 }};
-    }
-  {%- endif -%}
-  {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-    {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
-    .{{ product.handle }} .product__info-container .product__description ul li::after,
-    .{{ product.handle }} .highlight li:after {
-      background-color: {{ customColor1 }};
-    }
-  {%- endif -%}
-  {% if product.metafields.Seccion.TextColor %}
-    .{{ product.handle }} #MainContent > section:first-child {
-      background: {{ customColor3 }};
-    }
+    {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+      {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+      .{{ product.handle }} .header-wrapper,
+      .{{ product.handle }} #MainContent > section:first-child,
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .accordion__content {
+        --gradient-base-background-1: {{ customColor3 }};
+        background: {{ customColor3 }};
+      }
+      .{{ product.handle }} #MainContent > section:first-child {
+        background: linear-gradient(180deg, {{ customColor3 }}, rgba(255, 255, 255, 1) 100%);
+      }
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .{{ product.handle }} .card--card {
+        border-color: {{ customColor3 }};
+      }
+    {%- endif -%}
+    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+      {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
+      .{{ product.handle }} .product__info-container .product__description ul li::after,
+      .{{ product.handle }} .highlight li:after {
+        background-color: {{ customColor1 }};
+      }
+    {%- endif -%}
+    {% if product.metafields.Seccion.TextColor %}
+      .{{ product.handle }} #MainContent > section:first-child {
+        background: {{ customColor3 }};
+      }
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
       .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
-        .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section:first-child {
-          --color-base-text: 255, 255, 255;
-          --color-foreground: 255, 255, 255;
-          --color-base-outline-button-labels: 255, 255, 255;
-          color: rgba(var(--color-foreground),.75);
-          fill: rgba(var(--color-foreground),.75);
+      .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
+      .{{ product.handle }} #MainContent > section:first-child {
+        --color-base-text: 255, 255, 255;
+        --color-link: rgba(var(--color-foreground),.75);
+        --color-foreground: 255, 255, 255;
+        --color-base-outline-button-labels: 255, 255, 255;
+        color: rgba(var(--color-foreground),.75);
+        fill: rgba(var(--color-foreground),.75);
         }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
           filter: invert(1);
-        }
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector {
-          --color-base-text: 255, 255, 255;
-          --color-foreground: 255, 255, 255;
-          --color-link: 255, 255, 255;
-          --color-base-outline-button-labels: 255, 255, 255;
         }
         .{{ product.handle }} .be-buttons-box .price--large {
           background-color: {{ customColor3 }};
@@ -384,5 +368,5 @@
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
     {% endif %}
-  {%- endfor -%}    
+  {%- endfor -%}
 {% endstyle %}
