@@ -327,7 +327,7 @@
       -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     }
-  {%- endfor -%}
+
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
     .{{ product.handle }} .header-wrapper,
@@ -388,4 +388,5 @@
           border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
         }
     {% endif %}
+  {%- endfor -%}    
 {% endstyle %}
