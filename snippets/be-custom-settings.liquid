@@ -333,7 +333,7 @@
       .{{ product.handle }} .be-buttons-box,
       .{{ product.handle }} .be-buttons-box .price--large,
       .{{ product.handle }} .card--card,
-      .{{ product.handle }} #be-ecopack-add-to-cart-box .button {
+      .collection .{{ product.handle }} .card--card {
         border-color: {{ customColor3 }};
       }
     {%- endif -%}
@@ -369,7 +369,6 @@
         .{{ product.handle }} .be-buttons-box .price--large {
           background-color: {{ customColor3 }};
         }
-        .{{ product.handle }} #be-ecopack-add-to-cart-box .button,
         .{{ product.handle }} .be-buttons-box .price--large,
         .{{ product.handle }} .be-buttons-box,
         .{{ product.handle }} .card--card {
