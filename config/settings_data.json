@@ -22,7 +22,7 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 12,
     "spacing_grid_vertical": 12,
-    "buttons_border_thickness": 1,
+    "buttons_border_thickness": 2,
     "buttons_border_opacity": 55,
     "buttons_radius": 40,
     "buttons_shadow_opacity": 0,
