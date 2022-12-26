@@ -435,5 +435,40 @@
       "copy_code_success": "Code copied successfully",
       "print_gift_card": "Print"
     }
+  },
+  "belevels": {
+    "general": {
+      "all_right_reserved": "All right reserved"
+    },
+    "products": {
+      "product_not_available_in": "Product not available in",
+      "download_report": "Download report",
+      "show_more": "See more",
+      "judge_section_title": "Feedback from our customers"
+    },
+    "comparador": {
+      "review": "review",
+      "reviews": "reviews",
+      "your_goal": "Your goal",
+      "why_is_it_unique": "Why is it unique",
+      "user_rating": "Users rating",
+      "when_to_use_it": "When to use it",
+      "how_to_use_it": "How to use it",
+      "see_product": "See product",
+      "based_on": "based on"
+    },
+    "club": {
+      "for_you_belever": "For you #belever",
+      "hello": "Hi",
+      "you_have": "You have",
+      "spend": "Spend",
+      "earn": "Earn",
+      "be_coin": "Be Coin",
+      "be_coins": "Be Coins",
+      "message": "Join our loyalty program, save and enjoy its benefits.",
+      "login": "Log in",
+      "sign_in": "Sign in",
+      "video_footer_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af5fb7d7a6c74c16a4a7a7bf9f89d701.mp4"
+    }
   }
 }
