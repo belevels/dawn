@@ -197,6 +197,13 @@
               </p>
             {%- endif -%}
 
+            {%- comment -%}Be Levels - start mod: Agregamos descripción corta e info adicional para el comparador{%- endcomment -%}
+            <div class="short-description text rte">
+              {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
+              <small>{{ shortDescription }}</small>
+            </div>
+          </div>            
+
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
