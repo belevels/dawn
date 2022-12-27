@@ -3011,10 +3011,10 @@ details-disclosure > details {
 .be-box .quantity,
 .be-box .product-form__input input[type="radio"] + label {
   flex-basis: 100%;
-}
-.be-box .product-form__input input[type="radio"] > label:nth-child(2),
-.be-box .product-form__input input[type="radio"] > label:nth-child(4) { 
   margin-right: 0;
+}
+.be-box .product-form__input input[type="radio"] + label:first-of-type {
+  margin-right: 0.5rem;
 }
 .be-add-to-cart-box > div {
   width: 100%;
