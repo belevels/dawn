@@ -65,7 +65,6 @@
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-        {%- assign ecopack_product_form_id = 'ecopack-product-form' | append: section.id -%}
 
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -76,7 +75,7 @@
                 class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                 {{ block.shopify_attributes }}
               >
-                {{- block.settings.text | strip_html -}} 
+                {{- block.settings.text -}}
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
@@ -97,7 +96,7 @@
                 -%}
               </div>
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                <div class="product__tax caption rte visually-hidden">
+                <div class="product__tax caption rte">
                   {%- if shop.taxes_included -%}
                     {{ 'products.product.include_taxes' | t }}
                   {%- endif -%}
@@ -200,7 +199,7 @@
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                 {{ block.shopify_attributes }}
               >
-                <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
+                <label class="form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                 </label>
 
@@ -212,7 +211,7 @@
                     {% render 'icon-minus' %}
                   </button>
                   <input
-                    class="quantity__input" 
+                    class="quantity__input"
                     type="number"
                     name="quantity"
                     id="Quantity-{{ section.id }}"
@@ -378,62 +377,7 @@
               {% render 'icon-with-text',
                 block: block
               %}
-            {%- comment -%}
-              Be Levels - start mod: agregamos cantidad minima para Eco Pack
-            {%- endcomment -%}
-            {%- when 'ecopack_quantity_selector' -%}
-              <div id="be-ecopack-add-to-cart-box" class="be-add-to-cart-box">
-                <div
-                  class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
-                    {{ 'products.product.quantity.label' | t }}
-                  </label>
-
-                  <quantity-input class="quantity">
-                    <button class="quantity__button no-js-hidden" name="minus" type="button">
-                      <span class="visually-hidden">
-                        {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                      </span>
-                      {% render 'icon-minus' %}
-                    </button>
-                    <input
-                      class="quantity__input" 
-                      type="number"
-                      name="quantity"
-                      id="EcoPack-Quantity-{{ section.id }}"
-                      min="2"
-                      value="2"
-                      form="{{ ecopack_product_form_id }}"
-                    >
-                    <button class="quantity__button no-js-hidden" name="plus" type="button">
-                      <span class="visually-hidden">
-                        {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                      </span>
-                      {% render 'icon-plus' %}
-                    </button>
-                  </quantity-input>
-                </div>
-                <div>
-                  {%- render 'be-ecopack-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
-                </div>  
-              </div>
-            {%- comment -%}
-              Be Levels - start mod: agregamos cantidad minima para Eco Pack
-            {%- endcomment -%}              
-            {%- when 'download-report' -%}
-              {%-liquid
-                assign urlContent = product.metafields.c_f.lookbook_description 
-                assign urlContent = urlContent | strip_html
-              -%}
-              {%- if urlContent != blank -%}
-                <a class="share-button__button full-unstyled-link" role="button" href="{{ urlContent }}" alt="{{ 'belevels.products.download_report' | t }}" download="{{ urlContent | split: '/' | last }}" target="_blank">
-                  {%- render 'icon-download' -%}&nbsp;{{ 'belevels.products.download_report' | t }}
-                </a>
-              {%- endif -%}  
-              {%- comment -%}Be Levels - end mod{%- endcomment -%}
-            {%- endcase -%}
+          {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
@@ -1892,15 +1836,6 @@
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
         }
       ]
-    },
-    {
-      "type": "ecopack_quantity_selector",
-      "name": "Eco Pack: Cantidad",
-      "limit": 1
-    },
-    {
-      "type": "download-report",
-      "name": "Descargar reporte"
     }
   ],
   "settings": [

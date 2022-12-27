@@ -141,7 +141,6 @@
 :root,
 .color-icon-text {
   --color-icon: rgb(var(--color-base-text));
-  --color-icon: rgb(var(--color-foreground));
 }
 
 .color-icon-accent-1 {
@@ -316,7 +315,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 1);
+  color: rgba(var(--color-foreground), 0.75);
   background-color: rgb(var(--color-background));
 }
 
@@ -432,21 +431,18 @@ h5,
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4.2rem);
-  font-weight: 100;
-  line-height: 1;
+  font-size: calc(var(--font-heading-scale) * 4rem);
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 7.2rem);
+    font-size: calc(var(--font-heading-scale) * 5.2rem);
   }
 }
 
 h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
-  font-weight: 100;
 }
 
 @media only screen and (min-width: 750px) {
@@ -459,7 +455,6 @@ h1,
 h2,
 .h2 {
   font-size: calc(var(--font-heading-scale) * 2rem);
-  font-weight: 100;
 }
 
 @media only screen and (min-width: 750px) {
@@ -1978,7 +1973,6 @@ input[type='checkbox'] {
   color: rgba(var(--color-foreground));
   position: relative;
   width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
-  width: calc(13rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
@@ -2968,4 +2962,3 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
-/* Be Levels - start mod */
