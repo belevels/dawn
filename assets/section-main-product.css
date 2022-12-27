@@ -1564,7 +1564,7 @@ a.product__text {
     transform: scaleX(-1);
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: rgba(var(--color-foreground),.75);
+    background-color: rgba(var(--color-foreground), 0.75);
   }
   .highlight li svg {
     display: inline-block;
@@ -1579,7 +1579,7 @@ a.product__text {
   }
   .product__info-container .product__description ul li::after,
   .highlight li:after {
-    background-color: rgb(var(--color-base-accent-2));
+    background-color: rgba(var(--color-base-accent-2), 0.52);
     content: '';
     display: inline-block;
     width: 1.875rem;
@@ -1592,7 +1592,6 @@ a.product__text {
     top: 2px;
     position: absolute;
     z-index: 0;
-    opacity: .5;
   }
   .product-card-wrapper .card {
     z-index: 0;
