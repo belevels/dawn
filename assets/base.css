@@ -421,26 +421,25 @@ h5,
   word-break: break-word;
 }
 
-.h0,
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 6.2rem);
-  font-weight: 100;
+  font-size: calc(var(--font-heading-scale) * 5rem);
 }
 
 @media only screen and (min-width: 750px) {
-  .h0,
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 9.2rem);
+    font-size: calc(var(--font-heading-scale) * 6.2rem);
   }
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: calc(var(--font-heading-scale) * 6.5rem);
+  font-weight: 100;
+  line-height: calc(.7 + .3/max(1,var(--font-heading-scale)));
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: calc(var(--font-heading-scale) * 9.5rem);
   }
 }
 
