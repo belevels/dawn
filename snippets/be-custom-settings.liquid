@@ -269,7 +269,7 @@
   }
   {%- for product in collections['all'].products -%}
 
-    {% capture svgIcon %}{% render {{ product.handle | append: '.svg' | asset_url }} %}{% endcapture %}
+    {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
     {% unless svgIcon contains "Liquid error" %}
 
     
