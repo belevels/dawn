@@ -267,6 +267,7 @@
     font-weight: 100;
     margin-top: .75rem;
   }
+  {%- comment -%}
   {%- for product in collections['all'].products -%}
 
     {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
@@ -326,7 +327,7 @@
     {% endif %}
   {% endunless %}
   {%- endfor -%}
-  {%- comment -%}
+  
   {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
       .{{ product.handle }} .header-wrapper,
