@@ -1,5 +1,8 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/logo_web.webp",
+    "logo_width": 120,
+    "favicon": "shopify:\/\/shop_images\/versus.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -126,6 +129,7 @@
             "type": "announcement",
             "settings": {
               "text": "Welcome to our store",
+              "text_alignment": "center",
               "color_scheme": "background-1",
               "link": ""
             }
@@ -143,8 +147,13 @@
           "color_scheme": "background-1",
           "logo_position": "middle-left",
           "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
-          "margin_bottom": 0
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 20,
+          "padding_bottom": 20
         }
       },
       "footer": {
@@ -185,6 +194,7 @@
           "enable_country_selector": true,
           "enable_language_selector": true,
           "payment_enable": true,
+          "show_policy": false,
           "margin_top": 48,
           "padding_top": 36,
           "padding_bottom": 36
@@ -202,7 +212,10 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
