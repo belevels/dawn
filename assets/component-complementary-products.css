@@ -112,6 +112,8 @@ product-recommendations.is-accordion + .accordion {
 .complementary-products__container .card--horizontal .quick-add {
   margin: 0;
   max-width: 20rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 .complementary-products__container .quick-add__submit {
