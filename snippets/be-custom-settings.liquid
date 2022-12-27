@@ -297,6 +297,7 @@
     font-weight: 100;
     margin-top: .75rem;
   }
+  {%- comment -%}
   {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
       .{{ product.handle }} .header-wrapper,
@@ -389,4 +390,5 @@
       }
     {% endif %}
   {%- endfor -%}
+  {%- endcomment -%}
 {% endstyle %}
