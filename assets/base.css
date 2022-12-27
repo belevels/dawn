@@ -2988,8 +2988,11 @@ details-disclosure > details {
   margin: 0;
   display: flex;
 }
-.be-add-to-cart-box .product-form__input--dropdown {
+.be-box .product-form__input--dropdown {
   flex-grow: 1;
+}
+.be-box .product-form__input input[type="radio"] + label {
+  flex-basis: 100%;
 }
 .be-add-to-cart-box div:not(.product-form__input) {
   width: 100%;
@@ -2997,4 +3000,3 @@ details-disclosure > details {
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
-.product-form__input input[type="radio"] + label {}
