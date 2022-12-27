@@ -3009,6 +3009,7 @@ details-disclosure > details {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-base-background-1);
+  display: flex;
 }
 @media screen and (min-width: 990px) {
   .be-box .product-form__input,
