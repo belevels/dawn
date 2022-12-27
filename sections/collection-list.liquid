@@ -68,7 +68,8 @@
             {% render 'card-collection', 
               card_collection: block.settings.collection,
               media_aspect_ratio: section.settings.image_ratio,
-              columns: columns
+              columns: columns,
+              horizontal_quick_add : true
             %}
           </li>
         {%- endfor -%}
