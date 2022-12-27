@@ -3012,7 +3012,7 @@ details-disclosure > details {
 .be-box .product-form__input input[type="radio"] + label {
   flex-basis: 100%;
   margin-right: 0;
-}
+} 
 .be-box .product-form__input input[type="radio"] > label:nth-child(1),
 .be-box .product-form__input input[type="radio"] > label:nth-child(3),
 .be-box .product-form__input input[type="radio"] > label:nth-child(5) {
