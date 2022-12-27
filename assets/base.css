@@ -2972,3 +2972,10 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+/* Be Levels - start mod */
+/* custom boxes */
+.be-add-to-cart-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
