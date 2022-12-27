@@ -3012,14 +3012,14 @@ details-disclosure > details {
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
-.be-box > div:first-child {
+.be-box > div.price--large {
   font-size: 2rem;
   width: fit-content;
   position: absolute;
   top: -1.5rem;
   padding: 0 1rem;border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
   border-radius: 40px;
-  background-color: var(--color-base-background-1);
+  background-color: rgb(var(--color-base-background-1));
 }
 .be-box .product .price__container {
   margin-bottom: 0;
