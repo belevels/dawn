@@ -78,10 +78,17 @@
             "page": ""
           }
         },
-        "share": {
-          "type": "share",
+        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5": {
+          "type": "complementary",
           "settings": {
-            "share_label": "Share"
+            "block_heading": "Combínalo con",
+            "make_collapsible_row": true,
+            "icon": "heart",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
           }
         }
       },
@@ -97,7 +104,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
       ],
       "settings": {
         "enable_sticky_info": true,
