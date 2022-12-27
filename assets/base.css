@@ -3019,7 +3019,6 @@ details-disclosure > details {
 }
 .be-add-to-cart-box > div {
   width: 100%;
-  max-width: 37rem;
   min-width: fit-content;
 }
 .product__info-container .be-add-to-cart-box .product-form {
