@@ -1318,6 +1318,10 @@ button.shopify-payment-button__button--unbranded {
   margin-left: auto !important;
 }
 
+modal-opener .icon-wrap .icon-arrow {
+  transform: rotate(-33deg);
+}
+
 .shopify-payment-button__button--branded {
   z-index: auto;
 }
