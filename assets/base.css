@@ -1315,7 +1315,7 @@ button.shopify-payment-button__button--unbranded {
 
 .button .icon-wrap,
 .card .icon-wrap {
-  margin-left: 4rem;
+  margin-left: 4rem !important;
 }
 
 .shopify-payment-button__button--branded {
