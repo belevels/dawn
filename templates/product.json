@@ -53,7 +53,7 @@
             "block_heading": "Combínalo con",
             "make_collapsible_row": true,
             "icon": "heart",
-            "product_list_limit": 3,
+            "product_list_limit": 10,
             "products_per_page": 1,
             "pagination_style": "dots",
             "image_ratio": "square",
