@@ -3006,7 +3006,7 @@ details-disclosure > details {
 }
 .be-box .product-form__input,
 .be-add-to-cart-box .product-form__input {
-  display: flex;
+  /*display: flex;*/
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-base-background-1);
