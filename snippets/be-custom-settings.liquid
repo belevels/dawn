@@ -1,0 +1,425 @@
+{%- comment -%}
+{% style %}
+:root {
+  --buttons-border-offset: 0;
+}
+  :focus-visible {
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+  }
+  button:not([disabled]):hover::after, 
+  .button:not([disabled]):hover::after, 
+  .shopify-challenge__button:hover::after, 
+  .customer button:hover::after, 
+  .shopify-payment-button__button--unbranded:hover::after {
+    box-shadow: none !important;
+  }
+  .product__title h1,
+  .product-card-wrapper .card__heading {
+    font-family: "Cy Black", {{ settings.type_header_font.family}}, {{ settings.type_header_font.fallback_families}}
+  }
+  .shopify-section-header-sticky.scrolled-past-header .header-wrapper {
+    background: var(--gradient-background);    
+    background: rgb(var(--color-background));
+    border-bottom:.1rem solid rgba(var(--color-foreground),.08);
+  } 
+  /* Button - default */
+  .button,
+  .shopify-challenge__button,
+  .customer button,
+  button.shopify-payment-button__button--unbranded,
+  .shopify-payment-button [role="button"],
+  .cart__dynamic-checkout-buttons [role='button'],
+  .cart__dynamic-checkout-buttons iframe,
+  .complementary-products__container .quick-add__submit {
+    font-family: "DM Sans", {{ settings.type_body_font.family}}, {{ settings.type_body_font.fallback_families}} !important;
+    justify-content: flex-start !important;
+    padding: 0 2rem;
+  }
+  .button span,
+  .quick-add__submit div {
+    padding-right: 40px;
+    margin-right: auto;
+  }
+  @media screen and (max-width: 749px) {
+    .button span,
+    .quick-add__submit div {
+      padding-right: 0;
+    }
+  }
+  .button span::after,
+  .quick-add__submit div::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-mask: url({{ 'icon-arrow.svg' | asset_url}}) no-repeat 100% 100%;
+    mask: url({{ 'icon-arrow.svg' | asset_url}}) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-background),.85);
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    transform: translateX(-0.25rem);
+    transition: transform 0.1s ease;
+  }
+  .complementary-products__container .quick-add__submit span::after {
+    top: 1rem;
+  }
+  .button:hover span::after {
+    transform: translateX(-0.05rem);
+  }
+  .button--primary:hover::after {
+    box-shadow: none !important;
+  }
+  .button--secondary span::after {
+    background-color: rgba(var(--color-foreground),.85);
+  }
+  .complementary-products__container .quick-add__submit {
+    padding: 1rem 2rem !important;
+  }
+  .global-media-settings {
+    background-color: rgba(var(--color-background), 0);
+  }
+  .localization-selector + .disclosure__list-wrapper {
+    top: 100% !important;
+    bottom: unset !important;
+    right: 20px !important;
+    margin: 1rem 0 0 !important;
+  }
+  .localization-selector {
+    font-size: 1.125rem;
+    color: rgba(var(--color-foreground),0.57);
+    border-radius: 40px;
+    background: var(--color-background);
+    width: calc(3rem - 1px);
+    height: calc(3rem - 1px);
+    cursor: pointer;
+    border: 0.1rem solid rgba(var(--color-foreground),0.57);
+    position: absolute;
+    top: calc(-1rem - 1px);
+    left: calc(-3rem - 1px);
+    text-align: center;
+  }
+  @media screen and (max-width: 749px) {
+    .localization-selector {
+      left: calc(-4rem - 1px);
+    }
+  }
+  .localization-selector:hover {
+    color: rgba(var(--color-foreground),1);
+    border-color: rgba(var(--color-foreground),1);
+    letter-spacing: 1.05px !important;
+    transform: scale(1.05);
+    transition: transform .1s ease;
+  }
+  @media screen and (min-width: 750px) and (max-width: 964px) {
+    .product__info-wrapper--extra-padding {
+      padding: 0 0 0 2rem !important;
+    }
+  }
+  .product__title *,
+  .product-card-wrapper .card__heading,
+  #be-buttons-box .accordion__title {
+    font-weight: 700;
+  }
+  .product__text.subtitle {
+    margin: 0 auto 3rem;
+  }
+  .be-buttons-box {
+    padding: 1rem;
+    border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+    border-radius: 20px;
+  }
+  .be-buttons-box .price--large {
+    font-size: 1.6rem;
+    line-height: calc(1 + .6 / var(--font-body-scale));
+    letter-spacing: .13rem;
+    margin: -2.5rem 1rem 1.5rem;
+    padding: 0.5rem 1.5rem 0;
+    border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    background: rgb(var(--color-background));
+    width: fit-content;
+  }
+  #be-add-to-cart-box,
+  #be-ecopack-add-to-cart-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+  #be-add-to-cart-box div,
+  #be-ecopack-add-to-cart-box div,
+  .be-buttons-box .product-form__input {
+    width: 100%;
+    max-width: 100%;
+  }
+  #be-buttons-box .accordion {
+  margin-top: 1rem;
+  border: 0;
+  }
+  #be-buttons-box .accordion__content {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem 2rem;
+    border-radius: 20px;
+  }
+  #be-buttons-box .accordion summary {
+    padding: 0;
+  }
+  .complementary-products .accordion {
+    margin: 0;
+  }
+  .be-buttons-box .product-form__input input[type="radio"] + label {
+    width: calc(50% - 2rem);
+    margin-left: 1rem;
+  }
+  #be-add-to-cart-box .product-form,
+  #be-ecopack-add-to-cart-box .product-form,
+  #be-add-to-cart-box .product-form__quantity,
+  #be-ecopack-add-to-cart-box  .product-form__quantity {
+    margin: 0 0.25rem;
+    flex: 0;
+  }
+  /* bullet points */
+  .product__info-container .product__description ul,
+  .highlight {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+  }
+  .product__info-container .product__description ul li,
+  .highlight li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .product__info-container .product__description ul li::before {
+    content: '';
+    display: inline-block;
+    height: 1.5rem;
+    width: 2rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.5rem;
+    left: -0.5rem;
+    opacity: 1;
+    margin-right: 1rem;
+    z-index: 2;
+    transform: scaleX(-1);
+    -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
+    mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-foreground),.75);
+  }
+  .highlight li svg {
+    display: inline-block;
+    height: 1.875rem;
+    width: 1.875rem;
+    position: relative;
+    top: 0;
+    left: .5rem;
+    opacity: 1;
+    margin-right: 1rem;
+    z-index: 1;
+  }
+  .product__info-container .product__description ul li::after,
+  .highlight li:after {
+    content: '';
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 1rem;
+    left: 0;
+    top: 2px;
+    position: absolute;
+    z-index: 0;
+    opacity: .5;
+  }
+  .product-card-wrapper .card {
+    z-index: 0;
+  }
+  .product__info-container .product__description ul li i.fa-li,
+  .fa-ul li br {
+    display: none;
+  }
+  .complementary-products__container .card.card--horizontal {
+    align-items: center;
+  }
+  .complementary-products__container .card .card__content {
+    margin-right: 2rem;
+  }
+  .complementary-products__container .card .card__content .quick-add {
+    width: 100%;
+  }
+  .product__media-wrapper .slider-buttons,
+  .be-buttons-box .form__label {
+    display: none;
+  }
+  .collection__description.subtitle {
+    font-size: 2.8rem;
+    line-height: calc(1 + 0 / var(--font-body-scale));
+    color: rgba(var(--color-foreground),1);
+    font-weight: 100;
+    margin-top: .75rem;
+  }
+  
+  {%- for product in collections['all'].products -%}
+
+    {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+    {% unless svgIcon contains "Liquid error" %}
+
+    
+
+    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+      /*
+      #MainContent > section .product .product__media::after,
+  .product__info-wrapper .product__title h1::after,
+  .product-card-wrapper .card .card__media::after,
+  product-recommendations .product-card-wrapper .card .card__media::after,
+  .product-card-wrapper .card__heading span::after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.25rem;
+    position: absolute;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-foreground),.75);
+  }
+  .product-card-wrapper .card .card__media::after,
+  product-recommendations .product-card-wrapper .card .card__media::after,
+  #MainContent > section .product .product__media::after {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    z-index: -3;
+    top: 0;
+  }
+  .product-card-wrapper .card__heading span::after {
+    width: 1.75rem;
+    height: 1.75rem;
+  }*/
+  /*
+  .product-card-wrapper .card .card__media::after {
+    opacity: 0.75;
+  }*/
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0.25rem;
+        position: absolute;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: rgba(var(--color-foreground),.75);        
+        -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+        mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+      }
+    {% endif %}
+  {% endunless %}
+  {%- endfor -%}
+  
+  {% assign productCollections = product.collections | map: "handle" %}
+  {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
+      .{{ product.handle }} .header-wrapper,
+      .{{ product.handle }} #MainContent > section,
+      .{{ product.handle }} .be-buttons-box {
+        background-color: rgba(214, 196, 186, 0.5);
+      }
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .be-buttons-box .price--large {
+        border-color: rgba(214, 196, 186, 1);
+      }
+      .{{ product.handle }} .product__info-container .product__description ul li::after,
+      .{{ product.handle }} .highlight li:after {
+        background-color: rgba(214, 196, 186, 1);
+      }
+    {% endif %}
+    {%- for product in collections['all'].products -%}
+    .{{ product.handle }} #MainContent > section .product .product__media::after,
+    .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+    .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+    product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+      -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+      mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+    }
+    {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+      {%- assign customColor3 = product.metafields.Seccion.CustomColor3 -%}
+      .{{ product.handle }} .header-wrapper,
+      .{{ product.handle }} #MainContent > section:first-child,
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      .collection .{{ product.handle }}.card .button,      
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .accordion__content {
+        --gradient-base-background-1: {{ customColor3 }};
+        background: {{ customColor3 }};
+      }
+      .{{ product.handle }} #MainContent > section:first-child,
+      .{{ product.handle }}.card--card {
+        background: linear-gradient(180deg, {{ customColor3 }}, rgba(255, 255, 255, 1) 100%);
+      
+      }
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .{{ product.handle }}.card--card,
+      .collection .{{ product.handle }}.card--card {
+        border-color: {{ customColor3 }};
+      }
+    {%- endif -%}
+    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+      {%- assign customColor1 = product.metafields.Seccion.CustomColor1 -%}
+      .{{ product.handle }} .product__info-container .product__description ul li::after,
+      .{{ product.handle }} .highlight li:after,
+      .{{ product.handle }} #be-ecopack-add-to-cart-box .button {
+        background-color: {{ customColor1 }};
+      }
+    {%- endif -%}
+    {% if product.metafields.Seccion.TextColor %}
+      .{{ product.handle }} #MainContent > section:first-child,
+      .{{ product.handle }} #MainContent > section:first-child .card,
+      .{{ product.handle }} #MainContent > section:first-child .quick-add__submit {
+        background: {{ customColor3 }};
+      }
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
+      .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
+      .{{ product.handle }} #MainContent > section:first-child,
+      .collection .{{ product.handle }}.card .button {
+        --color-base-text: 255, 255, 255;
+        --color-link: rgba(var(--color-foreground),.75);
+        --color-foreground: 255, 255, 255;
+        --color-base-outline-button-labels: 255, 255, 255;
+        color: rgba(var(--color-foreground),.75);
+        fill: rgba(var(--color-foreground),.75);
+      }
+      .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
+        filter: invert(1);
+      }
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .collection .{{ product.handle }}.card .button {
+        background-color: {{ customColor3 }};
+      }
+      .{{ product.handle }} .be-buttons-box .price--large,
+      .{{ product.handle }} .be-buttons-box,
+      .{{ product.handle }} .card--card,
+      .collection .{{ product.handle }}.card .button {
+        border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+      }
+    {% endif %}
+  {%- endfor -%}
+  {%- endcomment -%}
+{% endstyle %}
