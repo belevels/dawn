@@ -3010,7 +3010,7 @@ details-disclosure > details {
   margin-right: auto;
   background-color: var(--color-base-background-1);
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1120px) {
   .be-box .product-form__input,
   .be-add-to-cart-box .product-form__input {
   display: flex;
