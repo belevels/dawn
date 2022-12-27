@@ -2982,6 +2982,6 @@ details-disclosure > details {
 .be-add-to-cart-box .product-form__input {
   flex: 0;
 }
-.be-add-to-cart-box .product-form {
-  margin: 0;
+.product__info-container .be-add-to-cart-box .product-form {
+  margin: 0 0 0 0.5rem;
 }
