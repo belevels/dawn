@@ -38,7 +38,7 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
     {% comment %}
-      Be Levels - start mod: agregamos fuentes y estilos básicos pesonalizados
+      Be Levels - start mod: agregamos fuentes, estilos básicos pesonalizados y be-custom-settings
     {% endcomment %}
     {% style %}
       @font-face {
@@ -325,6 +325,9 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    {% render 'be-custom-settings' %}
+    {% comment %}Be Levels - end mod {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
