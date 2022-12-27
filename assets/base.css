@@ -2980,7 +2980,7 @@ details-disclosure > details {
   box-sizing: border-box;
   border-radius: 20px;
   border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
-  padding: 2.5rem;
+  padding: calc(3.5rem - var(--product-card-border-width) * 2);
 }
 .be-add-to-cart-box {
 /*  display: flex;
