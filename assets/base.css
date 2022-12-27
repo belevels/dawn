@@ -2995,6 +2995,7 @@ details-disclosure > details {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--color-base-background-1);
 }
 .be-box .product-form__input--dropdown,
 .be-box .quantity,
@@ -3018,6 +3019,7 @@ details-disclosure > details {
   top: -1.5rem;
   padding: 0 1rem;border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
   border-radius: 40px;
+  background-color: var(--color-base-background-1);
 }
 .be-box .product .price__container {
   margin-bottom: 0;
