@@ -2975,8 +2975,8 @@ details-disclosure > details {
 /* Be Levels - start mod */
 /* custom boxes */
 .be-add-to-cart-box {
-  display: flex;
-  flex-direction: row;
+/*  display: flex;
+  flex-direction: row;*/
   margin-top: 1rem;
 }
 .be-box .form__label {
@@ -2994,8 +2994,10 @@ details-disclosure > details {
 .be-box .product-form__input input[type="radio"] + label {
   flex-basis: 100%;
 }
-.be-add-to-cart-box div:not(.product-form__input) {
+.be-add-to-cart-box div {
   width: 100%;
+  max-width: 37rem;
+  min-width: fit-content;
 }
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
