@@ -1,6 +1,7 @@
 {
   "current": {
-    "logo_width": 120,
+    "logo": "shopify:\/\/shop_images\/logo-belevels_ee84f8b5-81e4-47e8-8f30-446580d11ff8.png",
+    "logo_width": 150,
     "favicon": "shopify:\/\/shop_images\/versus.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
@@ -122,8 +123,9 @@
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_cart_note": true,
-    "checkout_logo_position": "left",
-    "checkout_logo_size": "medium",
+    "checkout_header_image": "shopify:\/\/shop_images\/logo-belevels_ee84f8b5-81e4-47e8-8f30-446580d11ff8.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
     "checkout_sidebar_background_color": "#f7f7f7",
     "checkout_accent_color": "#334fb4",
     "checkout_button_color": "#000000",
