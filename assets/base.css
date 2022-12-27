@@ -3006,10 +3006,15 @@ details-disclosure > details {
 }
 .be-box .product-form__input,
 .be-add-to-cart-box .product-form__input {
-  /*display: flex;*/
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-base-background-1);
+}
+@media screen and (min-width: 989px) {
+  .be-box .product-form__input,
+  .be-add-to-cart-box .product-form__input {
+  display: flex;
+  }
 }
 .be-add-to-cart-box .product-form__quantity {
   flex: 0;
