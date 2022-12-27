@@ -2986,6 +2986,9 @@ details-disclosure > details {
   flex: 0;
   margin: 0;
 }
+.be-add-to-cart-box .product-form__input--dropdown {
+  flex-grow: 1;
+}
 .be-add-to-cart-box div:not(.product-form__input) {
   width: 100%;
 }
