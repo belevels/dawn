@@ -2981,6 +2981,7 @@ details-disclosure > details {
 }
 .be-add-to-cart-box .product-form__input {
   flex: 0;
+  margin: 0;
 }
 .be-add-to-cart-box div:not(.product-form__input) {
   width: 100%;
