@@ -3013,7 +3013,7 @@ details-disclosure > details {
   flex-basis: 100%;
   margin-right: 0;
 }
-.be-box .product-form__input input[type="radio"] > label:nth-child(1) {
+.be-box .product-form__input input[type="radio"] > label:nth-child(1) { 
   margin-right: 0.5rem;
 }
 .be-add-to-cart-box > div {
