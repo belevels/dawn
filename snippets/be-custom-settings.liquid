@@ -264,7 +264,6 @@
     height: 80%;
     margin: 10%;
     z-index: -3;
-    opacity: 0.75;
     top: 0;
   }
   .product-card-wrapper .card__heading span::after {
@@ -385,5 +384,19 @@
         border: 0.1rem solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
       }
     {% endif %}
+{%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
+{%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
+{%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+<h2>Colores<h/2>
+<ul>
+  <li>customColor1: {{ customColor1 }}</li>
+  <li>customColor2: {{ customColor2 }}</li>
+  <li>customColor3: {{ customColor3 }}</li>
+</ul>
+
+{% assign rgb2 = rgb | color_to_hex | color_modify: 'alpha', 0.125 %}
+<h1>RGB to HEX = {{ rgb2 }}</h1>
+
+
   {%- endfor -%}
 {% endstyle %}
