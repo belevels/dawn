@@ -2974,6 +2974,12 @@ details-disclosure > details {
 }
 /* Be Levels - start mod */
 /* custom boxes */
+.be-box {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid rgba(var(--color-foreground),var(--border-opacity));
+}
 .be-add-to-cart-box {
 /*  display: flex;
   flex-direction: row;*/
