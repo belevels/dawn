@@ -2974,7 +2974,6 @@ details-disclosure > details {
 }
 /* Be Levels - start mod */
 /* custom boxes */
-.be-box,
 .be-add-to-cart-box {
   display: flex;
   flex-direction: row;
