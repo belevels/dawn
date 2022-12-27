@@ -2,6 +2,7 @@
   "sections": {
     "12824c19-77a9-4586-a40d-22d887d3f4e0": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}\n{%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}\n{%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}\n<h2>Colores<h\/2>\n<ul>\n  <li>customColor1: {{ customColor1 }}<\/li>\n  <li>customColor2: {{ customColor2 }}<\/li>\n  <li>customColor3: {{ customColor3 }}<\/li>\n<\/ul>",
         "color_scheme": "background-1",
