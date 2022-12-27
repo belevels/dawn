@@ -1313,6 +1313,10 @@ button.shopify-payment-button__button--unbranded {
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
 }
 
+.button .wrap-icon {
+  margin-left: 4rem;
+}
+
 .shopify-payment-button__button--branded {
   z-index: auto;
 }
