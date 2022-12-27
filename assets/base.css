@@ -3011,6 +3011,14 @@ details-disclosure > details {
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
+.be-box .price--large {
+  font-size: 2rem;
+  width: fit-content;
+  position: absolute;
+  top: -1.5rem;
+  padding: 0 1rem;border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
+  border-radius: 40px;
+}
 .be-box .product .price__container {
   margin-bottom: 0;
 }
