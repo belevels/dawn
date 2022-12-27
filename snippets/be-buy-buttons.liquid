@@ -44,7 +44,7 @@
           <button
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %} animate-arrow"
+            class="product-form__submit button button--full-width button--secondary animate-arrow"
             {% if product.selected_or_first_available_variant.available == false %}
               disabled
             {% endif %}
@@ -69,9 +69,6 @@
               </svg>
             </div>
           </button>
-          {%- if block.settings.show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
         </div>
       {%- endform -%}
     </product-form>
