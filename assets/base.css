@@ -2980,7 +2980,7 @@ details-disclosure > details {
   flex-direction: row;
   margin-top: 1rem;
 }
-.be-add-to-cart-box .form__label {
+.be-box .form__label {
   display: none;
 }
 .be-add-to-cart-box .product-form__input {
