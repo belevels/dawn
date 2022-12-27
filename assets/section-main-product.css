@@ -173,6 +173,7 @@ variant-selects {
 
 .product-form__input--dropdown {
   margin-bottom: 1.6rem;
+  display: flex;
 }
 
 .product-form__input .form__label {
