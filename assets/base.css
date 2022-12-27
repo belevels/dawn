@@ -2985,6 +2985,7 @@ details-disclosure > details {
 .be-add-to-cart-box .product-form__input {
   flex: 0;
   margin: 0;
+  display: flex;
 }
 .be-add-to-cart-box .product-form__input--dropdown {
   flex-grow: 1;
@@ -2995,3 +2996,4 @@ details-disclosure > details {
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
+.product-form__input input[type="radio"] + label {}
