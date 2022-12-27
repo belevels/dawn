@@ -2979,3 +2979,9 @@ details-disclosure > details {
   flex-direction: row;
   margin-top: 1rem;
 }
+.be-add-to-cart-box .product-form__input {
+  flex: 0;
+}
+.be-add-to-cart-box .product-form {
+  margin: 0;
+}
