@@ -3021,6 +3021,6 @@ details-disclosure > details {
   border-radius: 40px;
   background-color: rgb(var(--color-base-background-1)); 
 }
-.be-box .product .product .price__container {
+.be-box .price .price__container {
   margin-bottom: 0;
 }
