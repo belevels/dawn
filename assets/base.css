@@ -2999,6 +2999,9 @@ details-disclosure > details {
   margin-right: auto;
   background-color: var(--color-base-background-1);
 }
+.be-add-to-cart-box .product-form__quantity {
+  flex: 0;
+}
 .be-box .product-form__input--dropdown,
 .be-box .quantity,
 .be-box .product-form__input input[type="radio"] + label {
