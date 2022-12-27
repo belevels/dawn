@@ -2981,13 +2981,13 @@ details-disclosure > details {
   box-sizing: border-box;
   border-radius: 20px;
   border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
-  padding: calc(3.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2);
+  padding: calc(3.5rem - var(--product-card-border-width) * 2);
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
 }
 @media screen and (max-width:989px) {
   .be-box {
-    padding: calc(3.5rem - var(--product-card-border-width) * 2);
+    padding: calc(3.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2);
   }
 }
 .be-add-to-cart-box {
