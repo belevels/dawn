@@ -34,7 +34,7 @@
         "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=2be-add-to-cart-box\">"
+            "custom_liquid": "<div class=\"be-add-to-cart-box\">"
           }
         },
         "quantity_selector": {
