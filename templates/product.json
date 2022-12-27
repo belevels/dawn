@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "0084fd30-a48b-42cc-ad8c-222e0b527cda": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -58,6 +63,7 @@
       },
       "block_order": [
         "title",
+        "0084fd30-a48b-42cc-ad8c-222e0b527cda",
         "caption",
         "price",
         "variant_picker",
