@@ -1000,6 +1000,10 @@ summary::-webkit-details-marker {
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
+  font-size: 3.8rem;
+  line-height: calc(.2 + .8 / var(--font-body-scale));
+  color: rgba(var(--color-foreground),1);
+  font-weight: 100;
 }
 
 .subtitle--small {
