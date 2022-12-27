@@ -2982,7 +2982,7 @@ details-disclosure > details {
 .be-add-to-cart-box .product-form__input {
   flex: 0;
 }
-.be-add-to-cart-box .product-form__input > div:first-child {
+.be-add-to-cart-box .product-form__input > div:nth-child(2) {
   width: 100%;
 }
 .product__info-container .be-add-to-cart-box .product-form {
