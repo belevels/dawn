@@ -2991,7 +2991,8 @@ details-disclosure > details {
 .be-box .product-form__input,
 .be-add-to-cart-box .product-form__input {
   display: flex;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .be-box .product-form__input--dropdown,
 .be-box .quantity,
@@ -3002,7 +3003,8 @@ details-disclosure > details {
   width: 100%;
   max-width: 37rem;
   min-width: fit-content;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
