@@ -123,7 +123,6 @@
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_cart_note": true,
-    "checkout_header_image": "shopify:\/\/shop_images\/logo-belevels.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_sidebar_background_color": "#f7f7f7",
