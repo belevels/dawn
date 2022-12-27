@@ -243,7 +243,33 @@
   .product-card-wrapper .card {
     z-index: 0;
   }
-  #MainContent > section .product .product__media::after,
+  .product__info-container .product__description ul li i.fa-li,
+  .fa-ul li br {
+    display: none;
+  }
+  .complementary-products__container .card.card--horizontal {
+    align-items: center;
+  }
+  .complementary-products__container .card .card__content {
+    margin-right: 2rem;
+  }
+  .complementary-products__container .card .card__content .quick-add {
+    width: 100%;
+  }
+  .product__media-wrapper .slider-buttons,
+  .be-buttons-box .form__label {
+    display: none;
+  }
+  .collection__description.subtitle {
+    font-size: 2.8rem;
+    line-height: calc(1 + 0 / var(--font-body-scale));
+    color: rgba(var(--color-foreground),1);
+    font-weight: 100;
+    margin-top: .75rem;
+  }
+  {%- for product in collections['all'].products -%}
+    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+      #MainContent > section .product .product__media::after,
   .product__info-wrapper .product__title h1::after,
   .product-card-wrapper .card .card__media::after,
   product-recommendations .product-card-wrapper .card .card__media::after,
@@ -273,30 +299,17 @@
     width: 1.75rem;
     height: 1.75rem;
   }
-  .product__info-container .product__description ul li i.fa-li,
-  .fa-ul li br {
-    display: none;
-  }
-  .complementary-products__container .card.card--horizontal {
-    align-items: center;
-  }
-  .complementary-products__container .card .card__content {
-    margin-right: 2rem;
-  }
-  .complementary-products__container .card .card__content .quick-add {
-    width: 100%;
-  }
-  .product__media-wrapper .slider-buttons,
-  .be-buttons-box .form__label {
-    display: none;
-  }
-  .collection__description.subtitle {
-    font-size: 2.8rem;
-    line-height: calc(1 + 0 / var(--font-body-scale));
-    color: rgba(var(--color-foreground),1);
-    font-weight: 100;
-    margin-top: .75rem;
-  }
+  
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+        -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+        mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+      }
+    {% endif %}
+  {%- endfor -%}
   {%- comment -%}
   {% assign productCollections = product.collections | map: "handle" %}
   {% if productCollections contains 'esenciales' or productCollections contains 'essentials' %} 
