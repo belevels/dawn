@@ -3012,7 +3012,7 @@ details-disclosure > details {
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
-.be-box .price--large {
+.be-box > div:first-child {
   font-size: 2rem;
   width: fit-content;
   position: absolute;
