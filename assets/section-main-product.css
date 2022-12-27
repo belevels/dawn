@@ -1562,8 +1562,6 @@ a.product__text {
     margin-right: 1rem;
     z-index: 2;
     transform: scaleX(-1);
-    -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
-    mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: rgba(var(--color-foreground),.75);
