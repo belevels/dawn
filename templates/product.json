@@ -20,15 +20,15 @@
             "text_style": "subtitle"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
           }
         },
         "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
@@ -77,8 +77,8 @@
         "title",
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
         "caption",
-        "price",
         "variant_picker",
+        "price",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
         "buy_buttons",
