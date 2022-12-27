@@ -1579,6 +1579,7 @@ a.product__text {
   }
   .product__info-container .product__description ul li::after,
   .highlight li:after {
+    background-color: rgb(var(--color-base-accent-2));
     content: '';
     display: inline-block;
     width: 1.875rem;
