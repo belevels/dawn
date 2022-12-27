@@ -171,9 +171,12 @@ variant-selects {
   display: block;
 }
 
+variant-selects {
+  display: flex;
+}
+
 .product-form__input--dropdown {
   margin-bottom: 1.6rem;
-  display: flex;
 }
 
 .product-form__input .form__label {
