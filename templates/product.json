@@ -60,6 +60,11 @@
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
+        "72d76219-e839-4f9c-9867-fbd424124b07": {
+          "type": "ecopack_quantity_selector",
+          "settings": {
+          }
+        },
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
@@ -96,6 +101,7 @@
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "72d76219-e839-4f9c-9867-fbd424124b07",
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
