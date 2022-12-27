@@ -3011,6 +3011,7 @@ details-disclosure > details {
 .be-box .product-form__input--dropdown,
 .be-box .quantity {
   flex-basis: 100%;
+  margin-right: 0;
 }
 .be-box .product-form__input input[type="radio"] > label:nth-child(1) { 
   margin-right: 0.5rem;
@@ -3038,6 +3039,4 @@ details-disclosure > details {
   .be-box {
     padding: calc(3.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2);
   }
-  .be-box .product-form__input input[type="radio"] + label {
-    margin-right: 0;}
 }
