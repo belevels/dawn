@@ -118,7 +118,7 @@
 {%- assign headerTransparentIn = 'product' %}
 {% if template == headerTransparentIn and section.settings.transparent_header %}
   {% style %}
-    {%- if section.settings.content_color != blank -%}
+    {%- comment -%}
     .template-index .site-header-transparent .header__icon,
     .template-index .site-header-transparent .header__menu-item span, 
     .template-index .site-header-transparent .header__menu-item svg, 
@@ -127,7 +127,7 @@
       color: {{ section.settings.content_color }};
       border-color: {{ section.settings.content_color }};
     }
-    {%- endif -%}
+    {%- endcomment -%}
     .template-index #MainContent > .section:first-of-type {
       padding-top: 9.4rem; /* ugly */
     }
