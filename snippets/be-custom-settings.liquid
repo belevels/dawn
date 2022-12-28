@@ -35,7 +35,7 @@ opacity: 0.75;
 .{{ product.handle }} .global-media-settings {
   background-color: transparent;
 }
-.{{ product.handle }} .product__title h1::after {
+.{{ product.handle }} .product__titlex h1::after {
   background-color: pink;/*rgba(var(--color-foreground),.75);*/
 }
   .{{ product.handle }} #MainContent > section .product .product__media::after,
@@ -50,7 +50,7 @@ opacity: 0.75;
     position: absolute;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: pink;/*rgba(var(--color-foreground),.75);*/
+    background-color: rgba(var(--color-foreground),.75);
     -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
   }
