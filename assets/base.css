@@ -2989,8 +2989,5 @@ details-disclosure > details {
   font-weight: 100;
 }
 #HeaderLanguageForm {
-  top: 100% !important;
-  bottom: unset !important;
-  right: 20px !important;
-  margin: 1rem 0 0 !important;
+  margin: 0;
 }
