@@ -6,6 +6,7 @@ slider-component {
 
 slider-component.slider-component-full-width {
   --desktop-margin-left-first-item: 1.5rem;
+  --desktop-margin-left-first-item: 3rem;
 }
 
 @media screen and (max-width: 749px) {
