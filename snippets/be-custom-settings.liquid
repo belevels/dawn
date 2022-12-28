@@ -32,7 +32,7 @@
   {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank -%}
     {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-    {% assign customColorRgba3 = customColor3 | color_to_hex | color_modify: 'alpha', 0.13 %}
+    {% assign customColorRgba3 = customColor3 | color_to_hex | color_modify: 'alpha', 1 %}
     .{{ product.handle }} #MainContent > section {
       background-color: {{ customColorRgba3 }};
     }
