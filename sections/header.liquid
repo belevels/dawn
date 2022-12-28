@@ -838,13 +838,10 @@
     }
   </script>
 {%- endif -%}
-  {%- comment -%}
-    Be Levels - start mod: agregamos site-header-transparent, summary id="header-menu"
-  {%- endcomment -%}
-
-
-
-
+{%- comment -%}
+  Be Levels - start mod: agregamos headerTransparentIn, nnevos estilos y scripts
+{%- endcomment -%}
+{%- assign headerTransparentIn = 'product' %}
 {% if template == headerTransparentIn and section.settings.transparent_header %}
 {% style %}
   .template-index .site-header-transparent .header__icon,
