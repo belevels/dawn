@@ -11,7 +11,7 @@
 
 
 
-{%- if product.metafields.Seccion.CustomColor1 != blank -%}
+
 
   #MainContent > section .product .product__media::after,
 .product__info-wrapper .product__title h1::after,
@@ -51,7 +51,7 @@ opacity: 0.75;
     -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
   }
-{% endif %}
+
 {% endunless %}
 {%- endfor -%}
 
