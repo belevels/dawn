@@ -6,7 +6,6 @@ slider-component {
 
 slider-component.slider-component-full-width {
   --desktop-margin-left-first-item: 1.5rem;
-  --desktop-margin-left-first-item: 3rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -167,8 +166,8 @@ slider-component.slider-component-full-width {
   }
 
   .slider--desktop .slider__slide:first-child {
-    margin-left: var(--desktop-margin-left-first-item);
-    scroll-margin-left: var(--desktop-margin-left-first-item);
+    margin-left: calc(var(--desktop-margin-left-first-item) + 1.5rem);
+    scroll-margin-left: calc(var(--desktop-margin-left-first-item) + 1.5rem);
   }
 
   .slider-component-full-width .slider--desktop {
