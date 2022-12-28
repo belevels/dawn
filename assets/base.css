@@ -2988,6 +2988,8 @@ details-disclosure > details {
   color: rgba(var(--color-foreground),1);
   font-weight: 100;
 }
-#HeaderLanguageForm {
+#HeaderLanguageForm,
+.header__icons localization-form {
   margin: 0;
+  padding: 0;
 }
