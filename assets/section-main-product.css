@@ -1523,6 +1523,12 @@ a.product__text {
   width: 100%;
   min-width: fit-content;
 }
+.be-add-to-cart-box .product__accordion {
+  border: 0;
+}
+.be-add-to-cart-box .product__accordion summary {
+  padding: 0;
+}
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
 }
