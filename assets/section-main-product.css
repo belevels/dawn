@@ -1525,6 +1525,13 @@ a.product__text {
 }
 .be-box .product__accordion {
   border: 0;
+  margin-top: 1rem;
+}
+#be-buttons-box .accordion__content {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin: 1rem 1rem 2rem;
+  border-radius: 20px;
 }
 .be-box .product__accordion summary {
   padding: 0;
