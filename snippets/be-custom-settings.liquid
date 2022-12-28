@@ -3,61 +3,63 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-{%- for product in collections['all'].products -%}
-  {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
-  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-  {% unless svgIconUrl contains 'Liquid error' %}
-    .{{ product.handle }} .global-media-settings {
-        background-color: transparent;
+{% for product in collections.all.products %}
+  {% for collection in product.collections %}
+    {% if collection.title == 'Fórmulas maestras' %} 
+      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
+      {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+        .{{ product.handle }} .global-media-settings {
+            background-color: transparent;
+          }
+          .{{ product.handle }} .product-card-wrapper .card__heading span {
+            width: fit-content;
+            margin-right: 0.25rem;
+          }
+          .{{ product.handle }} #MainContent > section .product .product__media::after,
+          .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+          .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+            content: '';
+            position: absolute;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: rgba(var(--color-foreground),.125);
+            -webkit-mask: url({{ svgIcon }}) no-repeat 100% 100%;
+            mask: url({{ svgIcon }}) no-repeat 100% 100%;
+          }
+      {% endif %}
+    {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
+    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+      {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
+      {% assign customColorRgba1 = customColor1 | color_to_hex %}
+      .{{ product.handle }} .be-box,
+      .{{ product.handle }} .product__accordion .accordion__content,
+      .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
+      .{{ product.handle }} .product__info-container .product__description ul li::after, 
+      .{{ product.handle }} .highlight li::after {
+        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
-      .{{ product.handle }} .product-card-wrapper .card__heading span {
-        width: fit-content;
-        margin-right: 0.25rem;
+      .{{ product.handle }} .slider-counter__link--dots .dot {
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-        content: '';
-        position: absolute;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: rgba(var(--color-foreground),.125);
-        -webkit-mask: url({{ svgIcon }}) no-repeat 100% 100%;
-        mask: url({{ svgIcon }}) no-repeat 100% 100%;
+    {%- endif -%}
+    {%- if product.metafields.Seccion.CustomColor2 != blank -%}
+      {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
+      {% assign customColorRgba2 = customColor2 | color_to_hex %}    
+      .{{ product.handle }} .product__info-container .product__description ul li::before {
+        background-color: {{ customColorRgba2 }};
       }
-  {% endunless %}
-  {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
-  {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-    {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-    {% assign customColorRgba1 = customColor1 | color_to_hex %}
-    .{{ product.handle }} .be-box,
-    .{{ product.handle }} .product__accordion .accordion__content,
-    .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
-    .{{ product.handle }} .product__info-container .product__description ul li::after, 
-    .{{ product.handle }} .highlight li::after {
-      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
-    }
-    .{{ product.handle }} .slider-counter__link--dots .dot {
-      border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
-    }
-  {%- endif -%}
-  {%- if product.metafields.Seccion.CustomColor2 != blank -%}
-    {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-    {% assign customColorRgba2 = customColor2 | color_to_hex %}    
-    .{{ product.handle }} .product__info-container .product__description ul li::before {
-      background-color: {{ customColorRgba2 }};
-    }
-  {%- endif -%}
-  {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-    {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-    {% assign customColorRgba3 = customColor3 | color_to_hex %}
-    .{{ product.handle }} #MainContent > section {
-      background-color: {{ customColorRgba3 }};
-      background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
-    }
-  {%- endif -%}    
+    {%- endif -%}
+    {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+      {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+      {% assign customColorRgba3 = customColor3 | color_to_hex %}
+      .{{ product.handle }} #MainContent > section {
+        background-color: {{ customColorRgba3 }};
+        background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
+      }
+    {%- endif -%}    
+  {%- endfor -%}
 {%- endfor -%}
 {%- comment -%}
 :root {
