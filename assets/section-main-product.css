@@ -1573,7 +1573,7 @@ a.product__text {
     vertical-align: middle;
     position: relative;
     top: -0.5rem;
-    left: -0.5rem;
+    left: 0.25rem;
     opacity: 1;
     margin-right: 1rem;
     z-index: 2;
