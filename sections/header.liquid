@@ -137,11 +137,14 @@
   </symbol>
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+  {%- comment -%}
+    Be Levels - start mod: agregamos site-header-transparent, summary id="header-menu"
+  {%- endcomment -%}
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %} {% if section.settings.transparent_header %}site-header-transparent{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
-          <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+          <summary id="header-menu" class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
               {% render 'icon-close' %}
@@ -309,7 +312,10 @@
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
-      <details-modal class="header__search">
+      {%- comment -%}
+        Be Levels - start mod: agregamos id="header-search"
+      {%- endcomment -%}
+      <details-modal id="header-search" class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -555,19 +561,18 @@
     {%- endif -%}
 
     <div class="header__icons">
-      {%- liquid
-        comment
-        Be Levels - start mod
-        Duplicamos el selector de idiomas en el header
-        endcomment
-      -%}
+      {%- comment -%}
+        Be Levels - start mod: Duplicamos el selector de idiomas en el header
+      {%- endcomment -%}
       {%- liquid
         if section.settings.enable_language_selector_in_header and localization.available_languages.size > 1
           render 'be-selector-idioma'
         endif
       -%}
-      {%- comment -%}Be Levels - end mod{%- endcomment -%}
-      <details-modal class="header__search">
+      {%- comment -%}
+        Be Levels - start mod: agregamos id="header-search"
+      {%- endcomment -%}
+      <details-modal id="header-search" class="header__search">      
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -833,11 +838,81 @@
     }
   </script>
 {%- endif -%}
+  {%- comment -%}
+    Be Levels - start mod: agregamos site-header-transparent, summary id="header-menu"
+  {%- endcomment -%}
 
+
+
+
+{% if template == 'index' and section.settings.transparent_header %}
+{% style %}
+  .template-index .site-header-transparent .header__icon, .template-index .site-header-transparent .header__menu-item span, .template-index .site-header-transparent .header__menu-item svg, .template-index .site-header-transparent .header__active-menu-item {
+    color: {{ section.settings.content_color }};
+  }
+  .site-header-transparent {
+    background: transparent;
+    position: absolute;
+    border: none;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .site-header-transition {
+      margin-top: var(--header-height);
+  }
+{% endstyle %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var headerHeight = document.getElementById('site-header').offsetHeight;
+    document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
+  });
+  window.onscroll = function() {
+    var header = document.getElementById('site-header');
+    var main = document.getElementById('MainContent');
+    var height = document.getElementById('site-header').offsetHeight;
+    if ( window.pageYOffset > height ) {
+      header.classList.remove('site-header-transparent');
+      main.classList.add('site-header-transition');
+    } else {
+      header.classList.add('site-header-transparent');
+      main.classList.remove('site-header-transition');
+    }
+  }
+  document.getElementById("header-menu").addEventListener('click',function () {
+    var sideMenu = document.getElementById('Details-menu-drawer-container');
+    var header = document.getElementById('site-header');
+    var height = document.getElementById('site-header').offsetHeight;
+    if ( window.pageYOffset < height ) {
+    if (!sideMenu.classList.contains('menu-opening')) {
+      header.classList.remove('site-header-transparent');
+    } else {
+      header.classList.add('site-header-transparent');
+    }
+    }
+  });
+  document.getElementById("header-search").addEventListener('click',function () {
+    var search = document.getElementById('template-index');
+    var header = document.getElementById('site-header');
+    var main = document.getElementById('MainContent');
+    var height = document.getElementById('site-header').offsetHeight;
+    if ( window.pageYOffset < height ) {
+      if (search.classList.contains('overflow-hidden')) {
+        header.classList.remove('site-header-transparent');
+        main.classList.add('site-header-transition');
+      } else {
+        header.classList.add('site-header-transparent');
+        main.classList.remove('site-header-transition');
+      }
+    }
+  });
+</script>
+{% endif %}
 {%- liquid
   comment
   Be Levels - start mod
-  Agregamos enable_language_selector_in_header, logo_svg y custom_url
+  Agregamos enable_language_selector_in_header, logo_svg, custom_url, transparent_header, content_color
   endcomment
 -%}
 {% schema %}
@@ -975,6 +1050,21 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "header",
+      "content": "Transparent Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "transparent_header",
+      "label": "Enable transparent header",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Change icon & text color"
     },
     {
       "type": "header",
