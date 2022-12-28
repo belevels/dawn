@@ -43,7 +43,9 @@
   {%- if product.metafields.Seccion.CustomColor2 != blank -%}
     {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
     {% assign customColorRgba2 = customColor2 | color_to_hex %}
-    .{{ product.handle }} .be-box {
+    .{{ product.handle }} .be-box,
+    .{{ product.handle }} .product__info-container .product__description ul li::after, 
+    .{{ product.handle }} .highlight li::after {
       background-color: {{ customColorRgba2 | color_modify: 'alpha', 0.125 }};
     }
     .{{ product.handle }} .product__info-container .product__description ul li::before {
