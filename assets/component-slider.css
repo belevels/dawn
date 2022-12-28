@@ -166,8 +166,8 @@ slider-component.slider-component-full-width {
   }
 
   .slider--desktop .slider__slide:first-child {
-    margin-left: calc(var(--desktop-margin-left-first-item) + 1.5rem);
-    scroll-margin-left: calc(var(--desktop-margin-left-first-item) + 1.5rem);
+    margin-left: calc(var(--desktop-margin-left-first-item) - 1.5rem);
+    scroll-margin-left: calc(var(--desktop-margin-left-first-item) - 1.5rem);
   }
 
   .slider-component-full-width .slider--desktop {
