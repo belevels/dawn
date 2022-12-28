@@ -32,7 +32,7 @@
   {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
   {%- if product.metafields.Seccion.CustomColor3 != blank-%}
     {%- liquid      
-    capture customColor1 {{ product.metafields.Seccion.CustomColor1 }}
+    capture customColor3 {{ product.metafields.Seccion.CustomColor3 }}
     endcapture
     assign customColorRgba3 = customColor1 | color_to_rgb | color_modify: 'alpha', 0.125
     -%}
