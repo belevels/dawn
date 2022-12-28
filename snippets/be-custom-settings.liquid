@@ -3,11 +3,11 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-
 {%- for product in collections['all'].products -%}
   {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
   {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-  {% unless svgIcon contains "Liquid error" %}
+  {% assign svgIcon2 = svgIcon | downcase %}
+  {% unless svgIcon2 contains "not found" %}
     .{{ product.handle }} .global-media-settings {
         background-color: transparent;
       }
