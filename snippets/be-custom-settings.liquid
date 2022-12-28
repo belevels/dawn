@@ -51,7 +51,7 @@ product-recommendations .product-card-wrapper .card__headingx {
     position: absolute;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: rgba(var(--color-foreground),.75);
+    background-color: rgba(var(--color-foreground),.125);
     -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
   }
@@ -503,7 +503,6 @@ product-recommendations .product-card-wrapper .card__headingx {
     margin: 10%;
     z-index: -3;
     top: 0;
-    opacity: 0.125;
   }
   .product-card-wrapper .card__heading span::after {
     width: 1.75rem;
