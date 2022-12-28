@@ -347,11 +347,20 @@
     </script>
   </head>
   {%- comment -%}
-    Be Levels - start mod: agregamos header transparente en productos
+    Be Levels - start mod: agregamos headerTransparentIn, customClass
   {%- endcomment -%}
-  {%- assign headerTransparentIn = 'product' %}
+  {%- liquid
+    assign headerTransparentIn = 'product'
+    if request.page_type == "collection"
+      assign customClass = collection.handle | prepend: " "
+    elsif request.page_type == "product"
+      assign customClass = product.handle | prepend: " "
+      elsif request.page_type == "page"
+      assign customClass = page.handle | prepend: " "
+    endif
+  -%}
   
-  <body {% if template == headerTransparentIn %}id="template-index"{% endif %} class="gradient {% if template == headerTransparentIn %}template-index{% endif %}">
+  <body {% if template == headerTransparentIn %}id="template-index"{% endif %} class="gradient{% if template == headerTransparentIn %} template-index{% endif %}{% if customClass != blank %} customClass{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
