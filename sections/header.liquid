@@ -121,8 +121,10 @@
     .template-index .site-header-transparent .header__icon,
     .template-index .site-header-transparent .header__menu-item span, 
     .template-index .site-header-transparent .header__menu-item svg, 
-    .template-index .site-header-transparent .header__active-menu-item {
+    .template-index .site-header-transparent .header__active-menu-item,
+    #HeaderLanguageForm .localization-selector {
       color: {{ section.settings.content_color }};
+      border-color: {{ section.settings.content_color }};
     }
     .template-index #MainContent > .section:first-of-type {
       padding-top: 9.4rem; /* ugly */
