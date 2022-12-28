@@ -396,21 +396,36 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-          <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
-              {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-              {{ settings.logo | image_url: width: 500 | image_tag:
-                class: 'header__heading-logo motion-reduce',
-                widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                height: logo_height,
-                width: settings.logo_width,
-                alt: logo_alt
-              }}
-            {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
-            {%- endif -%}
-          </a>
+      {%- liquid
+        comment
+        Be Levels - start mod
+        Agregamos logo_svg y url segun idioma
+        endcomment
+      -%}
+      {%- if section.settings.logo_svg == true -%}
+        {%- render 'be-logo-svg' -%}
+      {%- else -%}
+        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+          {%- if settings.logo != blank -%}
+            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+            {{ settings.logo | image_url: width: 500 | image_tag:
+              class: 'header__heading-logo motion-reduce',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: settings.logo_width,
+              alt: logo_alt
+            }}
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>      
+      {%- endif -%}
+      {%- liquid
+        comment
+        Be Levels - end mod
+        endcomment 
+      -%}
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
@@ -540,6 +555,18 @@
     {%- endif -%}
 
     <div class="header__icons">
+      {%- liquid
+        comment
+        Be Levels - start mod
+        Duplicamos el selector de idiomas en el header
+        endcomment
+      -%}
+      {%- liquid
+        if section.settings.enable_language_selector_in_header and localization.available_languages.size > 1
+          render 'be-selector-idioma'
+        endif
+      -%}
+      {%- comment -%}Be Levels - end mod{%- endcomment -%}
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -807,6 +834,12 @@
   </script>
 {%- endif -%}
 
+{%- liquid
+  comment
+  Be Levels - start mod
+  Agregamos enable_language_selector_in_header, logo_svg y custom_url
+  endcomment
+-%}
 {% schema %}
 {
   "name": "t:sections.header.name",
@@ -871,6 +904,24 @@
       ],
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector_in_header",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_svg",
+      "default": true,
+      "label": "Usar versión svg del logo"
+    },
+    {
+      "type": "text",
+      "id": "custom_url",
+      "label": "Url personalizada en el logo",
+      "info": "Incluir https://"
     },
     {
       "type": "link_list",
