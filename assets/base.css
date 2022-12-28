@@ -2993,7 +2993,7 @@ details-disclosure > details {
   padding: 0;
 }
 #HeaderLanguageForm .localization-selector {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   margin-right: 1rem;
   background: var(--color-background);
   border-radius: 40px;
