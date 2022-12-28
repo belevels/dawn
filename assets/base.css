@@ -2988,3 +2988,9 @@ details-disclosure > details {
   color: rgba(var(--color-foreground),1);
   font-weight: 100;
 }
+#HeaderLanguageForm {
+  top: 100% !important;
+  bottom: unset !important;
+  right: 20px !important;
+  margin: 1rem 0 0 !important;
+}
