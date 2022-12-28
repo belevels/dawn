@@ -3000,3 +3000,9 @@ details-disclosure > details {
   cursor: pointer;
   border: 0.1rem groove rgba(var(--color-foreground),0.57);
 }
+.localization-selector + .disclosure__list-wrapper {
+  top: 100% !important;
+  bottom: unset !important;
+  right: 20px !important;
+  margin: 1rem 0 0 !important;
+}
