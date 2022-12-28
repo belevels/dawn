@@ -1577,7 +1577,6 @@ a.product__text {
     opacity: 1;
     margin-right: 1rem;
     z-index: 2;
-    transform: scaleX(-1);
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: rgba(var(--color-foreground), 0.75);
