@@ -40,7 +40,8 @@
       .{{ product.handle }} .product__info-container .product__description ul li::after, 
       .{{ product.handle }} .highlight li::after,
       .product-card-wrapper .{{ product.handle }}.card,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after {
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .product-card-wrapper .{{ product.handle }}.card .button--secondary {
         background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
       .{{ product.handle }} .be-box,
@@ -48,7 +49,7 @@
       .{{ product.handle }} .slider-counter__link--dots .dot,
       .product-card-wrapper .{{ product.handle }}.card,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
       }
     {%- endif -%}
     {%- if product.metafields.Seccion.CustomColor2 != blank -%}
