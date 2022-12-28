@@ -123,24 +123,21 @@
     .template-index .site-header-transparent .header__menu-item svg, 
     .template-index .site-header-transparent .header__active-menu-item {
       color: {{ section.settings.content_color }};
-    }/*
+    }
     .template-index #MainContent {
-      position: relative;
-      top: calc(var(--header-height) * -1);
-    }*/
+      padding-top: calc(var(--header-height) * -1);
+    }
     .site-header-transparent {
       background: transparent;
-      /*
       position: absolute;
       border: none;
       width: 100%;
       left: 50%;
       transform: translateX(-50%);
-      */
-    }/*
+    }
     .site-header-transition {
       margin-top: var(--header-height);
-    }*/
+    }
   {% endstyle %}
 {% endif %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
