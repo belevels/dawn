@@ -46,11 +46,13 @@
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
-      .{{ product.handle }} .slider-counter__link--dots .dot,
+      .{{ product.handle }} .slider-counter__link--dots .dot {
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+      }
       .product-card-wrapper .{{ product.handle }}.card,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
         border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
-      }
+      }      
     {%- endif -%}
     {%- if product.metafields.Seccion.CustomColor2 != blank -%}
       {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
