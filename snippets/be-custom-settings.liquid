@@ -37,10 +37,10 @@
     .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
     .{{ product.handle }} .product__info-container .product__description ul li::after, 
     .{{ product.handle }} .highlight li::after {
-      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
     }
     .{{ product.handle }} .slider-counter__link--dots .dot {
-      border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+      border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
     }
   {%- endif -%}
   {%- if product.metafields.Seccion.CustomColor2 != blank -%}
