@@ -45,10 +45,10 @@
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
-      .{{ product.handle }} .slider-counter__link--dots .dot {
+      .{{ product.handle }} .slider-counter__link--dots .dot,
+      .product-card-wrapper .{{ product.handle }}.card {
         border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
-      .product-card-wrapper .{{ product.handle }}.card,
       .{{ product.handle }} .be-box .button--secondary,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
         border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
