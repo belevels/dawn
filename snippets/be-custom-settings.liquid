@@ -33,6 +33,7 @@
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
       {% assign customColorRgba1 = customColor1 | color_to_hex %}
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .product__accordion .accordion__content,
       .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
