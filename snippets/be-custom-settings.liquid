@@ -32,9 +32,12 @@
   {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
     {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-    {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 1 %}
+    {% assign customColorRgba1 = customColor1 | color_to_hex %}
     .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot {
-      background-color: {{ customColorRgba1 }};
+      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+    }
+    .{{ product.handle }} .slider-counter__link--dots .dot {
+      border-color: {{ customColorRgba1 }};
     }
   {%- endif -%}
   {%- if product.metafields.Seccion.CustomColor2 != blank -%}
