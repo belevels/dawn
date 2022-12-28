@@ -116,28 +116,27 @@
   Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos
 {%- endcomment -%}
 {%- assign headerTransparentIn = 'product' %}
-<h2>headerTransparentIn: {{ headerTransparentIn }}</h2>
 {% if template == headerTransparentIn and section.settings.transparent_header %}
-{% style %}
-  .template-index .site-header-transparent .header__icon,
-  .template-index .site-header-transparent .header__menu-item span, 
-  .template-index .site-header-transparent .header__menu-item svg, 
-  .template-index .site-header-transparent .header__active-menu-item {
-    color: {{ section.settings.content_color }};
-  }
-  .site-header-transparent {
-    background: transparent;
-    position: absolute;
-    border: none;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .site-header-transition {
-      margin-top: var(--header-height);
-  }
-{% endstyle %}
-
+  {% style %}
+    .template-index .site-header-transparent .header__icon,
+    .template-index .site-header-transparent .header__menu-item span, 
+    .template-index .site-header-transparent .header__menu-item svg, 
+    .template-index .site-header-transparent .header__active-menu-item {
+      color: {{ section.settings.content_color }};
+    }
+    .site-header-transparent {
+      background: transparent;
+      position: absolute;
+      border: none;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .site-header-transition {
+        margin-top: var(--header-height);
+    }
+  {% endstyle %}
+{% endif %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -866,42 +865,17 @@
 {%- comment -%}
   Be Levels - start mod: agregamos headerTransparentIn, script
 {%- endcomment -%}
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var headerHeight = document.getElementById('site-header').offsetHeight;
-    document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
-  });
-  window.onscroll = function() {
-    var header = document.getElementById('site-header');
-    var main = document.getElementById('MainContent');
-    var height = document.getElementById('site-header').offsetHeight;
-    if ( window.pageYOffset > height ) {
-      header.classList.remove('site-header-transparent');
-      main.classList.add('site-header-transition');
-    } else {
-      header.classList.add('site-header-transparent');
-      main.classList.remove('site-header-transition');
-    }
-  }
-  document.getElementById("header-menu").addEventListener('click',function () {
-    var sideMenu = document.getElementById('Details-menu-drawer-container');
-    var header = document.getElementById('site-header');
-    var height = document.getElementById('site-header').offsetHeight;
-    if ( window.pageYOffset < height ) {
-    if (!sideMenu.classList.contains('menu-opening')) {
-      header.classList.remove('site-header-transparent');
-    } else {
-      header.classList.add('site-header-transparent');
-    }
-    }
-  });
-  document.getElementById("header-search").addEventListener('click',function () {
-    var search = document.getElementById('template-index');
-    var header = document.getElementById('site-header');
-    var main = document.getElementById('MainContent');
-    var height = document.getElementById('site-header').offsetHeight;
-    if ( window.pageYOffset < height ) {
-      if (search.classList.contains('overflow-hidden')) {
+{% if template == headerTransparentIn and section.settings.transparent_header %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var headerHeight = document.getElementById('site-header').offsetHeight;
+      document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
+    });
+    window.onscroll = function() {
+      var header = document.getElementById('site-header');
+      var main = document.getElementById('MainContent');
+      var height = document.getElementById('site-header').offsetHeight;
+      if ( window.pageYOffset > height ) {
         header.classList.remove('site-header-transparent');
         main.classList.add('site-header-transition');
       } else {
@@ -909,8 +883,34 @@
         main.classList.remove('site-header-transition');
       }
     }
-  });
-</script>
+    document.getElementById("header-menu").addEventListener('click',function () {
+      var sideMenu = document.getElementById('Details-menu-drawer-container');
+      var header = document.getElementById('site-header');
+      var height = document.getElementById('site-header').offsetHeight;
+      if ( window.pageYOffset < height ) {
+      if (!sideMenu.classList.contains('menu-opening')) {
+        header.classList.remove('site-header-transparent');
+      } else {
+        header.classList.add('site-header-transparent');
+      }
+      }
+    });
+    document.getElementById("header-search").addEventListener('click',function () {
+      var search = document.getElementById('template-index');
+      var header = document.getElementById('site-header');
+      var main = document.getElementById('MainContent');
+      var height = document.getElementById('site-header').offsetHeight;
+      if ( window.pageYOffset < height ) {
+        if (search.classList.contains('overflow-hidden')) {
+          header.classList.remove('site-header-transparent');
+          main.classList.add('site-header-transition');
+        } else {
+          header.classList.add('site-header-transparent');
+          main.classList.remove('site-header-transition');
+        }
+      }
+    });
+  </script>
 {% endif %}
 {%- liquid
   comment
