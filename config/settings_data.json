@@ -159,7 +159,7 @@
           "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega",
-          "sticky_header_type": "on-scroll-up",
+          "sticky_header_type": "none",
           "show_line_separator": true,
           "transparent_header": true,
           "content_color": "#e22120",
