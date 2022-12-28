@@ -34,6 +34,7 @@
     {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {% assign customColorRgba1 = customColor1 | color_to_hex %}
     .{{ product.handle }} .be-box,
+    .{{ product.handle }} .product__accordion .accordion__content,
     .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
     .{{ product.handle }} .product__info-container .product__description ul li::after, 
     .{{ product.handle }} .highlight li::after {
