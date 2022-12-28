@@ -124,6 +124,9 @@
     .template-index .site-header-transparent .header__active-menu-item {
       color: {{ section.settings.content_color }};
     }
+    .template-index #MainContent {
+      margin-top: calc(-var(--header-height));
+    }
     .site-header-transparent {
       background: transparent;
       position: absolute;
@@ -133,7 +136,6 @@
       transform: translateX(-50%);
     }
     .site-header-transition {
-      --header-height: 95px;
       margin-top: var(--header-height);
     }
   {% endstyle %}
