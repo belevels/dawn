@@ -1,0 +1,31 @@
+{%- liquid
+  if section.settings.custom_url != blank
+    assign locale_url = localization.language.root_url | downcase
+    if locale_url == '/'
+      assign logo_url = 'https://belevels.com'
+    else
+      assign logo_url = 'https://belevels.com' | append: locale_url
+    endif 
+  else
+    assign logo_url = routes.root_url
+  endif
+-%}
+<a href="{{ logo_url }}" class="header__heading-link link link--text focus-inset">
+  {%- if settings.logo != blank -%}
+    {%- liquid
+      assign logo_alt = settings.logo.alt | default: shop.name | escape
+      assign logo_width = settings.logo_width
+      assign logo_height = logo_width | divided_by: settings.logo.aspect_ratio 
+    -%}
+    <img src="{{ 'logo.svg' | asset_url }}" 
+      class= "header__heading-logo motion-reduce" 
+      widths= "50, 100, 150, 200, 250, 300, 400, 500" 
+      width="{{ logo_width }}" 
+      height="{{ logo_height }}" 
+      style ="height: {{ logo_height }}px" 
+      alt="{{ logo_alt }}"
+    />
+  {%- else -%}
+    <span class="h2">{{ shop.name }}</span>
+  {%- endif -%}
+</a>
