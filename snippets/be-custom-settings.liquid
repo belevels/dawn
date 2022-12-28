@@ -38,12 +38,14 @@
       .{{ product.handle }} .product__accordion .accordion__content,
       .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
       .{{ product.handle }} .product__info-container .product__description ul li::after, 
-      .{{ product.handle }} .highlight li::after {
+      .{{ product.handle }} .highlight li::after,
+      .product-card-wrapper .{{ product.handle }}.card {
         background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
-      .{{ product.handle }} .slider-counter__link--dots .dot {
+      .{{ product.handle }} .slider-counter__link--dots .dot,
+      .product-card-wrapper .{{ product.handle }}.card {
         border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
     {%- endif -%}
