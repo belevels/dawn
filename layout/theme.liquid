@@ -256,7 +256,22 @@
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
-
+      :root {
+        --buttons-border-offset: 0;
+      }
+        :focus-visible {
+          outline: 0 !important;
+          outline-offset: 0 !important;
+          box-shadow: none !important;
+          background: none !important;
+        }
+        button:not([disabled]):hover::after, 
+        .button:not([disabled]):hover::after, 
+        .shopify-challenge__button:hover::after, 
+        .customer button:hover::after, 
+        .shopify-payment-button__button--unbranded:hover::after {
+          box-shadow: none !important;
+        }
       *,
       *::before,
       *::after {

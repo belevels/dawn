@@ -74,22 +74,7 @@
   {%- endfor -%}
 {%- endfor -%}
 {%- comment -%}
-:root {
-  --buttons-border-offset: 0;
-}
-  :focus-visible {
-    outline: 0 !important;
-    outline-offset: 0 !important;
-    box-shadow: none !important;
-    background: none !important;
-  }
-  button:not([disabled]):hover::after, 
-  .button:not([disabled]):hover::after, 
-  .shopify-challenge__button:hover::after, 
-  .customer button:hover::after, 
-  .shopify-payment-button__button--unbranded:hover::after {
-    box-shadow: none !important;
-  }
+
   .product__title h1,
   .product-card-wrapper .card__heading {
     font-family: "Cy Black", {{ settings.type_header_font.family}}, {{ settings.type_header_font.fallback_families}}
@@ -502,7 +487,11 @@
   {%- endfor -%}
   {%- endcomment -%}
 
+
+
+
 {% endstyle %}
+
 <style>
   .product__info-wrapper .product__title h1::after {
     width: 3rem;
