@@ -56,7 +56,8 @@
     {%- endif -%}
     {%- if product.metafields.Seccion.CustomColor2 != blank -%}
       {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-      {% assign customColorRgba2 = customColor2 | color_to_hex %}    
+      {% assign customColorRgba2 = customColor2 | color_to_hex %}
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
       .{{ product.handle }} .product__info-container .product__description ul li::before {
         background-color: {{ customColorRgba2 }};
       }
