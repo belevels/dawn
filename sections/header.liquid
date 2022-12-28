@@ -433,12 +433,9 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-      {%- liquid
-        comment
-        Be Levels - start mod
-        Agregamos logo_svg y url segun idioma
-        endcomment
-      -%}
+      {%- comment -%}
+        Be Levels - start mod: Agregamos logo_svg y url segun idioma
+      {%- endcomment -%}
       {%- if section.settings.logo_svg == true -%}
         {%- render 'be-logo-svg' -%}
       {%- else -%}
