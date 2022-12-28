@@ -46,9 +46,8 @@ product-recommendations .product-card-wrapper .card__headingx {
   .{{ product.handle }} .product__info-wrapper .product__title h1::after,
   .product-card-wrapper .{{ product.handle }}.card .card__media::after,
   product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-  .product-card-wrapper .{{ product.handle }} .card__heading a::before {
+  .product-card-wrapper .{{ product.handle }} .card__heading span::before {
     content: '';
-    margin-left: 0.25rem;
     position: absolute;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -505,7 +504,7 @@ product-recommendations .product-card-wrapper .card__headingx {
     z-index: -3;
     top: 0;
   }
-  .product-card-wrapper .card__heading a::before {
+  .product-card-wrapper .card__heading span::before {
     width: 1.75rem;
     height: 1.75rem;
     left: 0;
