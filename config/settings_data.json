@@ -161,6 +161,8 @@
           "menu_type_desktop": "mega",
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
+          "transparent_header": true,
+          "content_color": "",
           "mobile_logo_position": "left",
           "margin_bottom": 0,
           "padding_top": 8,
