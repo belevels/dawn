@@ -2992,3 +2992,6 @@ details-disclosure > details {
   margin: 0;
   padding: 0;
 }
+#HeaderLanguageForm .localization-selector {
+  margin-top: 1rem;
+}
