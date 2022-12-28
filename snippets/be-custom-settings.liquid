@@ -5,9 +5,9 @@
 }
 {%- for product in collections['all'].products -%}
   {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
-  {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-  {% assign svgIcon2 = svgIcon | downcase %}
-  {% unless svgIcon2 contains "not found" %}
+  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+  {% assign svgIcon = product.handle | append: '.svg' %}
+  {% unless svgIconUrl contains svgIcon %}
     .{{ product.handle }} .global-media-settings {
         background-color: transparent;
       }
