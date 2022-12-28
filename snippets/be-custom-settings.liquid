@@ -33,7 +33,10 @@
   {%- if product.metafields.Seccion.CustomColor1 != blank -%}
     {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {% assign customColorRgba1 = customColor1 | color_to_hex %}
-    .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot {
+    .{{ product.handle }} .be-box,
+    .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
+    .{{ product.handle }} .product__info-container .product__description ul li::after, 
+    .{{ product.handle }} .highlight li::after {
       background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
     }
     .{{ product.handle }} .slider-counter__link--dots .dot {
@@ -42,12 +45,7 @@
   {%- endif -%}
   {%- if product.metafields.Seccion.CustomColor2 != blank -%}
     {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-    {% assign customColorRgba2 = customColor2 | color_to_hex %}
-    .{{ product.handle }} .be-box,
-    .{{ product.handle }} .product__info-container .product__description ul li::after, 
-    .{{ product.handle }} .highlight li::after {
-      background-color: {{ customColorRgba2 | color_modify: 'alpha', 0.125 }};
-    }
+    {% assign customColorRgba2 = customColor2 | color_to_hex %}    
     .{{ product.handle }} .product__info-container .product__description ul li::before {
       background-color: {{ customColorRgba2 }};
     }
