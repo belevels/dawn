@@ -2956,7 +2956,9 @@ details-disclosure > details {
   .button,
   .shopify-challenge__button,
   .customer button {
-    border: transparent solid 1px;
+    border-color: transparent;
+    border-style: solid !important;
+    border-width: 0.1rem !important;
   }
 
   .button:focus-visible,
