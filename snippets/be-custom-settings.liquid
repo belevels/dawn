@@ -58,21 +58,7 @@ product-recommendations .product-card-wrapper .card__headingx {
 {% endunless %}
 {%- endfor -%}
 
-<style>
-  .product-card-wrapper .card .card__media::after,
-  product-recommendations .product-card-wrapper .card .card__media::after,
-  #MainContent > section .product .product__media::after {
-    width: 80%;
-    height: 80%;
-    margin: 10%;
-    z-index: -3;
-    top: 0;
-  }
-  .product-card-wrapper .card__heading::after {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-</style>
+
 {%- comment -%}
 :root {
   --buttons-border-offset: 0;
@@ -502,3 +488,18 @@ product-recommendations .product-card-wrapper .card__headingx {
   {%- endfor -%}
   {%- endcomment -%}
 {% endstyle %}
+<style>
+  .product-card-wrapper .card .card__media::after,
+  product-recommendations .product-card-wrapper .card .card__media::after,
+  #MainContent > section .product .product__media::after {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    z-index: -3;
+    top: 0;
+  }
+  .product-card-wrapper .card__heading::after {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+</style>
