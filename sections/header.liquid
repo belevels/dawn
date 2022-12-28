@@ -845,9 +845,12 @@
 
 
 
-{% if template == 'index' and section.settings.transparent_header %}
+{% if template == headerTransparentIn and section.settings.transparent_header %}
 {% style %}
-  .template-index .site-header-transparent .header__icon, .template-index .site-header-transparent .header__menu-item span, .template-index .site-header-transparent .header__menu-item svg, .template-index .site-header-transparent .header__active-menu-item {
+  .template-index .site-header-transparent .header__icon,
+  .template-index .site-header-transparent .header__menu-item span, 
+  .template-index .site-header-transparent .header__menu-item svg, 
+  .template-index .site-header-transparent .header__active-menu-item {
     color: {{ section.settings.content_color }};
   }
   .site-header-transparent {
