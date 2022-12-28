@@ -7,7 +7,6 @@
 {%- for product in collections['all'].products -%}
 
 {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-{% unless svgIcon contains "Liquid error" %}
 
 
 
@@ -52,7 +51,7 @@ opacity: 0.75;
     mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
   }
 
-{% endunless %}
+
 {%- endfor -%}
 
 <style>
