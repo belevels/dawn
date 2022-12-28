@@ -873,8 +873,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       var headerHeight = document.getElementById('site-header').offsetHeight;
-      document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
-      document.getElementById('shopify-section-header').style.setProperty('--header-height', '-'+ headerHeight + 'px');
+      document.getElementById('MainContent').style('padding-top:', headerHeight + 'px');
     });
     window.onscroll = function() {
       var header = document.getElementById('site-header');
