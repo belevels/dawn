@@ -5,7 +5,7 @@
 }
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
-    {% if collection.title == 'Fórmulas maestras' %} 
+    {% if collection.handle == 'formulas-maestras' %} 
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
         .{{ product.handle }} .global-media-settings {
@@ -25,8 +25,8 @@
             -webkit-mask-size: cover;
             mask-size: cover;
             background-color: rgba(var(--color-foreground),.125);
-            -webkit-mask: url({{ svgIcon }}) no-repeat 100% 100%;
-            mask: url({{ svgIcon }}) no-repeat 100% 100%;
+            -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+            mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
           }
       {% endif %}
     {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
@@ -338,8 +338,8 @@
   
   {%- for product in collections['all'].products -%}
 
-    {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-    {% unless svgIcon contains "Liquid error" %}
+    {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+    {% unless svgIconUrl contains "Liquid error" %}
 
     
 
