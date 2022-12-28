@@ -369,6 +369,9 @@ a.product__text {
 
 .product__accordion .accordion__content {
   padding: 0 1rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 20px;
 }
 
 .product .price .badge {
