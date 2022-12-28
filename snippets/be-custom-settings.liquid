@@ -40,8 +40,7 @@
       .{{ product.handle }} .product__info-container .product__description ul li::after, 
       .{{ product.handle }} .highlight li::after,
       .product-card-wrapper .{{ product.handle }}.card,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      .product-card-wrapper .{{ product.handle }}.card .button--secondary {
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after {
         background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
       }
       .{{ product.handle }} .be-box,
