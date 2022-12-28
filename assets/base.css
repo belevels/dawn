@@ -2994,6 +2994,7 @@ details-disclosure > details {
 }
 #HeaderLanguageForm .localization-selector {
   margin-top: 1rem;
+  margin-right: 1rem;
   background: var(--color-background);
   border-radius: 40px;
   padding: 0.2rem 0.75rem;
