@@ -116,6 +116,7 @@
   Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos
 {%- endcomment -%}
 {%- assign headerTransparentIn = 'product' %}
+<h2>headerTransparentIn: {{ headerTransparentIn }}</h2>
 {% if template == headerTransparentIn and section.settings.transparent_header %}
 {% style %}
   .template-index .site-header-transparent .header__icon,
