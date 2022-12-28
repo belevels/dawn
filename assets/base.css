@@ -1326,9 +1326,6 @@ button.shopify-payment-button__button--unbranded {
   margin-left: auto !important;
 }
 
-.button {
-  border: 0.1rem solid rgba(var(--color-foreground),0.55);
-}
 modal-opener .icon-wrap .icon-arrow {
   transform: rotate(-33deg);
 }
