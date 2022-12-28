@@ -3,7 +3,7 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-{%- for product in collections['formulas-maestras', 'deporte', 'salud-femenina'].products -%}
+{%- for product in collections['all'].products -%}
   {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
   {% capture svgIcon %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
   {% assign svgIcon2 = svgIcon | downcase %}
@@ -25,8 +25,8 @@
         -webkit-mask-size: cover;
         mask-size: cover;
         background-color: rgba(var(--color-foreground),.125);
-        -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
-        mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
+        -webkit-mask: url({{ svgIcon }}) no-repeat 100% 100%;
+        mask: url({{ svgIcon }}) no-repeat 100% 100%;
       }
   {% endunless %}
   {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
