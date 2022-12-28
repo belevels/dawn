@@ -112,6 +112,30 @@
     }
   }
 {%- endstyle -%}
+{%- comment -%}
+  Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos
+{%- endcomment -%}
+{%- assign headerTransparentIn = 'product' %}
+{% if template == headerTransparentIn and section.settings.transparent_header %}
+{% style %}
+  .template-index .site-header-transparent .header__icon,
+  .template-index .site-header-transparent .header__menu-item span, 
+  .template-index .site-header-transparent .header__menu-item svg, 
+  .template-index .site-header-transparent .header__active-menu-item {
+    color: {{ section.settings.content_color }};
+  }
+  .site-header-transparent {
+    background: transparent;
+    position: absolute;
+    border: none;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .site-header-transition {
+      margin-top: var(--header-height);
+  }
+{% endstyle %}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
@@ -839,30 +863,8 @@
   </script>
 {%- endif -%}
 {%- comment -%}
-  Be Levels - start mod: agregamos headerTransparentIn, nnevos estilos y scripts
+  Be Levels - start mod: agregamos headerTransparentIn, script
 {%- endcomment -%}
-{%- assign headerTransparentIn = 'product' %}
-{% if template == headerTransparentIn and section.settings.transparent_header %}
-{% style %}
-  .template-index .site-header-transparent .header__icon,
-  .template-index .site-header-transparent .header__menu-item span, 
-  .template-index .site-header-transparent .header__menu-item svg, 
-  .template-index .site-header-transparent .header__active-menu-item {
-    color: {{ section.settings.content_color }};
-  }
-  .site-header-transparent {
-    background: transparent;
-    position: absolute;
-    border: none;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .site-header-transition {
-      margin-top: var(--header-height);
-  }
-{% endstyle %}
-
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
     var headerHeight = document.getElementById('site-header').offsetHeight;
