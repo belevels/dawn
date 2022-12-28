@@ -12,7 +12,7 @@
 
 
 {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-  
+  /*
   #MainContent > section .product .product__media::after,
 .product__info-wrapper .product__title h1::after,
 .product-card-wrapper .card .card__media::after,
@@ -39,7 +39,7 @@ top: 0;
 .product-card-wrapper .card__heading span::after {
 width: 1.75rem;
 height: 1.75rem;
-}
+}*/
 /*
 .product-card-wrapper .card .card__media::after {
 opacity: 0.75;
@@ -56,7 +56,7 @@ opacity: 0.75;
     position: absolute;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: rgba(var(--color-foreground),.75);        
+    background-color: rgba(255,255,255,0.75);/*rgba(var(--color-foreground),.75);*/
     -webkit-mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ product.handle | append: '.svg' | asset_url }}) no-repeat 100% 100%;
   }
