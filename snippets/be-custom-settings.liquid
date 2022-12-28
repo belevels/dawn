@@ -34,7 +34,7 @@
     {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {% assign customColorRgba1 = customColor1 | color_to_hex %}
     .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot {
-      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+      background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.75 }};
     }
     .{{ product.handle }} .slider-counter__link--dots .dot {
       border-color: {{ customColorRgba1 }};
