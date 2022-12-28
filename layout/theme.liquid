@@ -346,8 +346,12 @@
     }
     </script>
   </head>
-
-  <body class="gradient">
+  {%- comment -%}
+    Be Levels - start mod: agregamos header transparente en productos
+  {%- endcomment -%}
+  {%- assign headerTransparentIn = 'product' %}
+  
+  <body {% if template == headerTransparentIn %}id="template-index"{% endif %} class="gradient {% if template == headerTransparentIn %}template-index{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
