@@ -24,7 +24,8 @@
           assign customColorRgba1 = customColor1 | color_to_hex
           assign customColorRgba2 = customColor2 | color_to_hex
           assign customColorRgba3 = customColor3 | color_to_hex
-        elsif collection.handle == 'esenciales'
+        endif
+        if collection.handle == 'esenciales'
           assign svgIconUrl = collection.handle | append: '.svg' | asset_url
           assign customColorRgba1 = '#D66C5B9'
           assign customColorRgba2 = '#EBD9C9'
