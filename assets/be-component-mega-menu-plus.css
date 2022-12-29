@@ -44,21 +44,13 @@
     to {top: 90px;}*/
 
     0% {
-
-        transform: scaleY(0)
-
+        transform: rotateX(-90deg)
     }
-
-    80% {
-
-        transform: scaleY(1.1)
-
+    70% {
+        transform: rotateX(20deg) 
     }
-
     100% {
-
-        transform: scaleY(1)
-
+        transform: rotateX(0deg) 
     }
     }
     /* Create three equal columns that floats next to each other */
