@@ -61,7 +61,7 @@
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {%- endif -%}
-      {% assign customColorRgba1 = customColor1 | color_to_hex %}
+      {% assign customColorRgba1 = customColor1 | color_modify: 'alpha', 0.13 | color_to_hex %}
       .{{ product.handle }} #MainContent > section .product .product__media::after,
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .product__accordion .accordion__content,
@@ -71,13 +71,13 @@
       .product-card-wrapper .{{ product.handle }}.card,
       .product-card-wrapper .{{ product.handle }}.card .card__media::after,
       product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        background-color: {{ customColorRgba1 }};
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
       .{{ product.handle }} .slider-counter__link--dots .dot,
       .product-card-wrapper .{{ product.handle }}.card {
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        border-color: {{ customColorRgba1 }};
       }
       .{{ product.handle }} .be-box .button--secondary,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
