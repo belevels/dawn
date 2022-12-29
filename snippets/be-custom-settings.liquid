@@ -31,7 +31,7 @@
     {% endif %}
     {%- liquid
     if collection.handle == 'esenciales'
-      assign svgIconUrl = collection.handle | append: '.svg' | asset_url
+      assign svgIconUrl = 'esenciales' | append: '.svg' | asset_url
       assign customColorRgba1 = '#D66C5B9'
       assign customColorRgba2 = '#EBD9C9'
       assign customColorRgba3 = '#F2E8E0'
