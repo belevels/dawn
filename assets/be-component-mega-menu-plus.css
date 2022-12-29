@@ -38,6 +38,9 @@
     .zed__navbar-dropdown:hover .zed__navbar-dropdown-content {
     display: block;
     animation: mymove 0.6s;
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+    transition: opacity 0.19s cubic-bezier(0.62, 0, 0.8, 0.38);
     }
     @keyframes mymove {
     from {top: 50px;}
