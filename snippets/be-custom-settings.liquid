@@ -74,7 +74,8 @@
         background-color: {{ customColorRgba1 }};
       }
       .{{ product.handle }} .product-form__input input[type="radio"]:checked + label {
-        --color-background: {{ customColorRgba1 | color_modify: 'alpha', 0.26 }};
+        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
