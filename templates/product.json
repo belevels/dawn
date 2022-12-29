@@ -1,5 +1,14 @@
 {
   "sections": {
+    "4fc69323-1212-40ca-a0c3-7c7da6303d6f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- for product in collections.all.products -%}\n  {%- for collection in product.collections %}\n    {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}\n    {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} \n      {% assign iconName = product.handle -%}\n    {%- elsif collection.handle == 'esenciales' -%}\n      {%- assign iconName = 'esenciales' -%}\n    {%- endif -%}\n  {%- endfor -%}\n    {%- assign svgIconUrl = iconName | append: '.svg' | asset_url -%}\n    {%- assign svgIcon = svgIconUrl | prepend: '<img src=\"'  | append: '\" width=\"24\" height=\"24\" \/>' -%}\n\n    {%- if svgIcon contains 'Liquid error' -%}\n      <p style=\"background:pink\"><b>ERROR<\/b><\/p>\n    {%- else -%}\n      <p style=\"text-align:center;background:wheat\">{{- svgIcon -}}<\/p>\n    {%- endif -%}\n{%- endfor -%}",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -256,6 +265,7 @@
     }
   },
   "order": [
+    "4fc69323-1212-40ca-a0c3-7c7da6303d6f",
     "main",
     "image-with-text",
     "multicolumn",
