@@ -73,6 +73,9 @@
       product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
         background-color: {{ customColorRgba1 }};
       }
+      {{ product.handle }} .product-form__input input[type="radio"]:checked + label {
+        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.26 }};
+      }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
       .{{ product.handle }} .slider-counter__link--dots .dot,
