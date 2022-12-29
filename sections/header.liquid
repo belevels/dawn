@@ -124,28 +124,204 @@
 {%- endcomment -%}
 {% style %}
     .zed__navbar-main {
-      background: rgb(var(--color-background));
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            background: #231123;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            background: #82204A;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            background: #558C8C;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            background: #E8DB7D;
+        {%- else -%}
+            background: rgb(var(--color-background));
+        {%- endif -%}
     }
     .zed__navbar-main a,
-    .zed__navbar-dropdown .zed__navbar-dropbtn {
-      color: rgba(var(--color-foreground),.75)
+    .zed__navbar-dropdown .zed__navbar-dropbtn{
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
     }
-    .zed__navbar-dropdown-content {
+    .zed__navbar-main a:hover, 
+    .zed__navbar-dropdown:hover .zed__navbar-dropbtn {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            background: #82204A;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            background: #231123;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            background: #231123;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            background: rgb(var(--color-background));
+        {%- else -%}
+            background: #E8DB7D;
+        {%- endif -%}
+    }
+    .zed__navbar-dropdown-content{
         background-color: rgb(var(--color-background));
     }
     .zed__navbar-dropdown-content-header {
-        background: rgb(var(--color-background));
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            background: #82204A;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            background: #231123;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            background: #231123;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            background: rgb(var(--color-background));
+        {%- else -%}
+            background: #E8DB7D;
+        {%- endif -%}
         padding: 1px 15px;
+    }
+    .zed__navbar-dropdown-content-header h4 {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+    }
+    .single_collection_products_grid .zed_mega-menu_grid-column .product-content h4 a,
+    .single_collection_products_grid .zed_mega-menu_grid-column .product-content h4 a:hover {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+        background: none;
+    }
+    .zed__navbar-dropdown-content .CollectionTab button{
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+    }
+    .zed__navbar-dropdown-content .CollectionTab button.collectionactive {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            border-bottom: 2px solid #231123;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            border-bottom: 2px solid #82204A;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            border-bottom: 2px solid #558C8C;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            border-bottom: 2px solid #E8DB7D;
+        {%- else -%}
+            border-bottom: 2px solid #231123;
+        {%- endif -%}
+    }
+    .zed__navbar-dropdown-content .CollectionTab button:hover {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            background: #000;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            background: #000;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            background: #000;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            background: #fff;
+        {%- else -%}
+            background: #fff;
+        {%- endif -%}
     }
     .collection_tabs_megamenu .zed_mega-menu_grid-column h4 a,
     .collection_tabs_megamenu .zed_mega-menu_grid-column h4 a:hover{
-      color: rgba(var(--color-foreground),.75);
-      background: none;
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+        background: none;
     }
 
     .zed__navbar-main-column h4,
-    .zed__navbar-main-column_ad h4 {
-      color: rgba(var(--color-foreground),.75);
+    .zed__navbar-main-column_ad h4{
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+    }
+    .zed__navbar-linklink-left-block .zed__navbar-main-column a,
+    .zed__navbar-linklink-left-block .zed__navbar-main-column a:hover {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+        background: none;
+    }
+    .collections_grid-mega-menu .zed_mega-menu_grid-column .product-content h4 a,
+    .collections_grid-mega-menu .zed_mega-menu_grid-column .product-content h4 a:hover{
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: #000;
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+        background: none;
+    }
+    button.zed__navbar-dropbtn i.fa {
+        {%- if section.settings.menu_theme == 'lightblack' -%}
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightred' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
+            color: #fff;
+        {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
+            color: rgba(var(--color-foreground),.75);
+        {%- else -%}
+            color: rgba(var(--color-foreground),.75);
+        {%- endif -%}
+        font-size: 10px;
+        margin-left: 5px;
     }
 {% endstyle %}
 {%- assign headerTransparentIn = 'product' %}
