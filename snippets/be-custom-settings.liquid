@@ -112,7 +112,8 @@
       }
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent > section {
-          background-image: none;
+          background-image: linear-gradient(to right, {{ customColorRgba1 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
+
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
         .{{ product.handle }} .be-box,
