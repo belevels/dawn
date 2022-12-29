@@ -151,6 +151,18 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "040988b6-473f-4af5-bb47-1a4518a47c13": {
+            "type": "collections-menu",
+            "settings": {
+              "collections_menu_name": "Productos",
+              "collections_menu_heading": "Menu Heading"
+            }
+          }
+        },
+        "block_order": [
+          "040988b6-473f-4af5-bb47-1a4518a47c13"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "logo_position": "middle-left",
@@ -158,7 +170,8 @@
           "logo_svg": true,
           "custom_url": "",
           "menu": "belevels",
-          "menu_type_desktop": "mega",
+          "menu_type_desktop": "mega-plus",
+          "menu_theme": "lightblack",
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
           "transparent_header": true,
