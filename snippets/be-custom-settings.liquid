@@ -25,12 +25,7 @@
           assign customColorRgba3 = '#F2E8E0'
         endif
 
-        if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food'
-        assign svgIconUrl = product.handle | append: '.svg' | asset_url
-        assign customColorRgba1 = customColor1 | color_to_hex
-        assign customColorRgba2 = customColor2 | color_to_hex
-        assign customColorRgba3 = customColor3 | color_to_hex
-      endif            
+
       -%}
     {%- endfor -%}
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
