@@ -123,7 +123,7 @@
         .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-          background-color: {{ customColorRgba2 | color_modify: 'alpha', 0.5 }};
+          background-color: rgba(var(--color-foreground),.25);
         }
         .{{ product.handle }} .product__info-wrapper .product__title h1::after,
         .{{ product.handle }} .product__info-container .product__description ul li::before {
