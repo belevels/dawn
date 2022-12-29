@@ -107,7 +107,27 @@
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
       }
-
+      {% if product.metafields.Seccion.TextColor %}
+        .{{ product.handle }} #MainContent > section {
+          background-color: {{ customColorRgba3 }};
+        }
+        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
+        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
+        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
+        .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
+        .{{ product.handle }} #MainContent > section:first-child,
+        .collection .{{ product.handle }}.card .button {
+          --color-base-text: 255, 255, 255;
+          --color-link: rgba(var(--color-foreground),.75);
+          --color-foreground: 255, 255, 255;
+          --color-base-outline-button-labels: 255, 255, 255;
+          color: rgba(var(--color-foreground),.75);
+          fill: rgba(var(--color-foreground),.75);
+        }
+        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
+          filter: invert(1);
+        }        
+      {% endif %}
   {%- endfor -%}
 {%- endfor -%}
 {%- comment -%}
