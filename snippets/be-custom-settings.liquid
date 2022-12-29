@@ -7,29 +7,28 @@
   {% for collection in product.collections %}
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
-      {% assign iconName = product.handle %}
-      {% capture svgIconUrl %} {{ iconName | append: '.svg' | asset_url }}{% endcapture %}
-      .{{ product.handle }} .global-media-settings {
-        background-color: transparent;
-      }
-      .{{ product.handle }} .product-card-wrapper .card__heading span {
-        width: fit-content;
-        margin-right: 0.25rem;
-      }
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-        content: '';
-        position: absolute;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: rgba(var(--color-foreground),1);
-        -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-        mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-      }
-    {%- endif -%}
+      {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+        .{{ product.handle }} .global-media-settings {
+            background-color: transparent;
+          }
+          .{{ product.handle }} .product-card-wrapper .card__heading span {
+            width: fit-content;
+            margin-right: 0.25rem;
+          }
+          .{{ product.handle }} #MainContent > section .product .product__media::after,
+          .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+          .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+            content: '';
+            position: absolute;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: rgba(var(--color-foreground),1);
+            -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+            mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+          }
+      {% endif %}
     {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
