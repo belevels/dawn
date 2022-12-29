@@ -125,7 +125,7 @@
         .product-card-wrapper .{{ product.handle }}.card,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-          background-color: {{ customColorRgba2 }};
+          background-color: {{ customColorRgba2 | color_modify: 'alpha', 0.5 }};
         }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
