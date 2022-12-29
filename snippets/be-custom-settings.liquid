@@ -4,12 +4,11 @@
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
 {% for product in collections.all.products %}
+  {%- assign svgIcon = collection.handle %}
   {% for collection in product.collections %}
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {%- assign svgIcon = product.handle %}
-    {% else -%}
-      {%- assign svgIcon = collection.handle %}
     {% endif %}
     {% capture svgIconUrl %} {{ svgIcon }}{% endcapture %}
         .{{ product.handle | append: '.svg' | asset_url }} .global-media-settings {
