@@ -44,7 +44,7 @@
     to {top: 90px;}*/
 
     0% {
-        transform: rotateX(-90deg)
+        transform: rotateX(0deg)
     }
     70% {
         transform: rotateX(20deg) 
