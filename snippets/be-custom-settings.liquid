@@ -105,11 +105,12 @@
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
       .{{ product.handle }} #MainContent > section {
         background-color: {{ customColorRgba3 }};
-        background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
+        background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 0%)
       }
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent > section {
-          background-color: {{ customColorRgba3 }};
+          background-image: linear-gradient(to right, {{ customColorRgba3 }}, {{ customColorRgba3 | color_modify: 'alpha', 0.75 }});
+
         }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
