@@ -15,7 +15,7 @@
       endif
     -%}
     {% capture svgIconUrl %} {{ svgIcon }}{% endcapture %}
-        .{{ svgIcon | append: '.svg' | asset_url }} .global-media-settings {
+        .{{ product.handle | append: '.svg' | asset_url }} .global-media-settings {
             background-color: transparent;
           }
           .{{ product.handle }} .product-card-wrapper .card__heading span {
