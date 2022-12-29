@@ -8,13 +8,13 @@
   {% for collection in product.collections %}
     {%- liquid
       if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food'
-        assign svgIcon = product.handle
+        assign svgIconUrl = product.handle | append: '.svg' | asset_url
       elsif collection.handle == 'esenciales'
-        assign svgIcon = collection.handle
+        assign svgIconUrl = collection.handle | append: '.svg' | asset_url
       endif
     -%}
-    {% capture svgIconUrl %} {{ svgIcon }}{% endcapture %}
-        .{{ product.handle | append: '.svg' | asset_url }} .global-media-settings {
+
+        .{{ product.handle }} .global-media-settings {
             background-color: transparent;
           }
           .{{ product.handle }} .product-card-wrapper .card__heading span {
