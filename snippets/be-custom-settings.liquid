@@ -29,14 +29,14 @@
         mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
       }
     {% endif %}
-    {%- liquid
-    if collection.handle == 'esenciales'
-      assign svgIconUrl = 'esenciales' | append: '.svg' | asset_url
-      assign customColorRgba1 = '#D66C5B9'
-      assign customColorRgba2 = '#EBD9C9'
-      assign customColorRgba3 = '#ff00ff'
-    endif
-    -%}
+    {%- if collection.handle == 'esenciales' -%}
+      {%- assign svgIconUrl = 'esenciales' | append: '.svg' | asset_url -%}
+      {%- capture customColor1 -%}#D66C5B9{%- endcapture -%}
+      {%- capture customColor2 -%}#EBD9C9{%- endcapture -%}
+      {%- capture customColor3 -%}#F2E8E0{%- endcapture -%}
+    {%- endif -%}
+    
+
     {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
