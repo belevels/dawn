@@ -8,15 +8,12 @@
       {%- comment -%}Be Levels - start mod: Agregamos colores personalizados{%- endcomment -%}
       {%- if product.metafields.Seccion.CustomColor3 != blank -%}
         {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-        {% assign customColorRgba1 = customColor1 | color_to_hex %}
       {%- endif -%}
       {%- if product.metafields.Seccion.CustomColor2 != blank -%}
         {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-        {% assign customColorRgba2 = customColor2 | color_to_hex %}
       {%- endif -%}
       {%- if product.metafields.Seccion.CustomColor3 != blank -%}
         {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-        {% assign customColorRgba3 = customColor3 | color_to_hex %}
       {%- endif -%}            
       {%- liquid
       comment
