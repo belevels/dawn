@@ -113,7 +113,10 @@
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent > section,
         .{{ product.handle }} .be-box .button--secondary,
-        .{{ product.handle }} #MainContent > section .product .product__media::after,
+        .{{ product.handle }} #MainContent > section .product .product__media::after {
+          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.85 }};
+          background-image: none;
+          }
 
         .{{ product.handle }} .be-box,
         .{{ product.handle }} .quantity::before,
