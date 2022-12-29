@@ -112,7 +112,7 @@
       }
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent > section {
-        background-image: linear-gradient(to right, {{ customColorRgba1 }}, {{ customColorRgba2 }});
+        background-image: linear-gradient(to right, {{ customColorRgba1 }}, {{ customColorRgba1 | color_modify: 'alpha', 0.5 }});
         }      
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
