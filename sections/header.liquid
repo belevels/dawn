@@ -131,7 +131,7 @@
         {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
             background: #558C8C;
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
-            background: #E8DB7D;
+            background: rgb(var(--color-background));
         {%- else -%}
             background: rgb(var(--color-background));
         {%- endif -%}
@@ -161,7 +161,7 @@
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
             background: rgb(var(--color-background));
         {%- else -%}
-            background: #E8DB7D;
+            background: rgb(var(--color-background));
         {%- endif -%}
     }
     .zed__navbar-dropdown-content{
@@ -177,7 +177,7 @@
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
             background: rgb(var(--color-background));
         {%- else -%}
-            background: #E8DB7D;
+            background: rgb(var(--color-background));
         {%- endif -%}
         padding: 1px 15px;
     }
