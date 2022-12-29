@@ -173,14 +173,14 @@
           "23061011-5f3b-4f22-9289-6a35a797ecab"
         ],
         "settings": {
-          "color_scheme": "inverse",
+          "color_scheme": "background-1",
           "logo_position": "middle-left",
           "enable_language_selector_in_header": true,
           "logo_svg": true,
           "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega-plus",
-          "menu_theme": "lightwhite",
+          "menu_theme": "lightyellow",
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
           "transparent_header": true,
