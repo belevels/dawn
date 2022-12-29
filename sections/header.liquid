@@ -831,7 +831,7 @@
                                           {%- endif -%}
                                           <!-- Menu column 5 -->
                                           {%- if block.settings.menu_link5 != blank -%}
-                                              <div class="seperate">.</div>
+                                              <div class="seperate">&nbsp;</div>
                                               <div class="zed__navbar-main-column">
                                                   {%- if block.settings.menu_title5 != blank -%}
                                                       <h4>{{ block.settings.menu_title5 | escape }}</h4>
@@ -930,16 +930,16 @@
                                                           <h4>{{ block.settings.ad_block_title | escape }}</h4>
                                                       {%- endif -%}
                                                       {%- if block.settings.ad_img1 != blank -%}
-                                                          <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                                          <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                                       {%- else -%}
                                                           <h3>EMPTY!!
                                                               <br>Nothing is set yet! Please set Ad Image.</h3>
                                                           {%- endif -%}
                                                           {%- if block.settings.ad_img2 != blank -%}
-                                                              <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                                              <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                                           {%- endif -%}
                                                           {%- if block.settings.ad_img3 != blank -%}
-                                                              <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                                              <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                                           {%- endif -%}
                                                       {%- endcase -%}
                                               {%- endfor -%}
@@ -988,7 +988,7 @@
                                       <div class="zed_mega-menu_grid-row">
                                           {%- for product in block.settings.single-collection-menu_coolection_1.products -%}
                                               <div class="zed_mega-menu_grid-column">
-                                                  <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                  <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                   <div class="product-content">
                                                       <h4>{{- product.title | link_to: product.url -}}</h4>
                                                   </div>
@@ -1036,7 +1036,7 @@
                                               {%- if block.settings.collections-tabs_1 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_1.products -%}
                                                       <div class="zed_mega-menu_grid-column">
-                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                           <div class="product-content">
                                                               <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
@@ -1050,7 +1050,7 @@
                                               {%- if block.settings.collections-tabs_2 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_2.products -%}
                                                       <div class="zed_mega-menu_grid-column">
-                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                           <div class="product-content">
                                                               <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
@@ -1064,7 +1064,7 @@
                                               {%- if block.settings.collections-tabs_3 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_3.products -%}
                                                       <div class="zed_mega-menu_grid-column">
-                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                           <div class="product-content">
                                                               <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
@@ -1078,7 +1078,7 @@
                                               {%- if block.settings.collections-tabs_4 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_4.products -%}
                                                       <div class="zed_mega-menu_grid-column">
-                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                           <div class="product-content">
                                                               <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
@@ -1092,7 +1092,7 @@
                                               {%- if block.settings.collections-tabs_5 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_5.products -%}
                                                       <div class="zed_mega-menu_grid-column">
-                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">.</div>
+                                                          <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                                           <div class="product-content">
                                                               <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
