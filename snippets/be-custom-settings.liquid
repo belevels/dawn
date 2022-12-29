@@ -5,7 +5,7 @@
 }
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
-    {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' or collection.handle == 'esenciales' %} 
+    {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
       .{{ product.handle }} .global-media-settings {
@@ -28,12 +28,32 @@
         -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
         mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
       }
-
-    {%- elsif collection.handle == 'esenciales' -%}
+    {% endif %}
+    {%- if collection.handle == 'esenciales' -%}
       {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
       {%- capture customColor1 -%}#EAD8CA{%- endcapture -%}
       {%- capture customColor2 -%}#8A6653{%- endcapture -%}
       {%- capture customColor3 -%}#F2E8E0{%- endcapture -%}
+      .{{ product.handle }} .global-media-settings {
+        background-color: transparent;
+      }
+      .{{ product.handle }} .product-card-wrapper .card__heading span {
+        width: fit-content;
+        margin-right: 0.25rem;
+      }
+      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+        content: '';
+        position: absolute;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: rgba(var(--color-foreground),1);
+        -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+        mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+      }      
     {%- endif -%}
     
 
