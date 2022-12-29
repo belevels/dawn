@@ -64,6 +64,7 @@
       {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 0.13 %}
       .{{ product.handle }} #MainContent > section .product .product__media::after,
       .{{ product.handle }} .be-box,
+      .{{ product.handle }} .be-box .price--large,
       .{{ product.handle }} .product__accordion .accordion__content,
       .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
       .{{ product.handle }} .product__info-container .product__description ul li::after, 
