@@ -3,7 +3,6 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-{%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
     {%- liquid
@@ -19,6 +18,7 @@
         assign customColorRgba3 = '#F2E8E0'
       endif
     -%}
+    {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
     .{{ product.handle }} .global-media-settings {
       background-color: transparent;
     }
@@ -41,10 +41,7 @@
     }
     
     {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
-    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-      {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-      {% assign customColorRgba1 = customColor1 | color_to_hex %}
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
+    .{{ product.handle }} #MainContent > section .product .product__media::after,
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .product__accordion .accordion__content,
       .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
@@ -65,23 +62,16 @@
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
         border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
       }      
-    {%- endif -%}
-    {%- if product.metafields.Seccion.CustomColor2 != blank -%}
-      {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
       {% assign customColorRgba2 = customColor2 | color_to_hex %}
       .{{ product.handle }} .product__info-wrapper .product__title h1::after,
       .{{ product.handle }} .product__info-container .product__description ul li::before {
         background-color: {{ customColorRgba2 }};
       }
-    {%- endif -%}
-    {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-      {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
       .{{ product.handle }} #MainContent > section {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
       }
-    {%- endif -%}    
   {%- endfor -%}
 {%- endfor -%}
 {%- comment -%}
