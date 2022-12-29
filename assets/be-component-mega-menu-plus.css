@@ -172,13 +172,13 @@
         float: left;
         width: 10.5%;
         margin: 10px 10px 5px 10px;
-        /*height: 100%; /* Should be removed. Only for demonstration */
+        height: 100%; /* Should be removed. Only for demonstration */
     }
     .zed_mega-menu_grid-column .product-img {
         float: none;
         display: block !important;
         width: 100%;
-        /*height: 200px; /* Should be removed. Only for demonstration */
+        height: 200px; /* Should be removed. Only for demonstration */
     }
     .zed_mega-menu_grid-column .product-img:hover {
         transition: .5s ease;
