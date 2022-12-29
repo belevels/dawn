@@ -130,7 +130,7 @@
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
             background: #E8DB7D;
         {%- else -%}
-            background: #EFF7FF;
+            background: rgb(var(--color-background));
         {%- endif -%}
     }
     .zed__navbar-main a,
@@ -156,13 +156,13 @@
         {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
             background: #231123;
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
-            background: #EFF7FF;
+            background: rgb(var(--color-background));
         {%- else -%}
             background: #E8DB7D;
         {%- endif -%}
     }
     .zed__navbar-dropdown-content{
-        background-color: #EFF7FF;
+        background-color: rgb(var(--color-background));
     }
     .zed__navbar-dropdown-content-header {
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -172,7 +172,7 @@
         {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
             background: #231123;
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
-            background: #EFF7FF;
+            background: rgb(var(--color-background));
         {%- else -%}
             background: #E8DB7D;
         {%- endif -%}
@@ -731,12 +731,12 @@
               {%- case block.type -%}
                   {%- when 'list-menu' -%}
                       <div class="zed__navbar-dropdown">
-                          <button class="zed__navbar-dropbtn">{{ - block.settings.list_menu_name | escape - }}
+                          <button class="zed__navbar-dropbtn">{{- block.settings.list_menu_name | escape -}}
                               <i class="fa fa-chevron-down"></i>
                           </button>
                           <div class="zed__navbar-dropdown-content">
                               <div class="zed__navbar-dropdown-content-header">
-                                  <h4>{{ - block.settings.list_menu_heading | escape - }}</h4>
+                                  <h4>{{- block.settings.list_menu_heading | escape -}}</h4>
                               </div>
                               <div class="zed__navbar-main-row">
                                   <div class="zed__navbar-linklink-left-block">
@@ -951,22 +951,22 @@
                           <!-- All Collections Grid 8 columns-->
                       {%- when "collections-menu" -%}
                           <div class="zed__navbar-dropdown">
-                              <button class="zed__navbar-dropbtn">{{ - block.settings.collections_menu_name | escape - }}
+                              <button class="zed__navbar-dropbtn">{{- block.settings.collections_menu_name | escape -}}
                                   <i class="fa fa-chevron-down"></i>
                               </button>
                               <div class="zed__navbar-dropdown-content">
                                   <div class="zed__navbar-dropdown-content-header">
-                                      <h4>{{ - block.settings.collections_menu_heading | escape - }}</h4>
+                                      <h4>{{- block.settings.collections_menu_heading | escape -}}</h4>
                                   </div>
                                   <div class="collections_grid-mega-menu">
                                       <div class="zed_mega-menu_grid-row">
                                           {% for collection in collections %}
                                               <div class="zed_mega-menu_grid-column">
-                                                  <a class="product-img" style="background-image: url({{ collection.image | image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat;" href="{{ - collection.url - }}">
+                                                  <a class="product-img" style="background-image: url({{ collection.image | image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat;" href="{{- collection.url -}}">
                                                       <div></div>
                                                   </a>
                                                   <div class="product-content">
-                                                      <h4>{{ - collection.title | link_to: collection.url }}</h4>
+                                                      <h4>{{- collection.title | link_to: collection.url }}</h4>
                                                   </div>
                                               </div>
                                           {% endfor %}
@@ -977,12 +977,12 @@
                           <!-- Single Collection's all products Grid 7 columns -->
                       {%- when "single-collection-menu" -%}
                           <div class="zed__navbar-dropdown">
-                              <button class="zed__navbar-dropbtn">{{ - block.settings.single-collection_menu_name | escape - }}
+                              <button class="zed__navbar-dropbtn">{{- block.settings.single-collection_menu_name | escape -}}
                                   <i class="fa fa-chevron-down"></i>
                               </button>
                               <div class="zed__navbar-dropdown-content">
                                   <div class="zed__navbar-dropdown-content-header">
-                                      <h4>{{ - block.settings.single-collection_menu_heading | escape - }}</h4>
+                                      <h4>{{- block.settings.single-collection_menu_heading | escape -}}</h4>
                                   </div>
                                   <div class="single_collection_products_grid">
                                       <div class="zed_mega-menu_grid-row">
@@ -990,7 +990,7 @@
                                               <div class="zed_mega-menu_grid-column">
                                                   <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                   <div class="product-content">
-                                                      <h4>{{ - product.title | link_to: product.url - }}</h4>
+                                                      <h4>{{- product.title | link_to: product.url -}}</h4>
                                                   </div>
                                               </div>
                                           {%- endfor -%}
@@ -1001,44 +1001,44 @@
                           <!-- Custom Specific collection's products Tabs with grid products 7 columns-->
                       {%- when "collections-tabs-menu" -%}
                           <div class="zed__navbar-dropdown">
-                              <button class="zed__navbar-dropbtn">{{ - block.settings.collection_tab_menu_name | escape - }}
+                              <button class="zed__navbar-dropbtn">{{- block.settings.collection_tab_menu_name | escape -}}
                                   <i class="fa fa-chevron-down"></i>
                               </button>
                               <div class="zed__navbar-dropdown-content">
                                   <div class="zed__navbar-dropdown-content-header">
                                       <div class="CollectionTab">
                                           {%- if block.settings.collection_tab_title_1 != blank -%}
-                                              <button class="collectiontablinks" onclick="openCollection(event, '{{ - block.settings.collection_tab_title_1 | escape - }}')" id="defaultOpen">{{ - block.settings.collection_tab_title_1 | escape - }}</button>
+                                              <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | escape -}}')" id="defaultOpen">{{- block.settings.collection_tab_title_1 | escape -}}</button>
                                           {%- endif -%}
                                           {%- if block.settings.collection_tab_title_2 != blank -%}
-                                              <button class="collectiontablinks" onclick="openCollection(event, '{{ - block.settings.collection_tab_title_2 | escape - }}')">
-                                                  {{ - block.settings.collection_tab_title_2 | escape - }}
+                                              <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_2 | escape -}}')">
+                                                  {{- block.settings.collection_tab_title_2 | escape -}}
                                               </button>
                                           {%- endif -%}
                                           {%- if block.settings.collection_tab_title_3 != blank -%}
-                                              <button class="collectiontablinks" onclick="openCollection(event, '{{ - block.settings.collection_tab_title_3 | escape - }}')">{{ - block.settings.collection_tab_title_3 | escape - }}</button>
+                                              <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_3 | escape -}}')">{{- block.settings.collection_tab_title_3 | escape -}}</button>
                                           {%- endif -%}
                                           {%- if block.settings.collection_tab_title_4 != blank -%}
-                                              <button class="collectiontablinks" onclick="openCollection(event, '{{ - block.settings.collection_tab_title_4 | escape - }}')">
-                                                  {{ - block.settings.collection_tab_title_4 | escape - }}
+                                              <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_4 | escape -}}')">
+                                                  {{- block.settings.collection_tab_title_4 | escape -}}
                                               </button>
                                           {%- endif -%}
                                           {%- if block.settings.collection_tab_title_5 != blank -%}
-                                              <button class="collectiontablinks" onclick="openCollection(event, '{{ - block.settings.collection_tab_title_5 | escape - }}')">
-                                                  {{ - block.settings.collection_tab_title_5 | escape - }}
+                                              <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_5 | escape -}}')">
+                                                  {{- block.settings.collection_tab_title_5 | escape -}}
                                               </button>
                                           {%- endif -%}
                                       </div>
                                   </div>
                                   <div class="collection_tabs_megamenu">
                                       <div class="zed_mega-menu_grid-row">
-                                          <div id="{{ - block.settings.collection_tab_title_1 | escape - }}" class="collectiontabcontent">
+                                          <div id="{{- block.settings.collection_tab_title_1 | escape -}}" class="collectiontabcontent">
                                               {%- if block.settings.collections-tabs_1 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_1.products -%}
                                                       <div class="zed_mega-menu_grid-column">
                                                           <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                           <div class="product-content">
-                                                              <h4>{{ - product.title | link_to: product.url }}</h4>
+                                                              <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
                                                       </div>
                                                   {%- endfor -%}
@@ -1046,13 +1046,13 @@
                                                   <h4>No collection set yet. please set one to see here.</h4>
                                               {%- endif -%}
                                           </div>
-                                          <div id="{{ - block.settings.collection_tab_title_2 | escape - }}" class="collectiontabcontent">
+                                          <div id="{{- block.settings.collection_tab_title_2 | escape -}}" class="collectiontabcontent">
                                               {%- if block.settings.collections-tabs_2 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_2.products -%}
                                                       <div class="zed_mega-menu_grid-column">
                                                           <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                           <div class="product-content">
-                                                              <h4>{{ - product.title | link_to: product.url }}</h4>
+                                                              <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
                                                       </div>
                                                   {%- endfor -%}
@@ -1060,13 +1060,13 @@
                                                   <h4>No collection set yet. please set one to see here.</h4>
                                               {%- endif -%}
                                           </div>
-                                          <div id="{{ - block.settings.collection_tab_title_3 | escape - }}" class="collectiontabcontent">
+                                          <div id="{{- block.settings.collection_tab_title_3 | escape -}}" class="collectiontabcontent">
                                               {%- if block.settings.collections-tabs_3 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_3.products -%}
                                                       <div class="zed_mega-menu_grid-column">
                                                           <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                           <div class="product-content">
-                                                              <h4>{{ - product.title | link_to: product.url }}</h4>
+                                                              <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
                                                       </div>
                                                   {%- endfor -%}
@@ -1074,13 +1074,13 @@
                                                   <h4>No collection set yet. please set one to see here.</h4>
                                               {%- endif -%}
                                           </div>
-                                          <div id="{{ - block.settings.collection_tab_title_4 | escape - }}" class="collectiontabcontent">
+                                          <div id="{{- block.settings.collection_tab_title_4 | escape -}}" class="collectiontabcontent">
                                               {%- if block.settings.collections-tabs_4 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_4.products -%}
                                                       <div class="zed_mega-menu_grid-column">
                                                           <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                           <div class="product-content">
-                                                              <h4>{{ - product.title | link_to: product.url }}</h4>
+                                                              <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
                                                       </div>
                                                   {%- endfor -%}
@@ -1088,13 +1088,13 @@
                                                   <h4>No collection set yet. please set one to see here.</h4>
                                               {%- endif -%}
                                           </div>
-                                          <div id="{{ - block.settings.collection_tab_title_5 | escape - }}" class="collectiontabcontent">
+                                          <div id="{{- block.settings.collection_tab_title_5 | escape -}}" class="collectiontabcontent">
                                               {%- if block.settings.collections-tabs_5 != blank -%}
                                                   {%- for product in block.settings.collections-tabs_5.products -%}
                                                       <div class="zed_mega-menu_grid-column">
                                                           <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;" ">.</div>
                                                           <div class="product-content">
-                                                              <h4>{{ - product.title | link_to: product.url }}</h4>
+                                                              <h4>{{- product.title | link_to: product.url }}</h4>
                                                           </div>
                                                       </div>
                                                   {%- endfor -%}
