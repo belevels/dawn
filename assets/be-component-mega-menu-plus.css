@@ -156,12 +156,6 @@
     /* Create four equal columns that floats next to each other */
     .zed_mega-menu_grid-row {
         padding: 15px 10px;
-        transition: 
-    0.5s height cubic-bezier(.73,.32,.34,1.5),
-    0.5s padding cubic-bezier(.73,.32,.34,1.5),
-    0.5s margin cubic-bezier(.73,.32,.34,1.5),
-    0.5s 0.2s color,
-    0.2s --background-color;
     }
     .zed_mega-menu_grid-column {
         float: left;
