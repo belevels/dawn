@@ -114,6 +114,19 @@
         .{{ product.handle }} #MainContent > section {
           background-image: none;
         }
+        .{{ product.handle }} #MainContent > section .product .product__media::after,
+        .{{ product.handle }} .be-box,
+        .{{ product.handle }} .quantity::before,
+        .{{ product.handle }} .be-box .price--large,
+        .{{ product.handle }} .product__accordion .accordion__content,
+        .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
+        .{{ product.handle }} .product__info-container .product__description ul li::after, 
+        .{{ product.handle }} .highlight li::after,
+        .product-card-wrapper .{{ product.handle }}.card,
+        .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+        product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
+          background-color: {{ customColorRgba2 }};
+        }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
