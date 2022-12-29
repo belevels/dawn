@@ -8,6 +8,10 @@
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' or collection.handle == 'esenciales' %} 
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+      {%- liquid
+        assign alphaA = '0.13'
+        assign alphaB = '0.26'
+        -%}      
       .{{ product.handle }} .global-media-settings {
         background-color: transparent;
       }
@@ -30,7 +34,11 @@
       }
     {% endif %}
     {%- if collection.handle == 'esenciales' -%}
-      {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
+      {%- liquid
+        assign svgIconUrl = 'esenciales.svg' | asset_url 
+        assign alphaA = '0.13'
+        assign alphaB = '0.5'
+        -%}
       {%- capture customColor1 -%}#EAD8CA{%- endcapture -%}
       {%- capture customColor2 -%}#EAD8CA{%- endcapture -%}
       {%- capture customColor3 -%}#EAD8CA{%- endcapture -%}
@@ -51,17 +59,17 @@
       .product-card-wrapper .{{ product.handle }}.card,
       .product-card-wrapper .{{ product.handle }}.card .card__media::after,
       product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        background-color: {{ customColorRgba1 | color_modify: 'alpha', alphaA }};
       }
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .be-box .price--large,
       .{{ product.handle }} .slider-counter__link--dots .dot,
       .product-card-wrapper .{{ product.handle }}.card {
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', alphaA }};
       }
       .{{ product.handle }} .be-box .button--secondary,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
+        border-color: {{ customColorRgba1 | color_modify: 'alpha', alphaB }};
       }      
 
     {%- if product.metafields.Seccion.CustomColor2 != blank -%}
