@@ -61,7 +61,7 @@
     {%- if product.metafields.Seccion.CustomColor1 != blank -%}
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {%- endif -%}
-      {% assign customColorRgba1 = customColor1 | color_modify: 'alpha', 0.13 | color_to_hex %}
+      {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 0.13 %}
       .{{ product.handle }} #MainContent > section .product .product__media::after,
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .product__accordion .accordion__content,
