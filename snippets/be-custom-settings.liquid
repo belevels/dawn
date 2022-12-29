@@ -28,8 +28,7 @@
         -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
         mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
       }
-    {% endif %}
-    {%- if collection.handle == 'esenciales' -%}
+    {% elsif collection.handle == 'esenciales' -%}
       {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
       {%- capture customColor1 -%}#CB9C7A{%- endcapture -%}
       {%- capture customColor2 -%}#8A6653{%- endcapture -%}
@@ -113,7 +112,6 @@
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent > section {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
-
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
         .{{ product.handle }} .be-box,
