@@ -111,8 +111,8 @@
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%)
       }
       {% if product.metafields.Seccion.TextColor %}
-        .{{ product.handle }} * {
-        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.13 }};
+        .{{ product.handle }} #MainContent > section {
+        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.95 }};
         background-image: none;
         }      
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
