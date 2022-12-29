@@ -516,6 +516,409 @@
             {%- endfor -%}
           </ul>
         </nav>
+      {%- elsif section.settings.menu_type_desktop == 'mega-plus' -%}
+      <div class="zed__navbar-main">
+        <!-- Custom Menu Link Lists 3/4 columns -->
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'list-menu' -%}
+            <div class="zed__navbar-dropdown">
+                <button class="zed__navbar-dropbtn">{{- block.settings.list_menu_name | escape -}} 
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="zed__navbar-dropdown-content">
+                    <div class="zed__navbar-dropdown-content-header">
+                        <h4>{{- block.settings.list_menu_heading | escape -}}</h4>
+                    </div>   
+                    <div class="zed__navbar-main-row">
+                        <div class="zed__navbar-linklink-left-block">
+                        {%- for block in section.blocks -%}
+                            <!-- Menu column Start  -->
+                            <!-- Menu column 1 -->
+                            {%- if block.settings.menu_link1 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title1 != blank -%}
+                                    <h4>{{ block.settings.menu_title1 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link1.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                            <!-- Menu column 2 -->
+                            {%- if block.settings.menu_link2 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title2 != blank -%}
+                                    <h4>{{ block.settings.menu_title2 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link2.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                            <!-- Menu colum 3 -->
+                            {%- if block.settings.menu_link3 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title3 != blank -%}
+                                    <h4>{{ block.settings.menu_title3 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link3.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                            <!-- Menu column 4 -->
+                            {%- if block.settings.menu_link4 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title4 != blank -%}
+                                    <h4>{{ block.settings.menu_title4 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link4.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                        
+                            <!-- Menu column 5 -->
+                            {%- if block.settings.menu_link5 != blank -%}
+                            <div class="seperate">.</div>
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title5 != blank -%}
+                                    <h4>{{ block.settings.menu_title5 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link5.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                            <!-- Menu column 6 -->
+                            {%- if block.settings.menu_link6 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title6 != blank -%}
+                                    <h4>{{ block.settings.menu_title6 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link6.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+                            <!-- Menu column 7 -->
+                            {%- if block.settings.menu_link7 != blank -%}
+                                <div class="zed__navbar-main-column">
+                                {%- if block.settings.menu_title7 != blank -%}
+                                    <h4>{{ block.settings.menu_title7 | escape }}</h4>
+                                {%- endif -%}
+                                {% for link in block.settings.menu_link7.links %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% if link.links.size > 0 %}
+                                    {% for child_link in link.links %}
+                                        <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                        {% if child_link.links.size > 0 %}
+                                        {% for grandchild_link in child_link.links %}
+                                        <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {%- endif -%}
+    
+                            <!-- Menu column 8 -->
+                            {%- if block.settings.menu_link8 != blank -%}
+                            <div class="zed__navbar-main-column">
+                            {%- if block.settings.menu_title8 != blank -%}
+                                <h4>{{ block.settings.menu_title8 | escape }}</h4>
+                            {%- endif -%}
+                            {% for link in block.settings.menu_link8.links %}
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                                {% if link.links.size > 0 %}
+                                {% for child_link in link.links %}
+                                    <a href="{{ child_link.url }}" class="child_link">{{ child_link.title }}</a>
+                                    {% if child_link.links.size > 0 %}
+                                    {% for grandchild_link in child_link.links %}
+                                    <a href="{{ grandchild_link.url }}" class="grand_child_link">- {{ grandchild_link.title }}</a>
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+                            {%- endif -%}
+                            <!-- Menu column End  -->
+                        {%- endfor -%}
+                        </div>
+                        <div class="zed__navbar-linklink-right-block">
+                            <div class="zed__navbar-main-column_ad">
+                                {%- for block in section.blocks -%}
+                                    {%- case block.type -%}
+                                        {%- when 'list-menu' -%}
+                                            {%- if block.settings.ad_block_title != blank -%}
+                                                <h4>{{ block.settings.ad_block_title | escape }}</h4>
+                                            {%- endif -%}
+                                            {%- if block.settings.ad_img1 != blank -%}
+                                            <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                            {%- else -%}
+                                            <h3>EMPTY!! <br>Nothing is set yet! Please set Ad Image.</h3>
+                                            {%- endif -%}
+                                            {%- if block.settings.ad_img2 != blank -%}
+                                            <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                            {%- endif -%}
+                                            {%- if block.settings.ad_img3 != blank -%}
+                                            <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">.</div>
+                                            {%- endif -%}
+                                    {%- endcase -%}
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+        <!-- All Collections Grid 8 columns-->
+        {%- when "collections-menu" -%}
+            <div class="zed__navbar-dropdown">
+                <button class="zed__navbar-dropbtn">{{- block.settings.collections_menu_name | escape -}} 
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="zed__navbar-dropdown-content">
+                    <div class="zed__navbar-dropdown-content-header">
+                    <h4>{{- block.settings.collections_menu_heading | escape -}}</h4>
+                    </div>   
+                    <div class="collections_grid-mega-menu">
+                        <div class="zed_mega-menu_grid-row">
+                            {% for collection in collections %}
+                                <div class="zed_mega-menu_grid-column">
+                                    <a class="product-img" style="background-image: url({{ collection.image | image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat;" href="{{- collection.url -}}">
+                                        <div> </div>
+                                    </a>
+                                    <div class="product-content">
+                                        <h4>{{- collection.title | link_to: collection.url }}</h4>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+        <!-- Single Collection's all products Grid 7 columns -->
+        {%- when "single-collection-menu" -%}
+            <div class="zed__navbar-dropdown">
+                <button class="zed__navbar-dropbtn">{{- block.settings.single-collection_menu_name | escape -}}
+                <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="zed__navbar-dropdown-content">
+                    <div class="zed__navbar-dropdown-content-header">
+                        <h4>{{- block.settings.single-collection_menu_heading | escape -}}</h4>
+                    </div>
+                    <div class="single_collection_products_grid">
+                        <div class="zed_mega-menu_grid-row">
+                            {%- for product in block.settings.single-collection-menu_coolection_1.products -%}
+                                <div class="zed_mega-menu_grid-column">
+                                    <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                    <div class="product-content">
+                                        <h4>{{- product.title | link_to: product.url -}}</h4>
+                                    </div>
+                                </div>
+                            {%- endfor -%}                    
+                        </div>
+                    </div>   
+    
+                </div>
+            </div> 
+    
+        <!-- Custom Specific collection's products Tabs with grid products 7 columns-->
+        {%- when "collections-tabs-menu" -%}
+            <div class="zed__navbar-dropdown">
+                <button class="zed__navbar-dropbtn">{{- block.settings.collection_tab_menu_name | escape -}} 
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="zed__navbar-dropdown-content">
+                    <div class="zed__navbar-dropdown-content-header">
+                        <div class="CollectionTab">
+                            {%- if block.settings.collection_tab_title_1 != blank -%}
+                            <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | escape -}}')" id="defaultOpen">{{- block.settings.collection_tab_title_1 | escape -}}</button>
+                            {%- endif -%}
+                            {%- if block.settings.collection_tab_title_2 != blank -%}
+                            <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_2 | escape -}}')">
+                                {{- block.settings.collection_tab_title_2 | escape -}}
+                            </button>
+                            {%- endif -%}
+                            {%- if block.settings.collection_tab_title_3 != blank -%}
+                            <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_3 | escape -}}')">{{- block.settings.collection_tab_title_3 | escape -}}</button>
+                            {%- endif -%}
+                            {%- if block.settings.collection_tab_title_4 != blank -%}
+                            <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_4 | escape -}}')">
+                                {{- block.settings.collection_tab_title_4 | escape -}}
+                            </button>
+                            {%- endif -%}
+                            {%- if block.settings.collection_tab_title_5 != blank -%}
+                            <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_5 | escape -}}')">
+                                {{- block.settings.collection_tab_title_5 | escape -}}
+                            </button>
+                            {%- endif -%}
+                        </div>
+                    </div>   
+                    <div class="collection_tabs_megamenu">
+                        <div class="zed_mega-menu_grid-row">
+                                <div id="{{- block.settings.collection_tab_title_1 | escape -}}" class="collectiontabcontent">
+                                {%- if block.settings.collections-tabs_1 != blank -%}
+                                    {%- for product in block.settings.collections-tabs_1.products -%}
+                                    <div class="zed_mega-menu_grid-column">
+                                        <div class="product-img" style="background-image: url({{ product.featured_image | image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                        
+                                        <div class="product-content">
+                                            <h4>{{- product.title | link_to: product.url }}</h4>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    <h4>No collection set yet. please set one to see here.</h4>
+                                {%- endif -%}
+                                </div>
+    
+    
+                           
+                                <div id="{{- block.settings.collection_tab_title_2 | escape -}}" class="collectiontabcontent">
+                                {%- if block.settings.collections-tabs_2 != blank -%}
+                                    {%- for product in block.settings.collections-tabs_2.products -%}
+                                    <div class="zed_mega-menu_grid-column">
+                                        <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                        
+                                        <div class="product-content">
+                                            <h4>{{- product.title | link_to: product.url }}</h4>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    <h4>No collection set yet. please set one to see here.</h4>
+                                {%- endif -%}
+                                </div>
+                           
+    
+                           
+                                <div id="{{- block.settings.collection_tab_title_3 | escape -}}" class="collectiontabcontent">
+                                {%- if block.settings.collections-tabs_3 != blank -%}
+                                    {%- for product in block.settings.collections-tabs_3.products -%}
+                                    <div class="zed_mega-menu_grid-column">
+                                        <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                       
+                                        <div class="product-content">
+                                            <h4>{{- product.title | link_to: product.url }}</h4>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    <h4>No collection set yet. please set one to see here.</h4>
+                                {%- endif -%}
+                                </div>
+                           
+    
+                          
+                                <div id="{{- block.settings.collection_tab_title_4 | escape -}}" class="collectiontabcontent">
+                                {%- if block.settings.collections-tabs_4 != blank -%}
+                                    {%- for product in block.settings.collections-tabs_4.products -%}
+                                    <div class="zed_mega-menu_grid-column">
+                                        <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                      
+                                        <div class="product-content">
+                                            <h4>{{- product.title | link_to: product.url }}</h4>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    <h4>No collection set yet. please set one to see here.</h4>
+                                {%- endif -%}
+                                </div>
+                           
+    
+                           
+                                <div id="{{- block.settings.collection_tab_title_5 | escape -}}" class="collectiontabcontent">
+                                {%- if block.settings.collections-tabs_5 != blank -%}
+                                    {%- for product in block.settings.collections-tabs_5.products -%}
+                                    <div class="zed_mega-menu_grid-column">
+                                        <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;"">.</div>
+                                        
+                                        <div class="product-content">
+                                            <h4>{{- product.title | link_to: product.url }}</h4>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    <h4>No collection set yet. please set one to see here.</h4>
+                                {%- endif -%}
+                                </div>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        {%- endcase -%}
+        {%- endfor -%}
+    
+    </div>
       {%- else -%}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
@@ -920,13 +1323,34 @@
 {%- liquid
   comment
   Be Levels - start mod
-  Agregamos enable_language_selector_in_header, logo_svg, custom_url, transparent_header, content_color
+  Agregamos enable_language_selector_in_header, logo_svg, custom_url, transparent_header, content_color, mega menu plus
   endcomment
 -%}
+<script>
+  function openCollection(evt, collectionName) {
+    var i, collectiontabcontent, collectiontablinks;
+    
+    collectiontabcontent = document.getElementsByClassName("collectiontabcontent");
+    for (i = 0; i < collectiontabcontent.length; i++) {
+      collectiontabcontent[i].style.display = "none";
+    }
+    collectiontablinks = document.getElementsByClassName("collectiontablinks");
+    for (i = 0; i < collectiontablinks.length; i++) {
+      collectiontablinks[i].className = collectiontablinks[i].className.replace(" collectionactive", "");
+    }
+    document.getElementById(collectionName).style.display = "block";
+    evt.currentTarget.className += " collectionactive";
+
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
 {% schema %}
 {
   "name": "t:sections.header.name",
   "class": "section-header",
+  "max_blocks": 5,  
   "settings": [
     {
       "type": "select",
@@ -1023,11 +1447,43 @@
         {
           "value": "mega",
           "label": "t:sections.header.settings.menu_type_desktop.options__2.label"
+        },
+        {
+          "value": "mega-plus",
+          "label": "Mega menu +"
         }
       ],
       "default": "dropdown",
       "label": "t:sections.header.settings.menu_type_desktop.label",
       "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "select",
+      "id": "menu_theme",
+      "label": "Menu Theme",
+      "options": [
+          {
+          "value": "lightblack",
+          "label": "Light Black"
+          },
+          {
+          "value": "lightred",
+          "label": "Light Red"
+          },
+          {
+          "value": "lightgreen",
+          "label": "Light Green"
+          },
+          {
+          "value": "lightyellow",
+          "label": "Light Yellow"
+          },
+          {
+          "value": "lightwhite",
+          "label": "Light White"
+          }
+      ],
+      "default": "lightblack"
     },
     {
       "type": "select",
@@ -1132,6 +1588,287 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "list-menu",
+      "name": "List Mega Menu",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Menu List Block"
+        },
+        {
+          "type": "text",
+          "id": "list_menu_name",
+          "default": "Menu Name",
+          "label": "Menu Name"
+        },
+        {
+          "type": "text",
+          "id": "list_menu_heading",
+          "default": "Menu Heading",
+          "label": "Menu Heading"
+        },
+        {
+          "type": "text",
+          "id": "menu_title1",
+          "default": "Menu 1",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link1",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title2",
+          "default": "Menu 2",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link2",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title3",
+          "default": "Menu 3",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link3",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title4",
+          "default": "Menu 4",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link4",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title5",
+          "default": "Menu 5",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link5",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title6",
+          "default": "Menu 6",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link6",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title7",
+          "default": "Menu 7",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link7",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title8",
+          "default": "Menu 8",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_link8",
+          "label": "Nav Menu"
+        },
+        {
+          "type": "header",
+          "content": "Menu Ad Block"
+        },
+        {
+          "type": "text",
+          "id": "ad_block_title",
+          "default": "Ad Title",
+          "label": "Ad Block Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img1",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img1_link",
+          "label": "Ad Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img2",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img2_link",
+          "label": "Ad Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img3",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img3_link",
+          "label": "Ad Image Link"
+        }
+      ]
+    },
+    {
+      "type": "collections-menu",
+      "name": "Collections Menu",
+      "settings":[
+          {
+          "type": "text",
+          "id": "collections_menu_name",
+          "label": "Menu Name",
+          "default": "Menu Name"
+        },
+        {
+          "type": "text",
+          "id": "collections_menu_heading",
+          "label": "Menu Heading",
+          "default": "Menu Heading"
+        }
+      ]
+    },
+    {
+      "type": "single-collection-menu",
+      "name": "Single Collection Menu",
+      "settings":[
+        {
+          "type": "text",
+          "id": "single-collection_menu_name",
+          "label": "Menu Name",
+          "default": "Menu Name"
+          },
+        {
+          "type": "text",
+          "id": "single-collection_menu_heading",
+          "label": "Menu Heading",
+          "default": "Menu Heading"
+          },
+        {
+          "type": "collection",
+          "id": "single-collection-menu_coolection_1",
+          "label": "Coolection"
+          }
+          ]
+      },
+    {
+      "type": "collections-tabs-menu",
+      "name": "Collections Tabs Menu",
+      "settings":[
+        {
+          "type": "text",
+          "id": "collection_tab_menu_name",
+          "label": "Menu Name",
+          "default": "Menu name"
+          },
+        {
+          "type": "text",
+          "id": "collection_tab_title_1",
+          "label": "Collection Title 1",
+          "default": "tshirt",
+          "info": "title should be small letters"
+          },
+        {
+          "type": "collection",
+          "id": "collections-tabs_1",
+          "label": "collection 1"
+          },
+        {
+          "type": "text",
+          "id": "collection_tab_title_2",
+          "label": "Collection Title 2",
+          "default": "shirt",
+          "info": "title should be small letters"
+          },
+        {
+          "type": "collection",
+          "id": "collections-tabs_2",
+          "label": "collection 2"
+          },
+        {
+          "type": "text",
+          "id": "collection_tab_title_3",
+          "label": "Collection Title 3",
+          "default": "shoes",
+          "info": "title should be small letters"
+          },
+        {
+          "type": "collection",
+          "id": "collections-tabs_3",
+          "label": "collection 3"
+          },
+        {
+          "type": "text",
+          "id": "collection_tab_title_4",
+          "label": "Collection Title 4",
+          "default": "bags",
+          "info": "title should be small letters"
+          },
+        {
+          "type": "collection",
+          "id": "collections-tabs_4",
+          "label": "collection 4"
+          },
+        {
+          "type": "text",
+          "id": "collection_tab_title_5",
+          "label": "Collection Title 5",
+          "default": "jwellary",
+          "info": "title should be small letters"
+          },
+        {
+          "type": "collection",
+          "id": "collections-tabs_5",
+          "label": "collection 5"
+          }
+          ]
+      }
+  ],
+  "default": {
+    "blocks":[
+      {
+      "type": "list-menu"
+      },
+      {
+      "type": "collections-menu"
+      },
+      {
+      "type": "single-collection-menu"
+      },
+      {
+      "type": "collections-tabs-menu"
+      }
+    ]
+  }
 }
 {% endschema %}
