@@ -137,16 +137,15 @@
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
         .{{ product.handle }} #MainContent > section:first-child,
-        .collection .{{ product.handle }}.card .button,
-        .header-wrapper--border-bottom {
+        .collection .{{ product.handle }}.card .button {
           --color-base-text: 255, 255, 255;
           --color-link: rgba(var(--color-foreground),.75);
           --color-foreground: 255, 255, 255;
           --color-base-outline-button-labels: 255, 255, 255;
           color: rgba(var(--color-foreground),.75);
-          border-color: rgba(var(--color-foreground),.75);
           fill: rgba(var(--color-foreground),.75);
         }
+        .{{ product.handle }} .header-wrapper--border-bottom,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
           filter: invert(1);
         }        
