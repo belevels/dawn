@@ -11,7 +11,7 @@
         assign svgIcon = product.handle
       endif
       if collection.handle == 'esenciales'
-        assign svgIcon = 'esenciales'
+        assign svgIcon = collection.handle
       endif
     -%}
     {% capture svgIconUrl %} {{ svgIcon }}{% endcapture %}
