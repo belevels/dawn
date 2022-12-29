@@ -31,6 +31,7 @@
           assign customColorRgba3 = '#F2E8E0'
         endif
       -%}
+    {%- endfor -%}
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       .{{ product.handle }} .global-media-settings {
         background-color: transparent;
@@ -85,7 +86,7 @@
           background-color: {{ customColorRgba3 }};
           background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
         }
-    {%- endfor -%}
+    
   {%- endfor -%}
 {% endstyle %}
 
