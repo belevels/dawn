@@ -81,7 +81,10 @@
       }
       .{{ product.handle }} .be-box .button--secondary,
       .product-card-wrapper .{{ product.handle }}.card .button--secondary {
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
+        --color-button: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
+        --color-button-text: #ffffff;
+        color: rgb(var(--color-button-text));
+        border-color: rgba(var(--color-button),var(--alpha-button-background));
       }      
 
     {%- if product.metafields.Seccion.CustomColor2 != blank -%}
