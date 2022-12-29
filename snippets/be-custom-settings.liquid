@@ -114,7 +114,7 @@
         .{{ product.handle }} #MainContent > section,
         .{{ product.handle }} .be-box .button--secondary,
         .{{ product.handle }} #MainContent > section .product .product__media::after {
-          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.85 }};
+          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.95 }};
           background-image: none;
           }
 
@@ -128,7 +128,7 @@
         .product-card-wrapper .{{ product.handle }}.card,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.95 }};
+          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.85 }};
           background-image: none;
           }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
