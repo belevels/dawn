@@ -16,7 +16,7 @@
       {%- endif -%}            
       
       
-    {% for collection in product.collections %}
+
       {%- liquid
         if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food'
         assign svgIconUrl = product.handle | append: '.svg' | asset_url
@@ -25,7 +25,7 @@
         assign customColorRgba3 = customColor3 | color_to_hex
         endif
       -%}
-    {%- endfor -%}
+
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       .{{ product.handle }} .global-media-settings {
         background-color: transparent;
