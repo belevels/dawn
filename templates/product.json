@@ -3,7 +3,7 @@
     "c4d35099-9c2f-475a-b296-d458475f6d60": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<div style=\"background:wheat;width:500px;height:500px;margin: 0 auto;\">\n    {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}\n{% render svgIconUrl %}\n{{ svgIconUrl }}\n{% if svgIconUrl contains 'Liquid error' %}\n<p>error en {{ svgIconUrl }}<\/p>\n{% endif %}\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
