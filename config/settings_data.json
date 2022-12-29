@@ -199,7 +199,7 @@
           "custom_url": "",
           "menu": "belevels",
           "menu_type_desktop": "mega-plus",
-          "menu_theme": "lightblack",
+          "menu_theme": "lightwhite",
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
           "transparent_header": true,
