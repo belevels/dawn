@@ -9,7 +9,7 @@
       {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {%- assign svgIcon = product.handle %}
     {% if collection.handle == 'esenciales' -%}
-      {%- assign svgIcon = collection.handle %}
+      {%- assign svgIcon = 'esenciales' %}
     {% endif %}
     {% capture svgIconUrl %} {{ svgIcon }}{% endcapture %}
         .{{ product.handle | append: '.svg' | asset_url }} .global-media-settings {
