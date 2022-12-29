@@ -179,7 +179,7 @@
           "logo_svg": true,
           "custom_url": "",
           "menu": "belevels",
-          "menu_type_desktop": "mega-plus",
+          "menu_type_desktop": "mega",
           "menu_theme": "lightwhite",
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
