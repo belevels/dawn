@@ -105,7 +105,7 @@
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
       .{{ product.handle }} #MainContent > section {
         background-color: {{ customColorRgba3 }};
-        background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 0.025) 100%)
+        background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 0.95) 100%)
       }
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
