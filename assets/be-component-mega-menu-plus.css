@@ -33,28 +33,33 @@
     left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    /*
-    transform: translate3d(0, -100%, 0);
-    will-change: transform;
-    */
     }
 
     .zed__navbar-dropdown:hover .zed__navbar-dropdown-content {
     display: block;
-    /*animation: mymove 0.6s;*/
-    /*
-    -webkit-animation-name: bounceInDown;
-    animation-name: bounceInDown;
-    transition: opacity 0.19s cubic-bezier(0.62, 0, 0.8, 0.38);
-    -webkit-animation-duration: 0.38s;
-    animation-duration: 0.38s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    */
+    animation: mymove 0.6s;
     }
     @keyframes mymove {
-    from {top: 50px;}
-    to {top: 90px;}
+    /*from {top: 50px;}
+    to {top: 90px;}*/
+
+    0% {
+
+        transform: scaleY(0)
+
+    }
+
+    80% {
+
+        transform: scaleY(1.1)
+
+    }
+
+    100% {
+
+        transform: scaleY(1)
+
+    }
     }
     /* Create three equal columns that floats next to each other */
     .zed__navbar-main-row {
