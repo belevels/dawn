@@ -4,7 +4,6 @@
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
   {% for product in collections.all.products %}
-    {% for collection in product.collections %}
       {%- comment -%}Be Levels - start mod: Agregamos colores personalizados{%- endcomment -%}
       {%- if product.metafields.Seccion.CustomColor3 != blank -%}
         {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
@@ -15,6 +14,9 @@
       {%- if product.metafields.Seccion.CustomColor3 != blank -%}
         {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       {%- endif -%}            
+      
+      
+    {% for collection in product.collections %}
       {%- liquid
         if collection.handle == 'esenciales'
           assign svgIconUrl = collection.handle | append: '.svg' | asset_url
