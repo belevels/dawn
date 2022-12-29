@@ -3,21 +3,8 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-  {% for product in collections.all.products %}
-    {% for collection in product.collections %}
-      {%- comment -%}Be Levels - start mod: Agregamos colores personalizados{%- endcomment -%}
-      {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-        {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-        {% assign customColorRgba1 = customColor1 | color_to_hex %}
-      {%- endif -%}
-      {%- if product.metafields.Seccion.CustomColor2 != blank -%}
-        {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-        {% assign customColorRgba2 = customColor2 | color_to_hex %}
-      {%- endif -%}
-      {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-        {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-        {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      {%- endif -%}            
+  {% for products in collections.all.products %}
+      {%- comment -%}Be Levels - start mod: Agregamos colores personalizados{%- endcomment -%}            
       {%- liquid
       comment
         if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food'
@@ -88,7 +75,7 @@
           background-color: {{ customColorRgba3 }};
           background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, white 100%)
         }
-    {%- endfor -%}
+
   {%- endfor -%}
 {% endstyle %}
 
