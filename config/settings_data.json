@@ -152,44 +152,25 @@
       "header": {
         "type": "header",
         "blocks": {
-          "040988b6-473f-4af5-bb47-1a4518a47c13": {
-            "type": "collections-menu",
+          "23061011-5f3b-4f22-9289-6a35a797ecab": {
+            "type": "collections-tabs-menu",
             "settings": {
-              "collections_menu_name": "Productos",
-              "collections_menu_heading": "Menu Heading"
-            }
-          },
-          "8c164a05-83cd-4d9c-b45e-d806d30c7651": {
-            "type": "list-menu",
-            "settings": {
-              "list_menu_name": "Menu Name",
-              "list_menu_heading": "Menu Heading",
-              "menu_title1": "Menu 1",
-              "menu_link1": "",
-              "menu_title2": "Menu 2",
-              "menu_link2": "",
-              "menu_title3": "Menu 3",
-              "menu_link3": "",
-              "menu_title4": "Menu 4",
-              "menu_link4": "",
-              "menu_title5": "Menu 5",
-              "menu_link5": "",
-              "menu_title6": "Menu 6",
-              "menu_link6": "",
-              "menu_title7": "Menu 7",
-              "menu_link7": "",
-              "menu_title8": "Menu 8",
-              "menu_link8": "",
-              "ad_block_title": "Ad Title",
-              "ad_img1_link": "",
-              "ad_img2_link": "",
-              "ad_img3_link": ""
+              "collection_tab_menu_name": "Productos",
+              "collection_tab_title_1": "Fórmulas maestras",
+              "collections-tabs_1": "formulas-maestras",
+              "collection_tab_title_2": "Salud femenina",
+              "collections-tabs_2": "salud-femenina",
+              "collection_tab_title_3": "Deporte",
+              "collections-tabs_3": "deporte",
+              "collection_tab_title_4": "Keto & Food",
+              "collections-tabs_4": "keto-food",
+              "collection_tab_title_5": "Esenciales",
+              "collections-tabs_5": "esenciales"
             }
           }
         },
         "block_order": [
-          "040988b6-473f-4af5-bb47-1a4518a47c13",
-          "8c164a05-83cd-4d9c-b45e-d806d30c7651"
+          "23061011-5f3b-4f22-9289-6a35a797ecab"
         ],
         "settings": {
           "color_scheme": "background-1",
