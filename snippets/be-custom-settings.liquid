@@ -145,9 +145,6 @@
           color: rgba(var(--color-foreground),.75);
           fill: rgba(var(--color-foreground),.75);
         }
-        .{{ product.handle }} .header-wrapper--border-bottom{
-          border: 0;
-        }
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
           filter: invert(1);
         }        
@@ -574,6 +571,9 @@
 {% endstyle %}
 
 <style>
+  #shopify-section-header:not(.scrolled-past-header) .header-wrapper--border-bottom {
+    border: 0;
+  }  
   .product__info-wrapper .product__title h1::after {
     width: 3rem;
     height: 3rem;
