@@ -219,7 +219,8 @@
     }
     
     /* Style the buttons inside the tab */
-    .zed__navbar-dropdown-content .CollectionTab button {
+    .zed__navbar-dropdown-content .CollectionTab button,
+    .zed__navbar-dropdown-content .CollectionTab a {
         background-color: inherit;
         float: left;
         border: none;
