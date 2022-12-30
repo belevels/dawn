@@ -24,9 +24,6 @@
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
     }
-    .zed__navbar-dropdown .zed__navbar-dropbtn:hover {
-        background-color: #E8DB7D;
-    }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn .icon-caret {
         width: 1rem;

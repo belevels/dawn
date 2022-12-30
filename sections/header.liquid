@@ -152,7 +152,7 @@
             background: rgb(var(--color-background));
         {%- endif -%}
     }
-    {%- comment -%}
+
     .zed__navbar-main a,
     .zed__navbar-dropdown .zed__navbar-dropbtn{
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -166,7 +166,7 @@
         {%- else -%}
             color: rgba(var(--color-foreground),.75);
         {%- endif -%}
-    }
+    }    {%- comment -%}
     .zed__navbar-main a:hover, 
     .zed__navbar-dropdown:hover .zed__navbar-dropbtn {
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -182,6 +182,9 @@
         {%- endif -%}
     }
     {%- endcomment -%}
+    .zed__navbar-dropdown .zed__navbar-dropbtn{
+      color: rgba(var(--color-foreground),.75);
+    }
     .zed__navbar-dropdown-content{
         background-color: rgb(var(--color-background));
     }
