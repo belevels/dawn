@@ -14,6 +14,10 @@
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
 
+  Be Levels - start mod: Agregamos opciones para mostrar descripción corta y precio
+  - be_show_price: {Boolean}. Default: false (optional)
+  - be_show_short_description: {Boolean}. Default: false (optional)
+
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
@@ -198,11 +202,13 @@
             {%- endif -%}
 
             {%- comment -%}Be Levels - start mod: Agregamos descripción corta e info adicional para el comparador{%- endcomment -%}
-            <div class="short-description text rte">
-              {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
-              <small>{{ shortDescription }}</small>
-            </div>
-                        
+            {%- if be_show_short_description -%}
+              <div class="short-description text rte">
+                {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
+                <small>{{ shortDescription }}</small>
+              </div>
+            {%- endif -%}
+            
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
@@ -375,7 +381,9 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {% render 'price' %}
+            {%- if be_show_price -%}
+              {% render 'price' %}
+            {%- endif -%}
           </div>
         </div>
       </div>
