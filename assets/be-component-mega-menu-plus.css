@@ -18,10 +18,14 @@
     padding: 2.5rem;
     background-color: inherit;
     font: inherit;
+    font-weight: 700;
     line-height: inherit;
     display: flex;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
+    }
+    .zed__navbar-dropdown .zed__navbar-dropbtn:hover {
+        background-color: #E8DB7D;
     }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn .icon-caret {
