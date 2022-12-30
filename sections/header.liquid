@@ -1055,6 +1055,15 @@
                             {{- block.settings.collection_tab_title_5 | escape -}}
                         </button>
                       {%- endif -%}
+                      {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
+                      {%- if block.settings.collections-show_all -%}
+                        <div class="zed_mega-menu_grid-row">
+                          <a href="/collections/all" class="button button--full-width button--primary animate-arrow">
+                            {{ 'belevels.general.see_all' | t }}
+                            <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
+                          </a>
+                        </div>
+                      {%- endif -%}
                     </div>
                   </div>
                     <div class="collection_tabs_megamenu">
@@ -1190,15 +1199,6 @@
                           {%- endif -%}
                         </div>
                       </div>
-                      {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
-                      {%- if block.settings.collections-show_all -%}
-                        <div class="zed_mega-menu_grid-row">
-                          <a href="/collections/all" class="button button--full-width button--primary animate-arrow">
-                            {{ 'belevels.general.see_all' | t }}
-                            <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
-                          </a>
-                        </div>
-                      {%- endif -%}
                   </div>
                 </div>
               </div>
