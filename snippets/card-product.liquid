@@ -208,7 +208,7 @@
                 <small>{{ shortDescription }}</small>
               </div>
             {%- endif -%}
-            
+
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
@@ -381,9 +381,9 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {%- if be_show_price -%}
-              {% render 'price' %}
-            {%- endif -%}
+            {%- if be_show_price -%}<div class="hidden">{%- endif -%}
+            {% render 'price' %}
+            {%- if be_show_price -%}</div>{%- endif -%}
           </div>
         </div>
       </div>
