@@ -1541,6 +1541,7 @@
       var headerHeight = document.getElementById('site-header').offsetHeight;
       document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
       document.getElementById('shopify-section-header').style.setProperty('--header-height', '-'+ headerHeight + 'px');
+      document.querySelector('.zed__navbar-dropdown-content').style.height = headerHeight;
     });
     window.onscroll = function() {
       var header = document.getElementById('site-header');
