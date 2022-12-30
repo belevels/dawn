@@ -18,7 +18,7 @@
     }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn {
-    font-size: 16px;  
+    /*font-size: 16px;  */
     border: none;
     outline: none;
     padding: 14px 16px;
@@ -92,7 +92,7 @@
     }
 
     .zed__navbar-main-column_ad h3 {
-        font-size: 20px;
+        /*font-size: 20px;*/
         text-align: center;
         color: #9a9a9a;
     }
@@ -100,7 +100,7 @@
     .zed__navbar-main-column a {
         float: none;
         color: rgb(255, 255, 255);
-        font-size: 14px;
+        /*font-size: 14px;*/
         font-weight: 400;
         line-height: 1.2;
         padding: 3px 5px;
@@ -217,7 +217,7 @@
         cursor: pointer;
         padding: 14px 16px;
         transition: 0.3s;
-        font-size: 17px;
+        /*font-size: 17px;*/
         text-transform: capitalize;
     }
     
