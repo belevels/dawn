@@ -1,149 +1,69 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "1658839022f11d75b5": {
+      "type": "image-banner-with-liquid",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "30538876-3863-4c92-972b-31534b75e82f": {
+          "type": "custom_liquid",
+          "disabled": true,
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "custom_liquid": "<div class=\"multicolumn-list contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop\" id=\"Slider-template--16071649722595__1658839503c0a81262\" role=\"list\">\n    <div class=\"multicolumn-list__item grid__item\">\n      <div class=\"multicolumn-card content-container\">\n        <div class=\"multicolumn-card__image-wrapper multicolumn-card__image-wrapper--half-width multicolumn-card-spacing\">\n          <div class=\"media media--transparent media--adapt\" style=\"padding-bottom: 39.714285714285715%;\">\n            <img class=\"multicolumn-card__image\" \n              srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png&amp;width=275 275w,\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png 350w\" \n              src=\"\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png?v=1658840265&amp;width=550\" sizes=\"(min-width: 990px) 550px,\n              (min-width: 750px) 550px,\n              calc(100vw - 30px)\" alt=\"\" height=\"139\" width=\"350\" loading=\"lazy\"\n            >\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <h2 class=\"banner__heading h0\"><span>{{ 'belevels.club.for_you_belever' | t }}<\/span><\/h2>\n  <div class=\"banner__text subtitle\">\n    <span>{{ 'belevels.club.message' | t }}<\/span>\n  <\/div>\n  <div class=\"banner__buttons banner__buttons--multiple\">\n    <a href=\"\/account\/register\" class=\"button button--primary\">{{ 'belevels.club.login' | t }}<\/a>\n    <a href=\"\/account\/login\" class=\"button button--secondary\">{{ 'belevels.club.sign_in' | t }}<\/a><\/div>"
           }
         },
-        "text": {
-          "type": "text",
+        "9c8e28cf-791b-4883-8e81-50356dc94087": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "custom_liquid": "<div class=\"multicolumn-list contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop\" id=\"Slider-template--16071649722595__1658839503c0a81262\" role=\"list\">\n  <div class=\"multicolumn-list__item grid__item\">\n    <div class=\"multicolumn-card content-container\">\n      <div class=\"multicolumn-card__image-wrapper multicolumn-card__image-wrapper--half-width multicolumn-card-spacing\">\n        <div class=\"media media--transparent media--adapt\" style=\"padding-bottom: 39.714285714285715%;\">\n          <img class=\"multicolumn-card__image\" \n            srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png&amp;width=275 275w,\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png 350w\" \n            src=\"\/\/cdn.shopify.com\/s\/files\/1\/0614\/7289\/9299\/files\/logo-be-club.png?v=1658840265&amp;width=550\" sizes=\"(min-width: 990px) 550px,\n            (min-width: 750px) 550px,\n            calc(100vw - 30px)\" alt=\"\" height=\"139\" width=\"350\" loading=\"lazy\"\n          >\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div> \n{%- if customer -%}\n  <h2 class=\"banner__heading h0\"><span>{{ 'belevels.club.hello' | t }} {{ customer.first_name }},<\/span><\/h2>\n  <div class=\"banner__text subtitle\">\n    <span class=\"h2\">{{ 'belevels.club.you_have' | t }} <span class=\"sweettooth-points-balance\"><\/span> {{ 'belevels.club.be_coins' | t }}.<\/p><\/span>\n  <\/div>\n  <div class=\"banner__buttons banner__buttons--multiple\">\n    <a href=\"#smile-points-products\" class=\"button button--primary\">{{ 'belevels.club.spend' | t }} {{ 'belevels.club.be_coins' | t }}<\/a>\n    <a href=\"#smile-points-activity-rules\" class=\"button button--secondary\">{{ 'belevels.club.earn' | t }} {{ 'belevels.club.be_coins' | t }}<\/a>\n  <\/div>\n{%- else -%}\n  <h2 class=\"banner__heading h0\"><span>{{ 'belevels.club.for_you_belever' | t }}<\/span><\/h2>\n  <div class=\"banner__text subtitle\">\n    <span>{{ 'belevels.club.message' | t }}<\/span>\n  <\/div>\n  <div class=\"banner__buttons banner__buttons--multiple\">\n    <a href=\"\/account\/login\" class=\"button button--primary\">{{ 'belevels.club.login' | t }}<\/a>\n    <a href=\"\/account\/register\" class=\"button button--secondary\">{{ 'belevels.club.sign_in' | t }}<\/a>\n  <\/div>\n{%- endif -%}"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "30538876-3863-4c92-972b-31534b75e82f",
+        "9c8e28cf-791b-4883-8e81-50356dc94087"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/be-club-ciclista-1880x720.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "rich_text": {
+    "1658843662e2ce18a4": {
       "type": "rich-text",
       "blocks": {
-        "heading": {
+        "16588436620c95bc7a-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand</p>",
+            "heading": "<p>¿Cómo funciona?<\/p>",
             "heading_size": "h1"
           }
         },
-        "text": {
-          "type": "text",
+        "79123097-d4d9-4999-a329-24bd095b2375": {
+          "type": "heading",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading": "<p>5 formas de ganar Be Coins, que puedes canjear por cupones<br\/>de descuento para tus próximos pedidos.<\/p>",
+            "heading_size": "h2"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "16588436620c95bc7a-0",
+        "79123097-d4d9-4999-a329-24bd095b2375"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "multicolumn": {
@@ -152,8 +72,9 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/registrarse.png",
+            "title": "",
+            "text": "<p>Sólo por registrarte gana un descuento de <strong>200 Be Coins<\/strong>.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -161,8 +82,9 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/becoin.png",
+            "title": "",
+            "text": "<p>Gana 1 cupón por valor de <strong>1 Be Coin<\/strong> por cada € gastado. <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -170,8 +92,29 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/rate.png",
+            "title": "",
+            "text": "<p>Deja tu opinión y gana <strong>150 Be Coins<\/strong>.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "55329f03-4cb4-4a35-9853-5f94f2f97cbf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instagram.png",
+            "title": "",
+            "text": "<p>Gana <strong>200 Be Coins<\/strong> por seguirnos en Instagram.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "08142c4b-3224-44fa-87d2-74d06e5c8b8e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/share.png",
+            "title": "",
+            "text": "<p>Gana <strong>250 Be Coins<\/strong> por cada recomendación a un amigo.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -180,32 +123,72 @@
       "block_order": [
         "column1",
         "column2",
-        "column3"
+        "column3",
+        "55329f03-4cb4-4a35-9853-5f94f2f97cbf",
+        "08142c4b-3224-44fa-87d2-74d06e5c8b8e"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "16588368165cadf997": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1658847522b67bca29": {
+      "type": "rich-text",
+      "blocks": {
+        "1658847522983b9444-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Más razones para unirte a Be Club y continuar tu camino hacia la salud integral. <\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "1658847522983b9444-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "1658851494d889f0f7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n   video {\n   width: 100%;\n   display: block;\n   margin: 0 auto;\n   }\n   .banner .multicolumn-card-spacing {\n     margin-left: 0 !important;\n   }\n   @media screen and (max-width: 749px) {\n     .multicolumn-card,\n     .multicolumn-list:not(.slider) {\n     padding-left: 0 !important;\n     padding-right: 0 !important;\n   }\n }\n   <\/style>\n   <video autoplay muted loop preload=\"metadata\" poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0369\/2619\/3804\/files\/ver-video.jpg?v=1658852316\">\n     <source src=\"{{ 'belevels.club.video_footer_url' | t }}\" type=\"video\/mp4\">\n   <\/video>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "1658839022f11d75b5",
+    "1658843662e2ce18a4",
+    "multicolumn",
+    "16588368165cadf997",
+    "1658847522b67bca29",
+    "1658851494d889f0f7"
   ]
 }
