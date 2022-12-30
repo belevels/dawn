@@ -15,7 +15,7 @@
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
 
   Be Levels - start mod: Agregamos opciones para mostrar descripción corta y precio
-  - be_show_price: {Boolean}. Default: false (optional)
+  - be_hide_price: {Boolean}. Default: false (optional)
   - be_show_short_description: {Boolean}. Default: false (optional)
 
   Usage:
@@ -381,9 +381,9 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {%- if be_show_price -%}<div class="hidden">{%- endif -%}
+            {%- if be_hide_price -%}<div class="hidden">{%- endif -%}
             {% render 'price' %}
-            {%- if be_show_price -%}</div>{%- endif -%}
+            {%- if be_hide_price -%}</div>{%- endif -%}
           </div>
         </div>
       </div>
