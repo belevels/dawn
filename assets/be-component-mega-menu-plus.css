@@ -174,10 +174,6 @@
     /* Create four equal columns that floats next to each other */
     .zed_mega-menu_grid-row {
         padding: 15px 10px;
-        position: fixed;
-        background: #fff;
-        width: 100%;
-        left: 0;
     }
     /*
     .zed_mega-menu_grid-column {
