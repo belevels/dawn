@@ -205,7 +205,7 @@
     /* Style the tab */
     .zed__navbar-dropdown-content .CollectionTab {
         overflow: hidden;
-        padding: 14px 16px;
+        padding: 14px 0;
     }
     
     /* Style the buttons inside the tab */
@@ -215,7 +215,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
+        padding: 14px 0;
         transition: 0.3s;
         font-size: 17px;
         text-transform: capitalize;
@@ -233,6 +233,10 @@
         gap: 1.5rem 1.5rem;
         grid-template-columns: repeat(6,minmax(0,1fr));
         list-style: none;
+    }
+
+    @media screen and (min-width: 750px) and (max-width: 989px) {
+        grid-template-columns: repeat(4,minmax(0,1fr));
     }
 
     .zed__navbar-dropdown-content .collectiontabcontent,
