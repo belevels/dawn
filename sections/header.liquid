@@ -1057,10 +1057,10 @@
                       {%- endif -%}
                       {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
                       {%- if block.settings.collections-show_all -%}
-                          <a href="/collections/all" class="link animate-arrow">
+                          <button class="collectiontablinks" onclick="location.href='/collections/all'">
                             {{ 'belevels.general.see_all' | t }}
                             <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
-                          </a>
+                          </button>
                       {%- endif -%}
                     </div>
                   </div>
