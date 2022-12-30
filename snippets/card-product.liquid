@@ -217,7 +217,7 @@
             {%- if be_show_ultrashort_description -%}
               <div class="short-description text rte">
                 {%- assign ultrashortDescription = card_product.metafields.c_f.ultrashort_description | strip_html -%}
-                <small>{{ shortDescription }}</small>
+                <small style="color:red;">{{ shortDescription }}</small>
               </div>
             {%- endif -%}            
 
