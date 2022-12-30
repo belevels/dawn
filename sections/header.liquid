@@ -345,8 +345,9 @@
         margin-left: 5px;
     }
 {% endstyle %}
+
 {%- assign headerTransparentIn = 'product' %}
-{% if template == headerTransparentIn and section.settings.transparent_header %}
+{% if section.settings.transparent_header %}
   {% style %}
     {%- comment -%}
     .template-index .site-header-transparent .header__icon,
@@ -1541,7 +1542,7 @@
 {%- comment -%}
   Be Levels - start mod: agregamos headerTransparentIn, script
 {%- endcomment -%}
-{% if template == headerTransparentIn and section.settings.transparent_header %}
+{% if section.settings.transparent_header %}
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       var headerHeight = document.getElementById('site-header').offsetHeight;
