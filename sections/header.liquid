@@ -93,6 +93,13 @@
       padding-top: 0.5rem;
     }
   }
+  {%- if section.settings.menu_type_desktop == 'mega-plus' -%}
+    .header {
+      grid-template-areas: "heading navigation icons";
+      grid-template-columns: auto auto 1fr;
+      column-gap: 1rem;
+    }
+  {%- endif -%}
 </style>
 
 {%- style -%}
