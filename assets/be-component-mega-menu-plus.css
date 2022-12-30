@@ -1,5 +1,8 @@
     .zed__navbar-main {
     overflow: hidden;
+    grid-area: heading;
+    text-align: left;
+    justify-self: center;
     }
 
     .zed__navbar-main a {
@@ -37,7 +40,7 @@
     .zed__navbar-dropdown:hover .icon-caret, 
     .zed__navbar-dropbtn:hover .icon-caret {
         transform: rotate(180deg);
-        transition: .25s ease-in-out;
+        transition: .5s ease-in-out;
     }
 
     .zed__navbar-dropdown-content {
