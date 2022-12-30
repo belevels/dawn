@@ -37,6 +37,7 @@
     .zed__navbar-dropdown:hover .icon-caret, 
     .zed__navbar-dropbtn:hover .icon-caret {
         transform: rotate(90deg);
+        transition: .5s ease-in-out;
     }
 
     .zed__navbar-dropdown-content {
