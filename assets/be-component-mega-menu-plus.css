@@ -244,7 +244,7 @@
         from {opacity: 0;}
         to {opacity: 1;} 
     }
-    /* */
-    .zed_mega-menu .card-information > .price {
+
+    .zed_mega-menu_grid-column .card-information > .price {
         display: none;
     }
