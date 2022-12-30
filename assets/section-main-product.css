@@ -802,6 +802,7 @@ a.product__text {
   display: block;
   height: auto;
   margin: auto;
+  width: inherit;
 }
 
 .product-media-modal__content .media {
