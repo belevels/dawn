@@ -1001,169 +1001,196 @@
               </div>
               <!-- Custom Specific collection's products Tabs with grid products 7 columns-->
             {%- when "collections-tabs-menu" -%}
-              <div class="zed__navbar-dropdown">
-                <a href="#" class="zed__navbar-dropbtn">{{- block.settings.collection_tab_menu_name | escape -}}
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-                <div class="zed__navbar-dropdown-content page-width">
-                  <div class="zed__navbar-dropdown-content-header">
-                    <div class="CollectionTab">
-                      {%- if block.settings.collection_tab_title_1 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen">
-                          {{- block.settings.collection_tab_title_1 | escape -}}
-                        </button>
-                      {%- endif -%}
-                      {%- if block.settings.collection_tab_title_2 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_2 | handleize -}}')">
-                            {{- block.settings.collection_tab_title_2 | escape -}}
-                        </button>
-                      {%- endif -%}
-                      {%- if block.settings.collection_tab_title_3 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_3 | handleize -}}')">{{- block.settings.collection_tab_title_3 | escape -}}</button>
-                      {%- endif -%}
-                      {%- if block.settings.collection_tab_title_4 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_4 | handleize -}}')">
-                            {{- block.settings.collection_tab_title_4 | escape -}}
-                        </button>
-                      {%- endif -%}
-                      {%- if block.settings.collection_tab_title_5 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_5 | handleize -}}')">
-                            {{- block.settings.collection_tab_title_5 | escape -}}
-                        </button>
-                      {%- endif -%}
-                    </div>
-                  </div>
-                    <div class="collection_tabs_megamenu">
-                      <div class="zed_mega-menu_grid-row">
-                        <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_1 != blank -%}
-                            {%- for product in block.settings.collections-tabs_1.products -%}                          
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: true
-                                %}
+              <ul class="list-menu list-menu--inline" role="list">
+                <li>
+                  <header-menu>
+                    <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                      <summary class="header__menu-item list-menu__item link focus-inset">
+                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{- block.settings.collection_tab_menu_name | escape -}}</span>
+                        {% render 'icon-caret' %}
+                      </summary>
+                      <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
+                        <ul class="zed__navbar-dropdown-content mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                          {%- comment -%}{%- f or childlink in link.links -%}{%- endcomment -%}
+                            <li class="zed__navbar-dropdown-content-header">
+                              <div class="CollectionTab">
+                                {%- if block.settings.collection_tab_title_1 != blank -%}
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                    {{- block.settings.collection_tab_title_1 | escape -}}
+                                </a>
+                                {%- endif -%}
+                                {%- if block.settings.collection_tab_title_2 != blank -%}
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                    {{- block.settings.collection_tab_title_2 | escape -}}
+                                </a>
+                                {%- endif -%}
+                                {%- if block.settings.collection_tab_title_3 != blank -%}
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                    {{- block.settings.collection_tab_title_3 | escape -}}
+                                </a>
+                                {%- endif -%}
+                                {%- if block.settings.collection_tab_title_1 != blank -%}
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                    {{- block.settings.collection_tab_title_4 | escape -}}
+                                </a>
+                                {%- endif -%}
+                                {%- if block.settings.collection_tab_title_5 != blank -%}
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                    {{- block.settings.collection_tab_title_5 | escape -}}
+                                </a>
+                                {%- endif -%}                                                                                                        
                               </div>
-                            {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
-                        </div>
-                        <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_2 != blank -%}
-                            {%- for product in block.settings.collections-tabs_2.products -%}
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: true
-                                %}
-                              </div>
-                            {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
-                        </div>
-                        <div id="{{- block.settings.collection_tab_title_3 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_3 != blank -%}
-                            {%- for product in block.settings.collections-tabs_3.products -%}
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: true
-                                %}
-                              </div>
-                            {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
-                        </div>
-                        <div id="{{- block.settings.collection_tab_title_4 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_4 != blank -%}
-                            {%- for product in block.settings.collections-tabs_4.products -%}
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: true
-                                %}
-                              </div>
-                            {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
-                        </div>
-                        <div id="{{- block.settings.collection_tab_title_5 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_5 != blank -%}
-                            {%- for product in block.settings.collections-tabs_5.products -%}
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: true
-                                %}
-                              </div>
-                            {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
-                        </div>
+                              {%- comment -%}{%- i f childlink.links != blank -%}{%- endcomment -%}
+                                <div class="collection_tabs_megamenu">
+                                  <ul class="zed_mega-menu_grid-row list-unstyled" role="list">
+                                    {%- comment -%}{%- f or grandchildlink in childlink.links -%}{%- endcomment -%}
+                                    <li>
+                                      <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {%- if block.settings.collections-tabs_1 != blank -%}
+                                          {%- for product in block.settings.collections-tabs_1.products -%}                          
+                                            <div class="zed_mega-menu_grid-column">
+                                              {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: 'square',
+                                                show_secondary_image: false,
+                                                show_vendor: false,
+                                                show_rating: true,
+                                                extend_height: true,
+                                                lazy_load: true,
+                                                show_quick_add: false,
+                                                section_id: product.id,
+                                                horizontal_class: false,
+                                                horizontal_quick_add: true,
+                                                be_hide_price: true,
+                                                be_show_short_description: true
+                                              %}
+                                            </div>
+                                          {%- endfor -%}
+                                        {%- else -%}
+                                          <h4>No collection set yet. please set one to see here.</h4>
+                                        {%- endif -%}
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {%- if block.settings.collections-tabs_2 != blank -%}
+                                          {%- for product in block.settings.collections-tabs_2.products -%}                          
+                                            <div class="zed_mega-menu_grid-column">
+                                              {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: 'square',
+                                                show_secondary_image: false,
+                                                show_vendor: false,
+                                                show_rating: true,
+                                                extend_height: true,
+                                                lazy_load: true,
+                                                show_quick_add: false,
+                                                section_id: product.id,
+                                                horizontal_class: false,
+                                                horizontal_quick_add: true,
+                                                be_hide_price: true,
+                                                be_show_short_description: true
+                                              %}
+                                            </div>
+                                          {%- endfor -%}
+                                        {%- else -%}
+                                          <h4>No collection set yet. please set one to see here.</h4>
+                                        {%- endif -%}
+                                      </div>
+                                    </li>                              
+                                    <li>
+                                      <div id="{{- block.settings.collection_tab_title_3 | handleize -}}" class="collectiontabcontent mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {%- if block.settings.collections-tabs_3 != blank -%}
+                                          {%- for product in block.settings.collections-tabs_3.products -%}                          
+                                            <div class="zed_mega-menu_grid-column">
+                                              {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: 'square',
+                                                show_secondary_image: false,
+                                                show_vendor: false,
+                                                show_rating: true,
+                                                extend_height: true,
+                                                lazy_load: true,
+                                                show_quick_add: false,
+                                                section_id: product.id,
+                                                horizontal_class: false,
+                                                horizontal_quick_add: true,
+                                                be_hide_price: true,
+                                                be_show_short_description: true
+                                              %}
+                                            </div>
+                                          {%- endfor -%}
+                                        {%- else -%}
+                                          <h4>No collection set yet. please set one to see here.</h4>
+                                        {%- endif -%}
+                                      </div>
+                                    </li>                              
+                                    <li>
+                                      <div id="{{- block.settings.collection_tab_title_4 | handleize -}}" class="collectiontabcontent mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {%- if block.settings.collections-tabs_4 != blank -%}
+                                          {%- for product in block.settings.collections-tabs_4.products -%}                          
+                                            <div class="zed_mega-menu_grid-column">
+                                              {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: 'square',
+                                                show_secondary_image: false,
+                                                show_vendor: false,
+                                                show_rating: true,
+                                                extend_height: true,
+                                                lazy_load: true,
+                                                show_quick_add: false,
+                                                section_id: product.id,
+                                                horizontal_class: false,
+                                                horizontal_quick_add: true,
+                                                be_hide_price: true,
+                                                be_show_short_description: true
+                                              %}
+                                            </div>
+                                          {%- endfor -%}
+                                        {%- else -%}
+                                          <h4>No collection set yet. please set one to see here.</h4>
+                                        {%- endif -%}
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div id="{{- block.settings.collection_tab_title_5 | handleize -}}" class="collectiontabcontent mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {%- if block.settings.collections-tabs_5 != blank -%}
+                                          {%- for product in block.settings.collections-tabs_5.products -%}                          
+                                            <div class="zed_mega-menu_grid-column">
+                                              {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: 'square',
+                                                show_secondary_image: false,
+                                                show_vendor: false,
+                                                show_rating: true,
+                                                extend_height: true,
+                                                lazy_load: true,
+                                                show_quick_add: false,
+                                                section_id: product.id,
+                                                horizontal_class: false,
+                                                horizontal_quick_add: true,
+                                                be_hide_price: true,
+                                                be_show_short_description: true
+                                              %}
+                                            </div>
+                                          {%- endfor -%}
+                                        {%- else -%}
+                                          <h4>No collection set yet. please set one to see here.</h4>
+                                        {%- endif -%}
+                                      </div>
+                                    </li>                              
+                                    {%- comment -%}{%- endfor -%}{%- endcomment -%}
+                                  </ul>
+                                </div>
+                              {%- comment -%}{%- endif -%}{%- endcomment -%}
+                            </li>
+                          {%- comment -%}{%- endfor -%}{%- endcomment -%}
+                        </ul>
                       </div>
-                  </div>
-                </div>
-              </div>
+                    </details>
+                  </header-menu>            
+                </li>
+              </ul>
           {%- endcase -%}
         {%- endfor -%}
       </nav>
