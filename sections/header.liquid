@@ -106,16 +106,6 @@
         display: none;
       }
     }
-    .fixed {
-      right: 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      margin: 0 auto;
-      margin-top: 0;
-      transition: 0.1s ease-in;
-      left: 0;
-    }
     
   {%- endif -%}
 </style>
@@ -1553,13 +1543,6 @@
       document.getElementById('shopify-section-header').style.setProperty('--header-height', '-'+ headerHeight + 'px');
     });
     window.onscroll = function() {
-      var sticky = document.querySelector('.zed__navbar-dropdown-content'),
-      if ( window.scrollTop >= 50) {
-        sticky.style.display = "none";;
-      } else {
-        sticky.style.display = "block";;
-      }
-
       var header = document.getElementById('site-header');
       var main = document.getElementById('MainContent');
       var height = document.getElementById('site-header').offsetHeight;
