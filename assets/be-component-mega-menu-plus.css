@@ -1,8 +1,8 @@
     .zed__navbar-main {
     overflow: hidden;
-    grid-area: heading;
+    grid-area: navigation;
     text-align: left;
-    justify-self: center;
+    justify-self: start;
     }
 
     .zed__navbar-main a {
