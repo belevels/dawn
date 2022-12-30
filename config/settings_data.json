@@ -219,7 +219,7 @@
           "menu": "belevels",
           "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
-          "sticky_header_type": "reduce-logo-size",
+          "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
           "transparent_header": true,
           "content_color": "#000000",
