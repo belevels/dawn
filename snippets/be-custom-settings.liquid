@@ -128,7 +128,9 @@
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
           background-color: rgba(var(--color-foreground),0.05);
         }
-        .{{ product.handle }} .be-box .price--large,
+        .{{ product.handle }} .be-box .price--large {
+          background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
+        }
         .{{ product.handle }} .product__info-wrapper .product__title h1::after,
         .{{ product.handle }} .product__info-container .product__description ul li::before {
           background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
