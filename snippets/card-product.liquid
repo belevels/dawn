@@ -202,7 +202,7 @@
             {%- endif -%}
 
             {%- comment -%}Be Levels - start mod: Agregamos descripción corta e info adicional para el comparador{%- endcomment -%}
-            {%- if be_show_short_description -%}
+            {%- if be_show_short_description == false -%}
               <div class="short-description text rte">
                 {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
                 <small>{{ shortDescription }}</small>
