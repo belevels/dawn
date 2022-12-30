@@ -138,7 +138,7 @@
   Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos, mega menu plus
 {%- endcomment -%}
 {% style %}
-    {%- comment -%}
+    
     .zed__navbar-main {
         {%- if section.settings.menu_theme == 'lightblack' -%}
             background: #231123;
@@ -152,6 +152,7 @@
             background: rgb(var(--color-background));
         {%- endif -%}
     }
+    {%- comment -%}
     .zed__navbar-main a,
     .zed__navbar-dropdown .zed__navbar-dropbtn{
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -180,6 +181,7 @@
             background: #E8DB7D;
         {%- endif -%}
     }
+    {%- endcomment -%}
     .zed__navbar-dropdown-content{
         background-color: rgb(var(--color-background));
     }
@@ -209,8 +211,7 @@
         {%- else -%}
             color: rgba(var(--color-foreground),.75);
         {%- endif -%}
-    }
-    {%- endcomment -%}
+    }    
     .single_collection_products_grid .zed_mega-menu_grid-column .product-content h4 a,
     .single_collection_products_grid .zed_mega-menu_grid-column .product-content h4 a:hover {
         {%- if section.settings.menu_theme == 'lightblack' -%}
