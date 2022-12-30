@@ -122,13 +122,13 @@
         .{{ product.handle }} #MainContent > section .product .product__media::after,
         .{{ product.handle }} .be-box,
         .{{ product.handle }} .quantity::before,
-        .{{ product.handle }} .be-box .price--large,
         .{{ product.handle }} .product__accordion .accordion__content,
         .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
           background-color: rgba(var(--color-foreground),0.05);
         }
+        .{{ product.handle }} .be-box .price--large,
         .{{ product.handle }} .product__info-wrapper .product__title h1::after,
         .{{ product.handle }} .product__info-container .product__description ul li::before {
           background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
