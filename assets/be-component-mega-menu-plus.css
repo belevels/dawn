@@ -231,6 +231,10 @@
         font-size: 1.5rem;
         font-weight: 700;
     }
+
+    .zed__navbar-dropdown-content .CollectionTab .collectiontablinks.animate-arrow {
+        float: right;
+    }
     
     /* Style the tab content */
     .zed__navbar-dropdown-content .collectiontabcontent {
