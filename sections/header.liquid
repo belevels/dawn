@@ -733,7 +733,7 @@
             {%- when 'list-menu' -%}
               <div class="zed__navbar-dropdown">
                 <button class="zed__navbar-dropbtn">{{- block.settings.list_menu_name | escape -}}
-                  <i class="fa fa-chevron-down"></i>
+                  {% render 'icon-caret' %}
                 </button>
                 <div class="zed__navbar-dropdown-content page-width">
                   <div class="zed__navbar-dropdown-content-header">
@@ -953,7 +953,7 @@
             {%- when "collections-menu" -%}
               <div class="zed__navbar-dropdown">
                 <button class="zed__navbar-dropbtn">{{- block.settings.collections_menu_name | escape -}}
-                  <i class="fa fa-chevron-down"></i>
+                  {% render 'icon-caret' %}
                 </button>
                 <div class="zed__navbar-dropdown-content page-width">
                   <div class="zed__navbar-dropdown-content-header">
@@ -979,7 +979,7 @@
             {%- when "single-collection-menu" -%}
               <div class="zed__navbar-dropdown">
                 <button class="zed__navbar-dropbtn">{{- block.settings.single-collection_menu_name | escape -}}
-                  <i class="fa fa-chevron-down"></i>
+                  {% render 'icon-caret' %}
                 </button>
                 <div class="zed__navbar-dropdown-content page-width">
                   <div class="zed__navbar-dropdown-content-header">
@@ -1003,7 +1003,7 @@
             {%- when "collections-tabs-menu" -%}
               <div class="zed__navbar-dropdown">
                 <a href="#" class="zed__navbar-dropbtn">{{- block.settings.collection_tab_menu_name | escape -}}
-                  <i class="fa fa-chevron-down"></i>
+                  {% render 'icon-caret' %}
                 </a>
                 <div class="zed__navbar-dropdown-content page-width">
                   <div class="zed__navbar-dropdown-content-header">
