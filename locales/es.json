@@ -445,7 +445,8 @@
   },
   "belevels": {
     "general": {
-      "all_right_reserved": "Todos los derechos reservados"
+      "all_right_reserved": "Todos los derechos reservados",
+      "see_all": "Ver todo"
     },
     "products": {
       "product_not_available_in": "Producto no disponible en",

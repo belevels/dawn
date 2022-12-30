@@ -1192,7 +1192,7 @@
                         </div>
                       </div>
                       {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
-                      {%- if block.settings.collections-tabs_6 != blank -%}
+                      {%- if block.settings.collections-show_all -%}
                         <div class="zed_mega-menu_grid-row">
                           <p>{{- block.settings.collection_tab_title_6 | escape -}}</p>
                         </div>
@@ -2139,13 +2139,14 @@
           "type": "text",
           "id": "collection_tab_title_6",
           "label": "Collection Title 65",
-          "default": "jwellary",
+          "default": "t:belevels.general.show_all",
           "info": "title should be small letters"
         },
         {
-          "type": "collection",
-          "id": "collections-tabs_6",
-          "label": "collection "
+          "type": "checkbox",
+          "id": "collections-show_all",
+          "label": "¿Activar Ver todo?",
+          "default": false
         }
       ]
     }
