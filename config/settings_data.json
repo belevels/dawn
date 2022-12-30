@@ -168,33 +168,6 @@
               "collections-tabs_5": "esenciales"
             }
           },
-          "8755cff8-5d9e-45e9-9b85-12e4b18cf98a": {
-            "type": "list-menu",
-            "settings": {
-              "list_menu_name": "Menu Name",
-              "list_menu_heading": "Menu Heading",
-              "menu_title1": "Menu 1",
-              "menu_link1": "deporte",
-              "menu_title2": "Menu 2",
-              "menu_link2": "f-rmulas-maestras",
-              "menu_title3": "Menu 3",
-              "menu_link3": "keto-food",
-              "menu_title4": "Menu 4",
-              "menu_link4": "salud-femenina",
-              "menu_title5": "Menu 5",
-              "menu_link5": "keto-food",
-              "menu_title6": "Menu 6",
-              "menu_link6": "footer",
-              "menu_title7": "Menu 7",
-              "menu_link7": "prote-nas",
-              "menu_title8": "Menu 8",
-              "menu_link8": "",
-              "ad_block_title": "Ad Title",
-              "ad_img1_link": "",
-              "ad_img2_link": "",
-              "ad_img3_link": ""
-            }
-          },
           "81d0f707-1cb5-4448-ab22-78dcbe24960f": {
             "type": "single-collection-menu",
             "disabled": true,
@@ -207,7 +180,6 @@
         },
         "block_order": [
           "23061011-5f3b-4f22-9289-6a35a797ecab",
-          "8755cff8-5d9e-45e9-9b85-12e4b18cf98a",
           "81d0f707-1cb5-4448-ab22-78dcbe24960f"
         ],
         "settings": {
@@ -219,7 +191,7 @@
           "menu": "belevels",
           "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
-          "sticky_header_type": "reduce-logo-size",
+          "sticky_header_type": "on-scroll-up",
           "show_line_separator": true,
           "transparent_header": true,
           "content_color": "#000000",
