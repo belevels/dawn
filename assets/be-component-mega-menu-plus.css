@@ -33,6 +33,12 @@
         margin: 0.25rem 0 0 0.5rem;
     }
 
+    .zed__navbar-main a:hover .icon-caret, 
+    .zed__navbar-dropdown:hover .icon-caret, 
+    .zed__navbar-dropbtn:hover .icon-caret {
+        transform: rotate(deg 180);
+    }
+
     .zed__navbar-dropdown-content {
     display: none;
     position: absolute;
