@@ -1009,23 +1009,23 @@
                   <div class="zed__navbar-dropdown-content-header">
                     <div class="CollectionTab">
                       {%- if block.settings.collection_tab_title_1 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | escape -}}')" id="defaultOpen">{{- block.settings.collection_tab_title_1 | escape -}}</button>
+                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen">{{- block.settings.collection_tab_title_1 | escape -}}</button>
                       {%- endif -%}
                       {%- if block.settings.collection_tab_title_2 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_2 | escape -}}')">
+                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_2 | handleize -}}')">
                             {{- block.settings.collection_tab_title_2 | escape -}}
                         </button>
                       {%- endif -%}
                       {%- if block.settings.collection_tab_title_3 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_3 | escape -}}')">{{- block.settings.collection_tab_title_3 | escape -}}</button>
+                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_3 | handleize -}}')">{{- block.settings.collection_tab_title_3 | escape -}}</button>
                       {%- endif -%}
                       {%- if block.settings.collection_tab_title_4 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_4 | escape -}}')">
+                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_4 | handleize -}}')">
                             {{- block.settings.collection_tab_title_4 | escape -}}
                         </button>
                       {%- endif -%}
                       {%- if block.settings.collection_tab_title_5 != blank -%}
-                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_5 | escape -}}')">
+                        <button class="collectiontablinks" onclick="openCollection(event, '{{- block.settings.collection_tab_title_5 | handleize -}}')">
                             {{- block.settings.collection_tab_title_5 | escape -}}
                         </button>
                       {%- endif -%}
