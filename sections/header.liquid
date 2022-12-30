@@ -1001,11 +1001,11 @@
               </div>
               <!-- Custom Specific collection's products Tabs with grid products 7 columns-->
             {%- when "collections-tabs-menu" -%}
-              <ul class="list-menu list-menu--inline" role="list">
+              <ul class="zed__navbar-dropdown list-menu list-menu--inline" role="list">
                 <li>
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
-                      <summary class="header__menu-item list-menu__item link focus-inset">
+                      <summary class="zed__navbar-dropbtn header__menu-item list-menu__item link focus-inset">
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{- block.settings.collection_tab_menu_name | escape -}}</span>
                         {% render 'icon-caret' %}
                       </summary>
@@ -1020,22 +1020,22 @@
                                 </a>
                                 {%- endif -%}
                                 {%- if block.settings.collection_tab_title_2 != blank -%}
-                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                     {{- block.settings.collection_tab_title_2 | escape -}}
                                 </a>
                                 {%- endif -%}
                                 {%- if block.settings.collection_tab_title_3 != blank -%}
-                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                     {{- block.settings.collection_tab_title_3 | escape -}}
                                 </a>
                                 {%- endif -%}
                                 {%- if block.settings.collection_tab_title_1 != blank -%}
-                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                     {{- block.settings.collection_tab_title_4 | escape -}}
                                 </a>
                                 {%- endif -%}
                                 {%- if block.settings.collection_tab_title_5 != blank -%}
-                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" id="defaultOpen" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                  <a href="#" onclick="openCollection(event, '{{- block.settings.collection_tab_title_1 | handleize -}}')" class="collectiontablinks mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                     {{- block.settings.collection_tab_title_5 | escape -}}
                                 </a>
                                 {%- endif -%}                                                                                                        
