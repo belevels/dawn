@@ -31,16 +31,16 @@
     }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn .icon-caret {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin: 0.25rem 0 0 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.5rem;
     }
 
     .zed__navbar-main a:hover .icon-caret, 
     .zed__navbar-dropdown:hover .icon-caret, 
     .zed__navbar-dropbtn:hover .icon-caret {
         transform: rotate(180deg);
-        transition: .5s ease-in-out;
+        transition: .1s ease-in-out;
     }
 
     .zed__navbar-dropdown-content {
@@ -230,8 +230,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 0 1.4rem 1.5rem;
-        padding: 1.4rem 1.6rem;
+        padding: 1rem 1.6rem 2rem;
         transition: 0.3s;
         font-size: 1.5rem;
         font-weight: 700;
