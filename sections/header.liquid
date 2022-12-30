@@ -1037,12 +1037,25 @@
                           <div id="{{- block.settings.collection_tab_title_1 | escape -}}" class="collectiontabcontent">
                             {%- if block.settings.collections-tabs_1 != blank -%}
                               {%- for product in block.settings.collections-tabs_1.products -%}
+                                {% comment %}
                                 <div class="zed_mega-menu_grid-column">
                                   <div class="product-img" style="background-image: url({{ product.featured_image | img_url: 'master' }}); background-size: cover; background-position: center; background-repeat: no-repeat;">&nbsp;</div>
                                   <div class="product-content">
                                     <h4>{{- product.title | link_to: product.url }}</h4>
                                   </div>
                                 </div>
+                                {% endcomment %}
+                                {% render 'card-product',
+                                  card_product: product,
+                                  media_aspect_ratio: section.settings.image_ratio,
+                                  show_secondary_image: section.settings.show_secondary_image,
+                                  show_vendor: section.settings.show_vendor,
+                                  show_rating: section.settings.show_rating,
+                                  lazy_load: lazy_load,
+                                  show_quick_add: section.settings.enable_quick_add,
+                                  section_id: section.id,
+                                  horizontal_quick_add: true
+                                %}
                               {%- endfor -%}
                             {%- else -%}
                               <h4>No collection set yet. please set one to see here.</h4>
