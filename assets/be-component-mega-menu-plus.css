@@ -235,6 +235,12 @@
         list-style: none;
     }
 
+    @media screen and (min-width: 750px) and (max-width: 989px) {
+        .zed__navbar-dropdown-content .collectiontabcontent {
+            grid-template-columns: repeat(6,minmax(0,1fr));
+        }
+    }
+
     .zed__navbar-dropdown-content .collectiontabcontent,
     .zed__navbar-dropdown-content .zed_mega-menu_grid-column {
         animation: fadeEffect 1s; /* Fading effect takes 1 second */
