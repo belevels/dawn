@@ -1191,6 +1191,12 @@
                           {%- endif -%}
                         </div>
                       </div>
+                      {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
+                      {%- if block.settings.collections-tabs_6 != blank -%}
+                        <div class="zed_mega-menu_grid-row">
+                          <p>{{- block.settings.collection_tab_title_6 | escape -}}</p>
+                        </div>
+                      {%- endif -%}
                   </div>
                 </div>
               </div>
@@ -2045,20 +2051,20 @@
           "id": "single-collection_menu_name",
           "label": "Menu Name",
           "default": "Menu Name"
-          },
+        },
         {
           "type": "text",
           "id": "single-collection_menu_heading",
           "label": "Menu Heading",
           "default": "Menu Heading"
-          },
+        },
         {
           "type": "collection",
           "id": "single-collection-menu_coolection_1",
           "label": "Coolection"
-          }
-          ]
-      },
+        }
+      ]
+    },
     {
       "type": "collections-tabs-menu",
       "name": "Collections Tabs Menu",
@@ -2068,69 +2074,81 @@
           "id": "collection_tab_menu_name",
           "label": "Menu Name",
           "default": "Menu name"
-          },
+        },
         {
           "type": "text",
           "id": "collection_tab_title_1",
           "label": "Collection Title 1",
           "default": "tshirt",
           "info": "title should be small letters"
-          },
+        },
         {
           "type": "collection",
           "id": "collections-tabs_1",
           "label": "collection 1"
-          },
+        },
         {
           "type": "text",
           "id": "collection_tab_title_2",
           "label": "Collection Title 2",
           "default": "shirt",
           "info": "title should be small letters"
-          },
+        },
         {
           "type": "collection",
           "id": "collections-tabs_2",
           "label": "collection 2"
-          },
+        },
         {
           "type": "text",
           "id": "collection_tab_title_3",
           "label": "Collection Title 3",
           "default": "shoes",
           "info": "title should be small letters"
-          },
+        },
         {
           "type": "collection",
           "id": "collections-tabs_3",
           "label": "collection 3"
-          },
+        },
         {
           "type": "text",
           "id": "collection_tab_title_4",
           "label": "Collection Title 4",
           "default": "bags",
           "info": "title should be small letters"
-          },
+        },
         {
           "type": "collection",
           "id": "collections-tabs_4",
           "label": "collection 4"
-          },
+        },
         {
           "type": "text",
           "id": "collection_tab_title_5",
           "label": "Collection Title 5",
           "default": "jwellary",
           "info": "title should be small letters"
-          },
+        },
         {
           "type": "collection",
           "id": "collections-tabs_5",
           "label": "collection 5"
-          }
-          ]
-      }
+        },
+        {
+          "type": "text",
+          "id": "collection_tab_title_6",
+          "label": "Collection Title 65",
+          "default": "jwellary",
+          "info": "title should be small letters"
+        },
+        {
+          "type": "collection",
+          "id": "collections-tabs_6",
+          "label": "collection "
+        }
+      ]
+    }
   ],
   "default": {
     "blocks":[
