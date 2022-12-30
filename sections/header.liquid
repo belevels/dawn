@@ -138,10 +138,8 @@
   Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos, mega menu plus
 {%- endcomment -%}
 {% style %}
-    {%- comment -%}
+    
     .zed__navbar-main {
-      background: rgb(var(--color-background));
-        
         {%- if section.settings.menu_theme == 'lightblack' -%}
             background: #231123;
         {%- elsif section.settings.menu_theme == 'lightred' -%} 
@@ -153,7 +151,6 @@
         {%- else -%}
             background: rgb(var(--color-background));
         {%- endif -%}
-        {%- endcomment -%}
     }
 
     .zed__navbar-main a,
@@ -348,9 +345,8 @@
         margin-left: 5px;
     }
 {% endstyle %}
-
-{%- comment -%}{%- assign headerTransparentIn = template -%}{%- endcomment -%}
-{% if section.settings.transparent_header %}
+{%- assign headerTransparentIn = 'product' %}
+{% if template == headerTransparentIn and section.settings.transparent_header %}
   {% style %}
     {%- comment -%}
     .template-index .site-header-transparent .header__icon,
@@ -361,11 +357,10 @@
       color: {{ section.settings.content_color }};
       border-color: {{ section.settings.content_color }};
     }
-    
+    {%- endcomment -%}
     .template-index #MainContent > .section:first-of-type {
       padding-top: 9.4rem; /* ugly */
     }
-    
     .site-header-transparent {
       background: transparent;
       position: absolute;
@@ -377,7 +372,6 @@
     .site-header-transition {
       margin-top: var(--header-height);
     }
-    {%- endcomment -%}
   {% endstyle %}
 {% endif %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -1547,7 +1541,7 @@
 {%- comment -%}
   Be Levels - start mod: agregamos headerTransparentIn, script
 {%- endcomment -%}
-{% if section.settings.transparent_header %}
+{% if template == headerTransparentIn and section.settings.transparent_header %}
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       var headerHeight = document.getElementById('site-header').offsetHeight;
