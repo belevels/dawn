@@ -1194,7 +1194,10 @@
                       {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
                       {%- if block.settings.collections-show_all -%}
                         <div class="zed_mega-menu_grid-row">
-                          <p>{{- block.settings.collection_tab_title_6 | escape -}}</p>
+                          <a href="/collections/all" class="button button--full-width button--primary animate-arrow">
+                            {{ 'belevels.general.show_all' | t }}
+                            <span>{%- render 'icon-arrow' -%}</span>
+                          </a>
                         </div>
                       {%- endif -%}
                   </div>
@@ -2134,13 +2137,6 @@
           "type": "collection",
           "id": "collections-tabs_5",
           "label": "collection 5"
-        },
-        {
-          "type": "text",
-          "id": "collection_tab_title_6",
-          "label": "Collection Title 65",
-          "default": "t:belevels.general.show_all",
-          "info": "title should be small letters"
         },
         {
           "type": "checkbox",
