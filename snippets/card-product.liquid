@@ -16,7 +16,8 @@
 
   Be Levels - start mod: Agregamos opciones para mostrar descripción corta y precio
   - be_hide_price: {Boolean}. Default: false (optional)
-  - be_show_short_description: {Boolean}. Default: false (optional)
+  - be_show_short_description: {Boolean}. Default: true (optional)
+  - be_show_ultrashort_description: {Boolean}. Default: false (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -201,13 +202,24 @@
               </p>
             {%- endif -%}
 
-            {%- comment -%}Be Levels - start mod: Agregamos descripción corta e info adicional para el comparador{%- endcomment -%}
+            {%- comment -%}
+              Be Levels - start mod: Agregamos 
+              - descripción corta para las tarjetas en colecciones y widgets,
+              - descripción ultracorta para el menu,
+              - info adicional para el comparador *** pendiente ***
+            {%- endcomment -%}
             {%- if be_show_short_description != false -%}
               <div class="short-description text rte">
                 {%- assign shortDescription = card_product.metafields.c_f.short_description | strip_html -%}
                 <small>{{ shortDescription }}</small>
               </div>
             {%- endif -%}
+            {%- if be_show_ultrashort_description -%}
+              <div class="short-description text rte">
+                {%- assign ultrashortDescription = card_product.metafields.c_f.ultrashort_description | strip_html -%}
+                <small>{{ shortDescription }}</small>
+              </div>
+            {%- endif -%}            
 
             {% render 'price', product: card_product, price_class: '' %}
           </div>
