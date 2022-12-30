@@ -299,6 +299,10 @@
         font-weight: var(--font-body-weight);
       }
 
+      #MainContent > .section:first-of-type {
+      padding-top: 9.4rem; /* ugly */
+    }
+
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
@@ -363,7 +367,7 @@
     Be Levels - start mod: agregamos headerTransparentIn, agregamos handle como slug para estilos personalizados con customClass 
   {%- endcomment -%}
   {%- liquid
-    assign headerTransparentIn = 'product'
+    assign headerTransparentIn = template
     if request.page_type == "collection"
       assign customClass = collection.handle | prepend: " "
     elsif request.page_type == "product"

@@ -349,7 +349,7 @@
     }
 {% endstyle %}
 
-{%- assign headerTransparentIn = 'product' %}
+{%- comment -%}{%- assign headerTransparentIn = template -%}{%- endcomment -%}
 {% if section.settings.transparent_header %}
   {% style %}
     {%- comment -%}
@@ -361,10 +361,11 @@
       color: {{ section.settings.content_color }};
       border-color: {{ section.settings.content_color }};
     }
-    {%- endcomment -%}
+    
     .template-index #MainContent > .section:first-of-type {
       padding-top: 9.4rem; /* ugly */
     }
+    
     .site-header-transparent {
       background: transparent;
       position: absolute;
@@ -376,6 +377,7 @@
     .site-header-transition {
       margin-top: var(--header-height);
     }
+    {%- endcomment -%}
   {% endstyle %}
 {% endif %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
