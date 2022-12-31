@@ -1087,8 +1087,8 @@
                   </div>
                     <div class="collection_tabs_megamenu">
                       <div class="zed_mega-menu_grid-row">
-                        <div style="background:pink;">
-                          <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
+                        <div class="collectiontabcontent" style="background:pink;">
+                          <div id="{{- block.settings.collection_tab_title_1 | handleize -}}">
                             {%- if block.settings.collections-tabs_1 != blank -%}
                               {%- for product in block.settings.collections-tabs_1.products -%}
                                 <div class="zed_mega-menu_grid-column">
@@ -1217,7 +1217,7 @@
                             {%- endfor -%}
                           </div><!-- products -->
                         </div>
-                        <div class="collectiontabcontent" style="background:wheat;">
+                        <div style="background:wheat;">
                           <p>Future Mega menu footer</p>
                         </div>
 
