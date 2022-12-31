@@ -303,7 +303,7 @@
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
         background: aliceblue;
     }
-    .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado .card__inner {
+    .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
         width: 150px;
     }
     
