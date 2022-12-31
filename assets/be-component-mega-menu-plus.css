@@ -220,7 +220,7 @@
     
     /* Style the buttons inside the tab */
     .zed__navbar-dropdown-content .CollectionTab button,
-    .zed__navbar-dropdown-content .CollectionTab a {
+    .zed__navbar-dropdown-content .CollectionTab a.collectiontablinks {
         background-color: inherit;
         float: left;
         border: none;
