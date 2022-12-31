@@ -304,11 +304,11 @@
 
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
         display: grid;
-        background: gold;
+        background: #f7f7f7;
         width: 190px;
         min-height: 219px;
         border-radius: 20px;
-        border: 0.1rem solid goldenrod;
+        border: 0.1rem solid #DDDDDD;
         padding: 1rem;
         margin: auto;
         display: grid;
@@ -318,7 +318,7 @@
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
         width: 150px;
         height: 150px;
-        background: goldenrod;
+        background: #DDDDDD;
         border-radius: 20px;
     }
     
