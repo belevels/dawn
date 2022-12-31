@@ -1240,6 +1240,7 @@
                           {%- else -%}
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
+                        </div>
                           {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
                           <div class="zed_mega-menu_grid-row mega-menu-footer">
                             <div class="footer-left">
@@ -1252,9 +1253,7 @@
                               <p class="card__heading h3">Espacio para un mensaje.</p>
                             </div>
                           </div>
-                      
-                      
-                        </div>
+                                                  
                         <div id="{{- block.settings.collection_tab_title_3 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_3 != blank -%}
                             {%- for product in block.settings.collections-tabs_3.products -%}
