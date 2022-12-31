@@ -96,7 +96,7 @@
         font-display: swap;
         src:  {% comment %}url({{ "DMSans-Italic.woff2" | asset_url }}) format("woff2");{% endcomment %}
               url({{ "DMSans-Italic.woff" | asset_url }}) format("woff");
-      }
+      }Graphik
       @font-face {
         font-family: "DM Sans";
         font-weight: 700;
@@ -297,6 +297,7 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+        font-feature-settings: "ss01";
       }
 
       @media screen and (min-width: 750px) {
@@ -330,7 +331,6 @@
       .product__title h4,
       .product-card-wrapper .card__heading {
         font-family: "Graphik", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        font-feature-settings: "ss01";
         font-weight: 700;
       }
 
