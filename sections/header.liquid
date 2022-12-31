@@ -1113,11 +1113,11 @@
                             {%- case block.type -%}
                               {%- when 'collections-tabs-menu' -%}
                                 <div class="destacado">
-                                  {%- if block.settings.ad_block_title_0 != blank -%}
-                                    <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                  {%- endif -%}
                                   {%- if block.settings.ad_img1_0 != blank -%}
                                     {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
+                                    {%- if block.settings.ad_block_title_0 != blank -%}
+                                      <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
+                                    {%- endif -%}  
                                     <div class="collage-card card-wrapper product-card-wrapper color-background-2">
                                       <div
                                         class="media media--transparent ratio"
@@ -1145,12 +1145,12 @@
                                   {%- endif -%}
                                 </div>
                                 <div class="destacado">
-                                  {%- if block.settings.ad_block_title_0 != blank -%}
-                                    <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                  {%- endif -%}
                                   {%- if block.settings.ad_img2_0 != blank -%}
                                     {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                     <div class="collage-card card-wrapper product-card-wrapper color-background-2">
+                                      {%- if block.settings.ad_block_title_0 != blank -%}
+                                        <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
+                                      {%- endif -%}    
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img2_0 != blank %}
@@ -1177,12 +1177,12 @@
                                   {%- endif -%}
                                 </div>
                                 <div class="destacado">
-                                  {%- if block.settings.ad_block_title_0 != blank -%}
-                                    <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                  {%- endif -%}
                                   {%- if block.settings.ad_img3_0 != blank -%}
                                     {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                     <div class="collage-card card-wrapper product-card-wrapper color-background-2">
+                                      {%- if block.settings.ad_block_title_0 != blank -%}
+                                        <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
+                                      {%- endif -%}    
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img3_0 != blank %}
