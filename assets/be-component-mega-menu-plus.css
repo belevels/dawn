@@ -292,6 +292,6 @@
         text-align: center;
     }
 
-    .zed_mega-menu_grid-column .card .card-media {
+    .zed_mega-menu_grid-column .card .card__media {
         border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     }
