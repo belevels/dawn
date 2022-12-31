@@ -304,7 +304,7 @@
 
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
         display: grid;
-        background: #EDEDED;
+        background: #F7F7F7;
         width: 190px;
         min-height: 219px;
         border-radius: 20px;
