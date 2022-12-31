@@ -43,6 +43,20 @@
     filter: invert(1);
   }
 
+      /* Style the buttons inside the tab */
+      .zed__navbar-dropdown-content .CollectionTab button,
+      .zed__navbar-dropdown-content .CollectionTab a {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 1rem 1.6rem 2rem;
+          transition: 0.3s;
+          font-size: 1.5rem;
+          font-weight: 700;
+      }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo {
       width: 75%;
