@@ -1146,12 +1146,12 @@
                                 </div>
                                 <div class="destacado">
                                   {%- if block.settings.ad_img2_0 != blank -%}
-                                    <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                    {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                   {%- endif -%}
                                 </div>
                                 <div class="destacado">
                                   {%- if block.settings.ad_img3_0 != blank -%}
-                                    <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                    {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                   {%- endif -%}
                                 </div>
                             {%- endcase -%}
