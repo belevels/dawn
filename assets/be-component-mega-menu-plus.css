@@ -272,6 +272,12 @@
         to {opacity: 1;} 
     }
 
+    .zed_mega-menu_grid-column .card .card-information > * {
+        line-height: 1;
+        color: rgb(var(--color-foreground));
+        margin: 0 !important;
+    }
+
     .zed_mega-menu_grid-column .card-information > .price {
         display: none;
     }
@@ -280,3 +286,4 @@
         max-height: 11rem;
         margin: 0 auto -2rem;
     }
+    
