@@ -1240,6 +1240,20 @@
                           {%- else -%}
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
+                          {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
+                          <div class="zed_mega-menu_grid-row mega-menu-footer">
+                            <div class="footer-left">
+                              <button class="button button--primary button--full-width animate-arrow">
+                                {{ 'belevels.products.show_more_in' | t }}
+                                <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
+                              </button>
+                            </div>
+                            <div class="footer-right color-background-2">
+                              <p class="card__heading h3">Espacio para un mensaje.</p>
+                            </div>
+                          </div>
+                      
+                      
                         </div>
                         <div id="{{- block.settings.collection_tab_title_3 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_3 != blank -%}
@@ -1318,18 +1332,6 @@
                           {%- else -%}
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
-                        </div>
-                      </div>
-                      {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
-                      <div class="zed_mega-menu_grid-row mega-menu-footer">
-                        <div class="footer-left">
-                          <button class="button button--primary button--full-width animate-arrow">
-                            {{ 'belevels.products.show_more_in' | t }}
-                            <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
-                          </button>
-                        </div>
-                        <div class="footer-right color-background-2">
-                          <p class="card__heading h3">Espacio para un mensaje.</p>
                         </div>
                       </div>
                   </div>
