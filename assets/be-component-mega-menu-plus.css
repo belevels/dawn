@@ -291,4 +291,11 @@
     .zed_mega-menu_grid-column .card .card__information {
         text-align: center;
     }
+
+    /* destacados */
+    .zed_mega-menu_grid-row .destacados {
+        list-style: none;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 1.5rem 1.5rem;
+    }
     
