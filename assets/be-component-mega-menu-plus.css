@@ -291,7 +291,6 @@
     .zed_mega-menu_grid-column .card .card__information {
         text-align: center;
     }
-
-    .zed_mega-menu_grid-column .card .card__media {
+    .zed_mega-menu_grid-column .card--card .card__inner .card__media {
         border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     }
