@@ -1126,7 +1126,7 @@
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img1_0 != blank %}
-                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img1_0.aspect_ratio  | times: 100 }}%"
+                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img1_0.aspect_ratio | times: 100 }}%"
                                         {% else %}
                                           style="--ratio-percent: 100%"
                                         {% endif %}
@@ -1318,6 +1318,16 @@
                           {%- else -%}
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
+                        </div>
+                      </div>
+                      {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
+                      <div class="zed_mega-menu_grid-row">
+                        <div>
+                          <button class="button button--tertiary">Ver todo</button>
+                          <span>{%- render 'icon-arrow' -%}</span>
+                        </div>
+                        <div>
+                          <p class="h3">Espacio para un mensaje.</p>
                         </div>
                       </div>
                   </div>
