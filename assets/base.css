@@ -499,6 +499,7 @@ h5,
   h5,
   .h5 {
     font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-size: calc(var(--font-heading-scale) * 1.125rem);
   }
 }
 
