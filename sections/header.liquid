@@ -1118,7 +1118,7 @@
                                   {%- endif -%}
                                   {%- if block.settings.ad_img1_0 != blank -%}
                                     {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
-                                    <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }}{% endif %}">
+                                    <div class="collage-card card-wrapper product-card-wrapper color-background-2">
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img1_0 != blank %}
