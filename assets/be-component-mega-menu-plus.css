@@ -306,11 +306,10 @@
     .zed_mega-menu_grid-row.mega-menu-footer {
         display: grid;
         gap: 1.5rem 1.5rem;
-        grid-template-columns: 33% 66%;
+        grid-template-columns: 66% 33%;
     }
     .zed_mega-menu_grid-row.mega-menu-footer .footer-left,
     .zed_mega-menu_grid-row.mega-menu-footer .footer-right {
-        padding: 1.5rem;
         display: grid;
         align-content: center;
     }
