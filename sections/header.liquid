@@ -1560,19 +1560,19 @@
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       var headerHeight = document.getElementById('site-header').offsetHeight;
-      document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
+      //document.getElementById('MainContent').style.setProperty('--header-height', '-'+ headerHeight + 'px');
       document.getElementById('shopify-section-header').style.setProperty('--header-height', '-'+ headerHeight + 'px');
     });
     window.onscroll = function() {
       var header = document.getElementById('site-header');
       var main = document.getElementById('MainContent');
-      var height = document.getElementById('site-header').offsetHeight;
+      //var height = document.getElementById('site-header').offsetHeight;
       if ( window.pageYOffset > height ) {
         header.classList.remove('site-header-transparent');
-        main.classList.add('site-header-transition');
+        //main.classList.add('site-header-transition');
       } else {
         header.classList.add('site-header-transparent');
-        main.classList.remove('site-header-transition');
+        //main.classList.remove('site-header-transition');
       }
     }
     document.getElementById("header-menu").addEventListener('click',function () {
