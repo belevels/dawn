@@ -303,10 +303,19 @@
     }
 
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
-        background: rgb(41, 141, 46);
+        background: gold;
+        width: 190px;
+        border-radius: 20px;
+        border: 0.1rem solid goldenrod;
+        padding: 1rem;
+        margin: auto;
+        display: grid;
+        text-align: center;
     }
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
         width: 150px;
         height: 150px;
+        background: goldenrod;
+        border-radius: 20px;
     }
     
