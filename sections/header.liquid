@@ -1072,7 +1072,7 @@
                             {{- block.settings.collection_tab_title_5 | escape -}}
                         </button>
                       {%- endif -%}
-                      {%- comment -%}Be Levels - start mod: agregamos enlace a la categoría{%- endcomment -%}
+                      {%- comment -%}Be Levels - start mod: agregamos enlace a la colección all{%- endcomment -%}
                       {%- if block.settings.collections-show_all -%}
                           <button class="collectiontablinks button animate-arrow" onclick="location.href='/collections/all'">
                             {{ 'belevels.general.see_all' | t }}
@@ -1109,26 +1109,26 @@
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
                           {%- comment -%}Be Level - start mod: agregamos productos destacados{%- endcomment -%}
-                          <div class="destacados">
-                            <div class="destacado">
-                              <strong>Destacado 1</strong>
-                              <img 
-                                srcset="//cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=165 165w,
-                                //cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=360 360w,
-                                //cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=533 533w,
-                                //cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=720 720w,
-                                //cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=940 940w,
-                                //cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274 1024w" 
-                                src="//cdn.shopify.com/s/files/1/0614/7289/9299/products/0007_gutday.png?v=1671802274&amp;width=533" 
-                                sizes="(min-width: 1300px) 292px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" 
-                                alt="Gut Day" 
-                                class="motion-reduce" 
-                                loading="lazy" 
-                                width="1024" 
-                                height="1024"
-                              >
-                            </div>
-                          </div>
+                          {%- for block in section.blocks -%}
+                            {%- case block.type -%}
+                              {%- when 'collections-tabs-menu' -%}
+                                {%- if block.settings.ad_block_title != blank -%}
+                                  <h4>{{ block.settings.ad_block_title | escape }}</h4>
+                                {%- endif -%}
+                                {%- if block.settings.ad_img1 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- else -%}
+                                  <h3>EMPTY!!
+                                  <br>Nothing is set yet! Please set Ad Image.</h3>
+                                {%- endif -%}
+                                {%- if block.settings.ad_img2 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- endif -%}
+                                {%- if block.settings.ad_img3 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- endif -%}
+                            {%- endcase -%}
+                          {%- endfor -%}
                         </div>
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_2 != blank -%}
@@ -2178,7 +2178,45 @@
           "id": "collections-show_all",
           "label": "¿Activar Ver todo?",
           "default": false
+        },
+        {
+          "type": "text",
+          "id": "ad_block_title",
+          "default": "Ad Title",
+          "label": "Ad Block Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img1",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img1_link",
+          "label": "Ad Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img2",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img2_link",
+          "label": "Ad Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "ad_img3",
+          "label": "Ad Image"
+        },
+        {
+          "type": "url",
+          "id": "ad_img3_link",
+          "label": "Ad Image Link"
         }
+      ]
+    }
       ]
     }
   ],
