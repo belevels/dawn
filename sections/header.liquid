@@ -1087,7 +1087,6 @@
                   </div>
                     <div class="collection_tabs_megamenu">
                       <div class="zed_mega-menu_grid-row">
-                        <div class="algo">
                         <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_1 != blank -%}
                             {%- for product in block.settings.collections-tabs_1.products -%}                          
@@ -1216,21 +1215,6 @@
                             {%- endcase -%}
                           {%- endfor -%}
                         </div>
-
-                        {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
-                        <div class="collectiontabcontent--mega-menu-footer">
-                          <div class="footer-left color-background-2">
-                            <p class="card__heading h3">Espacio para un mensaje.</p>
-                          </div>
-                          <div class="footer-right">
-                            <button class="button button--primary button--full-width animate-arrow">
-                              {{ 'belevels.products.show_more_in' | t }}
-                              <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
-                            </button>
-                          </div>
-                        </div>
-
-                      </div><!-- .algo -->
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_2 != blank -%}
                             {%- for product in block.settings.collections-tabs_2.products -%}
