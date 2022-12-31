@@ -303,13 +303,13 @@
     .collectiontabcontent .destacado .card-wrapper .media--transparent img {
         border-radius: 20px;
     }
-    .collectiontabcontent--mega-menu-footer {
+    .collectiontabcontent--mega-menu-footerx {
         display: grid;
         gap: 1.5rem 1.5rem;
         grid-template-columns: 66% 33%;
     }
-    .collectiontabcontent--mega-menu-footer .footer-left,
-    .collectiontabcontent--mega-menu-footer .footer-right {
+    .collectiontabcontent--mega-menu-footerx .footer-left,
+    .collectiontabcontent--mega-menu-footerx .footer-right {
         display: grid;
         align-content: center;
     }
