@@ -308,3 +308,9 @@
         gap: 1.5rem 1.5rem;
         grid-template-columns: 33% 66%;
     }
+    .zed_mega-menu_grid-row.mega-menu-footer .footer-left {
+        padding: 1.5rem;
+    }
+    .zed_mega-menu_grid-row.mega-menu-footer .footer-right {
+        padding: 0 1.5rem;
+    }
