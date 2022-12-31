@@ -305,15 +305,15 @@
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
         display: grid;
         background: #F7F7F7;
-        width: 190px;
+        /*width: 190px;*/
         min-height: 219px;
         border-radius: 20px;
         border: 0.1rem solid #DDDDDD;
         padding: 1rem;
         margin: auto;
         display: grid;
-        justify-content: center;
-        align-content: space-around;
+        /*justify-content: center;
+        align-content: space-around;*/
         text-align: center;
     }
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
