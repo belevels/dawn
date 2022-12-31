@@ -306,6 +306,7 @@
         display: grid;
         background: gold;
         width: 190px;
+        min-height: 219px;
         border-radius: 20px;
         border: 0.1rem solid goldenrod;
         padding: 1rem;
