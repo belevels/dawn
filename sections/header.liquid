@@ -1112,20 +1112,20 @@
                           {%- for block in section.blocks -%}
                             {%- case block.type -%}
                               {%- when 'collections-tabs-menu' -%}
-                                {%- if block.settings.ad_block_title != blank -%}
-                                  <h4>{{ block.settings.ad_block_title | escape }}</h4>
+                                {%- if block.settings.ad_block_title_0 != blank -%}
+                                  <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
                                 {%- endif -%}
-                                {%- if block.settings.ad_img1 != blank -%}
-                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- if block.settings.ad_img1_0 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                 {%- else -%}
                                   <h3>EMPTY!!
                                   <br>Nothing is set yet! Please set Ad Image.</h3>
                                 {%- endif -%}
-                                {%- if block.settings.ad_img2 != blank -%}
-                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- if block.settings.ad_img2_0 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                 {%- endif -%}
-                                {%- if block.settings.ad_img3 != blank -%}
-                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
+                                {%- if block.settings.ad_img3_0 != blank -%}
+                                  <div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>
                                 {%- endif -%}
                             {%- endcase -%}
                           {%- endfor -%}
@@ -2181,38 +2181,38 @@
         },
         {
           "type": "text",
-          "id": "ad_block_title",
+          "id": "ad_block_title_0",
           "default": "Ad Title",
           "label": "Ad Block Title"
         },
         {
           "type": "image_picker",
-          "id": "ad_img1",
+          "id": "ad_img1_0",
           "label": "Ad Image"
         },
         {
           "type": "url",
-          "id": "ad_img1_link",
+          "id": "ad_img1_link_0",
           "label": "Ad Image Link"
         },
         {
           "type": "image_picker",
-          "id": "ad_img2",
+          "id": "ad_img2_0",
           "label": "Ad Image"
         },
         {
           "type": "url",
-          "id": "ad_img2_link",
+          "id": "ad_img2_link_0",
           "label": "Ad Image Link"
         },
         {
           "type": "image_picker",
-          "id": "ad_img3",
+          "id": "ad_img3_0",
           "label": "Ad Image"
         },
         {
           "type": "url",
-          "id": "ad_img3_link",
+          "id": "ad_img3_link_0",
           "label": "Ad Image Link"
         }
       ]
