@@ -1108,6 +1108,12 @@
                           {%- else -%}
                             <h4>No collection set yet. please set one to see here.</h4>
                           {%- endif -%}
+                          {%- comment -%}Be Level - start mod: agregamos productos destacados{%- endcomment -%}
+                          <ul class="destacados">
+                            <li class="destacado-1">Destacado 1</li>
+                            <li class="destacado-2">Destacado 2</li>
+                            <li class="destacado-3">Destacado 3</li>
+                          </ul>
                         </div>
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_2 != blank -%}
