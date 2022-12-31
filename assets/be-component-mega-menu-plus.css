@@ -291,6 +291,9 @@
     .zed_mega-menu_grid-column .card .card__information {
         text-align: center;
     }
-    .zed_mega-menu_grid-column .card--card .card__inner .card__media {
+    .zed_mega-menu_grid-column .collage-card.card-wrapper .media--transparent {
+        display: contents;
+    }
+    .zed_mega-menu_grid-column .collage-card.card-wrapper .media--transparent img {
         border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     }
