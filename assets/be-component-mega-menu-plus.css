@@ -284,6 +284,10 @@
     .zed_mega-menu_grid-column .card .card__inner {
         max-width: 11rem;
         max-height: 11rem;
-        margin: 0 auto -2rem;
+        margin: 1rem auto -3rem;
+    }
+
+    .zed_mega-menu_grid-column .card .card-information {
+        text-align: center;
     }
     
