@@ -299,4 +299,8 @@
         grid-template-columns: repeat(3,minmax(0,1fr));
         gap: 1.5rem 1.5rem;
     }
+
+    .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
+        background: aliceblue;
+    }
     
