@@ -296,7 +296,7 @@
     .zed__navbar-dropdown-content .collectiontabcontent .destacados {
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(3,minmax(0,1fr));
+        grid-template-columns: auto auto auto;
         gap: 1.5rem 1.5rem;
     }
 
