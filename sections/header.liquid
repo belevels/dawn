@@ -1122,7 +1122,7 @@
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img1_0 != blank %}
-                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img1_0.aspect_ratio | times: 60 }}%"
+                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img1_0.aspect_ratio  | times: 100 }}%"
                                         {% else %}
                                           style="--ratio-percent: 100%"
                                         {% endif %}
@@ -1154,7 +1154,7 @@
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img2_0 != blank %}
-                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img2_0.aspect_ratio | times: 60 }}%"
+                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img2_0.aspect_ratio  | times: 100 }}%"
                                         {% else %}
                                           style="--ratio-percent: 100%"
                                         {% endif %}
@@ -1186,7 +1186,7 @@
                                       <div
                                         class="media media--transparent ratio"
                                         {% if block.settings.ad_img3_0 != blank %}
-                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img3_0.aspect_ratio | times: 60 }}%"
+                                          style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img3_0.aspect_ratio  | times: 100 }}%"
                                         {% else %}
                                           style="--ratio-percent: 100%"
                                         {% endif %}
