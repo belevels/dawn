@@ -276,7 +276,7 @@
         display: none;
     }
     .zed_mega-menu_grid-column .card .card__inner {
-        max-width: 12rem;
-        max-height: 12rem;
+        max-width: 11rem;
+        max-height: 11rem;
         margin: 0 auto -2rem;
     }
