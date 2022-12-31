@@ -303,3 +303,8 @@
     .collectiontabcontent .destacado .card-wrapper .media--transparent img {
         border-radius: 20px;
     }
+    .zed_mega-menu_grid-row.mega-menu-footer {
+        display: grid;
+        gap: 1.5rem 1.5rem;
+        grid-template-columns: 33% 66%;
+    }
