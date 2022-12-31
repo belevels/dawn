@@ -298,8 +298,8 @@
         padding: 0;
         list-style: none;
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 1.5rem 1.5rem;
+        /*grid-template-columns: auto auto auto;
+        gap: 1.5rem 1.5rem;*/
     }
 
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado {
@@ -312,8 +312,8 @@
         padding: 1rem;
         margin: auto;
         display: grid;
-        /*justify-content: center;
-        align-content: space-around;*/
+        justify-content: center;
+        align-content: space-around;
         text-align: center;
     }
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
