@@ -1087,6 +1087,7 @@
                   </div>
                     <div class="collection_tabs_megamenu">
                       <div class="zed_mega-menu_grid-row">
+                        <div class="algo">
                         <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_1 != blank -%}
                             {%- for product in block.settings.collections-tabs_1.products -%}                          
@@ -1215,6 +1216,7 @@
                             {%- endcase -%}
                           {%- endfor -%}
                         </div>
+                      </div><!-- .algo -->
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_2 != blank -%}
                             {%- for product in block.settings.collections-tabs_2.products -%}
