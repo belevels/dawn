@@ -1323,9 +1323,9 @@
                       {%- comment -%}Be Levels - start mod: agregamos segunda fila para Ver más de la colección{%- endcomment -%}
                       <div class="zed_mega-menu_grid-row mega-menu-footer">
                         <div class="footer-left">
-                          <button class="button button--primary button--full-width">
-                            <span>Ver todo</span>
-                            {%- render 'icon-arrow' -%}
+                          <button class="button button--primary button--full-width animate-arrow">
+                            {{ 'belevels.products.show_more_in' | t }}
+                            <span class="icon-wrap">{%- render 'icon-arrow' -%}</span>
                           </button>
                         </div>
                         <div class="footer-right color-background-2">
