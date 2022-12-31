@@ -298,7 +298,6 @@
         padding: 0;
         list-style: none;
         display: grid;
-        justify-content: center;
         /*grid-template-columns: auto auto auto;
         gap: 1.5rem 1.5rem;*/
     }
@@ -312,10 +311,10 @@
         border: 0.1rem solid #DDDDDD;
         /*padding: 1rem;
         margin: auto;
-        display: grid;
+        display: grid;*/
         justify-content: center;
         align-content: space-around;
-        text-align: center;*/
+        text-align: center;
     }
     .zed__navbar-dropdown-content .collectiontabcontent .destacados .destacado img {
         width: 150px;
