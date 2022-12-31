@@ -44,7 +44,7 @@
     width: 100%;
     left: 0;
     right: 0;
-    border-radius: 40px;
+    border-radius: 20px;
     z-index: 1;
     }
 
@@ -234,6 +234,11 @@
 
     .zed__navbar-dropdown-content .CollectionTab .collectiontablinks.animate-arrow {
         float: right;
+        min-height: calc(3rem + var(--buttons-border-width) * 2);
+        min-width: calc(18rem + var(--buttons-border-width) * 2);        
+        margin-top: 6px;
+        margin-right: -1.6rem;
+        font-weight: normal !important;
     }
     
     /* Style the tab content */
