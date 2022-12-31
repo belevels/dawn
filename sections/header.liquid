@@ -204,8 +204,9 @@
     .zed__navbar-dropdown .zed__navbar-dropbtn{
       color: rgba(var(--color-foreground),.75);
     }
-    .zed__navbar-dropdown-content{
+    .zed__navbar-dropdown-content {
         background-color: rgb(var(--color-background));
+        padding-bottom: 2.5rem;
     }
     .zed__navbar-dropdown-content-header {
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -272,7 +273,7 @@
         {%- elsif section.settings.menu_theme == 'lightgreen' -%} 
             border-bottom: 2px solid #558C8C;
         {%- elsif section.settings.menu_theme == 'lightyellow' -%} 
-            border-bottom: 2px solid #E8DB7D;
+            border-bottom: 2px solid rgba(var(--color-foreground),.75);
         {%- else -%}
             border-bottom: 2px solid #231123;
         {%- endif -%}
