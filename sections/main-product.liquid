@@ -383,12 +383,15 @@
             {%- endcomment -%}
             {%- comment -%}Be Levels - start mod: agregamos cantidad minima para EcoPack{%- endcomment -%}
             {%- when 'ecopack_quantity_selector' -%}
-              {%- comment -%}Be Levels - start mod - Bloqueamos botón de compra en determinados paises - ugly{%- endcomment -%}
-              {%- unless 
+              {%- if
                 product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
                 product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
                 product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-              -%}              
+              -%}
+                <div class="warning fake-button">
+                  {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+                </div>
+              {%- else -%}              
                 <div id="be-ecopack-add-to-cart-box" class="be-add-to-cart-box">
                   <div
                     class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -426,7 +429,7 @@
                     {%- render 'be-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
                   </div>  
                 </div>
-              {%- endunless -%}
+              {%- endif -%}
             {%- comment -%}Be Levels - start mod: agregamos download-report{%- endcomment -%}
             {%- when 'download-report' -%}
               {%-liquid
@@ -440,12 +443,15 @@
               {%- endif -%}
             {%- comment -%}Be Levels - start mod: agrupamos selector de cantidad y botones de compra en be-box{%- endcomment -%}
             {%- when 'be-box-buy-button' -%}
-              {%- comment -%}Be Levels - start mod - Bloqueamos botón de compra en determinados paises - ugly{%- endcomment -%}
-              {%- unless 
+              {%- if
                 product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
                 product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
                 product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-              -%}              
+              -%}
+                <div class="warning fake-button">
+                  {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+                </div>
+              {%- else -%}
                 <div class="be-add-to-cart-box">
                   <div
                     class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -481,7 +487,7 @@
                   </div>
                   {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}
                 </div>
-              {%- endunless -%}
+              {%- endif -%}
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
