@@ -300,7 +300,7 @@
     .collectiontabcontent .collectiontabcontent--footer {
         display: grid;
         gap: 1.5rem 1.5rem;
-        grid-template-columns: 66% 33%;
+        grid-template-columns: 33% 66%;
         align-items: center;
         margin-top: 2.5rem;
     }
