@@ -140,12 +140,13 @@
         {%- comment -%}Be Levels - start mod - Agregamos id="custom-search-box" para mostrar resultado personalizado. Ej: CBD{%- endcomment -%}
         <script>
           const box = document.querySelector('.custom-results');
+          const box2 = document.querySelector('.custom-results');
           const word = 'CBD';
           
           if (box.textContent.toLowerCase().includes(word.toLowerCase())) {
             box.innerHTML = '<a href="https://belevelscbd.com" target="_blank">Visita nuestra tienda de CBD</a>';
           }
-          if (box.textContent.toLowerCase().includes(word.toLowerCase())) {
+          if (box2.textContent.toLowerCase().includes(word.toLowerCase())) {
             box.classList.add('button', ' button--secondary', 'button-full-width', 'animate-arrow')
           }
 
