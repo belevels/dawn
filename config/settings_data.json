@@ -178,6 +178,7 @@
           },
           "6ca63829-a282-4987-986f-8620b5917bce": {
             "type": "list-menu",
+            "disabled": true,
             "settings": {
               "list_menu_name": "Menu Name",
               "list_menu_heading": "Menu Heading",
@@ -202,11 +203,18 @@
               "ad_img2_link": "",
               "ad_img3_link": ""
             }
+          },
+          "3c32b4ce-0caf-4942-bfab-10207781a7ee": {
+            "type": "single-dropdown",
+            "settings": {
+              "dropdown_tab_menu_name": "Menu name"
+            }
           }
         },
         "block_order": [
           "23061011-5f3b-4f22-9289-6a35a797ecab",
-          "6ca63829-a282-4987-986f-8620b5917bce"
+          "6ca63829-a282-4987-986f-8620b5917bce",
+          "3c32b4ce-0caf-4942-bfab-10207781a7ee"
         ],
         "settings": {
           "color_scheme": "background-1",
@@ -214,7 +222,7 @@
           "enable_language_selector_in_header": true,
           "logo_svg": true,
           "custom_url": "",
-          "menu": "belevels",
+          "menu": "main-menu",
           "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
           "sticky_header_type": "none",
