@@ -446,6 +446,33 @@
         "content": "The best option to give continuity to your shots and maximize your improvement process. You save on price, you save on shipping and we save CO₂ impact on the planet. 😇"
       }
     },
+    "sections": {
+      "all": {
+        "fourth_width": "One-fourth width of column",
+        "header_alignment": "Header Alignment",
+        "subheading_style": "Subheading style",
+        "alignment_right": "Right",
+        "show_more": "Show more"
+      },
+      "be-carousel-multicolumn-data": {
+        "name": "Be: Multicolumn + Slider",
+        "presets": {
+          "name": "Be: Multicolumn + Slider"
+        }
+      },
+      "be-image-with-text": {
+        "name": "Be: Image with text",
+        "presets": {
+          "name": "Be: Image with text"
+        }
+      },
+      "be-timeline": {
+        "name": "Be: Timeline",
+        "presets": {
+          "name": "Be: Timeline"
+        }
+      }
+    },
     "products": {
       "product_not_available_in": "Not available in",
       "download_report": "Download report",
