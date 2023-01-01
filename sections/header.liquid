@@ -155,10 +155,10 @@
   Be Levels - start mod: agregamos headerTransparentIn, nuevos estilos, mega menu plus
 {%- endcomment -%}
 {% style %}
-    
+    {%- comment -%}
     .zed__navbar-main {
       background: rgb(var(--color-background));
-        {%- comment -%}
+        
         {%- if section.settings.menu_theme == 'lightblack' -%}
             background: #231123;
         {%- elsif section.settings.menu_theme == 'lightred' -%} 
@@ -170,8 +170,8 @@
         {%- else -%}
             background: rgb(var(--color-background));
         {%- endif -%}
-        {%- endcomment -%}
-    }
+        
+    }{%- endcomment -%}
 
     .zed__navbar-dropdown .zed__navbar-dropbtn {
         {%- if section.settings.menu_theme == 'lightblack' -%}
@@ -771,7 +771,7 @@
         </nav>
       {%- elsif section.settings.menu_type_desktop == 'mega-plus' -%}
       {{ 'component-card.css' | asset_url | stylesheet_tag }}
-      <nav class="zed__navbar-main gradient color-background-1">
+      <nav class="zed__navbar-main">
         <!-- Custom Menu Link Lists 3/4 columns -->
         {%- for block in section.blocks -%}
           {%- case block.type -%}
