@@ -110,3 +110,8 @@
     padding-bottom: 0;
   }
 }
+.multirow modal-opener .button {
+  width: 100%;
+  min-width: 26rem;
+  max-width: 37rem;
+}
