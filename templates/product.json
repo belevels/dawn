@@ -199,7 +199,7 @@
         "title_wrapper_alignment": "center",
         "image_width": "fourth",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "gap_desktop": 10,
         "columns_mobile": "2",
         "column_alignment": "center",
