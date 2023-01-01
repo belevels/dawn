@@ -142,84 +142,6 @@
         "padding_bottom": 36
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -240,6 +162,7 @@
     },
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Fórmulas maestras",
         "heading_size": "h0",
@@ -264,13 +187,42 @@
         "padding_top": 36,
         "padding_bottom": 16
       }
+    },
+    "c22a79ad-d44e-4166-b9a3-3ecd00a49269": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "como-se-usa",
+        "show_title": true,
+        "heading_size": "h1",
+        "show_description": true,
+        "description_style": "subtitle",
+        "title_wrapper_alignment": "left",
+        "image_width": "fourth",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "gap_desktop": 10,
+        "columns_mobile": "2",
+        "column_alignment": "center",
+        "item_description_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "swipe_on_desktop": false,
+        "grid_peek": false,
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "slider_visual": "arrows",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
     "related-products",
-    "e03b2676-27b6-478f-bd55-ee1cb1c59d86"
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86",
+    "c22a79ad-d44e-4166-b9a3-3ecd00a49269"
   ]
 }
