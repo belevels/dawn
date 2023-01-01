@@ -1218,12 +1218,11 @@
                           </div><!-- products -->
                           <div class="collectiontabcontent--footer">
                             <div class="collectiontabcontent--footer-left">
-                              {%- for collection in block.settings.collections-tabs_1 -%}
-                                <button class="button button--tertiary button--full-width animate-arrow">
-                                  {{ 'belevels.general.see_all_in' | t }} {{- block.settings.collection_tab_title_1 | escape -}}
-                                  <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                                </button>
-                              {%- endfor -%}
+                              <button class="button button--tertiary button--full-width animate-arrow">
+                                {{ 'belevels.general.see_all_in' | t }} {{- block.settings.collection_tab_title_1 | escape -}}
+                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                              </button>
+                              {{ block.settings.collections-tabs_1 }}
                             </div>
                             <div class="collectiontabcontent--footer-right color-background-2">
                               <p class="h3">Con el EcoPack ahorras y contribuyes con el planeta.</p>
