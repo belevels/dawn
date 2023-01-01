@@ -71,6 +71,7 @@
         },
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "EcoPack",
             "icon": "question_mark",
