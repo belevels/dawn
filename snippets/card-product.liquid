@@ -231,8 +231,10 @@
             card_product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
             card_product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
           -%}
-            <div class="warning fake-button">
-              {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+            <div class="quick-add no-js-hidden">
+              <div class="warning fake-button">
+                {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+              </div>
             </div>
           {%- else -%}          
             <div class="quick-add no-js-hidden">
