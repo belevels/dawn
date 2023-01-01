@@ -226,7 +226,7 @@
         </div>
         {%- if show_quick_add -%}
 {%- comment -%}Be Levels - start mod: agregamos restricción por paises, selector de cantidad y botón add to cart agrupados en be-box {%- endcomment -%}
-{%- if
+{%- elsif
   product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
   product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
