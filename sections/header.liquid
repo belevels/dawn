@@ -1737,7 +1737,7 @@
                 </div>
               </div>
             {%- when "single-dropdown"-%}
-              <nav class="header__inline-menu">
+              <div class="zed__navbar-dropdown">
                 <ul class="list-menu list-menu--inline" role="list">
                   {%- for link in section.settings.menu.links -%}
                     <li>
@@ -1785,7 +1785,7 @@
                     </li>
                   {%- endfor -%}
                 </ul>
-              </nav>
+              </div>
             {%- endcase -%}
         {%- endfor -%}
       </nav>
