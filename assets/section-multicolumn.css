@@ -230,3 +230,6 @@
     display: list-item;
   }
 }
+.multicolumn modal-opener .button {
+  min-width: 37rem;
+}
