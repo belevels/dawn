@@ -2987,6 +2987,16 @@ details-disclosure > details {
   }
 }
 /* Be Levels - start mod */
+.warning {
+  background-color: #C63100;
+  color: #ffffff !important;
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate--45 {
+  transform: rotate(-45deg);
+}
 .collection .fake-button {
   text-align: center;
 }
