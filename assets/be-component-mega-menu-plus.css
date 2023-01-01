@@ -312,4 +312,8 @@
     .collectiontabcontent .collectiontabcontent--footer > div {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
+        align-items: center;
+    }
+    .collectiontabcontent .collectiontabcontent--footer > div p:first {
+        margin-top: 0;
     }
