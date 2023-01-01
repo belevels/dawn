@@ -1098,7 +1098,7 @@
                                     show_secondary_image: false,
                                     show_vendor: false,
                                     show_rating: true,
-                                    extend_height: true,
+                                    extend_height: false,
                                     lazy_load: true,
                                     show_quick_add: false,
                                     section_id: product.id,
@@ -1118,11 +1118,7 @@
                               {%- case block.type -%}
                                 {%- when 'collections-tabs-menu' -%}
                                   <div class="destacado">
-                                    {%- comment -%}{%- if block.settings.ad_block_title_0 != blank -%}
-                                      <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                    {%- endif -%}{%- endcomment -%}
                                     {%- if block.settings.ad_img1_0 != blank -%}
-                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                       <div class="collage-card card-wrapper product-card-wrapper color-background-2">
                                         <div
                                           class="media media--transparent ratio"
@@ -1144,17 +1140,10 @@
                                           {%- endif -%}
                                         </div>
                                       </div>
-                                    {%- else -%}
-                                      <h3>EMPTY!!
-                                      <br>Nothing is set yet! Please set Ad Image.</h3>
                                     {%- endif -%}
                                   </div>
                                   <div class="destacado">
-                                    {%- comment -%}{%- if block.settings.ad_block_title_0 != blank -%}
-                                      <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                    {%- endif -%}{%- endcomment -%}
                                     {%- if block.settings.ad_img2_0 != blank -%}
-                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                       <div class="collage-card card-wrapper product-card-wrapper color-background-2">
                                         <div
                                           class="media media--transparent ratio"
@@ -1176,17 +1165,10 @@
                                           {%- endif -%}
                                         </div>
                                       </div>
-                                    {%- else -%}
-                                      <h3>EMPTY!!
-                                      <br>Nothing is set yet! Please set Ad Image.</h3>
                                     {%- endif -%}
                                   </div>
                                   <div class="destacado">
-                                    {%- comment -%}{%- if block.settings.ad_block_title_0 != blank -%}
-                                      <h4>{{ block.settings.ad_block_title_0 | escape }}</h4>
-                                    {%- endif -%}{%- endcomment -%}
                                     {%- if block.settings.ad_img3_0 != blank -%}
-                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_0 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
                                       <div class="collage-card card-wrapper product-card-wrapper color-background-2">
                                         <div
                                           class="media media--transparent ratio"
@@ -1208,9 +1190,6 @@
                                           {%- endif -%}
                                         </div>
                                       </div>
-                                    {%- else -%}
-                                      <h3>EMPTY!!
-                                      <br>Nothing is set yet! Please set Ad Image.</h3>
                                     {%- endif -%}
                                   </div>                                
                               {%- endcase -%}
@@ -1228,10 +1207,11 @@
                               {%- if block.settings.ad_block_title_0 != blank -%}
                                 <p class="h3">{{ block.settings.ad_block_title_0 | escape }}</p>
                               {%- endif -%}
-                              <!--<p class="h3">Con el EcoPack ahorras y contribuyes con el planeta.</p>-->
                             </div>
                           </div>
                         </div>
+
+
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           <div class="collectiontabcontent--content">
                             {%- if block.settings.collections-tabs_2 != blank -%}
