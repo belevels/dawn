@@ -312,7 +312,7 @@
         }
     }
     .collectiontabcontent .collectiontabcontent--footer .footer-left {
-        padding-right: calc(1rem - var(--border-width))px;
+        padding-right: calc(1rem - 0.1rem * 2)px;
     }
     .collectiontabcontent .collectiontabcontent--footer .footer-right {
         padding-left: 2.5rem;
