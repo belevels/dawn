@@ -1,0 +1,154 @@
+.multicolumn carousel-component.page-width {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /*padding-left: 6rem;
+  padding-right: 6rem;*/
+}
+
+@media screen and (max-width: 989px) {
+  .no-js carousel-component .slider {
+    padding-bottom: 3rem;
+  }
+}
+
+carousel-component .slider:not(.grid--peek) {
+  scroll-padding-left: 0;
+  margin-bottom: 0;
+}
+
+carousel-component .slider-button {
+  background-color: rgba(var(--color-background),.65);
+  border: none;
+  border-radius: 50%;
+  color: rgba(var(--color-foreground),.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 1.2rem;
+  width: 4rem;
+  height: 4rem;
+}
+carousel-component .slider-button:not([disabled]):hover {
+  background-color: rgba(var(--color-background),.85);
+}
+
+carousel-component .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
+  padding-left: 3rem !important; 
+  padding-right: 3rem !important;
+}
+
+@media screen and (min-width: 990px) {
+  carousel-component .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
+    padding-left: 5rem !important; 
+    padding-right: 5rem !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  carousel-component .slider-buttons {
+    border-right: 0;
+    border-left: 0;
+  }
+}
+
+carousel-component .slider + .slider-buttons,
+carousel-component .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.spaced-section--full-width:last-child carousel-component:not(.page-width) .slideshow__controls {
+  border-bottom: none;
+}
+/* ** /
+carousel-component .slideshow {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  /* ** /gap: 0;/* ** /
+}
+/* **/
+/* new multicolumn options */
+/*
+carousel-component .multicolumn-card__info {
+  padding: 2.5rem 6rem !important;
+}
+*/
+.multicolumn-card__image-wrapper--fourth-width {
+  width: 20%;
+}
+/* new slideshow options */
+/* aqui */
+/*
+carousel-component .multicolumn-list {
+  --grid-desktop-horizontal-spacing: 130px;
+}
+*/
+carousel-component .slideshow__controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+carousel-component .slideshow__controls--arrows {
+  position: absolute;
+  top: 40%;
+  left: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 !important;
+  border: 0;
+}
+carousel-component .slideshow__controls--arrows .slider-button .icon {
+  height: 1rem;
+}
+
+carousel-component .slideshow__controls--arrows .slideshow__autoplay {
+  margin-top: 25%;
+  display: none;
+}
+
+/* mover */
+.slide-two-columns .multicolumn-card__image-wrapper {
+  width: calc(25% + 2.5rem);
+  min-width: calc(25% + 2.5rem);
+}
+.slide-two-columns .multicolumn-card__info .description {
+  order: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.slide-two-columns .multicolumn-card__info h3 {
+  order: 2;
+}
+.slide-two-columns .multicolumn-card__info .image-with-text__text--caption {
+  order: 3;
+  margin-top: 0;
+}
+@media screen and (min-width: 750px) {
+  .slide-two-columns.multicolumn-list__item:only-child {
+  max-width: 96rem;
+  }
+  .slide-two-columns .multicolumn-card {
+    display: flex;
+  }
+  .slide-two-columns .multicolumn-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .slide-two-columns .multicolumn-card-spacing {
+    padding: 2.5rem;
+  }
+}
+.product__column-sticky .slider-buttons {
+  display: none !important;
+}
