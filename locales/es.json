@@ -453,6 +453,33 @@
         "content": "La mejor opción para dar continuidad a tus tomas y maximizar tu proceso de mejora. Ahorras en precio, ahorras en envíos y ahorramos impacto de CO₂ al planeta. 😇"
       }
     },
+    "sections": {
+      "all": {
+        "fourth_width": "Ancho de un cuarto de columna",
+        "header_alignment": "Alineación del encabezado",
+        "subheading_style": "Estilo del subtítulo",
+        "alignment_right": "Derecha",
+        "show_more": "Ver más"
+      },
+      "be-carousel-multicolumn-data": {
+        "name": "Be: Multicolumna + Slider",
+        "presets": {
+          "name": "Be: Multicolumna + Slider"
+        }
+      },
+      "be-image-with-text": {
+        "name": "Be: Imagen con texto",
+        "presets": {
+          "name": "Be: Imagen con texto"
+        }
+      },
+      "be-timeline": {
+        "name": "Be: Timeline",
+        "presets": {
+          "name": "Be: Timeline"
+        }
+      }
+    },
     "products": {
       "product_not_available_in": "No disponible en",
       "download_report": "Descargar informe",
