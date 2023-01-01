@@ -176,19 +176,37 @@
               "ad_img3_link_0": ""
             }
           },
-          "81d0f707-1cb5-4448-ab22-78dcbe24960f": {
-            "type": "single-collection-menu",
-            "disabled": true,
+          "6ca63829-a282-4987-986f-8620b5917bce": {
+            "type": "list-menu",
             "settings": {
-              "single-collection_menu_name": "Menu Name",
-              "single-collection_menu_heading": "Menu Heading",
-              "single-collection-menu_coolection_1": "formulas-maestras"
+              "list_menu_name": "Menu Name",
+              "list_menu_heading": "Menu Heading",
+              "menu_title1": "Menu 1",
+              "menu_link1": "menu-legal",
+              "menu_title2": "Menu 2",
+              "menu_link2": "",
+              "menu_title3": "Menu 3",
+              "menu_link3": "",
+              "menu_title4": "Menu 4",
+              "menu_link4": "",
+              "menu_title5": "Menu 5",
+              "menu_link5": "",
+              "menu_title6": "Menu 6",
+              "menu_link6": "",
+              "menu_title7": "Menu 7",
+              "menu_link7": "",
+              "menu_title8": "Menu 8",
+              "menu_link8": "",
+              "ad_block_title": "Ad Title",
+              "ad_img1_link": "",
+              "ad_img2_link": "",
+              "ad_img3_link": ""
             }
           }
         },
         "block_order": [
           "23061011-5f3b-4f22-9289-6a35a797ecab",
-          "81d0f707-1cb5-4448-ab22-78dcbe24960f"
+          "6ca63829-a282-4987-986f-8620b5917bce"
         ],
         "settings": {
           "color_scheme": "background-1",
