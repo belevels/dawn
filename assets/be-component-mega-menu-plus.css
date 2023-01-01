@@ -235,10 +235,11 @@
     .zed__navbar-dropdown-content .CollectionTab .collectiontablinks.button {
         float: right;
         text-align: right;
+        margin-top: 0.5rem;
         margin-right: -1.6rem;
         padding-right: 0;
         font-weight: normal !important;
-        min-width: calc(18rem + var(--buttons-border-width) * 2);        
+        min-width: calc(18rem + var(--buttons-border-width) * 2);
     }
     
     /* Style the tab content */
