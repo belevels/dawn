@@ -439,7 +439,8 @@
   "belevels": {
     "general": {
       "all_right_reserved": "All right reserved",
-      "see_all": "Show all"
+      "see_all": "Show all",
+      "see_all_in": "Show all in"
     },
     "products": {
       "product_not_available_in": "Product not available in",
