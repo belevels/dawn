@@ -389,6 +389,7 @@
                 product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
               -%}
                 <div id="be-ecopack-add-to-cart-box">
+                  {%- when 'collapsible_tab' -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                     <details id="Details-{{ block.id }}-{{ section.id }}">
                       <summary>
