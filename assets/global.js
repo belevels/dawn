@@ -1011,3 +1011,77 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+/* Be Levels - start mod: extendemos slideshow a carousel */
+class CarouselComponent extends SlideshowComponent { 
+  constructor() {
+    super();
+    
+    this.initPages();
+
+    if (!this.slider || !this.prevButton || !this.nextButton) return;
+    
+    const resizeObserver = new ResizeObserver(entries => this.initPages());
+    resizeObserver.observe(this.slider);
+
+    this.slider.addEventListener('scroll', this.update.bind(this));
+    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
+    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+  }
+
+  initPages() {
+    this.TotalSlidesDesktop = this.querySelector('.total-slides-desktop');
+    var TwoSlidesMobile = this.querySelector('.grid--2-col');
+
+    if (!this.TotalSlidesDesktop) return;
+
+    if (TwoSlidesMobile === undefined || TwoSlidesMobile ===  null) {
+      this.TwoColumnsMobile = 0;
+    } else {
+      this.TwoColumnsMobile = 2;
+    }
+
+    this.TotalSlidesTablet = this.TotalSlidesDesktop.textContent - 1 + 2;
+    
+    this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
+    if (this.sliderItemsToShow.length < 2) return;
+    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+    this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
+    
+    if (window.matchMedia("(min-width: 990px)").matches) {
+      this.sliderItemsToShow.length = this.TotalSlidesDesktop.textContent; // desktop
+    } else if (window.matchMedia("(min-width: 750px) and (max-width: 989px)").matches) {
+      this.sliderItemsToShow.length = this.TotalSlidesTablet; // tablet
+    } else {
+      if (this.TwoColumnsMobile > 0) {
+        this.sliderItemsToShow.length = this.sliderItemsToShow.length - 1; // mobile two columns
+      } else {
+        this.sliderItemsToShow.length = this.sliderItemsToShow.length; // mobile
+      }
+    }
+    
+    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1; // orig
+  }
+
+  autoRotateSlides() {
+    var slideScrollPosition = '';
+
+    if (window.matchMedia("(min-width: 990px)").matches) {
+      var slideScrollPosition = this.currentPage === (this.sliderItems.length - this.TotalSlidesDesktop.textContent) ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // desktop
+    } else if (window.matchMedia("(min-width: 750px) and (max-width: 989px)").matches) {
+      var slideScrollPosition = this.currentPage === this.TotalSlidesTablet ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // tablet
+    } else {
+      if (this.TwoColumnsMobile > 0) {
+        var slideScrollPosition = this.currentPage === this.sliderItems.length - 1 ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile two columns
+      } else {
+        var slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile
+      }
+    }
+    
+    this.slider.scrollTo({
+      left: slideScrollPosition
+    });
+  }
+}
+
+customElements.define('carousel-component', CarouselComponent);
