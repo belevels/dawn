@@ -136,7 +136,17 @@
         {%- endif -%}
       {%- endunless -%}
       {%- if search.results_count == 0 and search.filters == empty -%}
-        <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+        <p class="custom-results" role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+        {%- comment -%}Be Levels - start mod - Agregamos id="custom-search-box" para mostrar resultado personalizado. Ej: CBD{%- endcomment -%}
+        <script>
+          const box = document.querySelector('.custom-results');
+          const word = 'CBD';
+          
+          if (box.textContent.toLowerCase().includes(word.toLowerCase())) {
+            box.innerHTML = '<a href="https://belevelscbd.com" target="_blank">Visita nuestra tienda de CBD</a>';
+          }
+          </script>
+          {%- comment -%}Be Levels - end mod{%- endcomment -%}        
       {%- endif -%}
     {%- endif -%}
   </div>
