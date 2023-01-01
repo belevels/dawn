@@ -242,7 +242,7 @@
     }
     
     /* Style the tab content */
-    .zed__navbar-dropdown-content .collectiontabcontent {
+    .zed__navbar-dropdown-content .collectiontabcontent--content {
         /*
         display: none;
         padding: 6px 12px;
@@ -256,7 +256,7 @@
     }
 
     @media screen and (min-width: 750px) and (max-width: 989px) {
-        .zed__navbar-dropdown-content .collectiontabcontent {
+        .zed__navbar-dropdown-content .collectiontabcontent--content {
             grid-template-columns: repeat(4,minmax(0,1fr));
         }
     }

@@ -1088,7 +1088,7 @@
                     <div class="collection_tabs_megamenu">
                       <div class="zed_mega-menu_grid-row">
                         <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
-                          <div style="background:pink;">
+                          <div class="collectiontabcontent--content" style="background:aliceblue;">
                             {%- if block.settings.collections-tabs_1 != blank -%}
                               {%- for product in block.settings.collections-tabs_1.products -%}
                                 <div class="zed_mega-menu_grid-column">
@@ -1216,7 +1216,7 @@
                               {%- endcase -%}
                             {%- endfor -%}
                           </div><!-- products -->
-                          <div style="background:wheat;">
+                          <div class="collectiontabcontent--footer" style="background:wheat;">
                             <p>Future Mega menu footer</p>
                           </div>
                         </div>
@@ -1752,7 +1752,7 @@
     for (i = 0; i < collectiontablinks.length; i++) {
       collectiontablinks[i].className = collectiontablinks[i].className.replace(" collectionactive", "");
     }
-    document.getElementById(collectionName).style.display = "grid";
+    document.getElementById(collectionName).style.display = "block";
     evt.currentTarget.className += " collectionactive";
 
   }
