@@ -227,9 +227,9 @@
         {%- if show_quick_add -%}
           {%- comment -%}Be Levels - start mod: agregamos restricción por paises, cantidad minima para EcoPack{%- endcomment -%}
           {%- unless
-            product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-            product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-            product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
+            card_product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
+            card_product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
+            card_product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
           -%}
             <div class="quick-add no-js-hidden">
               {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
