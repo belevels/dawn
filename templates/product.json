@@ -190,34 +190,6 @@
         "padding_bottom": 28
       }
     },
-    "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Fórmulas maestras",
-        "heading_size": "h0",
-        "description": "<p>Creadas con cariño para ti.<\/p>",
-        "show_description": false,
-        "description_style": "subtitle",
-        "collection": "formulas-maestras",
-        "products_to_show": 25,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 16
-      }
-    },
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5": {
       "type": "be-timeline",
       "blocks": {
@@ -401,16 +373,43 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Fórmulas maestras",
+        "heading_size": "h0",
+        "description": "<p>Creadas con cariño para ti.<\/p>",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "formulas-maestras",
+        "products_to_show": 25,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
     "main",
     "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
     "related-products",
-    "e03b2676-27b6-478f-bd55-ee1cb1c59d86",
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5",
     "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239",
     "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c",
-    "e6e74bfc-7d78-4b16-856a-d5a2f820038b"
+    "e6e74bfc-7d78-4b16-856a-d5a2f820038b",
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86"
   ]
 }
