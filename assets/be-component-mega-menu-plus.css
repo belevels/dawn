@@ -297,10 +297,12 @@
     .collectiontabcontent .destacado .card-wrapper .media--transparent img {
         border-radius: 20px;
     }
-    .collectiontabcontent--mega-menu-footerx {
+    .collectiontabcontent--mega-menu-footer {
         display: grid;
         gap: 1.5rem 1.5rem;
         grid-template-columns: 66% 33%;
+        align-items: center;
+        margin-top: 2.5rem;
     }
     .collectiontabcontent--mega-menu-footerx .footer-left,
     .collectiontabcontent--mega-menu-footerx .footer-right {
