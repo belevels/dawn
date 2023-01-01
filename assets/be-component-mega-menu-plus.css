@@ -299,15 +299,15 @@
     }
     .collectiontabcontent .collectiontabcontent--footer {
         display: grid;
-        gap: 1.5rem 1.5rem;
         grid-template-columns: 33% 66%;
+        gap: 1.5rem 1.5rem;        
+        align-items: center;
         margin-top: 2.5rem;
     }
 
     @media screen and (max-width: 990px) {
         .collectiontabcontent .collectiontabcontent--footer {
             grid-template-columns: repeat(2,minmax(0,1fr));
-            align-items: center;
         }
     }
     .collectiontabcontent .collectiontabcontent--footer > div {
