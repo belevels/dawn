@@ -217,12 +217,43 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "opiniones-expertos",
+        "show_title": false,
+        "heading_size": "h1",
+        "show_description": true,
+        "description_style": "body",
+        "title_wrapper_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 1,
+        "gap_desktop": 0,
+        "columns_mobile": "1",
+        "column_alignment": "left",
+        "item_description_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "swipe_on_desktop": false,
+        "grid_peek": false,
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "slider_visual": "arrows",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86",
-    "c22a79ad-d44e-4166-b9a3-3ecd00a49269"
+    "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
+    "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239"
   ]
 }
