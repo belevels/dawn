@@ -1216,10 +1216,11 @@
                               {%- endcase -%}
                             {%- endfor -%}
                           </div><!-- products -->
+                          <div style="background:wheat;">
+                            <p>Future Mega menu footer</p>
+                          </div>
                         </div>
-                        <div style="background:wheat;">
-                          <p>Future Mega menu footer</p>
-                        </div>
+
 
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_2 != blank -%}
@@ -1751,7 +1752,7 @@
     for (i = 0; i < collectiontablinks.length; i++) {
       collectiontablinks[i].className = collectiontablinks[i].className.replace(" collectionactive", "");
     }
-    document.getElementById(collectionName).style.display = "grid";
+    document.getElementById(collectionName).style.display = "block";
     evt.currentTarget.className += " collectionactive";
 
   }
