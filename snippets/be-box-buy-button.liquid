@@ -4,7 +4,7 @@
   product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
 -%}
-  <div class="warning fake-button">
+  <div class="fake-button">
     {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
   </div>
 {%- else -%}
