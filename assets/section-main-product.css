@@ -973,6 +973,7 @@ a.product__text {
 
 .product-popup-modal__opener {
   display: inline-block;
+  width: 100%;
 }
 
 .product-popup-modal__button {
