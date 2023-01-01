@@ -2987,6 +2987,12 @@ details-disclosure > details {
   }
 }
 /* Be Levels - start mod */
+.fake-button {
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  text-align: center;
+  width: 100%;
+}
 .title-wrapper .subtitle {
   font-size: 3.8rem;
   line-height: calc(.2 + .8 / var(--font-body-scale));
