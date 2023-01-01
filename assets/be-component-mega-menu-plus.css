@@ -303,8 +303,7 @@
         grid-template-columns: 33% 66%;
         margin-top: 2.5rem;
     }
-    .collectiontabcontent .collectiontabcontent--footer .footer-left,
-    .collectiontabcontent .collectiontabcontent--footer .footer-right {
+    .collectiontabcontent .collectiontabcontent--footer > div {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
