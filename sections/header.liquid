@@ -1232,34 +1232,152 @@
                             </div>
                           </div>
                         </div>
-
-
                         <div id="{{- block.settings.collection_tab_title_2 | handleize -}}" class="collectiontabcontent">
-                          {%- if block.settings.collections-tabs_2 != blank -%}
-                            {%- for product in block.settings.collections-tabs_2.products -%}
-                              <div class="zed_mega-menu_grid-column">
-                                {% render 'card-product',
-                                  card_product: product,
-                                  media_aspect_ratio: 'square',
-                                  show_secondary_image: false,
-                                  show_vendor: false,
-                                  show_rating: true,
-                                  extend_height: true,
-                                  lazy_load: true,
-                                  show_quick_add: false,
-                                  section_id: product.id,
-                                  horizontal_class: false,
-                                  horizontal_quick_add: true,
-                                  be_hide_price: true,
-                                  be_show_short_description: false,
-                                  be_show_ultrashort_description: true
-                                %}
-                              </div>
+                          <div class="collectiontabcontent--content">
+                            {%- if block.settings.collections-tabs_2 != blank -%}
+                              {%- for product in block.settings.collections-tabs_2.products -%}
+                                <div class="zed_mega-menu_grid-column">
+                                  {% render 'card-product',
+                                    card_product: product,
+                                    media_aspect_ratio: 'square',
+                                    show_secondary_image: false,
+                                    show_vendor: false,
+                                    show_rating: true,
+                                    extend_height: true,
+                                    lazy_load: true,
+                                    show_quick_add: false,
+                                    section_id: product.id,
+                                    horizontal_class: false,
+                                    horizontal_quick_add: true,
+                                    be_hide_price: true,
+                                    be_show_short_description: false,
+                                    be_show_ultrashort_description: true
+                                  %}
+                                </div>
+                              {%- endfor -%}
+                            {%- else -%}
+                              <h4>No collection set yet. please set one to see here.</h4>
+                            {%- endif -%}
+                            {%- comment -%}Be Level - start mod: agregamos productos destacados{%- endcomment -%}
+                            {%- for block in section.blocks -%}
+                              {%- case block.type -%}
+                                {%- when 'collections-tabs-menu' -%}
+                                  <div class="destacado">
+                                    {%- comment -%}{%- if block.settings.ad_block_title_1 != blank -%}
+                                      <h4>{{ block.settings.ad_block_title_1 | escape }}</h4>
+                                    {%- endif -%}{%- endcomment -%}
+                                    {%- if block.settings.ad_img1_1 != blank -%}
+                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img1_1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
+                                      <div class="collage-card card-wrapper product-card-wrapper color-background-2">
+                                        <div
+                                          class="media media--transparent ratio"
+                                          {% if block.settings.ad_img1_1 != blank %}
+                                            style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img1_1.aspect_ratio | times: 100 }}%"
+                                          {% else %}
+                                            style="--ratio-percent: 100%"
+                                          {% endif %}
+                                        >
+                                          {%- if block.settings.ad_img1_1 != blank -%}
+                                            {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                                            {{
+                                              block.settings.ad_img1_1
+                                              | image_url: width: 3000
+                                              | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+                                            }}
+                                          {%- else -%}
+                                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                                          {%- endif -%}
+                                        </div>
+                                      </div>
+                                    {%- else -%}
+                                      <h3>EMPTY!!
+                                      <br>Nothing is set yet! Please set Ad Image.</h3>
+                                    {%- endif -%}
+                                  </div>
+                                  <div class="destacado">
+                                    {%- comment -%}{%- if block.settings.ad_block_title_1 != blank -%}
+                                      <h4>{{ block.settings.ad_block_title_1 | escape }}</h4>
+                                    {%- endif -%}{%- endcomment -%}
+                                    {%- if block.settings.ad_img2_1 != blank -%}
+                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img2_1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
+                                      <div class="collage-card card-wrapper product-card-wrapper color-background-2">
+                                        <div
+                                          class="media media--transparent ratio"
+                                          {% if block.settings.ad_img2_1 != blank %}
+                                            style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img2_1.aspect_ratio  | times: 100 }}%"
+                                          {% else %}
+                                            style="--ratio-percent: 100%"
+                                          {% endif %}
+                                        >
+                                          {%- if block.settings.ad_img2_1 != blank -%}
+                                            {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                                            {{
+                                              block.settings.ad_img2_1
+                                              | image_url: width: 3000
+                                              | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+                                            }}
+                                          {%- else -%}
+                                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                                          {%- endif -%}
+                                        </div>
+                                      </div>
+                                    {%- else -%}
+                                      <h3>EMPTY!!
+                                      <br>Nothing is set yet! Please set Ad Image.</h3>
+                                    {%- endif -%}
+                                  </div>
+                                  <div class="destacado">
+                                    {%- comment -%}{%- if block.settings.ad_block_title_1 != blank -%}
+                                      <h4>{{ block.settings.ad_block_title_1 | escape }}</h4>
+                                    {%- endif -%}{%- endcomment -%}
+                                    {%- if block.settings.ad_img3_1 != blank -%}
+                                      {%- comment -%}<div class="category__ad-img" style="background-image: url({{ block.settings.ad_img3_1 | image_url: height: 120 }}); background-repeat: no-repeat; background-size: cover;background-position: center;">&nbsp;</div>{%- endcomment -%}
+                                      <div class="collage-card card-wrapper product-card-wrapper color-background-2">
+                                        <div
+                                          class="media media--transparent ratio"
+                                          {% if block.settings.ad_img3_1 != blank %}
+                                            style="--ratio-percent: {{ 1 | divided_by: block.settings.ad_img3_1.aspect_ratio  | times: 100 }}%"
+                                          {% else %}
+                                            style="--ratio-percent: 100%"
+                                          {% endif %}
+                                        >
+                                          {%- if block.settings.ad_img3_1 != blank -%}
+                                            {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                                            {{
+                                              block.settings.ad_img3_1
+                                              | image_url: width: 3000
+                                              | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+                                            }}
+                                          {%- else -%}
+                                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                                          {%- endif -%}
+                                        </div>
+                                      </div>
+                                    {%- else -%}
+                                      <h3>EMPTY!!
+                                      <br>Nothing is set yet! Please set Ad Image.</h3>
+                                    {%- endif -%}
+                                  </div>                                
+                              {%- endcase -%}
                             {%- endfor -%}
-                          {%- else -%}
-                            <h4>No collection set yet. please set one to see here.</h4>
-                          {%- endif -%}
+                          </div><!-- products -->
+                          <div class="collectiontabcontent--footer">
+                            <div class="collectiontabcontent--footer-left">
+                              {%- comment -%}Be Levels - start mod: agregamos enlace a la colección{%- endcomment -%}
+                              <button class="button button--tertiary button--full-width animate-arrow" onclick="location.href='/collections/{{- block.settings.collections-tabs_2 }}'">
+                                {{ 'belevels.general.see_all_in' | t }} {{- block.settings.collection_tab_title_2 | escape -}}
+                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                              </button>
+                            </div>
+                            <div class="collectiontabcontent--footer-right color-background-2">
+                              {%- if block.settings.ad_block_title_1 != blank -%}
+                                <p class="h3">{{ block.settings.ad_block_title_1 | escape }}</p>
+                              {%- endif -%}
+                              <!--<p class="h3">Con el EcoPack ahorras y contribuyes con el planeta.</p>-->
+                            </div>
+                          </div>
                         </div>
+
                         <div id="{{- block.settings.collection_tab_title_3 | handleize -}}" class="collectiontabcontent">
                           {%- if block.settings.collections-tabs_3 != blank -%}
                             {%- for product in block.settings.collections-tabs_3.products -%}
