@@ -225,18 +225,18 @@
           </div>
         </div>
         {%- if show_quick_add -%}
-          {%- comment -%}Be Levels - start mod: agregamos restricción por paises, selector de cantidad y botón add to cart agrupados en be-box {%- endcomment -%}
-          {%- elsif
-            product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-            product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-            product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-          -%}
-            <div class="warning fake-button">
-              {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
-            </div>
-          {%- else -%}
-            <div class="quick-add no-js-hidden">
-              {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
+          <div class="quick-add no-js-hidden">
+            {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
+            {%- comment -%}Be Levels - start mod: agregamos restricción por paises, selector de cantidad y botón add to cart agrupados en be-box {%- endcomment -%}
+            {%- if
+              product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
+              product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
+              product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
+            -%}
+              <div class="warning fake-button">
+                {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+              </div>
+            {%- else -%}
               {%- if card_product.variants.size == 1 -%}
                 <product-form>
                   {%- form 'product',
@@ -292,7 +292,7 @@
                     </button>
                   {%- endform -%}
                 </product-form>
-
+              {%- else -%}
                 <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
                   <button
                     id="{{ product_form_id }}-submit"
@@ -340,8 +340,8 @@
                   </div>
                 </quick-add-modal>
               {%- endif -%}
-            </div>
-          {%- endif -%}
+            {%- endif -%}
+          </div>
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
