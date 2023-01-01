@@ -60,16 +60,16 @@
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <noscript>
-                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                  <button type="submit" class="cart__update-button button button--secondary animate-arrow" form="cart">
                     {{ 'sections.cart.update' | t }}
-                    <span>{% render 'icon-arrow' %}</span>
+                    <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                   </button>
                 </noscript>
 
                 <button
                   type="submit"
                   id="checkout"
-                  class="cart__checkout-button button"
+                  class="cart__checkout-button button animate-arrow"
                   name="checkout"
                   {% if cart == empty %}
                     disabled
@@ -77,7 +77,7 @@
                   form="cart"
                 >
                   {{ 'sections.cart.checkout' | t }}
-                  <span>{% render 'icon-arrow' %}</span>
+                  <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                 </button>
               </div>
 
