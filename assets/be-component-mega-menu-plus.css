@@ -238,6 +238,7 @@
         margin-right: -1.6rem;
         padding-right: 0;
         font-weight: normal !important;
+        min-width: calc(18rem + var(--buttons-border-width) * 2);        
     }
     
     /* Style the tab content */
