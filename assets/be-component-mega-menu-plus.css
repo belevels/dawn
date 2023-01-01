@@ -247,7 +247,7 @@
         display: grid;
         gap: 1.5rem 1.5rem;
         grid-template-columns: repeat(6,minmax(0,1fr));
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     @media screen and (min-width: 750px) and (max-width: 989px) {
