@@ -1088,7 +1088,7 @@
                     <div class="collection_tabs_megamenu">
                       <div class="zed_mega-menu_grid-row">
                         <div id="{{- block.settings.collection_tab_title_1 | handleize -}}" class="collectiontabcontent">
-                          <div class="collectiontabcontent--content" style="background:pink;">
+                          <div class="collectiontabcontent--content">
                             {%- if block.settings.collections-tabs_1 != blank -%}
                               {%- for product in block.settings.collections-tabs_1.products -%}
                                 <div class="zed_mega-menu_grid-column">
@@ -1216,8 +1216,16 @@
                               {%- endcase -%}
                             {%- endfor -%}
                           </div><!-- products -->
-                          <div class="collectiontabcontent--footer" style="background:wheat;">
-                            <p>Future Mega menu footer</p>
+                          <div class="collectiontabcontent--footer">
+                            <div class="collectiontabcontent--footer-left">
+                              <button class="button button--secondary button--full-width">
+                                {{ belevels.product.show_all_in | t }}
+                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                              </button>
+                            </div>
+                            <div class="collectiontabcontent--footer-right">
+                              <p>Future Mega menu footer</p>
+                            </div>
                           </div>
                         </div>
 
