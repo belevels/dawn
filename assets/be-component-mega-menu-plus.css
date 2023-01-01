@@ -301,11 +301,10 @@
         display: grid;
         gap: 1.5rem 1.5rem;
         grid-template-columns: 33% 66%;
-        align-items: center;
         margin-top: 2.5rem;
     }
-    .collectiontabcontent .collectiontabcontent--footerx .footer-left,
-    .collectiontabcontent .collectiontabcontent--footerx .footer-right {
-        display: grid;
-        align-content: center;
+    .collectiontabcontent .collectiontabcontent--footer .footer-left,
+    .collectiontabcontent .collectiontabcontent--footer .footer-right {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
