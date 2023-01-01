@@ -51,7 +51,7 @@
           >
             <span>
               {%- if product.selected_or_first_available_variant.available -%}
-                {{ 'products.product.add_to_cart' | t }} EcoPack
+                {{ 'products.product.add_to_cart' | t }} {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               {%- else -%}
                 {{ 'products.product.sold_out' | t }}
               {%- endif -%}
