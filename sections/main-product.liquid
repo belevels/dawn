@@ -381,69 +381,10 @@
             {%- comment -%}
               Be Levels - start mod: agregamos bloqueo por paises y bloques personalizados ecopack_quantity_selector, download-report, be-box-buy-button
             {%- endcomment -%}
-            {%- comment -%}Be Levels - start mod: agregamos cantidad minima para EcoPack{%- endcomment -%}
-            {%- when 'ecopack_quantity_selector' -%}
-              {%- unless
-                product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-                product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-                product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-              -%}
-                <div id="be-ecopack-add-to-cart-box">
-                  <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                    <details id="Details-{{ block.id }}-{{ section.id }}">
-                      <summary>
-                        <div class="summary__title">
-                          {% render 'icon-accordion', icon: question_mark %}
-                          <h2 class="h4 accordion__title">
-                            {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
-                          </h2>
-                        </div>
-                        {% render 'icon-caret' %}
-                      </summary>
-                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                        {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
-                      </div>
-                    </details>
-                  </div>
-                  <div class="be-add-to-cart-box">
-                    <div
-                      class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-                      {{ block.shopify_attributes }}
-                    >
-                      <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
-                        {{ 'products.product.quantity.label' | t }}
-                      </label>
 
-                      <quantity-input class="quantity">
-                        <button class="quantity__button no-js-hidden" name="minus" type="button">
-                          <span class="visually-hidden">
-                            {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                          </span>
-                          {% render 'icon-minus' %}
-                        </button>
-                        <input
-                          class="quantity__input" 
-                          type="number"
-                          name="quantity"
-                          id="EcoPack-Quantity-{{ section.id }}"
-                          min="2"
-                          value="2"
-                          form="{{ ecopack_product_form_id }}"
-                        >
-                        <button class="quantity__button no-js-hidden" name="plus" type="button">
-                          <span class="visually-hidden">
-                            {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                          </span>
-                          {% render 'icon-plus' %}
-                        </button>
-                      </quantity-input>
-                    </div>
-                    <div>
-                      {%- render 'be-buy-buttons', block: block, product: product, product_form_id: ecopack_product_form_id, show_pickup_availability: true -%}
-                    </div>  
-                  </div>
-                </div>
-              {%- endunless -%}
+            {%- when 'ecopack_quantity_selector' -%}
+              {%- render 'be-ecopack-quantity-selector'-%}
+
             {%- comment -%}Be Levels - start mod: agregamos download-report{%- endcomment -%}
             {%- when 'download-report' -%}
               {%-liquid
