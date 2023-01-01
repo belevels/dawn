@@ -64,6 +64,11 @@
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
+        "02f120be-a55a-44f0-9ae6-9256d8518630": {
+          "type": "be_box_buy_button",
+          "settings": {
+          }
+        },
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -76,11 +81,6 @@
         },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
           "type": "ecopack_quantity_selector",
-          "settings": {
-          }
-        },
-        "02f120be-a55a-44f0-9ae6-9256d8518630": {
-          "type": "be_box_buy_button",
           "settings": {
           }
         },
@@ -120,9 +120,9 @@
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "02f120be-a55a-44f0-9ae6-9256d8518630",
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
         "72d76219-e839-4f9c-9867-fbd424124b07",
-        "02f120be-a55a-44f0-9ae6-9256d8518630",
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
