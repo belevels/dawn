@@ -197,7 +197,7 @@
         "show_description": true,
         "description_style": "subtitle",
         "title_wrapper_alignment": "center",
-        "image_width": "third",
+        "image_width": "fourth",
         "image_ratio": "square",
         "columns_desktop": 5,
         "gap_desktop": 10,
