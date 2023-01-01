@@ -37,11 +37,6 @@
             "picker_type": "button"
           }
         },
-        "004ad8e7-6d04-461e-bca0-04eb3b0b8cf8": {
-          "type": "be-box-buy-button",
-          "settings": {
-          }
-        },
         "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
           "type": "custom_liquid",
           "disabled": true,
@@ -84,6 +79,11 @@
           "settings": {
           }
         },
+        "02f120be-a55a-44f0-9ae6-9256d8518630": {
+          "type": "be_box_buy_button",
+          "settings": {
+          }
+        },
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
@@ -116,13 +116,13 @@
         "aea48dc4-8143-4ee8-9033-259c6041fd13",
         "price",
         "variant_picker",
-        "004ad8e7-6d04-461e-bca0-04eb3b0b8cf8",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
         "72d76219-e839-4f9c-9867-fbd424124b07",
+        "02f120be-a55a-44f0-9ae6-9256d8518630",
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
