@@ -243,16 +243,10 @@
     
     /* Style the tab content */
     .collection_tabs_megamenu .collectiontabcontent--content {
-        /*
-        display: none;
-        padding: 6px 12px;
-        border-top: none;
-        */
         display: grid;
         gap: 1.5rem 1.5rem;
         grid-template-columns: repeat(6,minmax(0,1fr));
-        list-style: none;
-        gap: 0 2.5rem;
+        gap: 2.5rem;
     }
 
     @media screen and (min-width: 750px) and (max-width: 989px) {
