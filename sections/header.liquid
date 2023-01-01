@@ -1218,13 +1218,17 @@
                           </div><!-- products -->
                           <div class="collectiontabcontent--footer">
                             <div class="collectiontabcontent--footer-left">
+                              {%- comment -%}Be Levels - start mod: agregamos enlace a la colección{%- endcomment -%}
                               <button class="button button--tertiary button--full-width animate-arrow" onclick="location.href='/collections/{{- block.settings.collections-tabs_1 }}'">
                                 {{ 'belevels.general.see_all_in' | t }} {{- block.settings.collection_tab_title_1 | escape -}}
                                 <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                               </button>
                             </div>
                             <div class="collectiontabcontent--footer-right color-background-2">
-                              <p class="h3">Con el EcoPack ahorras y contribuyes con el planeta.</p>
+                              {%- if block.settings.ad_block_title_0 != blank -%}
+                                <p class="h3">{{ block.settings.ad_block_title_0 | escape }}</p>
+                              {%- endif -%}
+                              <!--<p class="h3">Con el EcoPack ahorras y contribuyes con el planeta.</p>-->
                             </div>
                           </div>
                         </div>
