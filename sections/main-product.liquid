@@ -379,13 +379,10 @@
                 block: block
               %}
             {%- comment -%}
-              Be Levels - start mod: agregamos bloqueo por paises y bloques personalizados ecopack_quantity_selector, download-report, be-box-buy-button
+              Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector, download-report, be_box_buy_button
             {%- endcomment -%}
-
             {%- when 'ecopack_quantity_selector' -%}
               {%- render 'be-ecopack-quantity-selector'-%}
-
-            {%- comment -%}Be Levels - start mod: agregamos download-report{%- endcomment -%}
             {%- when 'download-report' -%}
               {%-liquid
                 assign urlContent = product.metafields.c_f.lookbook_description 
@@ -397,52 +394,9 @@
                 </a>
               {%- endif -%}
             {%- comment -%}Be Levels - start mod: agrupamos selector de cantidad y botones de compra en be-box{%- endcomment -%}
-            {%- when 'be-box-buy-button' -%}
-              {%- if
-                product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-                product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-                product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-              -%}
-                <div class="warning fake-button">
-                  {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
-                </div>
-              {%- else -%}
-                <div class="be-add-to-cart-box">
-                  <div
-                    class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-                    {{ block.shopify_attributes }}
-                  >
-                    <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
-                      {{ 'products.product.quantity.label' | t }}
-                    </label>
-    
-                    <quantity-input class="quantity">
-                      <button class="quantity__button no-js-hidden" name="minus" type="button">
-                        <span class="visually-hidden">
-                          {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                        </span>
-                        {% render 'icon-minus' %}
-                      </button>
-                      <input
-                        class="quantity__input" 
-                        type="number"
-                        name="quantity"
-                        id="Quantity-{{ section.id }}"
-                        min="1"
-                        value="1"
-                        form="{{ product_form_id }}"
-                      >
-                      <button class="quantity__button no-js-hidden" name="plus" type="button">
-                        <span class="visually-hidden">
-                          {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                        </span>
-                        {% render 'icon-plus' %}
-                      </button>
-                    </quantity-input>
-                  </div>
-                  {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}
-                </div>
-              {%- endif -%}
+            {%- when 'be_box_buy_button' -%}
+              {%- render 'be-box-buy-button' %}
+
               {%- comment -%}Be Levels - end mod{%- endcomment -%}
             {%- endcase -%}
         {%- endfor -%}
@@ -1910,7 +1864,7 @@
       "limit": 1
     },
     {
-      "type": "be-box-buy-button",
+      "type": "be_box_buy_button",
       "name": "Be box: Buy button",
       "limit": 1
     },
