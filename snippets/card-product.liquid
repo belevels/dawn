@@ -225,12 +225,16 @@
           </div>
         </div>
         {%- if show_quick_add -%}
-          {%- comment -%}Be Levels - start mod: agregamos restricción por paises, cantidad minima para EcoPack{%- endcomment -%}
-          {%- unless
-            card_product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-            card_product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-            card_product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
-          -%}
+{%- comment -%}Be Levels - start mod: agregamos restricción por paises, selector de cantidad y botón add to cart agrupados en be-box{%- endcomment -%}
+{%- if
+  card_product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
+  card_product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
+  card_product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
+-%}
+  <div class="warning fake-button">
+    {{ 'belevels.products.product_not_available_in' | t }} {{ localization.country.name }}
+  </div>
+{%- else -%}          
             <div class="quick-add no-js-hidden">
               {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
               {%- if card_product.variants.size == 1 -%}
@@ -337,7 +341,6 @@
                 </quick-add-modal>
               {%- endif -%}
             </div>
-          {%- endunless -%}
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
@@ -354,6 +357,7 @@
             >
               {{- 'products.product.on_sale' | t -}}
             </span>
+{%- endif -%}            
           {%- endif -%}
         </div>
       </div>
