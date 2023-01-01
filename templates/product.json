@@ -193,7 +193,7 @@
       "settings": {
         "title": "como-se-usa",
         "show_title": true,
-        "heading_size": "h0",
+        "heading_size": "h1",
         "show_description": true,
         "description_style": "subtitle",
         "title_wrapper_alignment": "center",
