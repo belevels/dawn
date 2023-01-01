@@ -165,7 +165,7 @@ endcase
     {%- if sectionButtonLabel != blank -%}
       <a class="button button--secondary animate-arrow section-button"{% if sectionButtonLink == blank %} role="link" aria-disabled="true"{% else %} href="{{ sectionButtonLink }}"{% endif %}>
         {{ sectionButtonLabel | escape }}
-        <span class="icon-wrap rotate--45">{% render 'icon-arrow' %}</span>
+        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       </a>
     {%- endif -%}
   </div>
