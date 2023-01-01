@@ -311,10 +311,10 @@
             grid-template-columns: repeat(2,minmax(0,1fr));
         }
     }
-    .collectiontabcontent .collectiontabcontent--footer .footer-left {
+    .collectiontabcontent .collectiontabcontent--footer .collectiontabcontent--footer-left {
         padding-right: calc(1rem - 0.1rem * 2)px;
     }
-    .collectiontabcontent .collectiontabcontent--footer .footer-right {
+    .collectiontabcontent .collectiontabcontent--footer .collectiontabcontent--footer-right {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }    
