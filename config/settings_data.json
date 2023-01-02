@@ -290,6 +290,36 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "be-sticky-add-to-cart": {
+        "type": "be-sticky-add-to-cart",
+        "blocks": {
+          "f8e6c918-c4d9-4128-8047-af5c6b57739b": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "69d97b59-1521-4a43-9815-e8092ae22373": {
+            "type": "description",
+            "settings": {
+            }
+          },
+          "58cba641-9519-4d4b-b7a5-975e9a6e9a1b": {
+            "type": "rating",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "f8e6c918-c4d9-4128-8047-af5c6b57739b",
+          "69d97b59-1521-4a43-9815-e8092ae22373",
+          "58cba641-9519-4d4b-b7a5-975e9a6e9a1b"
+        ],
+        "settings": {
+          "enable_sticky_bar": true,
+          "padding_top": 20,
+          "padding_bottom": 20
+        }
       }
     },
     "content_for_index": [
