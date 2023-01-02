@@ -3000,6 +3000,17 @@ details-disclosure > details {
 .collection .fake-button {
   text-align: center;
 }
+/* toggle visibility */
+@media screen and (max-width: 989px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 990px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
 .title-wrapper .subtitle {
   font-size: 3.8rem;
   line-height: calc(.2 + .8 / var(--font-body-scale));
