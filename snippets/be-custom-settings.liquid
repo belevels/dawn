@@ -116,9 +116,11 @@
         background-image: linear-gradient(120deg, {{ customColorRgba3 | color_modify: 'alpha', 0.12 }}, {{ customColorRgba3 | color_modify: 'alpha', 1 }});
         background: rgb(255,255,255);
         background: linear-gradient(0deg, rgba(255,255,255,0) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%);
+        background:coral;
       }
       .{{ product.handle }} #MainContent > section:nth-child(even) {
         background: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0) 100%);
+        background: pink;
       }
 
       {% if product.metafields.Seccion.TextColor %}
