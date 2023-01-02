@@ -120,8 +120,8 @@
         background: rgb(255,255,255);
         background: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0) 100%);
       }
-      .{{ product.handle }} #MainContent .color-background-2 {
-        
+      .{{ product.handle }} #MainContent .multicolumn.color-background-2 {
+        background: {{ customColorRgba2 }};
       }
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
