@@ -124,6 +124,9 @@
       .{{ product.handle }} #MainContent > .section + .section .color-background-2 {
         background: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
       }
+      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {
+        background: rgba(255, 255, 255, 1);
+      }
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
         .{{ product.handle }} #MainContent > section {
