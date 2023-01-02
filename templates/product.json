@@ -145,10 +145,10 @@
     "c22a79ad-d44e-4166-b9a3-3ecd00a49269": {
       "type": "be-carousel-multicolumn-data",
       "settings": {
-        "title": "como-se-usa",
-        "show_title": true,
+        "title": "ingredientes",
+        "show_title": false,
         "heading_size": "h1",
-        "show_description": true,
+        "show_description": false,
         "description_style": "subtitle",
         "title_wrapper_alignment": "center",
         "image_width": "fourth",
