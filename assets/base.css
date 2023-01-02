@@ -473,7 +473,7 @@ h2,
 h3,
 .h3 {
   font-size: calc(var(--font-heading-scale) * 1.7rem);
-  font-weight: 100;
+  /*font-weight: 100;*/
 }
 
 @media only screen and (min-width: 750px) {
