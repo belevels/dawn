@@ -94,7 +94,7 @@ endcase
   }
 {%- endstyle -%}
 
-<div class="custom-timeline image-with-text multirow image-with-text--{{ section.settings.content_layout }}{% if section.settings.layout == 'grid' %} page-width{% endif %} isolate gradient color-{{ section.settings.color_scheme }}{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
+<div class="custom-timeline image-with-text multirow image-with-text--{{ section.settings.content_layout }}{% if section.settings.layout == 'grid' %} page-width{% endif %} isolate gradientx color-{{ section.settings.color_scheme }}{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
   {%- if sectionShowHeader == 1 -%}
     <div class="multirow-title-wrapper title-wrapper--no-bottom-margin title-wrapper--no-top-margin page-width d-flex--column d-flex-align--{{ section.settings.title_wrapper_alignment }} {{ section.settings.title_wrapper_alignment }}"> 
       {%- unless sectionTitle == blank -%}
@@ -127,7 +127,7 @@ endcase
       </div>
     </div>
     <div class="image-with-text__text-item grid__item">
-      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.content_color_scheme }} content-container">
+      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.height }} gradientx color-{{ section.settings.content_color_scheme }} content-container">
         <ul class="timeline image-with-text__text-item image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }}">
           {%- for block in (0..columnCount) -%}
             {%- liquid
