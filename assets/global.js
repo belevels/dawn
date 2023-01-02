@@ -1063,28 +1063,7 @@ class CarouselComponent extends SlideshowComponent {
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1; // orig
   }
 
-  autoRotateSlides() {
-    var slideScrollPosition = '';
 
-    if (window.matchMedia("(min-width: 990px)").matches) {
-      var slideScrollPosition = this.currentPage === (this.TotalSlidesDesktop.textContent) ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // desktop
-      console.log('this.currentPage = ' + this.currentPage);
-      console.log('this.sliderItems.length = ' + this.sliderItems.length);
-      console.log('this.TotalSlidesDesktop.textContent = ' + this.TotalSlidesDesktop.textContent);
-    } else if (window.matchMedia("(min-width: 750px) and (max-width: 989px)").matches) {
-      var slideScrollPosition = this.currentPage === this.TotalSlidesTablet ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // tablet
-    } else {
-      if (this.TwoColumnsMobile > 0) {
-        var slideScrollPosition = this.currentPage === this.sliderItems.length - 1 ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile two columns
-      } else {
-        var slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile
-      }
-    }
-    
-    this.slider.scrollTo({
-      left: slideScrollPosition
-    });
-  }
 }
 
 customElements.define('carousel-component', CarouselComponent);
