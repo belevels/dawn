@@ -78,7 +78,7 @@
           {% endif %}
           <div class="grid__item">
             {%- for block in (0..ColumnCount) -%}
-              <div class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" {{ block.shopify_attributes }}>
+              <div class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradientx{% endif %}" {{ block.shopify_attributes }}>
                 <details id="Details-{{ section.id }}-{{ forloop.index }}"{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}>
                   <summary id="Summary-{{ section.id }}-{{ forloop.index }}">
                     {% render 'icon-accordion', icon: section.settings.icon %}
