@@ -192,6 +192,7 @@
     },
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5": {
       "type": "be-timeline",
+      "disabled": true,
       "blocks": {
         "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-0": {
           "type": "caption",
@@ -316,6 +317,7 @@
     },
     "e6e74bfc-7d78-4b16-856a-d5a2f820038b": {
       "type": "be-image-with-text",
+      "disabled": true,
       "blocks": {
         "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-0": {
           "type": "caption",
@@ -378,6 +380,7 @@
     },
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Fórmulas maestras",
         "heading_size": "h0",
