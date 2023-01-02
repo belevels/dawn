@@ -134,7 +134,7 @@
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
-        "image_zoom": "hover",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "columns",
         "hide_variants": true,
         "enable_video_looping": true,
