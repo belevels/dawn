@@ -135,9 +135,7 @@
       {% if product.metafields.Seccion.TextColor %}
         .{{ product.handle }} #MainContent .gradient,
         .{{ product.handle }} #MainContent > .section:first-of-type,
-        .{{ product.handle }} #MainContent .section + .section,
-
-        .product-card-wrapper .{{ product.handle }}.card {
+        .{{ product.handle }} #MainContent .section + .section {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
@@ -161,6 +159,10 @@
           background-color: rgba(var(--color-foreground),0.25);
         }
 
+        .{{ product.handle }} #MainContent .gradient,
+        .{{ product.handle }} #MainContent > .section:first-of-type,
+        .{{ product.handle }} #MainContent .section + .section,
+                
         .{{ product.handle }} .zed__navbar-dropdown .zed__navbar-dropbtn,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
