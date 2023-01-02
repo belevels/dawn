@@ -110,14 +110,14 @@
       {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     {%- endif -%}          
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      .{{ product.handle }} #MainContent > section {
+      .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }} {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%);
         background-image: linear-gradient(120deg, {{ customColorRgba3 | color_modify: 'alpha', 0.12 }}, {{ customColorRgba3 | color_modify: 'alpha', 1 }});
       }
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
-        .{{ product.handle }} #MainContent > section {
+        .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }} {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
@@ -146,7 +146,7 @@
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section:first-child,
+        .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }},
         .product-card-wrapper .{{ product.handle }}.card,
         .collection .{{ product.handle }}.card .button {
           --color-base-text: 255, 255, 255;
