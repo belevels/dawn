@@ -2988,6 +2988,9 @@ details-disclosure > details {
   }
 }
 /* Be Levels - start mod */
+.text-align--left {
+  text-align: left !important;
+}
 .warning {
   background-color: #C63100;
   color: #ffffff !important;
