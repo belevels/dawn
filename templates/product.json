@@ -155,7 +155,7 @@
         "image_ratio": "square",
         "columns_desktop": 4,
         "gap_desktop": 10,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "column_alignment": "center",
         "item_description_alignment": "left",
         "background_style": "none",
