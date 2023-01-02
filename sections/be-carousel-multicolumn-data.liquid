@@ -248,7 +248,7 @@ assign ColumnCount = 0
           </div>
           
           {%- comment -%}{%- i f totalSlides > totalSlidesDesktop -%}{%- endcomment -%}
-          {%- if show_mobile_slider -%}
+          {%- if show_mobile_slider or show_desktop_slider and totalSlides > columns_desktop_int -%}
             {%- comment -%}{%- i f show_desktop_slider or show_mobile_slider -%}{%- endcomment -%}
               <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden {% if show_desktop_slider == false %}hidden-desktop {% endif %}{% if show_mobile_slider == false %}hidden-mobile {% endif %}{% if section.settings.slider_visual == 'arrows' %}slideshow__controls--arrows {% endif %}">
                 <button type="button" class="slider-button slider-button--prev rotate-90" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-arrow' %}</button>                
