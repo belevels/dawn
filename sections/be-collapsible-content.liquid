@@ -109,12 +109,12 @@
             >
               <button
                 id="ProductPopup-{{ section.id }}"
-                class="button button--secondary animate-arrow"
+                class="button button--secondary button--fullwidth animate-arrow"
                 type="button"
                 aria-haspopup="dialog"
               >
                 <span>{{ sectionButtonLabel | escape }}</span>
-                <span class="icon-wrap rotate--45">{% render 'icon-arrow' %}</span>
+                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
               </button>
             </modal-opener>
           {%- endif -%}
