@@ -3043,4 +3043,9 @@ details-disclosure > details {
 .page-width.center .product-card-wrapper .card.color-background-1 {
   background: rgba(255, 255, 255, 0.85) !important;
 }
+modal-opener .button:not(.card--horizontal__quick-add) {
+  width: 100%;
+  min-width: 26rem;
+  max-width: 37rem;
+}
 
