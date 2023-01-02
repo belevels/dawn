@@ -153,7 +153,7 @@
         "title_wrapper_alignment": "center",
         "image_width": "fourth",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "gap_desktop": 10,
         "columns_mobile": "2",
         "column_alignment": "center",
@@ -166,7 +166,7 @@
         "swipe_on_desktop": true,
         "grid_peek": false,
         "auto_rotate": true,
-        "change_slides_speed": 3,
+        "change_slides_speed": 2,
         "slider_visual": "arrows",
         "padding_top": 52,
         "padding_bottom": 52
