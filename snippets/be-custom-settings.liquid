@@ -6,7 +6,7 @@
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
-      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados {%- endcomment -%}
+      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
       .{{ product.handle }} .zed__navbar-main,
       .{{ product.handle }} .global-media-settings {
@@ -110,14 +110,14 @@
       {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     {%- endif -%}          
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }} {
+      .{{ product.handle }} #MainContent > section:first-child {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%);
         background-image: linear-gradient(120deg, {{ customColorRgba3 | color_modify: 'alpha', 0.12 }}, {{ customColorRgba3 | color_modify: 'alpha', 1 }});
       }
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
-        .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }} {
+        .{{ product.handle }} #MainContent > section:first-child {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
@@ -146,7 +146,7 @@
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > #MainProduct-{{ section.id }},
+        .{{ product.handle }} #MainContent > section:first-child,
         .product-card-wrapper .{{ product.handle }}.card,
         .collection .{{ product.handle }}.card .button {
           --color-base-text: 255, 255, 255;
