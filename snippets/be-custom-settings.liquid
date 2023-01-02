@@ -10,7 +10,7 @@
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
       .{{ product.handle }} .zed__navbar-main,
       .{{ product.handle }} .global-media-settings {
-        background-color: transparent;
+        background-color: transparent !important;
       }
       .{{ product.handle }} .product-card-wrapper .card__heading span {
         width: fit-content;
