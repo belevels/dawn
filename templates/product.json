@@ -213,7 +213,7 @@
       ],
       "settings": {
         "title": "proceso-mejora",
-        "layout": "grid",
+        "layout": "full_bleed",
         "color_scheme": "background-2",
         "heading_size": "h1",
         "subheading": "",
