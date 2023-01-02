@@ -133,7 +133,7 @@ assign ColumnCount = 0
   -%}
   {%- comment -%}MOD: Be levels - Agregamos columns_desktop_int y show_desktop_slider {%- endcomment -%}
   {%- liquid
-    if totalSlides > section.settings.columns_desktop
+    if totalSlides >= section.settings.columns_desktop
       assign columns_desktop_int = section.settings.columns_desktop
     else
       assign columns_desktop_int = totalSlides
