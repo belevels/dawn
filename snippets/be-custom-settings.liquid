@@ -110,7 +110,7 @@
       {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     {%- endif -%}          
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      .{{ product.handle }} #MainContent > section:first-child, {
+      .{{ product.handle }} #MainContent > section:first-child {
         background-color: {{ customColorRgba3 }};
         background: rgb(255,255,255);
         background: linear-gradient(0deg, rgba(255,255,255,0) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%);
