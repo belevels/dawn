@@ -280,7 +280,7 @@
         "columns_mobile": "2",
         "column_alignment": "left",
         "item_description_alignment": "left",
-        "background_style": "primary",
+        "background_style": "none",
         "button_label": "Button label",
         "button_link": "",
         "color_scheme": "background-1",
