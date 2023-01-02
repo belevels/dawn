@@ -216,7 +216,7 @@
         "layout": "full_bleed",
         "color_scheme": "background-1",
         "heading_size": "h1",
-        "subheading": "Soy un subtítulo impactante",
+        "subheading": "",
         "subheading_style": "body",
         "title_wrapper_alignment": "center",
         "show_heading": true,
