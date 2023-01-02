@@ -1067,7 +1067,7 @@ class CarouselComponent extends SlideshowComponent {
     var slideScrollPosition = '';
 
     if (window.matchMedia("(min-width: 990px)").matches) {
-      var slideScrollPosition = this.currentPage === (this.currentPage - this.TotalSlidesDesktop.textContent) ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // desktop
+      var slideScrollPosition = this.currentPage === (this.sliderItems.length - this.TotalSlidesDesktop.textContent) ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // desktop
       console.log('this.currentPage = ' + this.currentPage);
       console.log('this.sliderItems.length = ' + this.sliderItems.length);
       console.log('this.TotalSlidesDesktop.textContent = ' + this.TotalSlidesDesktop.textContent);
