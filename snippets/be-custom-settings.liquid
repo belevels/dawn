@@ -6,7 +6,7 @@
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
-      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
+      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados {%- endcomment -%}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
       .{{ product.handle }} .zed__navbar-main,
       .{{ product.handle }} .global-media-settings {
