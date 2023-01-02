@@ -335,7 +335,7 @@
       ],
       "settings": {
         "title": "beneficios",
-        "layout": "full_bleed",
+        "layout": "grid",
         "color_scheme": "background-1",
         "heading_size": "h1",
         "subheading": "Soy un subtítulo impactante",
