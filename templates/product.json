@@ -254,6 +254,7 @@
     },
     "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239": {
       "type": "be-carousel-multicolumn-data",
+      "disabled": true,
       "settings": {
         "title": "opiniones-expertos",
         "show_title": false,
@@ -284,6 +285,7 @@
     },
     "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c": {
       "type": "be-carousel-multicolumn-data",
+      "disabled": true,
       "settings": {
         "title": "ingredientes",
         "show_title": false,
