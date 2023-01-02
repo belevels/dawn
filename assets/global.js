@@ -723,7 +723,7 @@ class SlideshowComponent extends SliderComponent {
   }
 
   autoRotateSlides() {
-    var slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
+    const slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
     this.slider.scrollTo({
       left: slideScrollPosition
     });
@@ -1017,16 +1017,6 @@ class CarouselComponent extends SlideshowComponent {
   constructor() {
     super();
     
-    this.initPages();
-
-    if (!this.slider || !this.prevButton || !this.nextButton) return;
-    
-    const resizeObserver = new ResizeObserver(entries => this.initPages());
-    resizeObserver.observe(this.slider);
-
-    this.slider.addEventListener('scroll', this.update.bind(this));
-    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
   }
 
   initPages() {
