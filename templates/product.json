@@ -264,36 +264,6 @@
         "padding_bottom": 52
       }
     },
-    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c": {
-      "type": "be-carousel-multicolumn-data",
-      "settings": {
-        "title": "ingredientes",
-        "show_title": false,
-        "heading_size": "h1",
-        "show_description": true,
-        "description_style": "body",
-        "title_wrapper_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "gap_desktop": 4,
-        "columns_mobile": "2",
-        "column_alignment": "left",
-        "item_description_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "swipe_on_mobile": true,
-        "swipe_on_desktop": true,
-        "grid_peek": false,
-        "auto_rotate": true,
-        "change_slides_speed": 2.5,
-        "slider_visual": "arrows",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "e6e74bfc-7d78-4b16-856a-d5a2f820038b": {
       "type": "be-image-with-text",
       "blocks": {
@@ -356,6 +326,36 @@
         "padding_bottom": 52
       }
     },
+    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "ingredientes",
+        "show_title": false,
+        "heading_size": "h1",
+        "show_description": true,
+        "description_style": "body",
+        "title_wrapper_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "gap_desktop": 4,
+        "columns_mobile": "2",
+        "column_alignment": "left",
+        "item_description_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "swipe_on_mobile": true,
+        "swipe_on_desktop": true,
+        "grid_peek": false,
+        "auto_rotate": true,
+        "change_slides_speed": 2.5,
+        "slider_visual": "arrows",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -408,8 +408,8 @@
     "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5",
     "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239",
-    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c",
     "e6e74bfc-7d78-4b16-856a-d5a2f820038b",
+    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c",
     "related-products",
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86"
   ]
