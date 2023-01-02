@@ -75,10 +75,7 @@
       .collection .product-card-wrapper .{{ product.handle }}.card,
       .zed__navbar-dropdown-content .product-card-wrapper .{{ product.handle }}.card,
       .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      .{{ product.handle }} .timeline::before,
-      .{{ product.handle }} .timeline .timeline-event-thumbnail,
-      .{{ product.handle }} .timeline .timeline-event-icon {
+      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
         background-color: {{ customColorRgba1 }};
       }
       .{{ product.handle }} .product-form__input input[type="radio"]:checked + label {
@@ -94,7 +91,10 @@
         border-color: {{ customColorRgba1 }};
       }
       .{{ product.handle }} .be-box .button--secondary,
-      .product-card-wrapper .{{ product.handle }}.card .button--secondary {
+      .product-card-wrapper .{{ product.handle }}.card .button--secondary,
+      .{{ product.handle }} .timeline::before,
+      .{{ product.handle }} .timeline .timeline-event-thumbnail,
+      .{{ product.handle }} .timeline .timeline-event-icon {
         background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
         color: rgba(255, 255, 255, 1);;
         border-color: transparent;
