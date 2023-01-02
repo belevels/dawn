@@ -110,23 +110,17 @@
       {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     {%- endif -%}          
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      .{{ product.handle }} #MainContent > section .color-background-1:nth-child(odd) {
+      .{{ product.handle }} #MainContent > section:nth-child(odd):first-child {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%);
         background-image: linear-gradient(120deg, {{ customColorRgba3 | color_modify: 'alpha', 0.12 }}, {{ customColorRgba3 | color_modify: 'alpha', 1 }});
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%);
-        background:coral;
+        background: wheat;
       }
-      .{{ product.handle }} #MainContent > section .color-background-1:nth-child(even) {
-        background: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0) 100%);
-        background: pink;
-      }
-
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
-        .{{ product.handle }} #MainContent > section:first-child {
+        .{{ product.handle }} #MainContent > section:nth-child(even):first-child {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
+          background: pink;
         }
         .{{ product.handle }} #MainContent > section .product .product__media::after,
         .{{ product.handle }} .be-box,
