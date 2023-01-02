@@ -133,7 +133,7 @@ assign ColumnCount = 0
   -%}
   {%- comment -%}MOD: Be levels - Agregamos columns_desktop_int y show_desktop_slider {%- endcomment -%}
   {%- liquid
-    if totalSlides >= section.settings.columns_desktop
+    if totalSlides > section.settings.columns_desktop
       assign columns_desktop_int = section.settings.columns_desktop
     else
       assign columns_desktop_int = totalSlides
@@ -157,6 +157,8 @@ assign ColumnCount = 0
     <div class="section-{{ section.id }}-padding page-width isolate">
       {%- if sectionTitle or sectionSubtitle -%}
         <div class="title-wrapper title-wrapper--no-top-margin title-wrapper--self-padded-tablet-down{% if section.settings.title_wrapper_alignment == 'center' %} center{% endif %}">
+          <p>totalSlides = {{ totalSlides }}</p>
+          <p>totalSlidesDesktop = {{ totalSlidesDesktop }}</p>
           {%- if sectionTitle and sectionShowHeader == 1 -%}
             <h2 class="title {{ section.settings.heading_size }}">
               {{ sectionTitle | escape }}
