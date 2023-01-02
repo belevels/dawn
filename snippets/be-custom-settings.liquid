@@ -113,7 +113,7 @@
       .{{ product.handle }} #MainContent .gradient {
         background: wheat;
       }
-      .{{ product.handle }} #MainContent > .section:first-of-type,
+      .{{ product.handle }} #MainContent > .section:first-of-type + .section,
       .{{ product.handle }} #MainContent .section + .section {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%);
@@ -121,7 +121,7 @@
         background: burlywood;
       }
       .{{ product.handle }} #MainContent > .section:first-of-type .product-media-container {
-        background: gold;
+
       }
       {% if product.metafields.Seccion.TextColor %}
         .product-card-wrapper .{{ product.handle }}.card,
