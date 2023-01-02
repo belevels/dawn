@@ -133,7 +133,7 @@ assign ColumnCount = 0
   -%}
   {%- comment -%}MOD: Be levels - Agregamos columns_desktop_int y show_desktop_slider {%- endcomment -%}
   {%- liquid
-    if totalSlides >= section.settings.columns_desktop
+    if totalSlides > section.settings.columns_desktop
       assign columns_desktop_int = section.settings.columns_desktop
     else
       assign columns_desktop_int = totalSlides
@@ -157,8 +157,6 @@ assign ColumnCount = 0
     <div class="section-{{ section.id }}-padding page-width isolate">
       {%- if sectionTitle or sectionSubtitle -%}
         <div class="title-wrapper title-wrapper--no-top-margin title-wrapper--self-padded-tablet-down{% if section.settings.title_wrapper_alignment == 'center' %} center{% endif %}">
-          <p>totalSlides = {{ totalSlides }}</p>
-          <p>columns_desktop_int = {{ columns_desktop_int }}</p>
           {%- if sectionTitle and sectionShowHeader == 1 -%}
             <h2 class="title {{ section.settings.heading_size }}">
               {{ sectionTitle | escape }}
@@ -249,8 +247,8 @@ assign ColumnCount = 0
             {%- endfor -%}
           </div>
           
-          {%- if totalSlides > columns_desktop_int -%}
-            {%- if show_desktop_slider or show_mobile_slider -%}{%- comment -%}{%- endcomment -%}
+          {%- if totalSlides > totalSlidesDesktop -%}
+            {%- if show_desktop_slider or show_mobile_slider -%}
               <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden {% if show_desktop_slider == false %}hidden-desktop {% endif %}{% if show_mobile_slider == false %}hidden-mobile {% endif %}{% if section.settings.slider_visual == 'arrows' %}slideshow__controls--arrows {% endif %}">
                 <button type="button" class="slider-button slider-button--prev rotate-90" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-arrow' %}</button>                
                 <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' or section.settings.slider_visual == 'arrows' %} caption{% endif %} visually-hiddenx"> 
@@ -298,7 +296,7 @@ assign ColumnCount = 0
                 </div>
               </noscript>
               
-            {%- endif -%}{%- comment -%}{%- endcomment -%}
+            {%- endif -%}
           {%- endif -%}
         </carousel-component>
       {%- endif -%}
