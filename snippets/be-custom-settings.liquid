@@ -159,16 +159,16 @@
           background-color: rgba(var(--color-foreground),0.25);
         }
 
-        .{{ product.handle }} #MainContent .gradient,
+
         .{{ product.handle }} #MainContent > .section:first-of-type,
-        .{{ product.handle }} #MainContent .section + .section,
-                
+        .{{ product.handle }} #MainContent .section + .section,        
         .{{ product.handle }} .zed__navbar-dropdown .zed__navbar-dropbtn,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
         .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
         .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section:first-child
+        .{{ product.handle }} #MainContent > section:first-child,
+        .product-card-wrapper .{{ product.handle }}.card,
         .collection .{{ product.handle }}.card .button {
           --color-base-text: 255, 255, 255;
           --color-link: rgba(var(--color-foreground),.75);
