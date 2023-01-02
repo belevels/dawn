@@ -157,7 +157,8 @@
           background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
         }        
         .{{ product.handle }} .product__info-container .product__description ul li::after, 
-        .{{ product.handle }} .highlight li::after {
+        .{{ product.handle }} .highlight li::after,
+        .{{ product.handle }} .button {
           background-color: rgba(var(--color-foreground),0.25);
         }
 
