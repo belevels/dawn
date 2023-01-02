@@ -110,6 +110,9 @@
       {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
     {%- endif -%}          
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
+      .{{ product.handle }} #MainContent .gradient {
+        background: wheat;
+      }
       .{{ product.handle }} #MainContent .section + .section {
         background-color: {{ customColorRgba3 }};
         background-image: linear-gradient(to bottom, {{ customColorRgba3 }} 0%, rgba(255, 255, 255, 1) 100%);
