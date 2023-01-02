@@ -157,8 +157,8 @@ assign ColumnCount = 0
     <div class="section-{{ section.id }}-padding page-width isolate">
       {%- if sectionTitle or sectionSubtitle -%}
         <div class="title-wrapper title-wrapper--no-top-margin title-wrapper--self-padded-tablet-down{% if section.settings.title_wrapper_alignment == 'center' %} center{% endif %}">
-          <p>totalSlides* = {{ totalSlides }}</p>
-          <p>totalSlidesDesktop = {{ totalSlidesDesktop }}</p>
+          <p>totalSlides = {{ totalSlides }}</p>
+          <p>columns_desktop_int | plus: 1 = {{ columns_desktop_int | plus: 1 }}</p>
           {%- if sectionTitle and sectionShowHeader == 1 -%}
             <h2 class="title {{ section.settings.heading_size }}">
               {{ sectionTitle | escape }}
