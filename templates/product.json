@@ -318,7 +318,7 @@
         "column_layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "column_heading_size": "h2",
         "column_text_style": "caption-with-letter-spacing",
         "mobile_content_alignment": "left",
