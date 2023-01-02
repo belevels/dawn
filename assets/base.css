@@ -3040,7 +3040,7 @@ details-disclosure > details {
   right: 20px !important;
   margin: 1rem 0 0 !important;
 }
-product-recommendations .product-card-wrapper .card.color-background-1 {
+.page-width.center .product-card-wrapper .card.color-background-1 {
   background: rgba(255, 255, 255, 0.85) !important;
 }
 
