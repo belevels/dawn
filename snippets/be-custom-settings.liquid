@@ -144,12 +144,12 @@
         .{{ product.handle }} .product__accordion .accordion__content,
         .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-        product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-          background-color: rgba(var(--color-foreground),0.05);
-        }
-        .{{ product.handle }} .be-box .price--large,
+        product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         .{{ product.handle }} .multicolumn.background-primary .multicolumn-card,
         .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
+          background-color: rgba(var(--color-foreground),0.05);
+        }
+        .{{ product.handle }} .be-box .price--large {
           background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
         }
         .{{ product.handle }} .product__info-wrapper .product__title h1::after,
