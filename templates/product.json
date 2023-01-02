@@ -253,7 +253,7 @@
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "swipe_on_mobile": true,
         "swipe_on_desktop": true,
         "grid_peek": false,
