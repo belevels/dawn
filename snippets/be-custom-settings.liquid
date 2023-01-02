@@ -141,7 +141,6 @@
         .{{ product.handle }} #MainContent > section .product .product__media::after,
         .{{ product.handle }} .be-box,
         .{{ product.handle }} .quantity::before,
-        .{{ product.handle }} .product__accordion .accordion__content,
         .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
         .product-card-wrapper .{{ product.handle }}.card .card__media::after,
         product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
@@ -149,6 +148,7 @@
         .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
           background-color: rgba(var(--color-foreground),0.05);
         }
+        .{{ product.handle }} .product__accordion .accordion__content,
         .{{ product.handle }} .be-box .price--large {
           background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
         }
