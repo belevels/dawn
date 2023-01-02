@@ -248,7 +248,7 @@
         "columns_desktop": 1,
         "gap_desktop": 0,
         "columns_mobile": "1",
-        "column_alignment": "left",
+        "column_alignment": "center",
         "item_description_alignment": "left",
         "background_style": "primary",
         "button_label": "Button label",
