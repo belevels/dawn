@@ -434,14 +434,14 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     },
     "3f53a9a6-455e-4dc6-8d7e-1abc551cda35": {
       "type": "belevels-custom-judgme",
       "settings": {
         "layout": "full_bleed",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "heading_size": "h1",
         "content_heading_size": "h2",
         "text_style": "body",
