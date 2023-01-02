@@ -137,7 +137,7 @@
         "image_zoom": "hover",
         "mobile_thumbnails": "columns",
         "hide_variants": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 0,
         "padding_bottom": 36
       }
