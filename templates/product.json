@@ -426,7 +426,7 @@
         "description_style": "body",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "section",
+        "layout": "row",
         "color_scheme": "background-2",
         "container_color_scheme": "background-1",
         "icon": "none",
