@@ -469,7 +469,6 @@ a.product__text {
 
 .product-form__quantity .form__label {
   margin-bottom: 0.6rem;
-  display: none;
 }
 
 .product-form__quantity-top .form__label {
@@ -1497,9 +1496,6 @@ a.product__text {
   .be-add-to-cart-box {
     flex-direction: column;
   }
-}
-.be-box .form__label {
-  display: none;
 }
 .be-box .product-form__input,
 .be-add-to-cart-box .product-form__input {
