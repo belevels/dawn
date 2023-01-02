@@ -146,9 +146,9 @@
       "type": "be-carousel-multicolumn-data",
       "settings": {
         "title": "como-se-usa",
-        "show_title": true,
+        "show_title": false,
         "heading_size": "h1",
-        "show_description": true,
+        "show_description": false,
         "description_style": "subtitle",
         "title_wrapper_alignment": "center",
         "image_width": "fourth",
