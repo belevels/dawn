@@ -1617,6 +1617,6 @@ a.product__text {
   .fa-ul li br {
     display: none;
   }
-  .product__info-wrapper .product-card-wrapper .card {
+  product-recommendations .product-card-wrapper .card {
     background: rgba(255, 255, 255, 0.85);
   }
