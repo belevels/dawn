@@ -6,14 +6,14 @@
 -%}
 {{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
 <style>
-  .product-card {
+  .sticky-footer-bar .product-card {
     max-width: 29rem;
   }
-  .product-card-wrapper .card--media {
+  .sticky-footer-bar .product-card-wrapper .card--media img {
     width: 90px;
     height: 90px;
   }
-  .product-card-wrapper .card__content .card-information .price {
+  .sticky-footer-bar .product-card-wrapper .card__content .card-information .price {
     display: none;
   }
 </style>
@@ -33,7 +33,7 @@
 {%- endstyle -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
-  <div class="section-{{ section.id }} page-width color--background-1 gradient">
+  <div class="section-{{ section.id }} page-width color--background-1 gradient sticky-footer-bar">
     <div class="product-card">
       {% render 'card-product',
         card_product: product,
