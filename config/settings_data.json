@@ -302,10 +302,10 @@
           "ac3ff26d-0ab2-438e-afd2-a20cd2210995": {
             "type": "variant_picker",
             "settings": {
-              "picker_type": "button"
+              "picker_type": "dropdown"
             }
           },
-          "c0ae9800-9abe-488c-ae8a-35d6cd46d8df": {
+          "57d106b0-f7f7-4e0a-bdd6-cc948abffe83": {
             "type": "be_box_buy_button",
             "settings": {
             }
@@ -314,7 +314,7 @@
         "block_order": [
           "f446e76d-ee70-413f-a55f-1f171283bac1",
           "ac3ff26d-0ab2-438e-afd2-a20cd2210995",
-          "c0ae9800-9abe-488c-ae8a-35d6cd46d8df"
+          "57d106b0-f7f7-4e0a-bdd6-cc948abffe83"
         ],
         "settings": {
           "enable_sticky_bar": true,
