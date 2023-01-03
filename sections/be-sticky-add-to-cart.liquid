@@ -55,6 +55,10 @@
 {%- endstyle -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
+  {%- liquid
+    assign product_form_id  = 'sticky-bar-product-form-' | append: section.id 
+    assign variant_images  = product.images | where: 'attached_to_variant?', true | map: 'src' 
+  -%}
   <div class="section-{{ section.id }} page-width color--background-1 gradient sticky-footer-bar">
     <div class="product-card">
       {% render 'card-product',
@@ -74,16 +78,10 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="buttons" style="background:coral;">
-      <div {{ block.shopify_attributes }}>
-        {%- assign product_form_installment_id = 'sticky-bar-product-form-' | append: section.id -%}
-        {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-          {{ form | payment_terms }}
-        {%- endform -%}
-      </div>
+    <div class="buttons" style="background:burlywood;">
       <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
         {%- render 'price',
+          
           product: product,
           use_variant: true,
           show_badges: true,
@@ -91,7 +89,7 @@
         -%}
       </div>
       {% render 'product-variant-picker', block: block, product: product %}
-      {%- render 'be-box-buy-button' %}
+      {%- render 'be-box-buy-button', product_form_id: product_form_id, show_pickup_availability: true %}
     </div>
   </div>
   {%- liquid 
