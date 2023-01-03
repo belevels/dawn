@@ -357,7 +357,10 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  </head>
+  {% if content_for_header contains 'aiodstag' %}
+{% include 'cscode_discount' %}
+{% endif %}
+</head>
   {%- comment -%}
     Be Levels - start mod: agregamos headerTransparentIn, agregamos handle como slug para estilos personalizados con customClass 
   {%- endcomment -%}
