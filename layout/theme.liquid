@@ -337,9 +337,9 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-
+{% comment %}
     {% render 'be-custom-settings' %}
-    {% comment %}Be Levels - end mod {% endcomment %}
+    Be Levels - end mod {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -389,10 +389,11 @@
 
     {% section 'footer' %}
 
-    {%- comment -%}Be Levels - start mod{%- endcomment -%}
+    {%- comment -%}Be Levels - start mod
     {% if template == 'product' %}
       {%- section 'be-sticky-add-to-cart' -%}
     {%- endif -%}
+    {%- endcomment -%}
         
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
