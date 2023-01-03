@@ -152,7 +152,6 @@
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
-<<<<<<< HEAD
             {%- comment -%}Be Levels - start mod: agrupamos selector de cantidad y botones de compra en be-box{%- endcomment -%}
             {%- when 'be_box_buy_button' -%}
               {%- render 'be-box-buy-button' %}
@@ -161,8 +160,6 @@
             {%- endcomment -%}
             {%- when 'ecopack_quantity_selector' -%}
               {%- render 'be-ecopack-quantity-selector' -%}
-=======
->>>>>>> 1ee81c40f320440ac7fa57e72062eae0cfdacd5b
         {%- endcase -%}
       {%- endfor -%}
     </div>
