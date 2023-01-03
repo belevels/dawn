@@ -5,82 +5,85 @@
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
 -%}
 
-<style>
-</style>
+  <style>
+  </style>
 
-{%- style -%}
-.section-{{ section.id }}-padding {
-  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  align-items: center;
-}
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      align-items: center;
+    }
 
-@media screen and (min-width: 750px) {
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-}
-{%- endstyle -%}
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding page-width">
-  <div class="container">
-  <div class="product-be-card">
-    {% render 'card-product',
-      card_product: product,
-      media_aspect_ratio: 'square',
-      show_secondary_image: false,
-      show_vendor: false,
-      show_rating: true,
-      extend_height: false,
-      lazy_load: true,
-      show_quick_add: false,
-      section_id: 'FooterStickyBar',
-      horizontal_class: true,
-      horizontal_quick_add: true,
-      be_hide_price: false,
-      be_show_short_description: false,
-      be_show_ultrashort_description: true
-    %}
+  <div class="section-{{ section.id }}-padding page-width">
+    <div class="container">
+      <div class="product-be-card">
+        {% render 'card-product',
+          card_product: product,
+          media_aspect_ratio: 'square',
+          show_secondary_image: false,
+          show_vendor: false,
+          show_rating: true,
+          extend_height: false,
+          lazy_load: true,
+          show_quick_add: false,
+          section_id: 'FooterStickyBar',
+          horizontal_class: true,
+          horizontal_quick_add: true,
+          be_hide_price: false,
+          be_show_short_description: false,
+          be_show_ultrashort_description: true
+        %}
+      </div>
+      <div class="product-be-box">
+        <h3 class="warning">Pepe!</h3>
+      </div>
+    </div>
   </div>
-  <div class="product-be-box">
-    <h3 class="warning">Pepe!</h3>
-  </div>
-</div>
 
-{%- liquid 
-  comment
-  Be Levels - start mod    
-  Producto: Controlamos cuándo se visualiza be-sticky-add-to-cart.liquid
-  https://websensepro.com/blog/how-to-add-sticky-bar-on-product-page-dawn-theme-shopify/
-  endcomment
--%}
-<script>
-  function stickyAddtoCartButton(customWidth) {
-    if (customWidth.matches) { // If media query matches
-      window.onscroll = function() {
-          if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 6) ) {
+  {%- liquid 
+    comment
+    Be Levels - start mod    
+    Producto: Controlamos cuándo se visualiza be-sticky-add-to-cart.liquid
+    https://websensepro.com/blog/how-to-add-sticky-bar-on-product-page-dawn-theme-shopify/
+    endcomment
+  -%}
+  <script>
+    /*
+    function stickyAddtoCartButton(customWidth) {
+      if (customWidth.matches) { // If media query matches
+        window.onscroll = function() {
+            if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 6) ) {
+              document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'block';
+            } else {
+              document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'none';
+            }
+          }
+      } else {
+        window.onscroll = function() {
+          if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 4)) {
             document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'block';
           } else {
             document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'none';
           }
         }
-    } else {
-      window.onscroll = function() {
-        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 4)) {
-          document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'block';
-        } else {
-          document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'none';
-        }
       }
     }
-  }
-  
-  let customWidth = window.matchMedia("(max-width: 749px)");
-  
-  stickyAddtoCartButton(customWidth) // Call listener function at run time
-  customWidth.addListener(stickyAddtoCartButton) // Attach listener function on state changes
-</script>
+    
+    let customWidth = window.matchMedia("(max-width: 749px)");
+    
+    stickyAddtoCartButton(customWidth) // Call listener function at run time
+    customWidth.addListener(stickyAddtoCartButton) // Attach listener function on state changes
+    */
+  </script>
 {% endunless %}
 
 {% schema %}
