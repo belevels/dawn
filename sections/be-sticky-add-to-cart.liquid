@@ -12,9 +12,11 @@
 {{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
 <style>
   .section-be-sticky-add-to-cart variant-selects {
+    /*
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+    */
   }
   .section-be-sticky-add-to-cart variant-selects .select__select {
     max-height: calc((var(--inputs-border-width) * 2) + 3rem) !important;
@@ -50,11 +52,12 @@
   .sticky-footer-bar .buttons .be-add-to-cart-box .product-form__submit {
     min-width: 17rem;
     margin-left: 1rem;
-  }
+  }/*
   .section-be-sticky-add-to-cart variant-selects .product-form__input--dropdown {
     max-width: 14rem;
     margin: 0 auto;
   }
+  */
   .section-be-sticky-add-to-cart variant-selects .form__label {
     font-weight: normal;
     margin: 0;
