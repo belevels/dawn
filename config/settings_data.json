@@ -340,8 +340,8 @@
         ],
         "settings": {
           "enable_sticky_bar": true,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "padding_top": 0,
+          "padding_bottom": 0
         }
       }
     },
