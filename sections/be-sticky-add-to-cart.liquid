@@ -22,8 +22,8 @@
 {%- endstyle -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
-  <div class="section-{{ section.id }}" page-width>
-    <div>
+  <div class="section-{{ section.id }} page-width color--background-1 gradient">
+    <div class="product-card">
       {% render 'card-product',
         card_product: product,
         media_aspect_ratio: 'square',
@@ -50,7 +50,7 @@
     endcomment
   -%}
   <script>
-    /*function stickyAddtoCartButton(customWidth) {
+    function stickyAddtoCartButton(customWidth) {
       if (customWidth.matches) { // If media query matches
         window.onscroll = function() {
             if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 6) ) {
@@ -73,7 +73,7 @@
     let customWidth = window.matchMedia("(max-width: 749px)");
     
     stickyAddtoCartButton(customWidth) // Call listener function at run time
-    customWidth.addListener(stickyAddtoCartButton) // Attach listener function on state changes*/
+    customWidth.addListener(stickyAddtoCartButton) // Attach listener function on state changes
   </script>
     
 {%- endif -%}
