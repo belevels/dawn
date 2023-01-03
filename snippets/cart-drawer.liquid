@@ -76,6 +76,7 @@
           id="CartDrawer-Form"
           class="cart__contents cart-drawer__form"
           method="post"
+          data-csapp_line_wrapper
         >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
@@ -110,11 +111,11 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_line_index>
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
-                            <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                            <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true" data-aiod-volume-discount-line_item-bar> </a>
                             <img
                               class="cart-item__image"
                               src="{{ item.image | image_url: width: 300 }}"
@@ -126,12 +127,12 @@
                           {% endif %}
                         </td>
 
-                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
+                        <td class="cart-item__details data-csapp_price" role="cell" headers="CartDrawer-ColumnProduct" data-csapp_discount_summery>
                           {%- if settings.show_vendor -%}
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
 
-                          <a href="{{ item.url }}" class="cart-item__name h4 break">
+                          <a href="{{ item.url }}" class="cart-item__name h4 break" data-aiod-volume-discount-line_item-bar>
                             {{- item.product.title | escape -}}
                           </a>
 
@@ -229,7 +230,7 @@
                             </div>
                           </div>
 
-                          <div class="cart-item__price-wrapper">
+                          <div class="cart-item__price-wrapper data-csapp_line_price">
                             {%- if item.original_line_price != item.final_line_price -%}
                               <div class="cart-item__discounted-prices">
                                 <span class="visually-hidden">
