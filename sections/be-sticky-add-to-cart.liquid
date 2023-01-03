@@ -144,6 +144,7 @@
           {%- when 'buy_buttons' -%}
             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}  
         {%- endcase -%}
+      {%- endfor -%}
           
       <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
         {%- render 'price',
