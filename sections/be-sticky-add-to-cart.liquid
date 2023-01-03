@@ -29,7 +29,7 @@
   <div class="section-{{ section.id }} page-width color--background-1 gradient">
     <div class="product-card">
       {% render 'card-product',
-
+        card_product: product,
         media_aspect_ratio: 'square',
         show_secondary_image: false,
         show_vendor: false,
@@ -39,7 +39,7 @@
         show_quick_add: false,
         section_id: 'FooterStickyBar',
         horizontal_class: true,
-        horizontal_quick_add: false,
+        horizontal_quick_add: true,
         be_hide_price: false,
         be_show_short_description: false,
         be_show_ultrashort_description: false
