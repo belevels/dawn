@@ -223,7 +223,7 @@
           "logo_svg": true,
           "custom_url": "",
           "menu": "belevels",
-          "menu_type_desktop": "dropdown",
+          "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
           "sticky_header_type": "none",
           "show_line_separator": true,
