@@ -55,6 +55,8 @@
 {%- endstyle -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
+  {%- assign product_form_id = 'sticky-bar-product-form-' | append: section.id -%}
+
   <div class="section-{{ section.id }} page-width color--background-1 gradient sticky-footer-bar">
     <div class="product-card">
       {% render 'card-product',
@@ -74,7 +76,7 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="buttons" style="background:gold;">
+    <div class="buttons" style="background:burlywood;">
       {% render 'product-variant-picker', block: block, product: product %}
       {%- render 'be-box-buy-button' %}
     </div>
