@@ -61,10 +61,7 @@
 {%- endif -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
-  {%- liquid
-    assign product_form_id  = 'sticky-bar-product-form-' | append: section.id 
-    assign variant_images  = product.images | where: 'attached_to_variant?', true | map: 'src' 
-  -%}
+  {%- assign product_form_id  = 'sticky-bar-product-form-' | append: section.id -%}
   <div class="section-{{ section.id }} page-width color--background-1 gradient sticky-footer-bar">
     <div class="product-card">
       {% render 'card-product',
@@ -84,7 +81,7 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="buttons" style="background:fbfbfb;">
+    <div class="buttons">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%- when 'price' -%}
@@ -154,7 +151,7 @@
               {{ block.settings.custom_liquid }}
             {%- comment -%}Be Levels - start mod: agrupamos selector de cantidad y botones de compra en be-box{%- endcomment -%}
             {%- when 'be_box_buy_button' -%}
-              {%- render 'be-box-buy-button' %}
+              {%- render 'be-box-buy-button', product_form_id: product_form_id %}
             {%- comment -%}
               Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector, download-report, be_box_buy_button
             {%- endcomment -%}
