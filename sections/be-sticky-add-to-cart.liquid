@@ -26,6 +26,22 @@
 <div class="section-{{ section.id }}-padding page-width">
   <div class="container">
   <div class="product-be-card">
+    {% render 'card-product',
+      card_product: product,
+      media_aspect_ratio: 'square',
+      show_secondary_image: false,
+      show_vendor: false,
+      show_rating: true,
+      extend_height: false,
+      lazy_load: true,
+      show_quick_add: false,
+      section_id: 'FooterStickyBar',
+      horizontal_class: true,
+      horizontal_quick_add: true,
+      be_hide_price: false,
+      be_show_short_description: false,
+      be_show_ultrashort_description: true
+    %}
   </div>
   <div class="product-be-box">
   </div>
