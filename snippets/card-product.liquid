@@ -406,9 +406,9 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {%- if be_hide_price -%}<div class="hidden">{%- endif -%}
-            {% render 'price' %}
-            {%- if be_hide_price -%}</div>{%- endif -%}
+            {%- if be_hide_price -%}
+              {% render 'price' %}
+            {%- endif -%}
           </div>
         </div>
       </div>
