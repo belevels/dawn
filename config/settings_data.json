@@ -347,7 +347,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "127709043890318779": {
+        "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
