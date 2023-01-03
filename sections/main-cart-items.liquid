@@ -43,7 +43,7 @@
     {%- endif -%}
   </div>
 
-  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" data-csapp_line_wrapper>
+  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
         {%- if cart != empty -%}
@@ -70,7 +70,7 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-csapp_line_index>
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -96,7 +96,7 @@
                     <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
 
                     {%- if item.original_price != item.final_price -%}
-                      <div class="cart-item__discounted-prices" data-csapp_price>
+                      <div class="cart-item__discounted-prices">
                         <span class="visually-hidden">
                           {{ 'products.product.price.regular_price' | t }}
                         </span>
@@ -111,7 +111,7 @@
                         </strong>
                       </div>
                     {%- else -%}
-                      <div class="product-option" data-csapp_price>
+                      <div class="product-option">
                         {{ item.original_price | money }}
                       </div>
                     {%- endif -%}
@@ -176,7 +176,7 @@
                         </svg>
                       </div>
                     </div>
-                    <div class="cart-item__price-wrapper" data-csapp_line_price data-csapp_discount_summery>
+                    <div class="cart-item__price-wrapper">
                       {%- if item.original_line_price != item.final_line_price -%}
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
