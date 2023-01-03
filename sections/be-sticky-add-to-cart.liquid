@@ -7,7 +7,7 @@
 {{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
 <style>
   .product-card {
-    max-width: 6rem;
+    max-width: 29rem;
   }
 </style>
 {%- style -%}
@@ -29,7 +29,7 @@
   <div class="section-{{ section.id }} page-width color--background-1 gradient">
     <div class="product-card">
       {% render 'card-product',
-        card_product: product,
+
         media_aspect_ratio: 'square',
         show_secondary_image: false,
         show_vendor: false,
