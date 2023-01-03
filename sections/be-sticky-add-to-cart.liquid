@@ -40,18 +40,18 @@
   }
 </style>
 {%- style -%}
-.section-{{ section.id }}-padding {
-  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  align-items: center;
-}
-
-@media screen and (min-width: 750px) {
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    align-items: center;
   }
-}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
 {%- endstyle -%}
 
 {%- if section.settings.enable_sticky_bar == true -%}
@@ -78,7 +78,7 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="buttons" style="background:burlywood;">
+    <div class="buttons" style="background:wheat;">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'price' -%}
@@ -144,6 +144,7 @@
           {%- when 'buy_buttons' -%}
             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}  
         {%- endcase -%}
+      {%- endfor -%}
           
       <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
         {%- render 'price',
