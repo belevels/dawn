@@ -302,7 +302,7 @@
           "4e8481df-f3be-4ad8-921d-a72d3369fbe9": {
             "type": "variant_picker",
             "settings": {
-              "picker_type": "button"
+              "picker_type": "dropdown"
             }
           },
           "c954d7f8-2d2a-4e29-90f5-bc46c2481904": {
