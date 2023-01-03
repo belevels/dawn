@@ -78,7 +78,7 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="buttons" style="background:pink;">
+    <div class="buttons" style="background:gold;">
       <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
         {%- render 'price',
           
@@ -89,7 +89,10 @@
         -%}
       </div>
       {%- unless product.has_only_default_variant -%}
-        {%- assign be-picker_type = 'button' -%}
+        {%- liquid
+          assign be-picker_type = 'button' 
+          assign update_url = true
+          -%}
         {%- if be-picker_type == 'button' -%}
           <variant-radios
             id="variant-radios-{{ section.id }}"
