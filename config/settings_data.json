@@ -294,7 +294,7 @@
       "be-sticky-add-to-cart": {
         "type": "be-sticky-add-to-cart",
         "settings": {
-          "enable_sticky_bar": false,
+          "enable_sticky_bar": true,
           "padding_top": 20,
           "padding_bottom": 20
         }
