@@ -1,0 +1,124 @@
+{%- comment -%}Be Levels: Start - Bloqueamos botón de compra en determinados paises{%- endcomment -%}
+{%- unless 
+  product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
+  product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
+  product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
+-%}
+{{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+
+{%- if section.settings.enable_sticky_bar == true -%}
+  <div class="section-{{ section.id }}" page-width>
+    <div>
+      {% render 'card-product',
+        card_product: product,
+        media_aspect_ratio: 'square',
+        show_secondary_image: false,
+        show_vendor: false,
+        show_rating: true,
+        extend_height: false,
+        lazy_load: true,
+        show_quick_add: false,
+        section_id: 'MegaMenu--'product.id,
+        horizontal_class: false,
+        horizontal_quick_add: true,
+        be_hide_price: true,
+        be_show_short_description: false,
+        be_show_ultrashort_description: true
+      %}
+    </div>
+  </div>
+  {%- liquid 
+    comment
+    Be Levels - start mod    
+    Producto: Controlamos cuándo se visualiza be-sticky-add-to-cart.liquid
+    https://websensepro.com/blog/how-to-add-sticky-bar-on-product-page-dawn-theme-shopify/
+    endcomment
+  -%}
+  <script>
+    function stickyAddtoCartButton(customWidth) {
+      if (customWidth.matches) { // If media query matches
+        window.onscroll = function() {
+            if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 6) ) {
+              document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'block';
+            } else {
+              document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'none';
+            }
+          }
+      } else {
+        window.onscroll = function() {
+          if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight / 4)) {
+            document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'block';
+          } else {
+            document.getElementById('shopify-section-be-sticky-add-to-cart').style.display = 'none';
+          }
+        }
+      }
+    }
+    
+    let customWidth = window.matchMedia("(max-width: 749px)");
+    
+    stickyAddtoCartButton(customWidth) // Call listener function at run time
+    customWidth.addListener(stickyAddtoCartButton) // Attach listener function on state changes
+  </script>
+    
+{%- endif -%}
+{% endunless %}
+{% schema %}
+{
+  "name": "Sticky add to cart",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_bar",
+      "default": true,
+      "label": "Activar barra inferior de compra fija"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.settings.header.content",
+      "info": "t:sections.main-product.settings.header.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 20
+    }
+  ]
+}
+{% endschema %}
