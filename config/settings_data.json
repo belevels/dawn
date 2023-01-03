@@ -290,6 +290,44 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "be-sticky-add-to-cart": {
+        "type": "be-sticky-add-to-cart",
+        "blocks": {
+          "cad9e686-f325-4f71-8bed-d21bbdb8ea59": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
+          },
+          "a647c354-e810-4231-9d4d-3fd5633c9c1f": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_dynamic_checkout": false
+            }
+          },
+          "e97df333-b773-469c-810a-762b7cc9fec1": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "50326582-f40f-47c9-b99b-36c2c38ddbdb": {
+            "type": "ecopack_quantity_selector",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "cad9e686-f325-4f71-8bed-d21bbdb8ea59",
+          "a647c354-e810-4231-9d4d-3fd5633c9c1f",
+          "e97df333-b773-469c-810a-762b7cc9fec1",
+          "50326582-f40f-47c9-b99b-36c2c38ddbdb"
+        ],
+        "settings": {
+          "enable_sticky_bar": true,
+          "padding_top": 20,
+          "padding_bottom": 20
+        }
       }
     },
     "content_for_index": [
