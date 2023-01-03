@@ -111,7 +111,7 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_line_index>
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_price data-csapp_line_index>
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -127,7 +127,7 @@
                           {% endif %}
                         </td>
 
-                        <td class="cart-item__details data-csapp_price" role="cell" headers="CartDrawer-ColumnProduct" data-csapp_discount_summery>
+                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct" data-csapp_discount_summery>
                           {%- if settings.show_vendor -%}
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
