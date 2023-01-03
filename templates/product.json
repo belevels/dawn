@@ -449,8 +449,8 @@
         "subtitle_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "mobile_content_alignment": "left",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 100
       }
     },
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
