@@ -80,7 +80,7 @@
         >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
-              <div class="drawer__cart-items-wrapper">
+              <div class="drawer__cart-items-wrapper" data-aiod-volume-discount-line_item-bar>
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">
                     <tr role="row">
@@ -132,7 +132,7 @@
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
 
-                          <a href="{{ item.url }}" class="cart-item__name h4 break" data-aiod-volume-discount-line_item-bar>
+                          <a href="{{ item.url }}" class="cart-item__name h4 break">
                             {{- item.product.title | escape -}}
                           </a>
 
