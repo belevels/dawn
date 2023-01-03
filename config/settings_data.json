@@ -123,6 +123,7 @@
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_cart_note": true,
+    "cart_drawer_collection": "formulas-maestras",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo-belevels_ee84f8b5-81e4-47e8-8f30-446580d11ff8.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
