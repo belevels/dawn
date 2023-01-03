@@ -293,6 +293,29 @@
       },
       "be-sticky-add-to-cart": {
         "type": "be-sticky-add-to-cart",
+        "blocks": {
+          "f446e76d-ee70-413f-a55f-1f171283bac1": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "ac3ff26d-0ab2-438e-afd2-a20cd2210995": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
+          },
+          "c0ae9800-9abe-488c-ae8a-35d6cd46d8df": {
+            "type": "be_box_buy_button",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "f446e76d-ee70-413f-a55f-1f171283bac1",
+          "ac3ff26d-0ab2-438e-afd2-a20cd2210995",
+          "c0ae9800-9abe-488c-ae8a-35d6cd46d8df"
+        ],
         "settings": {
           "enable_sticky_bar": true,
           "padding_top": 20,
