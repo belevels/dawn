@@ -54,6 +54,10 @@
   }
 {%- endstyle -%}
 
+{%- if request.design_mode -%}
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
 {%- if section.settings.enable_sticky_bar == true -%}
   {%- liquid
     assign product_form_id  = 'sticky-bar-product-form-' | append: section.id 
