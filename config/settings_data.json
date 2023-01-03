@@ -299,6 +299,7 @@
             "settings": {
             }
           },
+<<<<<<< HEAD
           "ac3ff26d-0ab2-438e-afd2-a20cd2210995": {
             "type": "variant_picker",
             "settings": {
@@ -307,14 +308,29 @@
           },
           "57d106b0-f7f7-4e0a-bdd6-cc948abffe83": {
             "type": "be_box_buy_button",
+=======
+          "69d97b59-1521-4a43-9815-e8092ae22373": {
+            "type": "description",
+            "settings": {
+            }
+          },
+          "58cba641-9519-4d4b-b7a5-975e9a6e9a1b": {
+            "type": "rating",
+>>>>>>> parent of 0dd4f73c (Update from Shopify for theme dawn/main)
             "settings": {
             }
           }
         },
         "block_order": [
+<<<<<<< HEAD
           "f446e76d-ee70-413f-a55f-1f171283bac1",
           "ac3ff26d-0ab2-438e-afd2-a20cd2210995",
           "57d106b0-f7f7-4e0a-bdd6-cc948abffe83"
+=======
+          "f8e6c918-c4d9-4128-8047-af5c6b57739b",
+          "69d97b59-1521-4a43-9815-e8092ae22373",
+          "58cba641-9519-4d4b-b7a5-975e9a6e9a1b"
+>>>>>>> parent of 0dd4f73c (Update from Shopify for theme dawn/main)
         ],
         "settings": {
           "enable_sticky_bar": false,
