@@ -26,6 +26,14 @@
     grid-template-columns: 33.33% 66.66%;
     align-items: center;
   }
+  @media screen and (max-width:600px) {
+    .sticky-footer-bar {
+      display: flex;
+    }
+    .sticky-footer-bar .product-card {
+      display: none;
+    }
+  }
   .sticky-footer-bar .product-card {
     max-width: 24rem;
   }
