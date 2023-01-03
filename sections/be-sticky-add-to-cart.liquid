@@ -6,6 +6,10 @@
 -%}
 {{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
 <style>
+  .sticky-footer-bar {
+    display: grid;
+    grid-template-columns: 33.33% 66.66%;
+  }
   .sticky-footer-bar .product-card {
     max-width: 29rem;
   }
