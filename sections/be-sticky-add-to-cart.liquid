@@ -5,7 +5,11 @@
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
 -%}
 {{ 'section-be-stycky-add-to-cart.css' | asset_url | stylesheet_tag }}
-
+<style>
+  .product-card {
+    max-width: 6rem;
+  }
+</style>
 {%- style -%}
 .section-{{ section.id }}-padding {
   padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
