@@ -299,6 +299,12 @@
             "settings": {
             }
           },
+          "4e8481df-f3be-4ad8-921d-a72d3369fbe9": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
+          },
           "c954d7f8-2d2a-4e29-90f5-bc46c2481904": {
             "type": "custom_liquid",
             "settings": {
@@ -325,6 +331,7 @@
         },
         "block_order": [
           "7215764b-fe3d-4e20-84ff-3de90593d661",
+          "4e8481df-f3be-4ad8-921d-a72d3369fbe9",
           "c954d7f8-2d2a-4e29-90f5-bc46c2481904",
           "3acbbe0a-5685-4cdb-bf44-9386f3c8f2aa",
           "58001255-a73b-4009-8244-eb2bbb96c331",
