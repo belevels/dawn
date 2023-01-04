@@ -43,7 +43,7 @@
     {%- endif -%}
   </div>
 
-  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" data-csapp_line_wrapper>
+  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" >
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
         {%- if cart != empty -%}
@@ -68,7 +68,7 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody data-csapp_line_wrapper>
               {%- for item in cart.items -%}
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-csapp_line_index>
                   <td class="cart-item__media">
