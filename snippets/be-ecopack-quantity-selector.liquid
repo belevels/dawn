@@ -193,17 +193,20 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
   <script>
-document.addEventListener('readystatechange', event => { 
-
-    // When HTML/DOM elements are ready:
-    if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
-        alert("hi 1");
+    function csrundata() {
+      var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
+      document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+    
+      var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+      document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
+    
+      var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
+      var priceEcoPack = priceReg - (priceReg * discount);
+      var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
+      document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';  
     }
-
-    // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
     if (event.target.readyState === "complete") {
-        alert("hi 2");
+      csrundata();
     }
-});
   </script>
 {%- endunless -%}
