@@ -401,20 +401,12 @@
       <script>
         class csrundata {
           constructor() {
-            this.cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-            this.cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
-            //cantMinShow;
-            this.priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
-            this.priceRegShow = document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
-            //priceRegShow;
-            this.discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
-            var priceEcoPack = priceReg - (priceReg * discount);
-            var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
-            this.priceEcoPackShow = document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
-            //priceEcoPackShow;
+            this.cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0];
+            //this.cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+            console.log('cantMinShow = ' + cantMin);
           }
         }
-        new csrundata();
+        csrundata().new;
       </script>
     {%- endif -%}
 
