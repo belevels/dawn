@@ -193,14 +193,23 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
   <script>
-//var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tr td').innerText;
+function csrundata() {
+  var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+  var values = Array.from(document.querySelectorAll('.csapps-table tr')).map(td => td.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g));
+  console.log('values = ' + values);
 
-    const myNodelist = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tr td');
-for (let i = 0; i < myNodelist.length; i++) {
-  myNodelist[i].innerText.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
+  var cantMin = values[0][0] * 1;
+  var discount = values[0][1] * 1 / 100;
+  console.log('cantMin = ' + cantMin);
+  console.log('discount = ' + discount);
+
+  var priceEcoPack = priceReg - (priceReg * discount);
+  var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
+
+  document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+  document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
+  document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
 }
-
-    
-    //document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+csrundata();
   </script>
 {%- endunless -%}
