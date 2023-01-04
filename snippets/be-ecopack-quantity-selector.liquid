@@ -194,7 +194,7 @@
   {%- endcomment -%}
   <script>
 function csrundata() {
-  var values = [];
+  //var values = [];
   var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
   var values = Array.from(document.querySelectorAll('.csapps-table tr')).map(td => td.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g));
   console.log('values = ' + values);
