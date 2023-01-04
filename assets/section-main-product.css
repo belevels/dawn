@@ -1625,8 +1625,8 @@ a.product__text {
   font-size:1.25rem;
 }
 #EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
-  /*height: calc(var(--font-heading-scale) * 1.5rem);
-  margin-right: 0;*/
+  height: calc(var(--font-heading-scale) * 1.5rem);
+  margin-right: 0;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   max-width: fit-content;
