@@ -402,9 +402,9 @@
         window.addEventListener('load', function(){
         function csrundata() {
           var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
-          var priceReg = parseFloat(priceRegText.innerHTML.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+          var priceReg = parseFloat(priceRegText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
           var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
-          var cantMin = parseFloat(cantMinText.textContent);
+          var cantMin = parseFloat(cantMinText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
           var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
           var discount = parseFloat(discountText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) / 100;
 
@@ -418,8 +418,8 @@
           document.getElementById('PriceWithoutEcoPack').innerText = priceRegWithDecimals + ' €';
           document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals + ' €';
         };
-          csrundata()
-      });
+        csrundata()
+        });
       </script>
     {%- endif -%}
 
