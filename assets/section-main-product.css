@@ -1614,3 +1614,7 @@ a.product__text {
   .fa-ul li br {
     display: none;
   }
+  /* EcoPack */
+#EcoPack-be-ecopack-add-to-cart-box {}
+#EcoPack-be-ecopack-add-to-cart-box .summary__title > div {width:100%;}
+#EcoPack-be-ecopack-add-to-cart-box .summary__title .small {margin:0;font-size:1.25rem;}
