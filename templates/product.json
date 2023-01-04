@@ -78,7 +78,6 @@
         },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
           "type": "ecopack_quantity_selector",
-          "disabled": true,
           "settings": {
           }
         },
