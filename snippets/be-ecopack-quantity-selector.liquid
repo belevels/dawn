@@ -199,7 +199,7 @@
   var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
   var cantMin = parseFloat(cantMinText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
   var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
-  var discount = parseFloat(discountText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+  var discount = parseFloat(discountText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) / 100;
 
   var priceEcoPack = priceReg - (priceReg * discount);
   var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
