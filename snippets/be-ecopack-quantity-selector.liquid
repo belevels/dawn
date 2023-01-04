@@ -193,20 +193,5 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
   <script>
-    function csrundata() {
-  let cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-  let priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
-  let discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
-
-  let priceEcoPack = Math.floor((priceReg - (priceReg * discount)) * 100) / 100.0;
-  //let priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
-
-  let cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
-  let priceRegShow = document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
-  let priceEcoPackShow = document.getElementById('PriceWithEcoPack').innerText = priceEcoPack * cantMin + ' €';  
-  return;
-}
-
-  csrundata();
   </script>
 {%- endunless -%}
