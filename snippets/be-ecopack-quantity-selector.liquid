@@ -199,17 +199,18 @@ function csrundata() {
   var values = Array.from(document.querySelectorAll('.csapps-table tr')).map(td => td.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g));
   console.log('values = ' + values);
 
-  var cantMin = values[0]?.[0] * 1;
-  var discount = values[0]?.[1] * 1 / 100;
+  var cantMin = values[0]?.[0];
+  var discount = values[0]?.[1];
   console.log('cantMin = ' + cantMin);
   console.log('discount = ' + discount);
-
+/*
   var priceEcoPack = priceReg - (priceReg * discount);
   var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
 
   document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
   document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
   document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
+  */
 }
   </script>
 {%- endunless -%}
