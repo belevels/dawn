@@ -236,3 +236,6 @@ cart-items {
     display: block;
     text-align: left;
 }
+.dis-name {
+    display: flex;
+}
