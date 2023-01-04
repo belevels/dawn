@@ -1616,5 +1616,14 @@ a.product__text {
   }
   /* EcoPack */
 #EcoPack-be-ecopack-add-to-cart-box {}
-#EcoPack-be-ecopack-add-to-cart-box .summary__title > div {width:100%;}
-#EcoPack-be-ecopack-add-to-cart-box .summary__title .small {margin:0;font-size:1.25rem;}
+#EcoPack-be-ecopack-add-to-cart-box .summary__title > div {
+  width:100%;
+}
+#EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
+  margin:0 0.75rem;
+  font-size:1.25rem;
+}
+#EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
+  height: calc(var(--font-heading-scale) * 1.5rem);
+  margin-right: 0;
+}
