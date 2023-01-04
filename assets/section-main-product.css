@@ -1536,7 +1536,7 @@ a.product__text {
   border-radius: 20px;
 }
 .be-box .product__accordion summary {
-  padding: 0;
+  padding: 1rem 0 0;
 }
 .product__info-container .be-add-to-cart-box .product-form {
   margin: 0 0 0 0.5rem;
