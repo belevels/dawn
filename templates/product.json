@@ -84,7 +84,7 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"aiod-volume-discount-wrap\"><\/div>\n<\/div><!-- .be-box -->"
+            "custom_liquid": "<div class=\"aiod-volume-discount-wrap\" style=\"display: nnone;\"><\/div>\n<\/div><!-- .be-box -->"
           }
         },
         "description": {
