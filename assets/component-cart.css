@@ -223,5 +223,5 @@ cart-items {
 }
 .product-option,
 [data-csapp_price]{
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
