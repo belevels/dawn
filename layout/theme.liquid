@@ -397,24 +397,25 @@
       {%- section 'be-sticky-add-to-cart' -%}
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
-      
+      {%- endcomment -%}
       <script>
-        function csrundata() {
-          var cantMin  = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-          /*var cantMinShow = */document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
-          //cantMinShow;
-        
-          var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
-          var priceRegShow = document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
-          priceRegShow;
-        
-          var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
-          var priceEcoPack = priceReg - (priceReg * discount);
-          var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
-          var priceEcoPackShow = document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
-          priceEcoPackShow;
-        }
-      </script>{%- endcomment -%}
+      function csrundata() {
+        const cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
+        const cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+        console.log('cantMinShow = ' + cantMinShow);
+
+        const priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+        const priceRegShow = document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
+        console.log('priceRegShow = ' + priceRegShow);
+
+        const discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
+        var priceEcoPack = priceReg - (priceReg * discount);
+        var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
+        const priceEcoPackShow = document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
+        console.log('priceEcoPackShow = ' + priceEcoPackShow);
+      }
+      csrundata();
+      </script>
     {%- endif -%}
 
     <ul hidden>
