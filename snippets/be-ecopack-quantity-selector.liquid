@@ -118,7 +118,7 @@
           >
             <span>
               {%- if product.selected_or_first_available_variant.available -%}
-                {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
+                {{ 'belevels.general.add' | t }} {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               {%- else -%}
                 {{ 'products.product.sold_out' | t }}
               {%- endif -%}
