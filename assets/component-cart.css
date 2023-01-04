@@ -221,3 +221,21 @@ cart-items {
     gap: 1rem;
   }
 }
+.product-option,
+[data-csapp_price]{
+  align-items: flex-start !important;
+}
+.cart__blocks .totals{
+  align-items: flex-start;
+}
+.cart-drawer .totals{
+  align-items: flex-start;
+}
+.discount-label-conatiner span.dis-svg {
+  
+    display: block;
+    text-align: left;
+}
+.discount-label-conatiner .dis-name {
+    display: flex;
+}

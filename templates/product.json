@@ -78,6 +78,7 @@
         },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
           "type": "ecopack_quantity_selector",
+          "disabled": true,
           "settings": {
           }
         },
@@ -336,7 +337,7 @@
         "image_ratio": "square",
         "columns_desktop": 4,
         "gap_desktop": 4,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "column_alignment": "left",
         "item_description_alignment": "left",
         "background_style": "primary",
