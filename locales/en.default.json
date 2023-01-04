@@ -442,8 +442,9 @@
       "see_all": "Show all",
       "see_all_in": "Show all in",
       "from": "from",
+      "add": "Add",
       "pack_discount_by_quantity": {
-        "name": "Add EcoPack",
+        "name": "EcoPack",
         "content": "The best option to give continuity to your shots and maximize your improvement process. You save on price, you save on shipping and we save CO₂ impact on the planet. 😇"
       }
     },
