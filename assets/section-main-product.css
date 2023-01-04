@@ -1631,7 +1631,7 @@ a.product__text {
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   max-width: fit-content;
   padding: 0 1rem;
-  background: rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, 1);
   border-radius: 40px;
   text-align: right;
   /*margin: 0 4rem 0 0;*/
