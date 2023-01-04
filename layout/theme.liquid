@@ -400,8 +400,8 @@
       {%- endcomment -%}
       <script>
         function csrundata() {
-          cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-          cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+          var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
+          document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
           console.log('cantMin = ' + cantMin);
         }
         csrundata();
