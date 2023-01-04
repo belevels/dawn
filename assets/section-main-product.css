@@ -1628,3 +1628,8 @@ a.product__text {
   height: calc(var(--font-heading-scale) * 1.5rem);
   margin-right: 0;
 }
+#EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
+  text-align: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
