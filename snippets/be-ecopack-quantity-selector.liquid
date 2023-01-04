@@ -193,7 +193,6 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
   <script>
-var cantMin = document.querySelector('.aiod-volume-discount-wrap .csapps-table tbody tr > td:nth-child(2)').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0];
-  document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
   </script>
 {%- endunless -%}
