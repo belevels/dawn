@@ -197,7 +197,7 @@
 
     const myNodelist = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tr td');
 for (let i = 0; i < myNodelist.length; i++) {
-  myNodelist[i].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
+  myNodelist[i].innerText.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
 }
 
     
