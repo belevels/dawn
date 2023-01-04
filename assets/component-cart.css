@@ -221,3 +221,7 @@ cart-items {
     gap: 1rem;
   }
 }
+.product-option,
+[data-csapp_price]{
+  align-items: flex-start;
+}
