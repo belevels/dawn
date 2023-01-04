@@ -376,6 +376,7 @@ a.product__text {
 
 .product .price .badge {
   margin-bottom: 0.5rem;
+  vertical-align: bottom;
 }
 
 .product .price__container {
