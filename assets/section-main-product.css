@@ -1635,7 +1635,7 @@ a.product__text {
   border-radius: 40px;
   text-align: right;
   /*margin: 0 4rem 0 0;*/
-  max-height: 4rem;
+  max-height: 3.5rem;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
   font-size: 2rem;
