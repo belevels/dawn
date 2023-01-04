@@ -108,9 +108,9 @@
                     </tr>
                   </thead>
 
-                  <tbody role="rowgroup">
+                  <tbody role="rowgroup" data-csapp_line_wrapper>
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_line_index>
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
