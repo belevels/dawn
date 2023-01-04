@@ -399,7 +399,7 @@
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
       <script>
-        window.addEventListener('load', function(){
+
         function csrundata() {
           var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
           var priceReg = parseFloat(priceRegText.innerHTML.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
@@ -419,7 +419,7 @@
           document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals + ' €';
         };
 
-      });
+
       </script>
     {%- endif -%}
 
