@@ -1630,6 +1630,5 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   text-align: right;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: 4rem;
 }
