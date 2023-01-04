@@ -228,3 +228,6 @@ cart-items {
 .cart__blocks .totals{
   align-items: flex-start;
 }
+.cart-drawer .totals{
+  align-items: flex-start;
+}
