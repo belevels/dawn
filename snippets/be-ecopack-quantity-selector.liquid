@@ -191,7 +191,7 @@
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      function csrundata() {
+
         const cantMin  = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
         const cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
       
@@ -202,7 +202,7 @@
         let priceEcoPack = priceReg - (priceReg * discount);
         let priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
         const priceEcoPackShow = document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals * cantMin + ' €';
-      }
+
     });
   </script>
 {%- endunless -%}
