@@ -225,3 +225,6 @@ cart-items {
 [data-csapp_price]{
   align-items: flex-start !important;
 }
+.cart__blocks .totals{
+  align-items: flex-start;
+}
