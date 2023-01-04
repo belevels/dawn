@@ -408,7 +408,7 @@
   var discount = parseFloat(discountText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) / 100;
 
   var priceEcoPack = priceReg - (priceReg * discount);
-  var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
+  var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.00;
   console.log('priceEcoPack = ' + priceEcoPack);
   console.log('priceEcoPackwithDecimals = ' + priceEcoPackwithDecimals);
 
