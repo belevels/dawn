@@ -400,7 +400,7 @@
       {%- endcomment -%}
       <script>
       function csrundata() {
-        const cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0];
+        const cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent;
         const cantMinShow = document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
         console.log('cantMinShow = ' + cantMinShow);
 
