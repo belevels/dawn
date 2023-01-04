@@ -198,8 +198,8 @@ var values = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table
 
 for (i = 0; i < values.length; ++i) {
   values[i].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g);
+  console.log('value[i] = ' + values[i]);
 };
-console.log('value[0] = ' + values[i]);
 }
   </script>
 {%- endunless -%}
