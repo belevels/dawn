@@ -195,13 +195,14 @@
   <script>
 function csrundata() {
   var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-  var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) * 1;
-  var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
+  document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
 
+  var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) * 1;
+  document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
+  
+  var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
   var priceEcoPack = Math.floor((priceReg - (priceReg * discount)) * 100) / 100.0;
   
-  document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
-  document.getElementById('PriceWithoutEcoPack').innerText = priceReg * cantMin + ' €';
   document.getElementById('PriceWithEcoPack').innerText = priceEcoPack * cantMin + ' €';  
 }
 
