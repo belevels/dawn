@@ -194,9 +194,9 @@
   {%- endcomment -%}
   <script>
   function csrundata() {
-  var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1;
-  var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular').textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
-  var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1].textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0] * 1 * 1 / 100;
+  var cantMin = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[0];
+  var priceReg = parseFloat(document.querySelector('.be-main-product .be-box .price .price-item--regular');
+  var discount = document.querySelectorAll('.aiod-volume-discount-wrap .csapps-table tbody tr td')[1];
 
   var priceEcoPack = Math.floor((priceReg - (priceReg * discount)) * 100) / 100.0;
   var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0;
