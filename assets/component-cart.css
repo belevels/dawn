@@ -232,7 +232,7 @@ cart-items {
   align-items: flex-start;
 }
 .discount-label-conatiner span.dis-svg {
-  
+    width: 100%;
     display: block;
     text-align: left;
 }
