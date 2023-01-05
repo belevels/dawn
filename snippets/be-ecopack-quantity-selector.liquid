@@ -9,7 +9,7 @@
   {%- liquid
      assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
      assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento | times: 0.1
-     assign price_without_discount = product.price | times: ecopack_cant
+     assign price_without_discount = product.price
      assign discount = product.price | times: ecopack_desc
      assign price_with_discount = price_without_discount | minus: discount
      -%}
