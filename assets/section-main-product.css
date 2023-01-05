@@ -1492,7 +1492,7 @@ a.product__text {
 .be-add-to-cart-box {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
+  /*margin-top: 1rem;*/
 }
 @media screen and (max-width: 375px) {
   .be-add-to-cart-box {
@@ -1680,14 +1680,14 @@ EcoPack-be-ecopack-add-to-cart-box
 */
 @media screen and (max-width:600px) {
   #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
-  font-size: 1.5rem;
-  }
-  #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
-  font-size: 1.125rem;
-  }
-  #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
-  font-size: 1.5rem;
-  }
+    font-size: 1.5rem;
+    }
+    #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
+    font-size: 1.125rem;
+    }
+    #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
+    font-size: 1.5rem;
+    }
 }
 #EcoPack-be-ecopack-add-to-cart-box .button--primary {
   border-color: #327544;
