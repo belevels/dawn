@@ -1661,6 +1661,7 @@ a.product__text {
   font-size: 2rem;
   line-height: 1;
   color: #327544;
+  margin: 0;
 }
 #EcoPack-be-ecopack-add-to-cart-box .summary__title .small,
 #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
@@ -1672,7 +1673,7 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.5rem;
-  margin-top: 4px;
+  margin: 4px 0 0 0;
   /*margin-left: .25rem;*/
   text-decoration: line-through;
   color: #e62e1b;
