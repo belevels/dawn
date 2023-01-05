@@ -37,6 +37,7 @@
       </details>
     </div>
     <div class="be-add-to-cart-box">
+  {% comment %}
       <div
         class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
         {{ block.shopify_attributes }}
@@ -69,6 +70,7 @@
           </button>
         </quantity-input>
       </div>
+  {% endcomment %}
       <div>
         {% comment %}
     Renders product buy-buttons.
