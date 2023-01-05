@@ -16,9 +16,9 @@
         width: fit-content;
         margin-right: 0.25rem;
       }
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
       .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
       product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
       .product-card-wrapper .{{ product.handle }} .card__heading span::after {
         content: '';
@@ -43,7 +43,7 @@
         width: fit-content;
         margin-right: 0.25rem;
       }
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
       .{{ product.handle }} .product__info-wrapper .product__title h1::after,
       .product-card-wrapper .{{ product.handle }}.card .card__media::after,
       product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
@@ -64,7 +64,7 @@
       {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
     {%- endif -%}
       {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 0.13 %}
-      .{{ product.handle }} #MainContent > section .product .product__media::after,
+      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
       .{{ product.handle }} .be-box,
       .{{ product.handle }} .quantity::before,
       /*.{{ product.handle }} .be-box .price--large,*/
@@ -138,7 +138,7 @@
         .{{ product.handle }} #MainContent .section + .section {
           background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
         }
-        .{{ product.handle }} #MainContent > section .product .product__media::after,
+        {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
         .{{ product.handle }} .be-box,
         .{{ product.handle }} .quantity::before,
         .{{ product.handle }} .product__accordion .accordion__content,
