@@ -3058,6 +3058,6 @@ cart-remove-button .button {
   border: 0 !important; /* ugly */
 }
 carousel-component .grid--1-col-desktop .multicolumn-card,
-.image-with-text--overlap .image-with-text__content {
+.multirow.image-with-text--overlap .image-with-text__content {
   border-radius: 20px;
 }
