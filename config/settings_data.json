@@ -334,7 +334,7 @@
             "settings": {
               "heading": "Opciones",
               "icon": "none",
-              "content": "",
+              "content": "<p>Aquí irá el contenido, esperamos todo funcione bien.<\/p>",
               "page": ""
             }
           }
