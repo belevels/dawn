@@ -2087,6 +2087,7 @@ input[type='checkbox'] {
 .quantity__input:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
   background-color: inherit;
+  background-color: transparent;
 }
 
 .quantity__input:-webkit-autofill,
