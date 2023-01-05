@@ -1631,6 +1631,8 @@ a.product__text {
   }
   #EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
     content: "|";
+    color: #327544;
+    font-weight: normal;
   }
 }
 
