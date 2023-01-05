@@ -1688,6 +1688,7 @@ a.product__text {
   border-color: #327544;
   background-color:#327544;
 }
+/*
 @media screen and (max-width:600px) {
   #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
     font-size: 1.5rem;
@@ -1699,3 +1700,4 @@ a.product__text {
     font-size: 1.5rem;
     }
 }
+*/
