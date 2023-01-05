@@ -8,7 +8,7 @@
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
      assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
-     assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento | times 0.1
+     assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento | times: 0.1
      assign price_without_discount = product.price | times: ecopack_cant
      assign price_with_discount = product.price | times: ecopack_desc | times: ecopack_cant
      -%}
