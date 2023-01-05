@@ -249,6 +249,7 @@ cart-items {
   padding-left: 0rem;
   flex-direction: column;
 }
+/*
 .csapp_aiod_coupan .csapp_aiod_coupan_code {
   border-radius: 20px 0 0 20px !important;
   padding: 10px 15px !important;
@@ -257,5 +258,6 @@ cart-items {
   border-radius: 0 20px 20px 0 !important;
   padding-right: 0.5rem !important;
 }
+*/
 .csapp_discount_total_wrapper .csapps-cart-original-total.discount-price {color: #e62e1b;}
 .csapps-cart-total {color: #019D4F !important;}
