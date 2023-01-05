@@ -55,8 +55,3 @@
 .product__info-container .product-form__input--dropdown {
   flex: 1 0 auto;
 }
-#StickyFooterBar-be-sticky-add-to-cart > div.opciones.page-width > div,
-#StickyFooterBar-be-sticky-add-to-cart .opciones .product__accordion.accordion {
-  max-width: 40rem;
-  margin: 0 0 0 auto;
-}
