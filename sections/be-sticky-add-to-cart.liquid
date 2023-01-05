@@ -135,7 +135,9 @@
 #StickyFooterBar-be-sticky-add-to-cart .accordion summary {
   padding: 0.5rem 1rem 0.25rem;
 }
-.accordion details[open] > summary .icon-caret,
+.accordion details[open] > summary .icon-caret {
+  transform: rotate(-180deg);
+}
 .accordion details:not([open]) > summary .icon-caret {
   transform: rotate(-180deg);
 }
