@@ -1494,11 +1494,13 @@ a.product__text {
   flex-direction: row;
   /*margin-top: 1rem;*/
 }
+/*
 @media screen and (max-width: 375px) {
   .be-add-to-cart-box {
     flex-direction: column;
   }
 }
+*/
 .be-box .product-form__input,
 .be-add-to-cart-box .product-form__input {
   margin-left: auto;
@@ -1703,3 +1705,6 @@ a.product__text {
     content: "";
   }
 }
+
+/** */
+.button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
