@@ -1621,7 +1621,7 @@ a.product__text {
   width:100%;
 }
 #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
-  margin:0 0.75rem;
+  margin:0;
   font-size:1.25rem;
 }
 #EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
