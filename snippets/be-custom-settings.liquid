@@ -90,7 +90,7 @@
       .product-card-wrapper .{{ product.handle }}.card {
         border-color: {{ customColorRgba1 }};
       }
-      .{{ product.handle }} .be-box .button--secondary,
+      {%- comment -%}.{{ product.handle }} .be-box .button--secondary,{%- endcomment -%}
       .product-card-wrapper .{{ product.handle }}.card .button--secondary,
       .{{ product.handle }} .timeline::before,
       .{{ product.handle }} .timeline .timeline-event-thumbnail,
