@@ -58,8 +58,8 @@
             type="number"
             name="quantity"
             id="EcoPack-Quantity-{{ section.id }}"
-            min="2"
-            value="2"
+            min="{{ ecopack_cant }}"
+            value="{{ ecopack_cant }}"
             form="{{ product_form_id }}"
           >
           <button class="quantity__button no-js-hidden" name="plus" type="button">
