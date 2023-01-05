@@ -328,6 +328,15 @@
             "settings": {
               "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
             }
+          },
+          "abd52cda-94d0-4bff-9984-f383204afb14": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "Collapsible row",
+              "icon": "check_mark",
+              "content": "",
+              "page": ""
+            }
           }
         },
         "block_order": [
@@ -336,7 +345,8 @@
           "c954d7f8-2d2a-4e29-90f5-bc46c2481904",
           "3acbbe0a-5685-4cdb-bf44-9386f3c8f2aa",
           "58001255-a73b-4009-8244-eb2bbb96c331",
-          "c327f331-5d19-43c0-8ac4-9b27658d421c"
+          "c327f331-5d19-43c0-8ac4-9b27658d421c",
+          "abd52cda-94d0-4bff-9984-f383204afb14"
         ],
         "settings": {
           "enable_sticky_bar": true,
