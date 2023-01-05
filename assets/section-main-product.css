@@ -1690,6 +1690,10 @@ a.product__text {
 }
 
 @media screen and (max-width:498px) {
+  #EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
+    flex-direction: column;
+    width: 100%;
+  }
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     font-size: 1.5rem;
   }
