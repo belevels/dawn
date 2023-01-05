@@ -19,7 +19,7 @@
       {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
       .{{ product.handle }} .product__info-wrapper .product__title h1::after,
       {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
       .product-card-wrapper .{{ product.handle }} .card__heading span::after {
         content: '';
         position: absolute;
@@ -43,10 +43,10 @@
         width: fit-content;
         margin-right: 0.25rem;
       }
-      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+      {%- comment -%}{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
       .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+      {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+      {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
       .product-card-wrapper .{{ product.handle }} .card__heading span::after {
         content: '';
         position: absolute;
