@@ -398,6 +398,7 @@
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
+    {%- endif -%}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -437,16 +438,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-      <script>
-        //function csrundata() {
-        //var x = document.getElementById("myTable").rows[0].cells.length; 
-        
-          var ecopack_cant_min = document.querySelector('.csapps-table').rows[0].cells[0];
-          ecopack_cant_min.style.background = "red";
-          //console.log('ecopack_cant_min = ' + ecopack_cant_min.innerHTML);
-        //};
-      </script>
-    {%- endif -%}    
   </body>
 </html>
