@@ -1649,9 +1649,8 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
   font-size: 2rem;
-  margin: 0;
-  line-height: 2;
-  color: #019D4F;
+  line-height: 1;
+  color: #327544;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.5rem;
