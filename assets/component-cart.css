@@ -257,5 +257,5 @@ cart-items {
   border-radius: 0 40px 40px 0 !important;
   padding-right: 0.5rem !important;
 }
-.csapp_discount_total_wrapper .csapps-cart-original-total.discount-price {}
-.csapps-cart-total {color: #e62e1b !important;}
+.csapp_discount_total_wrapper .csapps-cart-original-total.discount-price {color: #e62e1b;}
+.csapps-cart-total {color: #019D4F !important;}
