@@ -1628,6 +1628,10 @@ font-size: 1.75rem;
 #EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
   display: flex;
 }
+#EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
+  content: "|";
+  font-size: 24rem;
+}
 @media screen and (max-width:749px) {
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     margin:0;
