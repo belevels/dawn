@@ -9,7 +9,7 @@
   {%- liquid
      assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
      assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento
-     assign price_without_discount = product.price * ecopack_cant
+     assign price_without_discount = product.price
      -%}
 
   <div id="EcoPack-be-ecopack-add-to-cart-box">
