@@ -3031,7 +3031,7 @@ details-disclosure > details {
   margin-top: 1.2rem;
   margin-right: 1rem;
   background: var(--color-background);
-  border-radius: 40px;
+  border-radius: 100%;
   padding: 0.2rem 0.75rem;
   cursor: pointer;
   border: 0.1rem groove rgba(var(--color-foreground),0.57);
