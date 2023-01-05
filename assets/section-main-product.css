@@ -1549,7 +1549,7 @@ a.product__text {
   top: -1.5rem;
   padding: 0.125rem 1.25rem;
   border: var(--product-card-border-width) solid rgba(var(--color-foreground),var(--product-card-border-opacity));
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: rgb(var(--color-base-background-1));
 }
 .be-box .price .price__container {
