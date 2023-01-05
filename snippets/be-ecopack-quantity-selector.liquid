@@ -16,7 +16,7 @@
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
-          {% render 'icon-accordion', icon: 'question_mark' %}
+          <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
           <div class="summary__title">
             <div>
               <p class="h4 accordion__title">
