@@ -37,7 +37,6 @@
       </details>
     </div>
     <div class="be-add-to-cart-box">
-  {% comment %}
       <div
         class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
         {{ block.shopify_attributes }}
@@ -70,7 +69,6 @@
           </button>
         </quantity-input>
       </div>
-  {% endcomment %}
       <div>
         {% comment %}
     Renders product buy-buttons.
@@ -81,7 +79,7 @@
     - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional) .
 
     Usage:
-    {% render 'be-buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+    {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
 {% endcomment %}
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
