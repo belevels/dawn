@@ -1688,16 +1688,9 @@ a.product__text {
   border-color: #327544;
   background-color:#327544;
 }
-/*
-@media screen and (max-width:600px) {
-  #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
+
+@media screen and (max-width:498px) {
+  #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     font-size: 1.5rem;
-    }
-    #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
-    font-size: 1.125rem;
-    }
-    #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
-    font-size: 1.5rem;
-    }
+  }
 }
-*/
