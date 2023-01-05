@@ -8,10 +8,8 @@
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
      assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
-     assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento
+     assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento
      assign price_without_discount = product.price
-     assign discount = ecopack_desc | times: 1 | divided_by: 100
-     assign price_with_discount = price_without_discount | minus: discount
      -%}
 
   <div id="EcoPack-be-ecopack-add-to-cart-box">
@@ -27,7 +25,7 @@
               <p class="small">{{ 'belevels.general.from' | t }} {{ ecopack_cant }} <span id="EcoPack--price-by-quantity"></span> uds.</p>
             </div>
             <div class="price eco-pack--price">
-              <span id="PriceWithEcoPack" class="price-item">{{ discount }}</span>
+              <span id="PriceWithEcoPack" class="price-item">{{ price_with_discount | money }}</span>
               <span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>
             </div>
           </div>
