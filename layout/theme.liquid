@@ -360,6 +360,17 @@
   {% if content_for_header contains 'aiodstag' %}
 {% include 'cscode_discount' %}
 {% endif %}
+      <script>
+        function csrundata() {
+          var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
+          var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
+          var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
+
+          if (  cantMinText.innerHTML) {
+            console.log(' cantMinText tiene contenidos***')
+          }
+        }
+      </script>
 </head>
   {%- comment -%}
     Be Levels - start mod: agregamos headerTransparentIn, agregamos handle como slug para estilos personalizados con customClass 
@@ -398,17 +409,7 @@
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
-      <script>
-        function csrundata() {
-          var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
-          var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
-          var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
 
-          if (  cantMinText.innerHTML) {
-            console.log(' cantMinText tiene contenidos')
-          }
-        }
-      </script>
     {%- endif -%}
 
     <ul hidden>
