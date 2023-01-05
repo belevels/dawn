@@ -439,17 +439,9 @@
     {%- endif -%}
 
       <script>
-        //window.addEventListener('load', function(){
         function csrundata() {
-          var cantMinText  = '';
-          var cantMin  = '';
-          var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
-          var priceReg = parseFloat(priceRegText.innerHTML.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
-          cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
-          var cantMin = cantMinText.textContent;
+          var ecopack_cant_min = document.getElementById('EcoPack--aiod').innerHTML;
         };
-          //csrundata()
-      //});
       </script>
     {%- endif -%}    
   </body>
