@@ -1085,8 +1085,8 @@ class CarouselComponent extends SlideshowComponent {
 }
 
 customElements.define('carousel-component', CarouselComponent);
-
-  function csrundata() {
+window.addEventListener("DOMContentLoaded", function() {
+  //function csrundata() {
   var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
   var priceReg = parseFloat(priceRegText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
   var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
@@ -1103,4 +1103,5 @@ customElements.define('carousel-component', CarouselComponent);
   document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
   document.getElementById('PriceWithoutEcoPack').innerText = priceRegWithDecimals + ' €';
   document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals + ' €';
-}
+  //}
+});
