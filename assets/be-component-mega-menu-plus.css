@@ -44,7 +44,7 @@
     width: 100%;
     left: 0;
     right: 0;
-    border-radius: 20px;
+    border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     z-index: 1;
     }
 
@@ -296,7 +296,7 @@
     }
 
     .collectiontabcontent .destacado .card-wrapper .media--transparent img {
-        border-radius: 20px;
+        border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     }
     .collectiontabcontent .collectiontabcontent--footer {
         display: grid;
