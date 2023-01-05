@@ -1641,6 +1641,9 @@ a.product__text {
   height: 2.25rem;
   fill: #327544;
 }
+#EcoPack-be-ecopack-add-to-cart-box .accordion .accordion .summary__title {
+  justify-content: space-between;
+}
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   /*max-width: fit-content;
   padding: 0 1rem;
