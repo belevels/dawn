@@ -126,7 +126,7 @@
                           {% endif %}
                         </td>
 
-                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
+                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct" data-csapp_discount_summery>
                           {%- if settings.show_vendor -%}
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
@@ -152,7 +152,7 @@
                               </strong>
                             </div>
                           {%- else -%}
-                            <div class="product-option" data-csapp_discount_summery>
+                            <div class="product-option">
                               {{ item.original_price | money }}
                             </div>
                           {%- endif -%}
