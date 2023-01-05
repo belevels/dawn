@@ -1623,14 +1623,15 @@ a.product__text {
   width:100%;
 }
 */
+#EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
+  display: flex;
+}
 @media screen and (min-width:750px) {
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     margin: 3px 0 0 4px;
   font-size: 1.75rem;
   }
-  #EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
-    display: flex;
-  }
+  
   #EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
     content: "|";
     color: #327544;
@@ -1667,6 +1668,7 @@ a.product__text {
 #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
   color: #327544;
   font-weight: bold;
+  width: max-content;
 }
 #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
   font-weight: normal;
