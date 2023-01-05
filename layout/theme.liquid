@@ -407,7 +407,7 @@
 
           if (cantMinText != '') {
             console.log(' 2 -cantMinText tiene contenidos');
-            var cantMin = parseFloat(cantMinText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+            var cantMin = cantMinText.textContent;
             console.log(' - -cantMin = ' + cantMin);
           }
         }
