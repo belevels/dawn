@@ -249,3 +249,6 @@ cart-items {
   padding-left: 0rem;
   flex-direction: column;
 }
+.csapp_aiod_coupan .csapp_aiod_coupan_code {
+  border-radius: 40px 0 0 40px !important;
+}
