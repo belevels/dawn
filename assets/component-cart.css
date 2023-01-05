@@ -252,3 +252,6 @@ cart-items {
 .csapp_aiod_coupan .csapp_aiod_coupan_code {
   border-radius: 40px 0 0 40px !important;
 }
+.csapp_aiod_coupan button.csapp_aiod_coupan_btn {
+  border-radius: 0 40px 40px 0;
+}
