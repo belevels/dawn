@@ -1651,6 +1651,8 @@ a.product__text {
   text-decoration: line-through;
   color: #e62e1b;
 }
+.csapp_discount_total_wrapper .csapps-cart-original-total.discount-price {}
+.csapp_discount_total_wrapper .csapps-cart-original-total.discount-price .csapps-cart-total {color: #e62e1b;}
 /*
 #EcoPack-be-ecopack-add-to-cart-box .product-form__buttons {
   max-width:100%;
