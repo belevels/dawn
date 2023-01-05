@@ -1638,14 +1638,15 @@ a.product__text {
   margin-right: calc(var(--font-heading-scale) * 0.25rem);
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
-  max-width: fit-content;
+  /*max-width: fit-content;
   padding: 0 1rem;
   background: rgba(255, 255, 255, 1);
   border-radius: 40px;
-  text-align: right;
-  /*margin: 0 4rem 0 0;*/
+  margin: 0 4rem 0 0;
   max-height: 3.5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;*/
+  text-align: right;
+  font-weight: bold;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
   font-size: 2rem;
@@ -1654,8 +1655,8 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.5rem;
-  margin-top: 6px;
-  margin-left: .25rem;
+  margin-top: 4px;
+  /*margin-left: .25rem;*/
   text-decoration: line-through;
   color: #e62e1b;
 }
