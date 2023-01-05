@@ -1482,6 +1482,7 @@ a.product__text {
   padding: calc(3.5rem - var(--product-card-border-width) * 2) calc(3.5rem - var(--product-card-border-width) * 2) calc(2.3rem - var(--product-card-border-width) * 2);
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
+  max-width: 42rem;
 }
 @media screen and (max-width:989px) {
   .be-box {
