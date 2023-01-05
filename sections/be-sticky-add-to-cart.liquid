@@ -141,24 +141,6 @@
 {%- if section.settings.enable_sticky_bar == true -%}
   {%- assign product_form_id  = 'product-form-' | append: section.id -%}
   <div class="section-{{ section.id }} color--background-1 gradient sticky-footer-bar">
-
-    <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-      <details id="Details-{{ block.id }}-{{ section.id }}">
-        <summary>
-          <div class="summary__title">
-            {% render 'icon-accordion', icon: block.settings.icon %}
-            <p class="accordion__title subtitle">
-              Opciones
-            </p>
-          </div>
-          {% render 'icon-caret' %}
-        </summary>
-        <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-          <div class="variantes"></div>
-        </div>
-      </details>
-    </div>
-
     <div class="product-card">
       {% render 'card-product',
         card_product: product,
@@ -177,6 +159,44 @@
         be_show_ultrashort_description: false
       %}
     </div>
+    <div class="opciones">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'collapsible_tab' -%}
+            <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+              <details id="Details-{{ block.id }}-{{ section.id }}">
+                <summary>
+                  <div class="summary__title">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h2 class="h4 accordion__title">
+                      {{ block.settings.heading | default: block.settings.page.title }}
+                    </h2>
+                  </div>
+                  {% render 'icon-caret' %}
+                </summary>
+                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                  {{ block.settings.content }}
+                  {{ block.settings.page.content }}
+                </div>
+              </details>
+            </div>
+          {%- when 'title' -%}
+            <div class="product__title" {{ block.shopify_attributes }}>
+              <h1>{{ product.title | escape }}</h1>
+              <a href="{{ product.url }}" class="product__title">
+                <h2 class="h1">
+                  {{ product.title | escape }}
+                </h2>
+              </a>
+            </div>
+          {%- when 'variant_picker' -%}
+            {% render 'product-variant-picker', block: block, product: product %}            
+            {%- comment -%}Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector{%- endcomment -%}
+          {%- when 'ecopack_quantity_selector' -%}
+            {%- render 'be-ecopack-quantity-selector' -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
     <div class="buttons">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -189,15 +209,7 @@
             >
               {{- block.settings.text | strip_html -}} 
             </p>
-          {%- when 'title' -%}
-            <div class="product__title" {{ block.shopify_attributes }}>
-              <h1>{{ product.title | escape }}</h1>
-              <a href="{{ product.url }}" class="product__title">
-                <h2 class="h1">
-                  {{ product.title | escape }}
-                </h2>
-              </a>
-            </div>
+
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price',
@@ -288,24 +300,7 @@
             </p>
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
-          {%- when 'collapsible_tab' -%}
-            <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-              <details id="Details-{{ block.id }}-{{ section.id }}">
-                <summary>
-                  <div class="summary__title">
-                    {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h2 class="h4 accordion__title">
-                      {{ block.settings.heading | default: block.settings.page.title }}
-                    </h2>
-                  </div>
-                  {% render 'icon-caret' %}
-                </summary>
-                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                  {{ block.settings.content }}
-                  {{ block.settings.page.content }}
-                </div>
-              </details>
-            </div>
+
           {%- when 'quantity_selector' -%}
             <div
               class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -364,8 +359,7 @@
               share_link: share_url
             %}
 
-          {%- when 'variant_picker' -%}
-            {% render 'product-variant-picker', block: block, product: product %}
+
           {%- when 'buy_buttons' -%}
             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}
           {%- when 'rating' -%}
@@ -489,11 +483,7 @@
             {% render 'icon-with-text',
               block: block
             %}
-          {%- comment -%}
-            Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector, download-report, be_box_buy_button
-          {%- endcomment -%}
-          {%- when 'ecopack_quantity_selector' -%}
-            {%- render 'be-ecopack-quantity-selector' -%}
+          {%- comment -%}Be Levels - start mod: agregamos bloques personalizados download-report, be_box_buy_button{%- endcomment -%}
           {%- when 'download-report' -%}
             {%-liquid
               assign urlContent = product.metafields.c_f.lookbook_description 
