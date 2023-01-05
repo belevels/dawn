@@ -58,7 +58,7 @@
             type="number"
             name="quantity"
             id="EcoPack-Quantity-{{ section.id }}"
-            min="{{ ecopack_cant }}"
+            min="1"
             value="{{ ecopack_cant | minus: 1 }}"
             form="{{ product_form_id }}"
           >
