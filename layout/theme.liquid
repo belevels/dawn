@@ -400,13 +400,15 @@
       {%- endcomment -%}
       <script>
         function csrundata() {
-          console.log('carga');
+          console.log('1 -carga');
           var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
           var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
           var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
 
-          if (cantMinText.innerText != '') {
-            console.log(' cantMinText tiene contenidos');
+          if (cantMinText != '') {
+            console.log(' 2 -cantMinText tiene contenidos');
+            var cantMin = parseFloat(cantMinText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+            console.log(' - -cantMin = ' + cantMin);
           }
         }
         //csrundata();
