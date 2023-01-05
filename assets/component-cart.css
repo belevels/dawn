@@ -247,7 +247,7 @@ cart-items {
   padding-left: 0rem;
   flex-direction: column;
 }
-
+*/
 .csapp_aiod_coupan .csapp_aiod_coupan_code {
   border-radius: 20px 0 0 20px !important;
   padding: 10px 15px !important;
@@ -256,7 +256,7 @@ cart-items {
   border-radius: 0 20px 20px 0 !important;
   padding-right: 0.5rem !important;
 }
-*/
+
 [data-csapp_discount_summery] .discount-label-conatiner, [data-csapp_line_price], [data-csapp_price]{
   align-items: flex-start !important;
 }
