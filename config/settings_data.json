@@ -332,8 +332,8 @@
           "abd52cda-94d0-4bff-9984-f383204afb14": {
             "type": "collapsible_tab",
             "settings": {
-              "heading": "Collapsible row",
-              "icon": "check_mark",
+              "heading": "Opciones",
+              "icon": "none",
               "content": "",
               "page": ""
             }
