@@ -10,7 +10,7 @@
      assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
      assign ecopack_desc = product.metafields.EcoPack.PorcentajeDescuento
      assign price_without_discount = product.price
-     assign discount = ecopack_desc | divided_by: 100 | money
+     assign discount = ecopack_desc | money | divided_by: 100
      assign price_with_discount = price_without_discount | minus: discount
      -%}
 
