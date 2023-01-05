@@ -97,7 +97,7 @@
           "settings": {
             "block_heading": "Combínalo con",
             "make_collapsible_row": true,
-            "icon": "heart",
+            "icon": "none",
             "product_list_limit": 10,
             "products_per_page": 1,
             "pagination_style": "dots",
