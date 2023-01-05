@@ -1650,3 +1650,11 @@ a.product__text {
   text-decoration: line-through;
   color: #e62e1b;
 }
+@media screen and (max-width:600px) {
+  #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
+  font-size: 1.5rem;
+  }
+  #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
+  font-size: 1.125rem;
+  }
+}
