@@ -441,8 +441,10 @@
       <script>
         function csrundata() {
           var ecopack_cant_min = document.getElementById('EcoPack--aiod');
-          ecopack_cant_min.style.color = "red";
-          console.log('ecopack_cant_min = ' + ecopack_cant_min.innerHTML);
+          var step_1 = ecopack_cant_min.querySelector("table > tbody > tr > td:nth-child(1)");
+  //var cantMin = parseFloat(cantMinText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));;
+          step_1.style.color = "red";
+          //console.log('ecopack_cant_min = ' + ecopack_cant_min.innerHTML);
         };
       </script>
     {%- endif -%}    
