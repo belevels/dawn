@@ -1617,10 +1617,12 @@ a.product__text {
     display: none;
   }
   /* EcoPack */
+  /*
   #EcoPack-be-ecopack-add-to-cart-box {}
 #EcoPack-be-ecopack-add-to-cart-box .summary__title > div {
   width:100%;
 }
+*/
 @media screen and (min-width:750px) {
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     margin: 3px 0 0 4px;
