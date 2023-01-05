@@ -383,12 +383,3 @@ cart-drawer-items::-webkit-scrollbar-thumb {
 cart-drawer-items::-webkit-scrollbar-track-piece {
   margin-top: 31px;
 }
-
-
-.discount-label-conatiner span.dis-svg {
-  width: 1.5rem;
-}
-.cart-drawer .cart-item > td + td {
-  padding-left: 0rem;
-  flex-direction: column;
-}
