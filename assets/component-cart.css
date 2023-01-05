@@ -257,5 +257,8 @@ cart-items {
   padding-right: 0.5rem !important;
 }
 */
+[data-csapp_discount_summery] .discount-label-conatiner, [data-csapp_line_price], [data-csapp_price]{
+  align-items: flex-start !important;
+}
 .csapp_discount_total_wrapper .csapps-cart-original-total.discount-price {color: #e62e1b;}
 .csapps-cart-total {color: #019D4F !important;}
