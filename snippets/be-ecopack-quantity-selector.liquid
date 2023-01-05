@@ -8,7 +8,7 @@
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
     assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento
+    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 1000
     assign price_without_discount = product.price
   -%}
 {%- if ecopack_cant and price_with_discount -%}
@@ -26,7 +26,7 @@
             </div>
             
             <div class="price eco-pack--price">
-              <span id="PriceWithEcoPack" class="price-item">€{{ price_with_discount }}</span>
+              <span id="PriceWithEcoPack" class="price-item">€{{ price_with_discount | money }}</span>
               <span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>
             </div>
           </div>
