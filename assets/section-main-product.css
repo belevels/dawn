@@ -1657,4 +1657,7 @@ a.product__text {
   #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.125rem;
   }
+  #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
+  font-size: 1.5rem;
+}
 }
