@@ -254,6 +254,6 @@ cart-items {
   padding: 10px 15px !important;
 }
 .csapp_aiod_coupan button.csapp_aiod_coupan_btn {
-  border-radius: 0 40px 40px 0;
-  padding-right: 0.5rem
+  border-radius: 0 40px 40px 0 !important;
+  padding-right: 0.5rem !important;
 }
