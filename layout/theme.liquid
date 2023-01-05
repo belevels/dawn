@@ -398,23 +398,6 @@
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
-      <script>
-        //window.addEventListener('load', function(){
-        var cantMinText  = '';
-        function csrundata() {
-          var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
-          cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr");
-          var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
-
-          if (cantMinText != '') {
-            console.log(document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr"));
-          }
-
-        };
-    //    csrundata()
-        //});
-      </script>
-    {%- endif -%}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -454,5 +437,30 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+      <script>
+        window.addEventListener('load', function(){
+        function csrundata() {
+          var priceRegText = document.querySelector('.be-main-product .be-box .price .price-item--regular');
+          var priceReg = parseFloat(priceRegText.innerHTML.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.'));
+          var cantMinText  = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(1)");
+          var cantMin = parseFloat(cantMinText.textContent);
+          var discountText = document.querySelector("div.be-box > div.aiod-volume-discount-wrap > div > table > tbody > tr > td:nth-child(2)");
+          var discount = parseFloat(discountText.textContent.match(/(-\d+|\d+)(,\d+)*(\.\d+)*/g)[0].replaceAll(',', '.')) / 100;
+
+          var priceRegWithDecimals = Math.floor(priceReg * 100) / 100.0 * cantMin;
+          var priceEcoPack = priceReg - (priceReg * discount);
+          var priceEcoPackwithDecimals = Math.floor(priceEcoPack * 100) / 100.0 * cantMin;
+          console.log('priceEcoPack = ' + priceEcoPack);
+          console.log('priceEcoPackwithDecimals = ' + priceEcoPackwithDecimals);
+
+          document.getElementById('EcoPack--price-by-quantity').innerText = cantMin;
+          document.getElementById('PriceWithoutEcoPack').innerText = priceRegWithDecimals + ' €';
+          document.getElementById('PriceWithEcoPack').innerText = priceEcoPackwithDecimals + ' €';
+        };
+          csrundata()
+      });
+      </script>
+    {%- endif -%}    
   </body>
 </html>
