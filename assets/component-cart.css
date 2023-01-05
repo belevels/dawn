@@ -231,6 +231,7 @@ cart-items {
 .cart-drawer .totals{
   align-items: flex-start;
 }
+/*
 .discount-label-conatiner span.dis-svg {
     width: 100%;
     display: block;
@@ -239,9 +240,6 @@ cart-items {
 .discount-label-conatiner .dis-name {
     display: flex;
 }
-
-
-
 .discount-label-conatiner span.dis-svg {
   width: 1.5rem;
 }
@@ -249,7 +247,7 @@ cart-items {
   padding-left: 0rem;
   flex-direction: column;
 }
-/*
+
 .csapp_aiod_coupan .csapp_aiod_coupan_code {
   border-radius: 20px 0 0 20px !important;
   padding: 10px 15px !important;
