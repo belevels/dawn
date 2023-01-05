@@ -115,6 +115,10 @@
     font-weight: normal;
     margin: 0;
   }
+  #be-box--sticky {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
 </style>
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -159,7 +163,7 @@
         be_show_ultrashort_description: false
       %}
     </div>
-    <div class="be-box--sticky">
+    <div id="be-box--sticky">
       <div class="opciones">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
