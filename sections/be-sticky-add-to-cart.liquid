@@ -144,11 +144,11 @@
 
 {%- if section.settings.enable_sticky_bar == true -%}
   {%- assign product_form_id  = 'product-form-' | append: section.id -%}
-  <div class="opciones page-width color--background-2 color-background-2 isolate gradient">
+  <div class="opciones page-width">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'collapsible_tab' -%}
-          <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+          <div class="product__accordion accordion quick-add-hidden color-background-2 isolate gradient" {{ block.shopify_attributes }}>
             <details id="Details-{{ block.id }}-{{ section.id }}">
               <summary>
                 <div class="summary__title">

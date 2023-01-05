@@ -55,3 +55,7 @@
 .product__info-container .product-form__input--dropdown {
   flex: 1 0 auto;
 }
+#shopify-section-be-sticky-add-to-cart .accordion {
+  max-width: 40rem;
+  margin: 0 0 0 auto;
+}
