@@ -371,6 +371,7 @@ a.product__text {
   padding: 0 1rem;
   padding: 2rem;
   margin-top: 1rem;
+  margin-top: 0;
   border-radius: 20px;
 }
 
