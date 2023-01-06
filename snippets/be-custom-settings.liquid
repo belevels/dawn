@@ -115,14 +115,12 @@
       {% assign customColorRgba3 = customColor3 | color_to_hex %}
       .{{ product.handle }} #MainContent .gradient {
         background-color: #ffffff;
-        background: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0.9121849423363095) 100%); 
-        /*background: wheat;*/
+        background-image: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0.9121849423363095) 100%); 
       }
       .{{ product.handle }} #MainContent > .section:first-of-type,
       .{{ product.handle }} #MainContent .section + .section {
         background-color: {{ customColorRgba3 }};
-        background: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%); 
-        /*background: burlywood;*/
+        background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%); 
       }
       .{{ product.handle }} #MainContent > .section + .section .color-background-2 {
         background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
