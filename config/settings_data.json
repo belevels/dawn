@@ -322,6 +322,12 @@
             "settings": {
               "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
             }
+          },
+          "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
           }
         },
         "block_order": [
@@ -329,7 +335,8 @@
           "c954d7f8-2d2a-4e29-90f5-bc46c2481904",
           "3acbbe0a-5685-4cdb-bf44-9386f3c8f2aa",
           "58001255-a73b-4009-8244-eb2bbb96c331",
-          "c327f331-5d19-43c0-8ac4-9b27658d421c"
+          "c327f331-5d19-43c0-8ac4-9b27658d421c",
+          "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d"
         ],
         "settings": {
           "enable_sticky_bar": true,
