@@ -358,12 +358,12 @@
     }
     </script>
   {% if content_for_header contains 'aiodstag' %}
-{% include 'cscode_discount' %}
+{% render 'cscode_discount' %}
 {% endif %}
 </head>
   {%- comment -%}
     Be Levels - start mod: agregamos headerTransparentIn, agregamos handle como slug para estilos personalizados con customClass 
-  {%- endcomment -%}
+  
   {%- liquid
     assign headerTransparentIn = 'product'
     if request.page_type == "collection"
@@ -374,8 +374,9 @@
       assign customClass = page.handle | prepend: " "
     endif
   -%}
-  
-  <body {% if template == headerTransparentIn %}id="template-index"{% endif %} class="gradient{% if template == headerTransparentIn %} template-index{% endif %}{% if customClass != blank %} {{ customClass }}{% endif %}">
+  {%- endcomment -%}
+  {%- comment -%}<body {% if template == headerTransparentIn %}id="template-index"{% endif %} class="gradient{% if template == headerTransparentIn %} template-index{% endif %}{% if customClass != blank %} {{ customClass }}{% endif %}">{%- endcomment -%}
+  <body id="template-index" class="gradient template-index{% if customClass != blank %} {{ customClass }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
