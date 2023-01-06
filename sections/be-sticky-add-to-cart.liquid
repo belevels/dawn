@@ -187,9 +187,9 @@
       <details id="Details-be-box-sticky-{{ section.id }}">
         <summary>
           <div class="summary__title">
-            {% render 'icon-accordion', icon: block.settings.icon %}
+            {%- comment -%}{% render 'icon-accordion', icon: block.settings.icon %}{%- endcomment -%}
             <P class="h5 accordion__title">
-              {%- comment -%}{{ block.settings.heading | default: block.settings.page.title }}{%- endcomment -%}
+              {%- comment -%}{{ block.settings.heading | default: block.settings.page.title }} {%- endcomment -%}
               {{- 'belevels.general.options' | t -}}
             </P>
           </div>
@@ -205,6 +205,7 @@
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
                       <div class="summary__title">
+                        {% render 'icon-accordion', icon: block.settings.icon %}
                         <P class="h5 accordion__title">
                           {{ block.settings.heading | default: block.settings.page.title }}
                         </P>
