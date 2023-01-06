@@ -389,7 +389,7 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     {%- comment -%}Be Levels - start mod{%- endcomment -%}
-    {% if template == 'product' %}
+    {% if template == 'product' or template == 'product.essentials' %}
       {%- section 'be-sticky-add-to-cart' -%}
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
