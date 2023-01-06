@@ -1,0 +1,492 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "0084fd30-a48b-42cc-ad8c-222e0b527cda": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.c_f.short_description.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-box\">"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-add-to-cart-box\">"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "5e6c6120-79d4-4443-9d12-7c20817487d7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
+          }
+        },
+        "02f120be-a55a-44f0-9ae6-9256d8518630": {
+          "type": "be_box_buy_button",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "9feb7ff5-3f71-434b-a1a2-7de647f9c904": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "EcoPack",
+            "icon": "question_mark",
+            "content": "<p>La mejor opción para dar continuidad a tus tomas y maximizar tu proceso de mejora. Ahorras en precio, ahorras en envíos y ahorramos impacto de CO₂ al planeta. 😇<\/p>",
+            "page": ""
+          }
+        },
+        "72d76219-e839-4f9c-9867-fbd424124b07": {
+          "type": "ecopack_quantity_selector",
+          "settings": {
+          }
+        },
+        "69d05011-95f0-4e3c-a4a1-1242313116eb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: none;\"><\/div>\n<\/div><!-- .be-box -->"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Combínalo con",
+            "make_collapsible_row": true,
+            "icon": "none",
+            "product_list_limit": 10,
+            "products_per_page": 1,
+            "pagination_style": "dots",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "0084fd30-a48b-42cc-ad8c-222e0b527cda",
+        "caption",
+        "aea48dc4-8143-4ee8-9033-259c6041fd13",
+        "price",
+        "variant_picker",
+        "deb4108e-f194-4e9a-9151-2eb100cc3d37",
+        "quantity_selector",
+        "buy_buttons",
+        "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "02f120be-a55a-44f0-9ae6-9256d8518630",
+        "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
+        "72d76219-e839-4f9c-9867-fbd424124b07",
+        "69d05011-95f0-4e3c-a4a1-1242313116eb",
+        "description",
+        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "columns",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "c22a79ad-d44e-4166-b9a3-3ecd00a49269": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "como-se-usa",
+        "show_title": false,
+        "heading_size": "h1",
+        "show_description": false,
+        "description_style": "subtitle",
+        "title_wrapper_alignment": "center",
+        "image_width": "fourth",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "gap_desktop": 10,
+        "columns_mobile": "1",
+        "column_alignment": "center",
+        "item_description_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "swipe_on_desktop": true,
+        "grid_peek": false,
+        "auto_rotate": true,
+        "change_slides_speed": 2,
+        "slider_visual": "arrows",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5": {
+      "type": "be-timeline",
+      "blocks": {
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-0": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Título de columna",
+            "heading_size": "h1"
+          }
+        },
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-3": {
+          "type": "button",
+          "settings": {
+            "column_button_label": "Button label",
+            "column_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-0",
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-1",
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-2",
+        "template--16613022433507__693d6eb6-9187-4ee1-b6b8-b9eb42d33df5-1672613373eae53e8f-3"
+      ],
+      "settings": {
+        "title": "proceso-mejora",
+        "layout": "grid",
+        "color_scheme": "background-2",
+        "heading_size": "h1",
+        "subheading": "",
+        "subheading_style": "body",
+        "title_wrapper_alignment": "center",
+        "show_heading": true,
+        "section_button_label": "Button label",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "column_heading_size": "h3",
+        "column_text_style": "caption-with-letter-spacing",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "opiniones-expertos",
+        "show_title": true,
+        "heading_size": "h1",
+        "show_description": true,
+        "description_style": "body",
+        "title_wrapper_alignment": "center",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 1,
+        "gap_desktop": 0,
+        "columns_mobile": "1",
+        "column_alignment": "center",
+        "item_description_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "swipe_on_desktop": true,
+        "grid_peek": false,
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "slider_visual": "arrows",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e6e74bfc-7d78-4b16-856a-d5a2f820038b": {
+      "type": "be-image-with-text",
+      "blocks": {
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-0": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Título de columna",
+            "heading_size": "h1"
+          }
+        },
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-3": {
+          "type": "button",
+          "settings": {
+            "column_button_label": "Button label",
+            "column_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-0",
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-1",
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-2",
+        "template--16613022433507__e6e74bfc-7d78-4b16-856a-d5a2f820038b-1672613506c41cf09e-3"
+      ],
+      "settings": {
+        "title": "beneficios",
+        "layout": "grid",
+        "color_scheme": "background-2",
+        "heading_size": "h1",
+        "subheading": "",
+        "subheading_style": "body",
+        "title_wrapper_alignment": "left",
+        "show_heading": true,
+        "section_button_label": "Button label",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "column_layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "column_heading_size": "h2",
+        "column_text_style": "caption-with-letter-spacing",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c": {
+      "type": "be-carousel-multicolumn-data",
+      "settings": {
+        "title": "ingredientes",
+        "show_title": false,
+        "heading_size": "h1",
+        "show_description": true,
+        "description_style": "body",
+        "title_wrapper_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "gap_desktop": 4,
+        "columns_mobile": "1",
+        "column_alignment": "left",
+        "item_description_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "swipe_on_desktop": true,
+        "grid_peek": false,
+        "auto_rotate": true,
+        "change_slides_speed": 2.5,
+        "slider_visual": "arrows",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h0",
+        "products_to_show": 9,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "89953ce0-1704-417d-83ad-40aa37ede371": {
+      "type": "be-collapsible-content",
+      "blocks": {
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-0",
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-1",
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-2",
+        "template--16613022433507__89953ce0-1704-417d-83ad-40aa37ede371-1672681379fcd153a8-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "description_style": "body",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-1",
+        "icon": "none",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3f53a9a6-455e-4dc6-8d7e-1abc551cda35": {
+      "type": "belevels-custom-judgme",
+      "settings": {
+        "layout": "full_bleed",
+        "color_scheme": "background-2",
+        "heading_size": "h1",
+        "content_heading_size": "h2",
+        "text_style": "body",
+        "subtitle_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Fórmulas maestras",
+        "heading_size": "h0",
+        "description": "<p>Creadas con cariño para ti.<\/p>",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "formulas-maestras",
+        "products_to_show": 25,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-2",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
+    "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5",
+    "37e4bacd-4ccf-46c1-8c0d-b2e8c1e8c239",
+    "e6e74bfc-7d78-4b16-856a-d5a2f820038b",
+    "3e0dbbf8-5a6b-46c0-b5f5-b0ea61297d0c",
+    "related-products",
+    "89953ce0-1704-417d-83ad-40aa37ede371",
+    "3f53a9a6-455e-4dc6-8d7e-1abc551cda35",
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86"
+  ]
+}
