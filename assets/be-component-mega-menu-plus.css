@@ -3,7 +3,6 @@
     grid-area: navigation;
     text-align: left;
     justify-self: start;
-    line-height: 1;
     }
 
     .zed__navbar-main a {
@@ -16,7 +15,7 @@
     }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn {
-    padding: 2.3rem 1rem;
+    padding: 2.5rem 1rem;
     background-color: inherit;
     font: inherit;
     font-weight: 700;
@@ -321,5 +320,5 @@
     }
     .zed__navbar-dropdown .header__menu-item {
         padding-top: 2.5rem;
-        padding-bottom: 2.7rem;
+        padding-bottom: 2.5rem;
     }
