@@ -328,6 +328,11 @@
             "settings": {
               "picker_type": "button"
             }
+          },
+          "1085b71b-5ae2-494e-b216-dc0b1fdf6238": {
+            "type": "ecopack_quantity_selector",
+            "settings": {
+            }
           }
         },
         "block_order": [
@@ -336,7 +341,8 @@
           "3acbbe0a-5685-4cdb-bf44-9386f3c8f2aa",
           "58001255-a73b-4009-8244-eb2bbb96c331",
           "c327f331-5d19-43c0-8ac4-9b27658d421c",
-          "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d"
+          "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d",
+          "1085b71b-5ae2-494e-b216-dc0b1fdf6238"
         ],
         "settings": {
           "enable_sticky_bar": true,
