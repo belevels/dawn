@@ -109,6 +109,8 @@
   border: 0;
   margin: 0;
   border-radius: 14px 14px 0 0;
+}
+#StickyFooterBar-be-sticky-add-to-cart .opciones .header-opciones {
   -webkit-box-shadow: 0px -1px 3px rgb(0 0 0 / 20%);
   -moz-box-shadow: 0px -1px 3px rgba(0,0,0,.2);
   box-shadow: 0px -1px 3px rgb(0 0 0 / 20%);  
@@ -188,7 +190,7 @@
   <div class="opciones page-width">
 
     <div class="product__accordion accordion quick-add-hidden gradient" {{ block.shopify_attributes }}>
-      <details id="Details-be-box-sticky-{{ section.id }}">
+      <details id="Details-be-box-sticky-{{ section.id }}" class="header-opciones">
         <summary>
           <div class="summary__title">
             {%- comment -%}{% render 'icon-accordion', icon: block.settings.icon %}{%- endcomment -%}
