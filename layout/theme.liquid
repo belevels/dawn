@@ -390,8 +390,6 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
-
     {%- comment -%}Be Levels - start mod{%- endcomment -%}
     {% if template == 'product' %}
       {%- section 'be-sticky-add-to-cart' -%}
@@ -399,6 +397,8 @@
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
     {%- endif -%}
+    
+    {% section 'footer' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
