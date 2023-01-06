@@ -3,6 +3,7 @@
     grid-area: navigation;
     text-align: left;
     justify-self: start;
+    line-height: 1;
     }
 
     .zed__navbar-main a {
