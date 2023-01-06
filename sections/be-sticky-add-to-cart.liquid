@@ -150,19 +150,21 @@
 #StickyFooterBar-be-sticky-add-to-cart .opciones .product__accordion .accordion__content {
   margin: 1rem 2rem 3rem;
 }
+
 </style>
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    {%- comment -%}padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;{%- endcomment -%}
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      {%- comment -%}padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;{%- endcomment -%}
+      padding-top: 3.5rem;      
     }
   }
 {%- endstyle -%}
