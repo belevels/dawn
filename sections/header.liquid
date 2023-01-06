@@ -2147,7 +2147,7 @@
   Be Levels - start mod: agregamos headerTransparentIn, script
   {% i f template == headerTransparentIn and section.settings.transparent_header %}
 {%- endcomment -%}
-{% if template == headerTransparentIn %}
+{% if section.settings.transparent_header %}
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       var headerHeight = document.getElementById('site-header').offsetHeight;
