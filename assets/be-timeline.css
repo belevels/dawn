@@ -102,7 +102,7 @@
 
 @media screen and (max-width: 749px) {
   .custom-timeline .image-with-text__content {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.85);
   }
   .multirow-title-wrapper {
     background-color: rgba(255,255,255,0.8);
