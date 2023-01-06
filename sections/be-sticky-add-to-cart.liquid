@@ -187,7 +187,7 @@
           <div class="summary__title">
             {% render 'icon-accordion', icon: block.settings.icon %}
             <P class="h5 accordion__title">
-              {%- comment -%}{{ block.settings.heading | default: block.settings.page.title }}{%- endcomment -%}
+              {%- comment -%}{{ block.settings.heading | default: block.settings.page.title }} {%- endcomment -%}
               {{- 'belevels.general.options' | t -}}
             </P>
           </div>
