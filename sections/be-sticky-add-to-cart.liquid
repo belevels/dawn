@@ -102,15 +102,15 @@
 #StickyFooterBar-be-sticky-add-to-cart .opciones .product__accordion.accordion {
   max-width: 48rem;
   position: absolute;
-  bottom: -3rem;
+  bottom: -3.25rem;
   width: 100%;
-  right: 4rem;
+  right: 5rem;
   border: 0;
   margin: 0;
   border-radius: 20px 20px 0 0;
 }
 #StickyFooterBar-be-sticky-add-to-cart .accordion summary {
-  padding: 0.5rem 1rem 0.25rem;
+  padding: 1rem 1rem 0rem;
 }
 .accordion details[open] > summary .icon-caret {
   transform: rotate(0deg);
@@ -158,6 +158,7 @@
   .section-{{ section.id }}-padding {
     {%- comment -%}padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;{%- endcomment -%}
+    padding-top: 1rem;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
