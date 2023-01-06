@@ -370,8 +370,6 @@
       assign customClass = collection.handle | prepend: " "
     elsif request.page_type == "product"
       assign customClass = product.handle | prepend: " "
-      elsif request.page_type == "product.essentials"
-      assign customClass = product.handle | prepend: " "      
     elsif request.page_type == "page"
       assign customClass = page.handle | prepend: " "
     endif

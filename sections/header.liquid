@@ -369,7 +369,16 @@
         margin-left: 5px;
     }
 {% endstyle %}
-{%- assign headerTransparentIn = 'product' %}
+{%- liquid
+  assign headerTransparentIn = 'product'
+  if request.page_type == "collection"
+    assign customClass = collection.handle | prepend: " "
+  elsif request.page_type == "product"
+    assign customClass = product.handle | prepend: " "
+  elsif request.page_type == "page"
+    assign customClass = page.handle | prepend: " "
+  endif
+-%}
 {% if template == headerTransparentIn and section.settings.transparent_header %}
   {% style %}
     {%- comment -%}
