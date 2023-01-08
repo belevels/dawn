@@ -27,7 +27,7 @@
   <p class="variant_shipping_info" style="display: none;"></p>
 
   {% assign current = product.selected_or_first_available_variant %}
-<span id="currently-selected-variation">{{ current.title }}</span>
+<span id="currently-selected-variation">{{ current.ecopack_cant }}</span>
 
 {% capture 'meta_data' %}
   {% for variant in product.variants %}
