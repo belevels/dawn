@@ -3,7 +3,7 @@
     "3db6cbc8-3f29-407d-8ea0-d38abef255e8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "{% if product.variants[forloop.index0].metafields.EcoPack.CantidadMinima and option.name == 'Color' %}\n  <label for=\"{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}\" style=\"background-color: {{product.variants[forloop.index0].metafields.EcoPack.CantidadMinima}}\"> \n  <\/label>\n{% else %}\n  <label for=\"{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}\">\n    {{ value }}\n  <\/label>\n{% endif %}",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
