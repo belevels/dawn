@@ -793,8 +793,8 @@ class VariantSelects extends HTMLElement {
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
         /** Be Levels - start mod: mostramos priceWithoutEcoPack */
-        document.getElementById("currently-selected-variation").innerHTML = this.options[index];
-        document.getElementById("currently-selected-variation--price").innerHTML = this.options[price];
+        //document.getElementById("currently-selected-variation").innerHTML = this.options[index];
+        //document.getElementById("currently-selected-variation--price").innerHTML = this.options[price];
         return this.options[index] === option;
       }).includes(false);
     });
