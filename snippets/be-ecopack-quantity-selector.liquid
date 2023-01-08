@@ -9,7 +9,7 @@
   {%- liquid
     assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
     assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
-    assign price_without_discount = product.selected_or_first_available_variant.price | money_without_trailing_zeros
+    assign price_without_discount = product.price
   -%}
 {%- if ecopack_cant and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
