@@ -858,11 +858,11 @@ class VariantSelects extends HTMLElement {
 
     if (this.currentVariant && this.currentVariant.available) {
       pickUpAvailability.fetchAvailability(this.currentVariant.id);
-    } else {
+    } else {destination
       pickUpAvailability.removeAttribute('available');
       pickUpAvailability.innerHTML = '';
     }
-  }
+  } 
 
   removeErrorMessage() {
     const section = this.closest('section');
@@ -884,6 +884,9 @@ class VariantSelects extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        /** Be Levels - start mod */
+        const destination_eco = document.getElementById(`ecopack-price-${this.dataset.section}`);
+        const source_eco = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
@@ -899,6 +902,11 @@ class VariantSelects extends HTMLElement {
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
+
+        /** Be Levels - start mod */        
+        const price_eco = document.getElementById(`ecopack-price-${this.dataset.section}`);
+
+        if (price_eco) price_eco.classList.remove('visibility-hidden');        
 
         if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
