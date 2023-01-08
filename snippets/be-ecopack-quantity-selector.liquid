@@ -14,7 +14,7 @@
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     assign price_without_discount = target.price
   -%}
-{%- if ecopack_cant and price_with_discount -%}
+{%- comment -%}{%- if ecopack_cant and price_with_discount -%}{%- endcomment -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -202,5 +202,5 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  {%- endif -%}
+  {%- comment -%}{%- endif -%}{%- endcomment -%}
 {%- endunless -%}
