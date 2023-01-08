@@ -889,7 +889,7 @@ class VariantSelects extends HTMLElement {
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         /** Be Levels - start mod */
         const destination_eco = document.getElementById(`ecopack-price-${this.dataset.section}`);
-        const source_eco = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const source_eco = html.getElementById(`ecopack-price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
@@ -942,12 +942,14 @@ class VariantSelects extends HTMLElement {
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
     const price = document.getElementById(`price-${this.dataset.section}`);
+    const price_eco = document.getElementById(`ecopack-price-${this.dataset.section}`);
     const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
 
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
+    if (price_eco) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
     if (sku) sku.classList.add('visibility-hidden');
   }
