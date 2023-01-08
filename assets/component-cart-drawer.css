@@ -383,3 +383,6 @@ cart-drawer-items::-webkit-scrollbar-thumb {
 cart-drawer-items::-webkit-scrollbar-track-piece {
   margin-top: 31px;
 }
+#template-index .csapp_aiod_coupan .csapp_aiod_coupan_code {
+  max-width: 100% !important;
+}

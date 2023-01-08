@@ -48,7 +48,7 @@
         "79123097-d4d9-4999-a329-24bd095b2375": {
           "type": "heading",
           "settings": {
-            "heading": "<p>5 formas de ganar Be Coins, que puedes canjear por cupones<br\/>de descuento para tus próximos pedidos.<\/p>",
+            "heading": "<p>5 formas de ganar Be Coins, que puedes canjear por cuponesde descuento para tus próximos pedidos.<\/p>",
             "heading_size": "h2"
           }
         }
@@ -156,7 +156,7 @@
         "1658847522983b9444-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Más razones para unirte a Be Club y continuar tu camino hacia la salud integral. <\/p>",
+            "heading": "<p>Más razones para unirte a Be Club y continuar tu camino hacia la salud&nbsp;integral. <\/p>",
             "heading_size": "h1"
           }
         }
@@ -175,6 +175,7 @@
     },
     "1658851494d889f0f7": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<style>\n   video {\n   width: 100%;\n   display: block;\n   margin: 0 auto;\n   }\n   .banner .multicolumn-card-spacing {\n     margin-left: 0 !important;\n   }\n   @media screen and (max-width: 749px) {\n     .multicolumn-card,\n     .multicolumn-list:not(.slider) {\n     padding-left: 0 !important;\n     padding-right: 0 !important;\n   }\n }\n   <\/style>\n   <video autoplay muted loop preload=\"metadata\" poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0369\/2619\/3804\/files\/ver-video.jpg?v=1658852316\">\n     <source src=\"{{ 'belevels.club.video_footer_url' | t }}\" type=\"video\/mp4\">\n   <\/video>",
         "color_scheme": "background-1",

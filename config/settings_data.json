@@ -1,8 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo_web.webp",
+    "logo": "shopify:\/\/shop_images\/belevels_nuevologo2022_negro.png",
     "logo_width": 120,
-    "favicon": "shopify:\/\/shop_images\/versus.jpg",
+    "favicon": "shopify:\/\/shop_images\/flavicon.png",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -166,14 +166,11 @@
               "collection_tab_title_4": "Keto & Food",
               "collections-tabs_4": "keto-food",
               "collection_tab_title_5": "Esenciales",
-              "collections-tabs_5": "esenciales",
+              "collections-tabs_5": "essentials",
               "collections-show_all": true,
-              "ad_block_title_0": "Con el EcoPack ahorras y contribuyes con el planeta.",
-              "ad_img1_0": "shopify:\/\/shop_images\/combo-antiresaca.png",
-              "ad_img1_link_0": "shopify:\/\/products\/combo-antiresaca-de-phil-hugo",
-              "ad_img2_0": "shopify:\/\/shop_images\/regala-salud.gif",
-              "ad_img2_link_0": "shopify:\/\/products\/tarjeta-regalo-be-levels",
-              "ad_img3_0": "shopify:\/\/shop_images\/combo-antiresaca-2.jpg",
+              "ad_block_title_0": "",
+              "ad_img1_link_0": "",
+              "ad_img2_link_0": "",
               "ad_img3_link_0": ""
             }
           },
@@ -208,7 +205,7 @@
           "3c32b4ce-0caf-4942-bfab-10207781a7ee": {
             "type": "single-dropdown",
             "settings": {
-              "dropdown_tab_menu_name": "Menu name"
+              "dropdown_tab_menu_name": "Productos"
             }
           }
         },
@@ -222,8 +219,8 @@
           "logo_position": "middle-left",
           "enable_language_selector_in_header": true,
           "logo_svg": true,
-          "custom_url": "",
-          "menu": "belevels",
+          "custom_url": "https:\/\/belevels.com",
+          "menu": "menu-principal",
           "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
           "sticky_header_type": "none",
@@ -242,8 +239,16 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "",
+              "menu": "footer-productos"
+            }
+          },
+          "51dc5d70-c8a7-425d-adef-de020099c304": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo-blanco.png",
+              "image_width": 150,
+              "alignment": "center"
             }
           },
           "footer-1": {
@@ -252,24 +257,17 @@
               "heading": "Info",
               "menu": "footer"
             }
-          },
-          "footer-2": {
-            "type": "text",
-            "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-            }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1",
-          "footer-2"
+          "51dc5d70-c8a7-425d-adef-de020099c304",
+          "footer-1"
         ],
         "settings": {
           "color_scheme": "accent-1",
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
+          "newsletter_heading": "Suscríbete para recibir noticias, lanzamientos, ofertas exclusivas y más.",
           "show_social": true,
           "enable_country_selector": false,
           "enable_language_selector": false,
@@ -357,6 +355,35 @@
     "blocks": {
       "127709043890318779": {
         "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6174324309569838175": {
+        "type": "shopify:\/\/apps\/smile-loyalty-rewards\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6441254115607727225": {
+        "type": "shopify:\/\/apps\/shop-quiz-product-recommender\/blocks\/automatic-popup\/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "quiz_id": "",
+          "quiz_timeout": 20,
+          "quiz_width": "100",
+          "quiz_height": "100",
+          "quiz_exit_intent": false
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
