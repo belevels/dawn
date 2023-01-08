@@ -106,10 +106,9 @@
             "enable_quick_add": true
           }
         },
-        "f2ebbca9-ca41-469a-a31e-30c1539a9508": {
-          "type": "custom_liquid",
+        "546ae407-8cc9-4c73-8e74-14323e99d5bd": {
+          "type": "price",
           "settings": {
-            "custom_liquid": "<div class=\"no-js-hidden\" id=\"price-{{ section.id }}\" role=\"status\" {{ block.shopify_attributes }}>\n  <p style=\"font-weight: bold;\">Precio sin descuento: \n    <span>\n      {%- render 'price',\n        product: product,\n        use_variant: true,\n        show_badges: true,\n        price_class: 'price--large'\n      -%}\n    <\/span>\n  <\/p>\n<\/div>"
           }
         }
       },
@@ -130,7 +129,7 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5",
-        "f2ebbca9-ca41-469a-a31e-30c1539a9508"
+        "546ae407-8cc9-4c73-8e74-14323e99d5bd"
       ],
       "settings": {
         "enable_sticky_info": true,
