@@ -12,7 +12,7 @@
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     assign price_without_discount = target.price
   -%}
-  {%- if product.metafields.EcoPack.CantidadMinima != '' %}
+  {%- if product.metafields.EcoPack.CantidadMinima -%}
   <h3>target = {{ product.metafields.EcoPack.CantidadMinima }}</h3>
   {%- else -%}
   <h3>target variante = {{ product.selected_or_first_available_variant.metafields.EcoPack.CantidadMinima }}</h3>
