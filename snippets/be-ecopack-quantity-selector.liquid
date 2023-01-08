@@ -24,7 +24,7 @@
     assign price_without_discount = target.price
   -%}
 
-  <p class="variant_shipping_info" style="display: none;"></p>
+  <p id="currently-selected-variation">{{ price_with_discount }}</p>
 
 {% capture 'meta_data' %}
   {% for variant in product.variants %}
