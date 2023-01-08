@@ -906,7 +906,9 @@ class VariantSelects extends HTMLElement {
 
         if (price) price.classList.remove('visibility-hidden');
 
-        /** Be Levels - start mod */        
+        /** Be Levels - start mod */
+        if (source_eco && destination_eco) destination_eco.innerHTML = source_eco.innerHTML;
+
         const price_eco = document.getElementById(`ecopack-price-${this.dataset.section}`);
 
         if (price_eco) price_eco.classList.remove('visibility-hidden');        
