@@ -3,7 +3,7 @@
     "b59bb85d-3e3d-4cee-8341-ac85ce5f4a20": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<h2>Producto sin variante<\/h2>\n<p>cantMin = {{product.metafields.EcoPack.CantidadMinima}}<\/p>\n\n<p>precioEcoPack = {{product.metafields.EcoPack.PorcentajeDescuento}}<\/p>\n<h2>Variante<\/h2>\n<p>cantMin = {{variant.metafields.EcoPack.CantidadMinima}}<\/p>\n<p>precioEcoPack = {{variant.metafields.EcoPack.PorcentajeDescuento}}<\/p>",
+        "custom_liquid": "<h2>Producto sin variante<\/h2>\n<p>cantMin = {{product.metafields.EcoPack.CantidadMinima}}<\/p>\n<p>precioEcoPack = {{product.metafields.EcoPack.PorcentajeDescuento}}<\/p>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
