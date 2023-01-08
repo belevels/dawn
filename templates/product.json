@@ -105,10 +105,10 @@
             "enable_quick_add": true
           }
         },
-        "5f59c965-b1d3-46c3-baed-8d8606f0f46f": {
+        "b256fcc7-08dc-4590-8ac1-273a5e6778e6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}"
+            "custom_liquid": "<div class=\"no-js-hidden\" id=\"price-{{ section.id }}-2\" role=\"status\" {{ block.shopify_attributes }}>\n                {%- render 'price',\n                  product: product,\n                  use_variant: true,\n                  show_badges: true,\n                  price_class: 'price--large'\n                -%}\n              <\/div>\n              {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}\n                <div class=\"product__tax caption rte visually-hidden\">\n                  {%- if shop.taxes_included -%}\n                    {{ 'products.product.include_taxes' | t }}\n                  {%- endif -%}\n                  {%- if shop.shipping_policy.body != blank -%}\n                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}\n                  {%- endif -%}\n                <\/div>\n              {%- endif -%}\n              <div {{ block.shopify_attributes }}>\n                {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}\n                {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}\n                  <input type=\"hidden\" name=\"id\" value=\"{{ product.selected_or_first_available_variant.id }}\">\n                  {{ form | payment_terms }}\n                {%- endform -%}\n              <\/div>"
           }
         }
       },
@@ -129,7 +129,7 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5",
-        "5f59c965-b1d3-46c3-baed-8d8606f0f46f"
+        "b256fcc7-08dc-4590-8ac1-273a5e6778e6"
       ],
       "settings": {
         "enable_sticky_info": true,
