@@ -7,7 +7,7 @@
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
-    assign target = product.selected_or_first_available_variant
+    assign target = product
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     assign price_without_discount = target.price
