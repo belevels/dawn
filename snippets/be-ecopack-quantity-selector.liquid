@@ -7,7 +7,7 @@
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
-    if product.selected_or_first_available_variant
+    if product.selected_or_first_available_variant != nil
       assign target = product.selected_or_first_available_variant
     else
       assign target = product
