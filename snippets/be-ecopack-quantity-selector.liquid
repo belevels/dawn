@@ -7,9 +7,15 @@
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
-    assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
-    assign price_without_discount = product.price
+    if product.selected_or_first_available_variant.inventory_quantity > 0
+      assign target = product.selected_or_first_available_variant
+    else
+      assign target = product
+    endif
+
+    assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
+    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
+    assign price_without_discount = target.price | money_without_trailing_zeros
   -%}
 {%- if ecopack_cant and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
