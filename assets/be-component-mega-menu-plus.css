@@ -15,7 +15,7 @@
     }
 
     .zed__navbar-dropdown .zed__navbar-dropbtn {
-    padding: 2.3rem 0.5rem;
+    padding: 2.3rem 1rem;
     background-color: inherit;
     font: inherit;
     font-weight: 700;
@@ -320,4 +320,5 @@
     }
     .zed__navbar-dropdown .header__menu-item {
         padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
