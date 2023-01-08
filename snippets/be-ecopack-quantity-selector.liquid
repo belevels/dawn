@@ -23,8 +23,8 @@
 
     assign price_without_discount = target.price
   -%}
-  <h3>cantMin</h3>
-  <p id="currently-selected-variation">{{ ecopack_cant }}</p>
+
+  <p class="variant_shipping_info" style="display: none;"></p>
 
 {% capture 'meta_data' %}
   {% for variant in product.variants %}
@@ -33,48 +33,26 @@
 {% endcapture %}
 
 <script>
-  class VariantSelects extends HTMLElement {
-    constructor() {
-      super();
-      const currentVariantId = {{ product.selected_or_first_available_variant.id }};  // get the currently selected before variant is changed. 
-      const metaData = { {{ meta_data }} };
-      
-      const shippingInfo = (id) => {
-        var selector = document.querySelector('.variant_shipping_info');
-        if (metaData[id]) {
-          selector.style.display = 'block' 
-          selector.innerHTML = metaData[id];
-        } 
-      }
-      shippingInfo(currentVariantId);
-    }
-    updateMasterId() {
-      this.currentVariant = this.getVariantData().find((variant) => {
-        return !variant.options.map((option, index) => {
-          document.getElementById("currently-selected-variation").addEventListener('change', function (event) {
-            //  hiddenInput.value = event.currentTarget.value;
-            var variant = event.detail.variant; // Gives you access to the whole variant details
-            var id = variant.id 
-              shippingInfo(id);
-            
-            });
-          return this.options[index] === option;
-        }).includes(false);
-      });
-    }
-  }
-
+  const currentVariantId = {{ product.selected_or_first_available_variant.id }};  // get the currently selected before variant is changed. 
+  const metaData = { {{ meta_data }} };
   
-
-/*
+  const shippingInfo = (id) => {
+    var selector = document.querySelector('.variant_shipping_info');
+    if (metaData[id]) {
+      selector.style.display = 'block' 
+      selector.innerHTML = metaData[id];
+    } 
+  }
+  shippingInfo(currentVariantId);
+  
+// When the variant is changed, get the id and call the function. :)
   document.addEventListener('variant:changed', function(event) { 
     var variant = event.detail.variant; // Gives you access to the whole variant details
     var id = variant.id 
       shippingInfo(id);
   });
-  */
+  
 </script> 
-
 
 {%- if ecopack_cant and price_with_discount > 0 -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
