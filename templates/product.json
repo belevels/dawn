@@ -109,7 +109,7 @@
         "f2ebbca9-ca41-469a-a31e-30c1539a9508": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p>Precio: {% render 'price', product: product, use_variant: true, show_badges: false %}<\/p>"
+            "custom_liquid": "<div class=\"no-js-hidden\" id=\"price-{{ section.id }}\" role=\"status\" {{ block.shopify_attributes }}>\n  <p style=\"font-weight: bold;\">Precio sin descuento: \n    <span>\n      {%- render 'price',\n        product: product,\n        use_variant: true,\n        show_badges: true,\n        price_class: 'price--large'\n      -%}\n    <\/span>\n  <\/p>\n<\/div>"
           }
         }
       },
