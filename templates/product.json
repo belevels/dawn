@@ -1,5 +1,14 @@
 {
   "sections": {
+    "b59bb85d-3e3d-4cee-8341-ac85ce5f4a20": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h2>Producto sin variante<\/h2>\n<p>cantMin = {{product.metafields.EcoPack.CantidadMinima}}<\/p>\n\n<p>precioEcoPack = {{variant.metafields.EcoPack.PorcentajeDescuento}}<\/p>\n<h2>Variante<\/h2>\n<p>cantMin = {{variant.metafields.EcoPack.CantidadMinima}}<\/p>\n<p>precioEcoPack = {{variant.metafields.EcoPack.PorcentajeDescuento}}<\/p>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -479,6 +488,7 @@
     }
   },
   "order": [
+    "b59bb85d-3e3d-4cee-8341-ac85ce5f4a20",
     "main",
     "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5",
