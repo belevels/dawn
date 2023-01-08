@@ -7,8 +7,8 @@
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
-    assign ecopack_cant = product.selected_or_first_available_variant.metafields.EcoPack.CantidadMinima
-    assign price_with_discount = product.selected_or_first_available_variant.metafields.EcoPack.PorcentajeDescuento | times: 100
+    assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
+    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
     assign price_without_discount = product.selected_or_first_available_variant.price | money_without_trailing_zeros
   -%}
 {%- if ecopack_cant and price_with_discount -%}
