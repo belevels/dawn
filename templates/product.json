@@ -3,7 +3,7 @@
     "3db6cbc8-3f29-407d-8ea0-d38abef255e8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% assign current = product.selected_or_first_available_variant %}\n{% assign precio = product.selected_or_first_available_variant.price | money %}\n<div class=\"page-width\">\n  <p><span id=\"currently-selected-variation\">{{ current.title }}<\/span><\/p>\n  <p>Precio sin descuento: <span id=\"currently-selected-variation--price\">{{ precio }}<\/span><\/p>\n<\/div>",
+        "custom_liquid": "{% render 'price', product: product, use_variant: true, show_badges: false %}",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
