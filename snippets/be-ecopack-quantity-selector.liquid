@@ -46,12 +46,21 @@
   shippingInfo(currentVariantId);
   
 // When the variant is changed, get the id and call the function. :)
+document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
+//  hiddenInput.value = event.currentTarget.value;
+var variant = event.detail.variant; // Gives you access to the whole variant details
+var id = variant.id 
+  shippingInfo(id);
+
+});
+
+/*
   document.addEventListener('variant:changed', function(event) { 
     var variant = event.detail.variant; // Gives you access to the whole variant details
     var id = variant.id 
       shippingInfo(id);
   });
-  
+  */
 </script> 
 
 
