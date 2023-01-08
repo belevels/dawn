@@ -91,7 +91,7 @@
         "e0d5fd9c-add0-403a-9aad-3c8b0fcf1465": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"page-width\">\n<div class=\"no-js-hidden\" id=\"price-{{ section.id }}\" role=\"status\" {{ block.shopify_attributes }}>\n                {%- render 'price',\n                  product: product,\n                  use_variant: true,\n                  show_badges: true,\n                  price_class: 'price--large'\n                -%}\n              <\/div>\n<\/div>"
+            "custom_liquid": "{% capture 'meta_data' %}\n{% for variant in product.variants %}\n  {{ variant.sku | json }}: {{ variant.selected_or_first_available_variant.price | json }}\n  {% unless forloop.last %},{% endunless %}\n{% endfor %}\n{% endcapture %}\n\n<script>\n  var metaData = { {{ meta_data }} }\n<\/script>"
           }
         },
         "description": {
