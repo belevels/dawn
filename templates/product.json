@@ -3,7 +3,7 @@
     "b59bb85d-3e3d-4cee-8341-ac85ce5f4a20": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n  <h2>Producto sin variante<\/h2>\n  <p>cantMin = {{product.metafields.EcoPack.CantidadMinima}}<\/p>\n  <p>precioEcoPack = {{product.metafields.EcoPack.PorcentajeDescuento}}<\/p>\n\n  <h2>Variante<\/h2>\n  {%- liquid\n    assign cantMin       = variant.metafields.EcoPack.CantidadMinima\n    assign precioEcoPack = variant.metafields.EcoPack.PorcentajeDescuento\n  -%}\n  <p>cantMin = {{ cantMin }}<\/p>\n<\/div>",
+        "custom_liquid": "<div class=\"page-width\">\n  <h2>Producto sin variante<\/h2>\n  <p>cantMin = {{product.metafields.EcoPack.CantidadMinima}}<\/p>\n  <p>precioEcoPack = {{product.metafields.EcoPack.PorcentajeDescuento}}<\/p>\n\n  <h2>Variante<\/h2>\n  {% for variant in product.variants %}\n    {%- liquid\n      assign cantMin       = variant.metafields.EcoPack.CantidadMinima\n      assign precioEcoPack = variant.metafields.EcoPack.PorcentajeDescuento\n    -%}\n    {%- if cantMin -%}\n      <p>cantMin = {{ cantMin }}<\/p>\n    {%- endif -%}\n  {%- endfor -%}\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
