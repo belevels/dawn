@@ -104,6 +104,12 @@
             "image_ratio": "square",
             "enable_quick_add": true
           }
+        },
+        "5f59c965-b1d3-46c3-baed-8d8606f0f46f": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}"
+          }
         }
       },
       "block_order": [
@@ -122,7 +128,8 @@
         "72d76219-e839-4f9c-9867-fbd424124b07",
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "description",
-        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
+        "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5",
+        "5f59c965-b1d3-46c3-baed-8d8606f0f46f"
       ],
       "settings": {
         "enable_sticky_info": true,
