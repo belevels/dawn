@@ -3,7 +3,7 @@
     "3db6cbc8-3f29-407d-8ea0-d38abef255e8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n  <p>Precio sin dcto. = {{product.selected_or_first_available_variant.price | money }}<\/p>\n  <p>Precio con dcto. = {{product.selected_or_first_available_variant.metafields.EcoPack.PorcentajeDescuento }}<\/p>\n  <p>Cant. min para dcto. = {{product.selected_or_first_available_variant.metafields.EcoPack.CantidadMinima }}<\/p>\n<\/div>",
+        "custom_liquid": "<p class=\"variant_cant_min\" style=\"display: none;\"><\/p>\n\n{% capture 'meta_data' %}\n{% for variant in product.variants %}\n{{variant.id}}:{{ variant.metafields.EcoPack.CantidadMinima | json }}{% unless forloop.last %},{% endunless %}\n  {% endfor %}\n  {% endcapture %}\n\n<script>\n  const currentVariantId = {{ product.selected_or_first_available_variant.id }};  \/\/ get the currently selected before variant is changed. \n  const metaData = { {{ meta_data }} };\n  \n  const shippingInfo = (id) => {\n    var selector = document.querySelector('.variant_cant_min');\n    if (metaData[id]) {\n      selector.style.display = 'block' \n      selector.innerHTML = metaData[id];\n    } \n  }\n  shippingInfo(currentVariantId);\n  \n\/\/ When the variant is changed, get the id and call the function. :)\n  document.addEventListener('variant:changed', function(event) { \n    var variant = event.detail.variant; \/\/ Gives you access to the whole variant details\n    var id = variant.id \n      shippingInfo(id);\n  });\n  \n<\/script>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
