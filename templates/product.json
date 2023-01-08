@@ -3,7 +3,7 @@
     "2f7a7578-3678-43d3-9df8-65076e7f19d6": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"no-js-hidden\" id=\"ecopack-price-{{ section.id }}\" role=\"status\" {{ block.shopify_attributes }}>\n      {%- render 'price',\n        product: product,\n        use_variant: true,\n        show_badges: true,\n        price_class: 'price--without'\n      -%}\n<\/div>",
+        "custom_liquid": "<div class=\"no-js-hidden\" id=\"ecopack-price-{{ section.id }}\" role=\"status\" {{ block.shopify_attributes }}>\n      {%- render 'price',\n        product: product,\n        use_variant: true,\n        show_badges: true,\n        price_class: 'price price--large'\n      -%}\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
