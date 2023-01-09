@@ -888,8 +888,8 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, 'text/html')
-        const destination = document.getElementById(`price-${this.dataset.section}`);
-        const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const destination = document.getElementById(`price-eco-${this.dataset.section}`);
+        const source = html.getElementById(`price-eco-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
@@ -902,7 +902,7 @@ class VariantSelects extends HTMLElement {
           skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
         }
 
-        const price = document.getElementById(`price-${this.dataset.section}`);
+        const price = document.getElementById(`price-eco-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
 
