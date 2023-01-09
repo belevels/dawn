@@ -5,7 +5,7 @@
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
 -%}
 
-  {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
+  {%- assign product_form_id = 'product-form-' | append: section.id -%}
   {%- liquid
     assign target = product.selected_or_first_available_variant
 
