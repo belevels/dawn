@@ -99,7 +99,7 @@
           {{ 'products.product.quantity.label' | t }}
         </label>
 
-        <quantity-input class="quantity hiddenx hideAll">
+        <quantity-input class="quantity hidden">
           <button class="quantity__button no-js-hidden" name="minus" type="button">
             <span class="visually-hidden">
               {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
@@ -107,7 +107,7 @@
             {% render 'icon-minus' %}
           </button>
           <input
-            class="quantity__input variant_info_3" 
+            class="quantity__input" 
             type="number"
             name="quantity"
             id="EcoPack-Quantity-{{ section.id }}"
@@ -115,7 +115,6 @@
             value="{{ ecopack_cant }}"
             form="{{ product_form_id }}"
           >
-
           <button class="quantity__button no-js-hidden" name="plus" type="button">
             <span class="visually-hidden">
               {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
