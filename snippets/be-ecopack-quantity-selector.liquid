@@ -47,19 +47,19 @@
   {% endcapture %}
 
 {%- if meta_data_1 and price_with_discount -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box">
+  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
           <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
           <div class="summary__title">
-            <div class="hideAll">
+            <div>
               <p class="h4 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }}</p>
               <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
             </div>
             
             <div class="price eco-pack--price">
-              <div class="hideAll"><span class="variant_info_2">{{ price_with_discount | money }}</span></div>
+              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span> {%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -67,7 +67,7 @@
                   product: product,
                   use_variant: true,
                   show_badges: false,
-                  price_class: 'price-item price-item--regular'
+                  price_class: 'price-item price-item--regular hideAll'
                 -%}
               </div>
             </div>
