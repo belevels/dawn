@@ -16,9 +16,9 @@
     endif
 
     if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100 | money
+    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
     else
-    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100 | money
+    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     endif
 
     assign price_without_discount = target.price
@@ -37,17 +37,17 @@
 
   {% capture 'meta_data_2' %}
   {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | money | times: 100 | json }}
+    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | json }}
   {% else %}
     {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | money | times: 100 | json }}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | json }}
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   {% endif %}    
   {% endcapture %}
 
 {%- if meta_data_1 and price_with_discount -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box" class="hideAll">
+  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
@@ -59,7 +59,7 @@
             </div>
             
             <div class="price eco-pack--price">
-              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount }}</span>
+              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
