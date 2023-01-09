@@ -1639,6 +1639,7 @@ a.product__text {
     content: "|";
     color: #327544;
     font-weight: normal;
+    margin-left: 0.5rem;
   }
 
 
