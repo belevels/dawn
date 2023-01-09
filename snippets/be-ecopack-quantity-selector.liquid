@@ -37,10 +37,10 @@
 
   {% capture 'meta_data_2' %}
   {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | money | json }}
+    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | times: 100 | money | json }}
   {% else %}
     {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | money | json }}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | times: 100 | money | json }}
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   {% endif %}    
