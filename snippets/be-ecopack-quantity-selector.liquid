@@ -48,7 +48,7 @@
 
 {%- if meta_data_1 and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
-    <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+    <div class="product__accordion accordion quick-add-hidden hideAll" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
           <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
@@ -67,7 +67,7 @@
                   product: product,
                   use_variant: true,
                   show_badges: false,
-                  price_class: 'price-item price-item--regular hideAll'
+                  price_class: 'price-item price-item--regular'
                 -%}
               </div>
             </div>
