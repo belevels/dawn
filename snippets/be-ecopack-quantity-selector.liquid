@@ -16,9 +16,9 @@
     endif
 
     if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
+    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100 | money
     else
-    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
+    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100 | money
     endif
 
     assign price_without_discount = target.price
@@ -59,7 +59,7 @@
             </div>
             
             <div class="price eco-pack--price">
-              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
+              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
