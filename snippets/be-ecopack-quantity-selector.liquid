@@ -26,12 +26,21 @@
     assign price_without_discount = target.price
   -%}
 
+  {% comment %}
+  <div class="hideAll">
+    <p style="background:coral"><span>Extra Info 1: </span><span class="ecopack_cant_change"></span></p>
+  </div>
+  {% capture 'ecopack_cant' %}
+    {% for variant in product.variants %}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {% endcapture %}
+  {% endcomment %}
 
 
 
-
-
-
+{%- if ecopack_cant and price_with_discount > 0 -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -244,5 +253,5 @@
     extraVariantInfo(currentVariantId);
   
   </script>  
-
+  {%- endif -%}
 {%- endunless -%}
