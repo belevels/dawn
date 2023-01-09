@@ -265,12 +265,13 @@
         if (metaData[x][id]) {
             hide[x].style.display = 'inline';
             selector[x].innerHTML = metaData[x][id];
+            console.log('metaData[2][id] = ' + metaData[x][id]);
         } else {
           hide[x].style.display = 'none';
         } 
       }
       document.querySelector('.variant_info_3').value = metaData[2][id];
-      console.log('metaData[2][id] = ' + metaData[2][id]);
+      
     }
   extraVariantInfo(currentVariantId);
 
