@@ -27,14 +27,9 @@
   -%}
 
   <div class="hideAll">
-    <p style="background:coral"><span>Extra Info 1: </span><span class="ecopack_cant_change"></span></p>
+    <p style="background:gold"><span>Extra Info 1: </span><span class="ecopack_cant_change"></span></p>
   </div>
-  {% capture 'ecopack_cant' %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endcapture %}
+
 
 
 
@@ -52,7 +47,12 @@
               <div class="hideAll">
                 <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change">{{ ecopack_cant }}</span> uds.</p>
               </div>                
-
+                {% capture 'ecopack_cant' %}
+                {% for variant in product.variants %}
+                  {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+                  {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+                {% endcapture %}
 
             </div>
             
