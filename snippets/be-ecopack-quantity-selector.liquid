@@ -25,7 +25,7 @@
   -%}
 
   <div class="hideAll">
-    <p style="background:coral"><span>Extra Info 1: </span><span class="variant_info_1x"></span></p>
+    <p style="background:burlywood"><span>Extra Info 1: </span><span class="variant_info_1"></span></p>
   </div>
   {% capture 'meta_data_1' %}
   {% if product.metafields.EcoPack.CantidadMinima %}
@@ -66,7 +66,7 @@
               <p class="h4 accordion__title">
                 {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               </p>
-              <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1"></span> uds.</p>
+              <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1x"></span> {{ ecopack_cant }} uds.</p>
             </div>
             
             <div class="price eco-pack--price">
