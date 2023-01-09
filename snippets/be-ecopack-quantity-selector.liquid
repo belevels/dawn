@@ -24,6 +24,19 @@
     assign price_without_discount = target.price
   -%}
 
+  <div class="hideAll">
+    <p style="background:goldenrod"><span>Extra Info 1: </span><span class="variant_info_1x"></span> {{ ecopack_cant }}</p>
+  </div>
+  {% capture 'meta_data_1' %}
+  {% if product.metafields.EcoPack.CantidadMinima %}
+    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
+  {% else %}
+    {% for variant in product.variants %}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {% endif %}    
+  {% endcapture %}
 
 
 
@@ -41,16 +54,7 @@
               <div class="hideAll">
                 <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
               </div>
-              {% capture 'meta_data_1' %}
-              {% if product.metafields.EcoPack.CantidadMinima %}
-                {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-              {% else %}
-                {% for variant in product.variants %}
-                  {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-                  {% unless forloop.last %},{% endunless %}
-                {% endfor %}
-              {% endif %}    
-              {% endcapture %}
+
             </div>
             
             <div class="price eco-pack--price">
