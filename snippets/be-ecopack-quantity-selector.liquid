@@ -16,9 +16,9 @@
     endif
 
     if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | money | times: 100
+    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
     else
-    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | money | times: 100
+    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     endif
 
     assign price_without_discount = target.price
