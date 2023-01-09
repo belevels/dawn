@@ -343,7 +343,7 @@
           "1085b71b-5ae2-494e-b216-dc0b1fdf6238"
         ],
         "settings": {
-          "enable_sticky_bar": false,
+          "enable_sticky_bar": true,
           "padding_top": 0,
           "padding_bottom": 0
         }
