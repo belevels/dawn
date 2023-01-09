@@ -24,7 +24,7 @@
     assign price_without_discount = target.price
   -%}
 
-  {% capture 'meta_data_1' %}
+  {% capture 'cant_min' %}
   {% if product.metafields.EcoPack.CantidadMinima %}
     {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
   {% else %}
@@ -35,7 +35,7 @@
   {% endif %}    
   {% endcapture %}
 
-{%- if meta_data_1 and price_with_discount -%}
+{%- if cant_min and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -224,7 +224,7 @@
   {%- endcomment -%}
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = { {{ meta_data_1 }} };
+    const metaData = { {{ cant_min }} };
     const extraVariantInfo = (id) => {
     let selector = document.querySelector('.variant_info_1');
     let hide = document.querySelector('.hideAll')
