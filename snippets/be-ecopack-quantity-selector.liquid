@@ -29,12 +29,7 @@
   <div class="hideAll">
     <p style="background:coral"><span>Extra Info 1: </span><span class="ecopack_cant_change"></span></p>
   </div>
-  {% capture 'ecopack_cant' %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endcapture %}
+
 
 
 
