@@ -395,26 +395,6 @@
       {%- comment -%}
         Be Levels - start mod: agregamos EcoPack
       {%- endcomment -%}
-    {%- comment -%}
-      Be Levels - start mod: agregamos EcoPack
-    {%- endcomment -%}
-    <script>
-      const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-      const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-      const extraVariantInfo = (id) => {
-      const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-      const hide = document.querySelectorAll('.hideAll');
-        for(let x = 0; x < metaData.length; x++) {
-          if (metaData[x][id]) {
-              hide[x].style.display = 'inline';
-              selector[x].innerHTML = metaData[x][id];
-          } else {
-            hide[x].style.display = 'none';
-          } 
-        }
-      }
-    extraVariantInfo(currentVariantId);
-    </script>      
     {%- endif -%}
     </main>
 
