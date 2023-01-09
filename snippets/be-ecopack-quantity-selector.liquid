@@ -27,7 +27,7 @@
   -%}
 
   <div class="hideAll">
-    <p><span>Extra Info 1: </span><span class="ecopack_cant"></span></p>
+    <p><span style="background:gold;">Extra Info 1: </span><span class="ecopack_cant"></span></p>
   </div>
   {% capture 'ecopack_cant' %}
     {% for variant in product.variants %}
@@ -36,21 +36,7 @@
     {% endfor %}
   {% endcapture %}
 
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = { {{ ecopack_cant }} };
-    const extraVariantInfo = (id) => {
-    let selector = document.querySelector('.ecopack_cant');
-    let hide = document.querySelector('.hideAll')
-      if (metaData[id]) {
-        hide.style.display = 'block'
-        selector.innerHTML = metaData[id];
-      }
-      else
-        hide.style.display = 'none'
-    }
-    extraVariantInfo(currentVariantId);
-  </script>
+
 
 {%- if ecopack_cant and price_with_discount > 0 -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
@@ -122,8 +108,8 @@
 
     Usage:
     {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
-{% endcomment %}
-<div {{ block.shopify_attributes }}>
+  {% endcomment %}
+  <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     <product-form class="product-form">
       <div class="product-form__error-message-wrapper" role="alert" hidden>
@@ -240,5 +226,20 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
+  <script>
+    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+    const metaData = { {{ ecopack_cant }} };
+    const extraVariantInfo = (id) => {
+    let selector = document.querySelector('.ecopack_cant');
+    let hide = document.querySelector('.hideAll')
+      if (metaData[id]) {
+        hide.style.display = 'block'
+        selector.innerHTML = metaData[id];
+      }
+      else
+        hide.style.display = 'none'
+    }
+    extraVariantInfo(currentVariantId);
+  </script>
   {%- endif -%}
 {%- endunless -%}
