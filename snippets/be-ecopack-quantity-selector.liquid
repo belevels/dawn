@@ -5,7 +5,7 @@
   product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
 -%}
 
-  {%- assign product_form_id = 'product-form-' | append: section.id -%}
+  {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
   {%- liquid
     assign target = product.selected_or_first_available_variant
 
@@ -88,7 +88,7 @@
           {{ 'products.product.quantity.label' | t }}
         </label>
 
-        <quantity-input class="quantity hiddenx">
+        <quantity-input class="quantity hidden">
           <button class="quantity__button no-js-hidden" name="minus" type="button">
             <span class="visually-hidden">
               {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
