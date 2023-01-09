@@ -44,7 +44,7 @@
                 {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               </p>
               <div class="hideAllx">
-                <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change"></span> {{ ecopack_cant }} uds.</p>
+                <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change"></span> uds.</p>
                 {% capture 'ecopack_cant' %}
                 {% for variant in product.variants %}
                   {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
