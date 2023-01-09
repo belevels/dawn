@@ -43,7 +43,7 @@
                 {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               </p>
               <div class="hideAll">
-                <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change"></span> uds.</p>
+                <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change">{{ ecopack_cant }}</span> uds.</p>
               </div>                
                 {% capture 'ecopack_cant' %}
                 {% for variant in product.variants %}
