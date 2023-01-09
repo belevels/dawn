@@ -10,12 +10,13 @@
     assign target = product.selected_or_first_available_variant
 
     comment
+    endcomment
     if product.metafields.EcoPack.CantidadMinima
     assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
     else
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
     endif
-    endcomment
+    
 
     if product.metafields.EcoPack.PorcentajeDescuento
     assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
