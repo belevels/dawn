@@ -27,19 +27,14 @@
   -%}
 
   <div class="hideAll">
-    <p><span style="background:coral;">Extra Info 1: </span><span class="ecopack_cant"></span></p>
+    <p><span style="background:gold;">Extra Info 1: </span><span class="ecopack_cant"></span></p>
   </div>
-  {% capture 'ecopack_cant' %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endcapture %}
+
 
 
 
 {%- comment -%}{%- i f ecopack_cant and price_with_discount > 0 -%}{%- endcomment -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box" class="hideAll">
+  <div id="EcoPack-be-ecopack-add-to-cart-box">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
@@ -50,6 +45,12 @@
                 {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               </p>
               <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant"></span> uds.</p>
+              {% capture 'ecopack_cant' %}
+              {% for variant in product.variants %}
+                {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+                {% unless forloop.last %},{% endunless %}
+              {% endfor %}
+              {% endcapture %}
             </div>
             
             <div class="price eco-pack--price">
