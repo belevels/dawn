@@ -9,11 +9,13 @@
   {%- liquid
     assign target = product.selected_or_first_available_variant
 
+    comment
     if product.metafields.EcoPack.CantidadMinima
     assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
     else
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
     endif
+    endcomment
 
     if product.metafields.EcoPack.PorcentajeDescuento
     assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
@@ -27,7 +29,7 @@
   <div class="hideAll">
     <p><span>Extra Info 1: </span><span class="variant_info_1"></span></p>
   </div>
-  {% capture 'meta_data_1' %}
+  {% capture 'ecopack_cant' %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
       {% unless forloop.last %},{% endunless %}
@@ -36,7 +38,7 @@
 
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = { {{ meta_data_1 }} };
+    const metaData = { {{ ecopack_cant }} };
     const extraVariantInfo = (id) => {
     let selector = document.querySelector('.variant_info_1');
     let hide = document.querySelector('.hideAll')
