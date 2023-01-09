@@ -29,7 +29,7 @@
   <div class="hideAll">
     <p style="background:gold"><span>Extra Info 1: </span><span class="ecopack_cant_change"></span></p>
   </div>
-  {% capture 'ecopack_cant' %}
+  {% capture 'ecopack_cant_change' %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
       {% unless forloop.last %},{% endunless %}
@@ -50,7 +50,7 @@
                 {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
               </p>
               <div class="hideAll">
-                <p class="small ecopack_cant_change">{{ 'belevels.general.from' | t }} {{ ecopack_cant }} uds.</p>
+                <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack_cant_change">{{ ecopack_cant }}</span> uds.</p>
                 {% capture 'ecopack_cant_change' %}
                 {% for variant in product.variants %}
                   {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
@@ -236,7 +236,7 @@
   {%- endcomment -%}
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = { {{ ecopack_cant }} };
+    const metaData = { {{ ecopack_cant_change }} };
     const extraVariantInfo = (id) => {
     let selector = document.querySelector('.ecopack_cant_change');
     let hide = document.querySelector('.hideAll')
