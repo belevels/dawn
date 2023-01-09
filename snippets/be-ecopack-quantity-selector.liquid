@@ -23,7 +23,34 @@
 
     assign price_without_discount = target.price
   -%}
+
+  <div class="hideAll">
+    <p><span>Extra Info 1: </span><span class="variant_info_1"></span></p>
+  </div>
+  {% capture 'meta_data_1' %}
+    {% for variant in product.variants %}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {% endcapture %}
+
+  <script>
+    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+    const metaData = { {{ meta_data_1 }} };
+    const extraVariantInfo = (id) => {
+    let selector = document.querySelector('.variant_info_1');
+    let hide = document.querySelector('.hideAll')
+      if (metaData[id]) {
+        hide.style.display = 'block'
+        selector.innerHTML = metaData[id];
+      }
+      else
+        hide.style.display = 'none'
+    }
+    extraVariantInfo(currentVariantId);
   
+  </script>
+
 {%- if ecopack_cant and price_with_discount > 0 -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
