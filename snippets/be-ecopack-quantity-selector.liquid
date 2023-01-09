@@ -27,7 +27,7 @@
   -%}
 
   <div class="hideAll">
-    <p><span style="background:gold;">Extra Info 1: </span><span class="ecopack_cant"></span></p>
+    <p><span style="background:coral;">Extra Info 1: </span><span class="ecopack_cant"></span></p>
   </div>
   {% capture 'ecopack_cant' %}
     {% for variant in product.variants %}
@@ -38,8 +38,8 @@
 
 
 
-{%- if ecopack_cant and price_with_discount > 0 -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box">
+{%- comment -%}{%- i f ecopack_cant and price_with_discount > 0 -%}{%- endcomment -%}
+  <div id="EcoPack-be-ecopack-add-to-cart-box" class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
@@ -241,5 +241,5 @@
     }
     extraVariantInfo(currentVariantId);
   </script>
-  {%- endif -%}
+  {%- comment -%}{%- endif -%}{%- endcomment -%}
 {%- endunless -%}
