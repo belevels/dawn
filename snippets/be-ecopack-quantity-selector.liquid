@@ -25,10 +25,10 @@
   -%}
 
   <div class="hideAll">
-    <p style="background:yellow"><span>Extra Info 1: </span><span class="variant_info_1x"></span> {{ ecopack_cant }}</p>
+    <p style="background:pink"><span>Extra Info 1: </span><span class="variant_info_1x"></span> {{ ecopack_cant }}</p>
   </div>
   {% capture 'meta_data_1' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
+  {% if product.metafields.EcoPack.CantidadMinima > 0 %}
     {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
   {% else %}
     {% for variant in product.variants %}
