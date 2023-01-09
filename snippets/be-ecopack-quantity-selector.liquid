@@ -271,6 +271,8 @@
       }
     }
   extraVariantInfo(currentVariantId);
+
+  document.getElementById("EcoPack-Quantity-{{ section.id }}").value = {{ ecopack_cant }};
   </script>
   {%- endif -%}
 {%- endunless -%}
