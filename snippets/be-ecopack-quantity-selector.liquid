@@ -29,7 +29,12 @@
   <div class="hideAll">
     <p><span>Extra Info 1: </span><span class="ecopack_cant"></span></p>
   </div>
-
+  {% capture 'ecopack_cant' %}
+    {% for variant in product.variants %}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {% endcapture %}
 
 
 
@@ -221,14 +226,7 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  {% capture 'ecopack_cant' %}
-  {% for variant in product.variants %}
-    {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-    {% unless forloop.last %},{% endunless %}
-  {% endfor %}
-  {% endcapture %}
-
-  <script>
+    <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
     const metaData = { {{ ecopack_cant }} };
     const extraVariantInfo = (id) => {
