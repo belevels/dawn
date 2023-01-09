@@ -47,18 +47,18 @@
   {% endcapture %}
 
 {%- if meta_data_1 and price_with_discount -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
+  <div id="EcoPack-be-ecopack-add-to-cart-box">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
           <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
           <div class="summary__title">
-            <div>
+            <div class="hideAll">
               <p class="h4 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }}</p>
               <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
             </div>
             
-            <div class="price eco-pack--price">
+            <div class="price eco-pack--price hideAll">
               <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>
@@ -238,7 +238,7 @@
     const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
     const extraVariantInfo = (id) => {
     const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-    var hide = document.querySelectorAll('.hideAll');
+    const hide = document.querySelectorAll('.hideAll');
       for(let x = 0; x < metaData.length; x++) {
         if (metaData[x][id]) {
             hide[x].style.display = 'inline';
