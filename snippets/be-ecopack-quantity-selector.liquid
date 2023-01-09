@@ -52,7 +52,7 @@
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <span id="PriceWithoutEcoPack" class="price-item price-item--regular">
                 {% render 'price', 
-                  product: target, 
+                  product: product.selected_or_first_available_variant, 
                   use_variant: true, 
                   show_badges: false,
                   price_class: ''
