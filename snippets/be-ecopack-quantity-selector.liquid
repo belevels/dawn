@@ -232,8 +232,9 @@
         if (metaData[x][id]) {
             hide[x].style.display = 'inline';
             selector[x].innerHTML = metaData[x][id];
-       }
-        else  hide[x].style.display = 'none';
+        } else {
+          hide[x].style.display = 'none';
+        } 
       }
     }
   extraVariantInfo(currentVariantId);
