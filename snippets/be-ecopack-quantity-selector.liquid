@@ -267,7 +267,8 @@
         if (metaData[x][id]) {
             hide[x].style.display = 'inline';
             selector[x].innerHTML = metaData[x][id];
-            document.querySelector('.variant_info_3').value = metaData[x2][id];
+            document.querySelector('.variant_info_3').value = metaData[x][id];
+            console.log('metaData[2][id] = ' + metaData[x][id]);
         } else {
           hide[x].style.display = 'none';
         } 
