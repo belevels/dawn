@@ -35,6 +35,14 @@
   {% endif %}    
   {% endcapture %}
 
+  {% capture 'meta_data_2' %}
+    {{ variant.id }}:{{ price_without_discount | json }}
+    {% for variant in product.variants %}
+      {{ variant.id }}:{{ price_without_discount | json }}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {% endcapture %}
+
 {%- if meta_data_1 and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
@@ -50,7 +58,7 @@
             <div class="price eco-pack--price">
               <span id="PriceWithEcoPack" class="price-item">{{ price_with_discount | money }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
-              <span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>
+              <span id="PriceWithoutEcoPack" class="price-item price-item--regular variant_info_2">{{ price_without_discount | money }}</span>
             </div>
           </div>
           {%- comment -%}{% render 'icon-caret' %}{%- endcomment -%}
@@ -224,7 +232,7 @@
   {%- endcomment -%}
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = [{ {{ meta_data_1 }} }];
+    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
     const extraVariantInfo = (id) => {
     const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
     const hide = document.querySelectorAll('.hideAll');
