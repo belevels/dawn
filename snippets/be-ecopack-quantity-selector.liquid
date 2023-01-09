@@ -36,7 +36,21 @@
     {% endfor %}
   {% endcapture %}
 
-
+  <script>
+    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+    const metaData = { {{ ecopack_cant }} };
+    const extraVariantInfo = (id) => {
+    let selector = document.querySelector('.ecopack_cant');
+    let hide = document.querySelector('.hideAll')
+      if (metaData[id]) {
+        hide.style.display = 'block'
+        selector.innerHTML = metaData[id];
+      }
+      else
+        hide.style.display = 'none'
+    }
+    extraVariantInfo(currentVariantId);
+  </script>
 
 {%- if ecopack_cant and price_with_discount > 0 -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box">
@@ -226,20 +240,5 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-    <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = { {{ ecopack_cant }} };
-    const extraVariantInfo = (id) => {
-    let selector = document.querySelector('.ecopack_cant');
-    let hide = document.querySelector('.hideAll')
-      if (metaData[id]) {
-        hide.style.display = 'block'
-        selector.innerHTML = metaData[id];
-      }
-      else
-        hide.style.display = 'none'
-    }
-    extraVariantInfo(currentVariantId);
-  </script>
   {%- endif -%}
 {%- endunless -%}
