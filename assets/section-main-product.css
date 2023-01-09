@@ -1675,14 +1675,13 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
   font-weight: normal;
-}
+}*/
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.5rem;
-  margin-left: 0.5rem;
-  margin-left: .25rem;
+  margin-left: 0.25rem;
   text-decoration: line-through;
   color: #e62e1b;
-}*/
+}
 /*
 #EcoPack-be-ecopack-add-to-cart-box .product-form__buttons {
   max-width:100%;
