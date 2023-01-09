@@ -60,7 +60,7 @@
             
             <div class="price eco-pack--price">
               <div class="hideAll">
-              <div id="PriceWithEcoPack" class="price-item"><span class="variant_info_2">{{ price_with_discount | money }}</span></div>
+              <span class="variant_info_2">{{ price_with_discount | money }}</span>
               </div>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span> {%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
