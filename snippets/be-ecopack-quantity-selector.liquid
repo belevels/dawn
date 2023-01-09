@@ -58,8 +58,8 @@
               <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
             </div>
             
-            <div class="price eco-pack--price">
-              <div id="PriceWithEcoPack" class="hideAll"><span class="variant_info_2">{{ price_with_discount | money }}</span></div>
+            <div class="price eco-pack--price hideAll">
+              <div id="PriceWithEcoPack" class="price-item"><span class="variant_info_2">{{ price_with_discount | money }}</span></div>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span> {%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
