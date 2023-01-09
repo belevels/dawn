@@ -37,10 +37,10 @@
 
   {% capture 'meta_data_2' %}
   {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | json }}
+    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | money | json }}
   {% else %}
     {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | json }}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | money | json }}
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   {% endif %}    
@@ -66,7 +66,7 @@
                 {%- render 'price',
                   product: product,
                   use_variant: true,
-                  show_badges: true,
+                  show_badges: false,
                   price_class: 'price-item price-item--regular hideAll'
                 -%}
               </div>
