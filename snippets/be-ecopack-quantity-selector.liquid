@@ -59,7 +59,7 @@
             </div>
             
             <div class="price eco-pack--price">
-              <div class=" hideAll"><span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount }}</span></div>
+              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount }}</span>
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span>{%- endcomment -%}
               {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
               <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -67,7 +67,7 @@
                   product: product,
                   use_variant: true,
                   show_badges: false,
-                  price_class: 'price-item price-item--regular'
+                  price_class: 'price-item price-item--regular hideAll'
                 -%}
               </div>
             </div>
