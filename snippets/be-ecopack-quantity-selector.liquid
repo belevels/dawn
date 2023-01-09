@@ -24,9 +24,7 @@
     assign price_without_discount = target.price
   -%}
 
-  <div class="hideAllx">
-    <p style="background:yellow"><span>Extra Info 1: </span><span class="variant_info_1x">{{ ecopack_cant }}</span> {{ ecopack_cant }}</p>
-  </div>
+
   {% capture 'meta_data_1' %}
   {% if product.metafields.EcoPack.CantidadMinima %}
     {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
