@@ -1678,7 +1678,7 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item--regular {
   font-size: 1.5rem;
-  margin: 4px 0 0 0;
+  margin-left: 0.5rem;
   /*margin-left: .25rem;*/
   text-decoration: line-through;
   color: #e62e1b;
