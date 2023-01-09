@@ -133,10 +133,10 @@
     - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional) .
 
     Usage:
-{% endcomment %}    
+  
     {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+{% endcomment %}  
 
-{% comment %}
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     <product-form class="product-form">
@@ -248,7 +248,7 @@
   {%- endif -%}
   
 </div>
-{% endcomment %}
+{% comment %}{% endcomment %}
       </div>  
     </div>
   </div>
