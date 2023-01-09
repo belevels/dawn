@@ -21,7 +21,9 @@
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     endif
 
+    comment
     assign price_without_discount = target.price
+    endcomment
   -%}
 
   {% capture 'meta_data_1' %}
@@ -265,8 +267,7 @@
         if (metaData[x][id]) {
             hide[x].style.display = 'inline';
             selector[x].innerHTML = metaData[x][id];
-            document.querySelector('.variant_info_3').value = metaData[2][id];
-            console.log('metaData[2][id] = ' + metaData[x][id]);
+            document.querySelector('.variant_info_3').value = metaData[x][id];
         } else {
           hide[x].style.display = 'none';
         } 
