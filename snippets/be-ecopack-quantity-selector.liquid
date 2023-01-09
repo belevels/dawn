@@ -269,10 +269,12 @@
           hide[x].style.display = 'none';
         } 
       }
+      document.querySelector('.variant_info_3').value = metaData[2][id];
     }
   extraVariantInfo(currentVariantId);
 
-  document.getElementById("EcoPack-Quantity-{{ section.id }}").value = {{ ecopack_cant }};
+  
+  
   </script>
   {%- endif -%}
 {%- endunless -%}
