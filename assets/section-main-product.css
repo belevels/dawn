@@ -1493,7 +1493,7 @@ a.product__text {
 .be-add-to-cart-box {
   display: flex;
   flex-direction: row;
-  /*margin-top: 1rem;*/
+  margin-top: 2rem;
 }
 /*
 @media screen and (max-width: 375px) {
