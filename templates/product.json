@@ -37,12 +37,6 @@
             "text_style": "subtitle"
           }
         },
-        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"be-box\">"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -72,6 +66,12 @@
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
+        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-box\">"
+          }
+        },
         "02f120be-a55a-44f0-9ae6-9256d8518630": {
           "type": "be_box_buy_button",
           "disabled": true,
@@ -96,7 +96,13 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: none;\"><\/div>\n<\/div><!-- .be-box -->"
+            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>\n<\/div><!-- .be-box -->"
+          }
+        },
+        "c0a9586d-dd6b-4026-8034-a58a095a3051": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/div>"
           }
         },
         "description": {
@@ -125,16 +131,17 @@
         "6c544147-a927-42f5-beae-ceeda50c8393",
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
         "caption",
-        "aea48dc4-8143-4ee8-9033-259c6041fd13",
         "variant_picker",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "aea48dc4-8143-4ee8-9033-259c6041fd13",
         "02f120be-a55a-44f0-9ae6-9256d8518630",
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
         "72d76219-e839-4f9c-9867-fbd424124b07",
         "69d05011-95f0-4e3c-a4a1-1242313116eb",
+        "c0a9586d-dd6b-4026-8034-a58a095a3051",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
       ],
