@@ -241,7 +241,7 @@
         "description_style": "body",
         "title_wrapper_alignment": "center",
         "image_width": "full",
-        "image_ratio": "portrait",
+        "image_ratio": "circle",
         "columns_desktop": 1,
         "gap_desktop": 0,
         "columns_mobile": "1",
