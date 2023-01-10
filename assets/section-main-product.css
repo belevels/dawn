@@ -1706,7 +1706,7 @@ a.product__text {
   }
 }
 
-/** */
+/** new */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
 .be-box--price {
