@@ -28,7 +28,7 @@
 
   {% capture 'meta_data_1' %}
   {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
+    {{ product.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
   {% else %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
@@ -256,7 +256,7 @@
   </div>
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
-  
+  {%- endcomment -%}
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
     const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
@@ -280,6 +280,6 @@
 
   
   
-  </script>{%- endcomment -%}
+  </script>
   {%- endif -%}
 {%- endunless -%}
