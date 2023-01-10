@@ -229,8 +229,8 @@
           "content_color": "#000000",
           "mobile_logo_position": "left",
           "margin_bottom": 0,
-          "padding_top": 0,
-          "padding_bottom": 0
+          "padding_top": 12,
+          "padding_bottom": 12
         }
       },
       "footer": {
@@ -240,7 +240,7 @@
             "type": "link_list",
             "settings": {
               "heading": "",
-              "menu": ""
+              "menu": "footer"
             }
           },
           "51dc5d70-c8a7-425d-adef-de020099c304": {
@@ -254,15 +254,39 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
+              "heading": "",
+              "menu": "footer-info"
+            }
+          },
+          "69202d01-5033-4877-b5a2-6dc63cd8d6c2": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
               "menu": "footer"
+            }
+          },
+          "acd88020-2861-42ae-b03a-2491358aa8e3": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          },
+          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3": {
+            "type": "image",
+            "settings": {
+              "image_width": 100,
+              "alignment": ""
             }
           }
         },
         "block_order": [
           "footer-0",
           "51dc5d70-c8a7-425d-adef-de020099c304",
-          "footer-1"
+          "footer-1",
+          "69202d01-5033-4877-b5a2-6dc63cd8d6c2",
+          "acd88020-2861-42ae-b03a-2491358aa8e3",
+          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3"
         ],
         "settings": {
           "color_scheme": "accent-1",
