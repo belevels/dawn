@@ -1706,7 +1706,7 @@ a.product__text {
   }
 }
 
-/** new */
+/** */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
 .be-box--price {
@@ -1717,13 +1717,13 @@ a.product__text {
   width: max-content;
 }
 .be-box--price .price--large {
-  font-size: calc(var(--font-heading-scale) * 3.5rem);
+  font-size: calc(var(--font-heading-scale) * 3rem);
   line-height: calc(1 + .3/max(1,var(--font-heading-scale)));
   text-align: right;
 }
 @media screen and (min-width: 750px) {
   .be-box--price .price--large {
-    font-size: calc(var(--font-heading-scale) * 3rem);
+    font-size: calc(var(--font-heading-scale) * 3.5rem);
     line-height: calc(1 + .3/max(1,var(--font-heading-scale)));
   }
 }
