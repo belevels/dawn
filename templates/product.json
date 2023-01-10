@@ -515,7 +515,7 @@
     "d0dd8971-9f63-42c8-903d-6a615a4cce54": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<h2>Script<\/h2>\n<script>\nfunction csrundata() {\n\nconsole.log('test');\n}\n<\/script>",
+        "custom_liquid": "<h2>Script<\/h2>\n<script>\nfunction csrundata() {\nvar cantMin = document.querySelector(\"#EcoPack--aiod > div > table > tbody > tr > td:nth-child(1)\").textContent;\ndocument.querySelector(\"#EcoPack-Details--template--16613022433507__main > summary > div.summary__title > div:nth-child(1) > p.small > span\").innerText = cantMin;\ndocument.querySelector(\"#EcoPack-Details--template--16613022433507__main > summary > div.summary__title > div:nth-child(1) > p.small > span\").style.background = 'yellow';\nconsole.log('test');\n}\n<\/script>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
