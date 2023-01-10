@@ -240,7 +240,7 @@
             "type": "link_list",
             "settings": {
               "heading": "",
-              "menu": ""
+              "menu": "footer"
             }
           },
           "51dc5d70-c8a7-425d-adef-de020099c304": {
@@ -254,8 +254,8 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "",
+              "menu": "footer-info"
             }
           }
         },
