@@ -1713,6 +1713,9 @@ a.product__text {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.be-box--price .price--large {
+  text-align: right;
+}
 @media screen and (min-width: 750px) {
   .be-box--price .price--large {
     font-size: calc(var(--font-heading-scale) * 3.5rem);
