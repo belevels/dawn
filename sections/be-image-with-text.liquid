@@ -139,7 +139,7 @@ endcase
       </div>
 
       <div class="image-with-text__text-item grid__item">
-        <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradientx color-{{ section.settings.color_scheme }}x content-container">
+        <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container">
           {%- if column_heading -%}
             <h3 class="image-with-text__heading {{ section.settings.column_heading_size }}" {{ block.shopify_attributes }}>
               {{ column_heading | escape }}
