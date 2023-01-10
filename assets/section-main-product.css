@@ -1709,7 +1709,7 @@ a.product__text {
 /** */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
-..be-box--price {
+.be-box--price {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
