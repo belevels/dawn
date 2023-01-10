@@ -276,7 +276,7 @@
             "type": "image",
             "settings": {
               "image_width": 100,
-              "alignment": "center"
+              "alignment": ""
             }
           }
         },
