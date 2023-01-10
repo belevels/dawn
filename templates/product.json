@@ -3,15 +3,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
         "d3f7cad9-6c48-4776-9539-a577d77f82b6": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<div class=\"be-box--price\">"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
           }
         },
         "price": {
@@ -119,8 +119,8 @@
         }
       },
       "block_order": [
-        "title",
         "d3f7cad9-6c48-4776-9539-a577d77f82b6",
+        "title",
         "price",
         "6c544147-a927-42f5-beae-ceeda50c8393",
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
