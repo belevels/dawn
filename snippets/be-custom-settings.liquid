@@ -29,8 +29,7 @@
         -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
         mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
       }
-    {% endif %}
-    {%- if collection.handle == 'esenciales' -%}
+    {%- elsif collection.handle == 'esenciales' or collection.handle == 'essentials' -%}
       {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
       {%- capture customColor1 -%}#CB9C7A{%- endcapture -%}
       {%- capture customColor2 -%}#8A6653{%- endcapture -%}
@@ -55,7 +54,13 @@
         background-color: rgba(var(--color-foreground),1);
         -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
         mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-      }      
+      }
+    {%- else -%}
+    {%- liquid
+      assign customColor1 = ''
+      assign customColor2 = ''
+      assign customColor3 = ''
+    -%}
     {%- endif -%}
     
 

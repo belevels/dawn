@@ -136,7 +136,7 @@
         <div class="page-width isolate">
           {%- if section_title and show_title -%}
             <div class="title-wrapper--self-padded-mobile title-wrapper--no-top-margin section-title text-center">
-              <h2 class="title mx-auto {{ section.settings.heading_size }}">
+              <h2 class="titlex mx-auto {{ section.settings.heading_size }}">
                 {{ section_title | escape }}
               </h2> 
             </div>
@@ -266,7 +266,7 @@
           assign columnsDesktop = forloop.length | minus: 4 
           assign secondLoop     = count | minus: 1 
         -%}
-        <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+        <div style="padding-top: 3.5rem;" class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
           <div class="page-width isolate">          
             <slider-component class="slider-mobile-gutter">
               <ul class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ columnsDesktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
