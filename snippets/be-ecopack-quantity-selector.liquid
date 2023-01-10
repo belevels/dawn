@@ -256,7 +256,7 @@
   </div>
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
-  {%- endcomment -%}
+  
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
     const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
@@ -276,10 +276,10 @@
       
       
     }
-  //extraVariantInfo(currentVariantId);
+  extraVariantInfo(currentVariantId);
 
   
   
-  </script>
+  </script>{%- endcomment -%}
   {%- endif -%}
 {%- endunless -%}
