@@ -783,6 +783,7 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       this.updateMeta(); /*** */
+      this.csrundata();/*** */
     }
   }
 
@@ -801,6 +802,12 @@ class VariantSelects extends HTMLElement {
   /*** */
   updateMeta() {
     extraVariantInfo(this.currentVariant.id);
+  }
+
+  csrundata() {
+    var cantMin = document.querySelector("#EcoPack--aiod > div > table > tbody > tr > td:nth-child(1)").textContent;
+    document.querySelector("#EcoPack-Details--template--16613022433507__main > summary > div.summary__title > div:nth-child(1) > p.small > span").innerText = cantMin;
+    console.log('test');
   }
 
   updateMedia() {
