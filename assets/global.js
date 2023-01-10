@@ -782,7 +782,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      this.updateMeta(); /** */
+      this.updateMeta(); /*** */
     }
   }
 
@@ -798,7 +798,7 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  /** */
+  /*** */
   updateMeta() {
     extraVariantInfo(this.currentVariant.id);
   }
