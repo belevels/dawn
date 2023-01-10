@@ -783,7 +783,6 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       this.updateMeta(); /*** */
-      this.csrundata();/*** */
     }
   }
 
