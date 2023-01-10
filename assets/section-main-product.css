@@ -1709,7 +1709,7 @@ a.product__text {
 /** */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
-.be-box--price {
+..be-box--price {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1720,4 +1720,10 @@ a.product__text {
   font-size: calc(var(--font-heading-scale) * 3.5rem);
   line-height: calc(1 + .3/max(1,var(--font-heading-scale)));
   text-align: right;
+}
+@media screen and (min-width: 750px) {
+  .be-box--price .price--large {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+    line-height: calc(1 + .3/max(1,var(--font-heading-scale)));
+  }
 }
