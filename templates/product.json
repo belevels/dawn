@@ -501,7 +501,7 @@
     "d0dd8971-9f63-42c8-903d-6a615a4cce54": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<h2>Script<\/h2>\n<script>\nfunction csrundata() {\nconsole.log.('test');\n}\n<\/script>",
+        "custom_liquid": "<h2>Script<\/h2>\n<script>\nfunction csrundata() {\nconsole.log('test');\n}\n<\/script>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
