@@ -1718,7 +1718,7 @@ a.product__text {
   text-align: right;
 }
 @media screen and (min-width: 750px) {
-  .be-box--price {
+  .be-box--pricex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
