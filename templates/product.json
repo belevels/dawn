@@ -511,15 +511,6 @@
         "padding_top": 52,
         "padding_bottom": 36
       }
-    },
-    "d0dd8971-9f63-42c8-903d-6a615a4cce54": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<h2>Script<\/h2>\n<script>\n\n<\/script>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -532,7 +523,6 @@
     "related-products",
     "89953ce0-1704-417d-83ad-40aa37ede371",
     "3f53a9a6-455e-4dc6-8d7e-1abc551cda35",
-    "e03b2676-27b6-478f-bd55-ee1cb1c59d86",
-    "d0dd8971-9f63-42c8-903d-6a615a4cce54"
+    "e03b2676-27b6-478f-bd55-ee1cb1c59d86"
   ]
 }
