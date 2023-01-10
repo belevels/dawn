@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -24,11 +29,6 @@
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<div class=\"be-box\">"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
           }
         },
         "variant_picker": {
@@ -109,9 +109,9 @@
       "block_order": [
         "title",
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
+        "price",
         "caption",
         "aea48dc4-8143-4ee8-9033-259c6041fd13",
-        "price",
         "variant_picker",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
