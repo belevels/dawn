@@ -90,8 +90,6 @@
                   {% endfor %}
                 {% endcapture %}
               </div>
-
-              {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
               
               <div class="price eco-pack--price ecopack-hide--all">
                 <span class="ecopack-variant--price price-item"></span>
@@ -112,6 +110,7 @@
               </div>
             </div>
           </summary>
+          {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
           <div class="accordion__content rte" id="EcoPack-ProductAccordion-{{ block.id }}-{{ section.id }}">
             {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
           </div>
