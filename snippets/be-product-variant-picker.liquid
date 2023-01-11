@@ -5,12 +5,13 @@
     - product: {Object} product object.
     - block: {Object} passing the block information.
     - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+    - picker_type_buttons: {Boolean}. Default: true (optional).
 
     Usage:
     {% render 'product-variant-picker', block: block, product: product %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
-  {%- if block.settings.picker_type == 'button' -%}
+  {%- if picker_type_buttons -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
