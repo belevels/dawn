@@ -119,7 +119,6 @@ carousel-component .slideshow__controls--arrows .slideshow__autoplay {
 .slide-two-columns .multicolumn-card__image-wrapper {
   width: calc(25% + 2.5rem);
   min-width: calc(25% + 2.5rem);
-  margin: auto;
 }
 .slide-two-columns .multicolumn-card__info .description {
   order: 1;

@@ -3,7 +3,6 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-{%- comment -%}
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
     {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
@@ -186,7 +185,6 @@
       {% endif %}
   {%- endfor -%}
 {%- endfor -%}
-{%- endcomment -%}
 {% endstyle %}
 
 <style>
