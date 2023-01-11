@@ -249,37 +249,35 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
   
-</div>
-{% comment %}{% endcomment %}
+  </div>
+  {% comment %}{% endcomment %}
       </div>  
     </div>
   </div>
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-    const extraVariantInfo = (id) => {
-    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-    const hide = document.querySelectorAll('.hideAll');
-      for(let x = 0; x < metaData.length; x++) {
-        if (metaData[x][id]) {
-            hide[x].style.display = 'inline';
-            selector[x].innerHTML = metaData[x][id];
-            //document.querySelector('.variant_info_3').value = metaData[x][id];
-            //console.log('metaData[2][id] = ' + metaData[x][id]);
-        } else {
-          hide[x].style.display = 'none';
-        } 
+  {% if product.has_only_default_variant %}
+    <script>
+      const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+      const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+      const extraVariantInfo = (id) => {
+      const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+      const hide = document.querySelectorAll('.hideAll');
+        for(let x = 0; x < metaData.length; x++) {
+          if (metaData[x][id]) {
+              hide[x].style.display = 'inline';
+              selector[x].innerHTML = metaData[x][id];
+              //document.querySelector('.variant_info_3').value = metaData[x][id];
+              //console.log('metaData[2][id] = ' + metaData[x][id]);
+          } else {
+            hide[x].style.display = 'none';
+          } 
+        }
       }
-      
-      
-    }
-  extraVariantInfo(currentVariantId);
-
+      extraVariantInfo(currentVariantId);
+    </script>
+  {% endif %}
   
-  
-  </script>
   {%- endif -%}
 {%- endunless -%}
