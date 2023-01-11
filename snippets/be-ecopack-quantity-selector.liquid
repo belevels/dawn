@@ -94,7 +94,7 @@
     </div>
     <div class="be-add-to-cart-box">
       <div
-        class="hideAll product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+        class="hideAllx product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
         {{ block.shopify_attributes }}
       >
         <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
@@ -258,7 +258,25 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
   <script>
-
+    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+    const extraVariantInfo = (id) => {
+    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+    const hide = document.querySelectorAll('.hideAll');
+      for(let x = 0; x < metaData.length; x++) {
+        if (metaData[x][id]) {
+            hide[x].style.display = 'inline';
+            selector[x].innerHTML = metaData[x][id];
+            //document.querySelector('.variant_info_3').value = metaData[x][id];
+            //console.log('metaData[2][id] = ' + metaData[x][id]);
+        } else {
+          hide[x].style.display = 'none';
+        } 
+      }
+      
+      
+    }
+  extraVariantInfo(currentVariantId);
   </script>
   {%- endif -%}
 {%- endunless -%}
