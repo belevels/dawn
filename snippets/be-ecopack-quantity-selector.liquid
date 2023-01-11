@@ -7,9 +7,9 @@
 
   {% if product.has_only_default_variant %}
     {% assign ecopack_cant_min = product.metafields.EcoPack.CantidadMinima %}
-    {% assign  ecopack_price = product.metafields.EcoPack.PorcentajeDescuento %}
+    {% assign  ecopack_price = product.metafields.EcoPack.PorcentajeDescuento | times: 100 %}
   {% endif %}
-  
+
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
 
 
