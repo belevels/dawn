@@ -168,30 +168,7 @@
     {%- endif -%}    
   {% endif %}
 
-  {% if product.has_only_default_variant == false %}
-    <script>
-      const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-      const metaData = [{ {{ ecopack_cant_min }} }, { {{ ecopack_price }} }, { {{ ecopack_cant_input }} }];
-      const extraVariantInfo = (id) => {
-      const selector = document.querySelectorAll('.ecopack-variant--cant, .ecopack-variant--price, .ecopack-variant--input');
-      const hide = document.querySelectorAll('.ecopack-hide--all');
-        for(let x = 0; x < metaData.length; x++) {
-          console.log('[x] = ' + x);
-          if ([x] == 2) {
-            console.log('x = ' + x);
-            selector[x].value = metaData[x][id];
-          } 
-          if (metaData[x][id]) {
-            hide[x].style.display = 'inline';
-            selector[x].innerHTML = metaData[x][id];
-          } else {
-            hide[x].style.display = 'none';
-          }
-        }
-      }
-      extraVariantInfo(currentVariantId);
-    </script>
-  {% endif %}  
+
 
 
 {%- endunless -%}
