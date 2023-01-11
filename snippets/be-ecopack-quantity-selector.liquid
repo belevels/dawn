@@ -6,58 +6,47 @@
 -%}
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
-  {%- liquid
-    assign target = product.selected_or_first_available_variant
+  
+   {%- liquid
+    if product.has_only_default_variant
+      assign target = product
+    else
+      for variant in product.variants
+        assign target = variant
+      endfor
+    endif
 
     if product.metafields.EcoPack.CantidadMinima
-    assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
-    else
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
     endif
 
     if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
-    else
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     endif
-
-    comment
-    assign price_without_discount = target.price
-    endcomment
   -%}
 
-  {% capture 'meta_data_1' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}
+  {%- if product.has_only_default_variant == false -%}
+    {% capture 'meta_data_1' %}
+      {% for variant in product.variants %}
+        {{ variant.id }}:{{ ecopack_cant | json }}
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endcapture %}
 
-  {% capture 'meta_data_2' %}
-  {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}
+    {% capture 'meta_data_2' %}
+      {% for variant in product.variants %}
+        {{ variant.id }}:{{ price_with_discount | json }}
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endcapture %}
 
-  {% capture 'meta_data_3' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}  
+    {% capture 'meta_data_3' %}
+      {% for variant in product.variants %}
+        {{ variant.id }}:{{ ecopack_cant | json }}
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endcapture %}
+  {%- endif -%}
 
 {%- if meta_data_1 and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
@@ -257,29 +246,26 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-    const extraVariantInfo = (id) => {
-    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-    const hide = document.querySelectorAll('.hideAll');
-      for(let x = 0; x < metaData.length; x++) {
-        if (metaData[x][id]) {
-            hide[x].style.display = 'inline';
-            selector[x].innerHTML = metaData[x][id];
-            //document.querySelector('.variant_info_3').value = metaData[x][id];
-            //console.log('metaData[2][id] = ' + metaData[x][id]);
-        } else {
-          hide[x].style.display = 'none';
-        } 
+  {%- if product.has_only_default_variant == false -%}
+    <script>
+      const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+      const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+      const extraVariantInfo = (id) => {
+      const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+      const hide = document.querySelectorAll('.hideAll');
+        for(let x = 0; x < metaData.length; x++) {
+          if (metaData[x][id]) {
+              hide[x].style.display = 'inline';
+              selector[x].innerHTML = metaData[x][id];
+              //document.querySelector('.variant_info_3').value = metaData[x][id];
+              //console.log('metaData[2][id] = ' + metaData[x][id]);
+          } else {
+            hide[x].style.display = 'none';
+          } 
+        }
       }
-      
-      
-    }
-  extraVariantInfo(currentVariantId);
-
-  
-  
-  </script>
+      extraVariantInfo(currentVariantId);
+    </script>
+  {%- endif -%}
   {%- endif -%}
 {%- endunless -%}
