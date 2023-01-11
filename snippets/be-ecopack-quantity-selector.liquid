@@ -250,7 +250,7 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  {% if product.has_only_default_variant = false %}
+  {% if product.has_only_default_variant == false %}
   <script>
     const currentVariantId = {{ product.selected_or_first_available_variant.id }};
     const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
