@@ -1,14 +1,5 @@
 {
   "sections": {
-    "ec0b7790-86e8-4fca-9f6b-f8b3c22f2a80": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n<p>metadata_1 = {{ metadata_1 }}<\/p>\n<p>metadata_2 = {{ metadata_2 }}<\/p>\n<\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -87,7 +78,6 @@
         },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
           "type": "ecopack_quantity_selector",
-          "disabled": true,
           "settings": {
           }
         },
@@ -488,7 +478,6 @@
     }
   },
   "order": [
-    "ec0b7790-86e8-4fca-9f6b-f8b3c22f2a80",
     "main",
     "c22a79ad-d44e-4166-b9a3-3ecd00a49269",
     "693d6eb6-9187-4ee1-b6b8-b9eb42d33df5",
