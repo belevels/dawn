@@ -110,7 +110,8 @@
               </div>
             </div>
           </summary>
-          {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
+          {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: false %}
+
           <div class="accordion__content rte" id="EcoPack-ProductAccordion-{{ block.id }}-{{ section.id }}">
             {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
           </div>
