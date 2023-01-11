@@ -68,6 +68,12 @@ function trapFocus(container, elementToFocus = container) {
   document.addEventListener('focusin', trapFocusHandlers.focusin);
 
   elementToFocus.focus();
+
+  if (elementToFocus.tagName === 'INPUT' &&
+    ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
+    elementToFocus.value) {
+    elementToFocus.setSelectionRange(0, elementToFocus.value.length);
+  }
 }
 
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
@@ -558,6 +564,10 @@ class SliderComponent extends HTMLElement {
   }
 
   update() {
+    // Temporarily prevents unneeded updates resulting from variant changes
+    // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
+    if (!this.slider || !this.nextButton) return;
+
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
@@ -761,6 +771,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
+    this.updateVariantStatuses();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -771,7 +782,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      this.updateMeta(); /** eco **/
+      this.updateMeta(); /*** */
     }
   }
 
@@ -787,9 +798,10 @@ class VariantSelects extends HTMLElement {
     });
   }
 
+  /*** */
   updateMeta() {
     extraVariantInfo(this.currentVariant.id);
-  } /** eco **/
+  }
 
   updateMedia() {
     if (!this.currentVariant) return;
@@ -824,6 +836,28 @@ class VariantSelects extends HTMLElement {
     });
   }
 
+  updateVariantStatuses() {
+    const selectedOptionOneVariants = this.variantData.filter(variant => this.querySelector(':checked').value === variant.option1);
+    const inputWrappers = [...this.querySelectorAll('.product-form__input')];
+    inputWrappers.forEach((option, index) => {
+      if (index === 0) return;
+      const optionInputs = [...option.querySelectorAll('input[type="radio"], option')]
+      const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked').value;
+      const availableOptionInputsValue = selectedOptionOneVariants.filter(variant => variant.available && variant[`option${ index }`] === previousOptionSelected).map(variantOption => variantOption[`option${ index + 1 }`]);
+      this.setInputAvailability(optionInputs, availableOptionInputsValue)
+    });
+  }
+
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach(input => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.innerText = input.getAttribute('value');
+      } else {
+        input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
+      }
+    });
+  }
+
   updatePickupAvailability() {
     const pickUpAvailability = document.querySelector('pickup-availability');
     if (!pickUpAvailability) return;
@@ -845,17 +879,42 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-    fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
+    const requestedVariantId = this.currentVariant.id;
+
+    fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
+        // prevent unnecessary ui changes from abandoned selections
+        if (this.currentVariant.id !== requestedVariantId) return;
+
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+        const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+        /** */
+        const destination_eco = document.getElementById(`price-eco-${this.dataset.section}`);        
+        const source_eco = html.getElementById(`price-eco-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        if (source_eco && destination_eco) destination_eco.innerHTML = source_eco.innerHTML;
+        const price_eco = document.getElementById(`price-eco-${this.dataset.section}`);
+        if (price_eco) price_eco.classList.remove('visibility-hidden');
+        /** */
+
         if (source && destination) destination.innerHTML = source.innerHTML;
+        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+        if (skuSource && skuDestination) {
+          skuDestination.innerHTML = skuSource.innerHTML;
+          skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
+        }
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
+
+        if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
+
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
       });
   }
@@ -883,9 +942,14 @@ class VariantSelects extends HTMLElement {
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
     const price = document.getElementById(`price-${this.dataset.section}`);
+    const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
+    const sku = document.getElementById(`Sku-${this.dataset.section}`);
+
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
+    if (inventory) inventory.classList.add('visibility-hidden');
+    if (sku) sku.classList.add('visibility-hidden');
   }
 
   getVariantData() {
@@ -899,6 +963,16 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+  }
+
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach(input => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.classList.remove('disabled');
+      } else {
+        input.classList.add('disabled');
+      }
+    });
   }
 
   updateOptions() {
@@ -950,3 +1024,77 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+/* Be Levels - start mod: extendemos slideshow a carousel */
+class CarouselComponent extends SlideshowComponent { 
+  constructor() {
+    super();
+    
+    this.initPages();
+
+    if (!this.slider || !this.prevButton || !this.nextButton) return;
+    
+    const resizeObserver = new ResizeObserver(entries => this.initPages());
+    resizeObserver.observe(this.slider);
+
+    this.slider.addEventListener('scroll', this.update.bind(this));
+    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
+    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+  }
+
+  initPages() {
+    this.TotalSlidesDesktop = this.querySelector('.total-slides-desktop');
+    var TwoSlidesMobile = this.querySelector('.grid--2-col');
+
+    if (!this.TotalSlidesDesktop) return;
+
+    if (TwoSlidesMobile === undefined || TwoSlidesMobile ===  null) {
+      this.TwoColumnsMobile = 0;
+    } else {
+      this.TwoColumnsMobile = 2;
+    }
+
+    this.TotalSlidesTablet = this.TotalSlidesDesktop.textContent - 1 + 2;
+    
+    this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
+    if (this.sliderItemsToShow.length < 2) return;
+    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+    this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
+    
+    if (window.matchMedia("(min-width: 990px)").matches) {
+      this.sliderItemsToShow.length = this.TotalSlidesDesktop.textContent; // desktop
+    } else if (window.matchMedia("(min-width: 750px) and (max-width: 989px)").matches) {
+      this.sliderItemsToShow.length = this.TotalSlidesTablet; // tablet
+    } else {
+      if (this.TwoColumnsMobile > 0) {
+        this.sliderItemsToShow.length = this.sliderItemsToShow.length - 1; // mobile two columns
+      } else {
+        this.sliderItemsToShow.length = this.sliderItemsToShow.length; // mobile
+      }
+    }
+    
+    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1; // orig
+  }
+
+  autoRotateSlides() {
+    var slideScrollPosition = '';
+
+    if (window.matchMedia("(min-width: 990px)").matches) {
+      var slideScrollPosition = this.currentPage === (this.sliderItems.length - this.TotalSlidesDesktop.textContent - 0) ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // desktop
+    } else if (window.matchMedia("(min-width: 750px) and (max-width: 989px)").matches) {
+      var slideScrollPosition = this.currentPage === this.TotalSlidesTablet ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // tablet
+    } else {
+      if (this.TwoColumnsMobile > 0) {
+        var slideScrollPosition = this.currentPage === this.sliderItems.length - 1 ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile two columns
+      } else {
+        var slideScrollPosition = this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth; // mobile
+      }
+    }
+    
+    this.slider.scrollTo({
+      left: slideScrollPosition
+    });
+  }
+}
+
+customElements.define('carousel-component', CarouselComponent);
