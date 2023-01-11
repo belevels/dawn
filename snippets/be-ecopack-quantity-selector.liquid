@@ -58,7 +58,8 @@
     {% endfor %}
   {% endif %}    
   {% endcapture %}  
-
+<p>metadata_1 = {{ metadata_1 }}</p>
+<p>metadata_2 = {{ metadata_2 }}</p>
 {%- if meta_data_1 and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
