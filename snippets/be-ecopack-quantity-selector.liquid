@@ -26,7 +26,7 @@
     endcomment
   -%}
 
-{%- if meta_data_1 and price_with_discount -%}
+{%- comment -%}{%- i f meta_data_1 and price_with_discount -%}{%- endcomment -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAllx">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -225,5 +225,5 @@
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
 
-  {%- endif -%}
+  {%- comment -%}{%- endif -%}{%- endcomment -%}
 {%- endunless -%}
