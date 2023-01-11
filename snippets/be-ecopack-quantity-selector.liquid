@@ -10,18 +10,14 @@
    {%- liquid
     if product.has_only_default_variant
       assign target = product
+      assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
+      assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     else
       for variant in product.variants
         assign target = variant
+        assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
+        assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
       endfor
-    endif
-
-    if product.metafields.EcoPack.CantidadMinima
-    assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
-    endif
-
-    if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     endif
   -%}
 
