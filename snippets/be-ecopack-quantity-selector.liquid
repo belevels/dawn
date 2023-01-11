@@ -10,18 +10,15 @@
    {%- liquid
     if product.has_only_default_variant
       assign target = product
-      assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
-      assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
     else
-      for variant in product.variants
         assign target = variant
-        assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
-        assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
-      endfor
     endif
+    assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
+    assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
+
   -%}
 
-  {%- if product.has_only_default_variant == false -%}
+  
     {% capture 'meta_data_1' %}
       {% for variant in product.variants %}
         {{ variant.id }}:{{ ecopack_cant | json }}
@@ -42,7 +39,7 @@
         {% unless forloop.last %},{% endunless %}
       {% endfor %}
     {% endcapture %}
-  {%- endif -%}
+  
 
 {%- if ecopack_cant and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
