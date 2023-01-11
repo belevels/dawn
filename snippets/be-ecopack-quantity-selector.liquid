@@ -40,7 +40,7 @@
     {% endfor %}
   {% endcapture %}
 
-{%- if ecopack_cant and price_with_discount -%}
+
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -261,5 +261,5 @@
   extraVariantInfo(currentVariantId);
   </script>
   {%- endif -%}
-{%- endif -%}
+
 {%- endunless -%}
