@@ -11,7 +11,7 @@
     if product.has_only_default_variant
       assign target = product
     else
-        assign target = variant
+        assign target = product.selected_or_first_available_variant
     endif
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
