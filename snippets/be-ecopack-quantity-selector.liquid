@@ -77,6 +77,7 @@
           </div>  
         </div>
       </div>
+    {%- endif -%}
   {%- else -%} {%- comment -%}EcoPack para productos con variantes{%- endcomment -%}
     <div id="EcoPack-be-ecopack-add-to-cart-box">
       <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
@@ -165,7 +166,6 @@
         </div>  
       </div>
     </div>    
-    {%- endif -%}    
   {% endif %}
 
   {% if product.has_only_default_variant == false %}
