@@ -28,7 +28,7 @@
 
   {% capture 'meta_data_1' %}
   {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
+    {{ product.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
   {% else %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
@@ -94,14 +94,14 @@
     </div>
     <div class="be-add-to-cart-box">
       <div
-        class="hideAllx product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+        class="hideAll product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
         {{ block.shopify_attributes }}
       >
         <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
           {{ 'products.product.quantity.label' | t }}
         </label>
 
-        <quantity-input class="quantity hidden">
+        <quantity-input class="quantity hiddenx">
           <button class="quantity__button no-js-hidden" name="minus" type="button">
             <span class="visually-hidden">
               {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
@@ -249,35 +249,37 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
   
-  </div>
-  {% comment %}{% endcomment %}
+</div>
+{% comment %}{% endcomment %}
       </div>  
     </div>
   </div>
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  {% if product.has_only_default_variant %}
-    <script>
-      const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-      const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-      const extraVariantInfo = (id) => {
-      const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-      const hide = document.querySelectorAll('.hideAll');
-        for(let x = 0; x < metaData.length; x++) {
-          if (metaData[x][id]) {
-              hide[x].style.display = 'inline';
-              selector[x].innerHTML = metaData[x][id];
-              //document.querySelector('.variant_info_3').value = metaData[x][id];
-              //console.log('metaData[2][id] = ' + metaData[x][id]);
-          } else {
-            hide[x].style.display = 'none';
-          } 
-        }
+  <script>
+    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+    const extraVariantInfo = (id) => {
+    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+    const hide = document.querySelectorAll('.hideAll');
+      for(let x = 0; x < metaData.length; x++) {
+        if (metaData[x][id]) {
+            hide[x].style.display = 'inline';
+            selector[x].innerHTML = metaData[x][id];
+            //document.querySelector('.variant_info_3').value = metaData[x][id];
+            //console.log('metaData[2][id] = ' + metaData[x][id]);
+        } else {
+          hide[x].style.display = 'none';
+        } 
       }
-      extraVariantInfo(currentVariantId);
-    </script>
-  {% endif %}
+      
+      
+    }
+  extraVariantInfo(currentVariantId);
+
   
+  
+  </script>
   {%- endif -%}
 {%- endunless -%}
