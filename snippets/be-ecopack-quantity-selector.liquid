@@ -27,9 +27,7 @@
   -%}
 
   {% capture 'meta_data_1' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
+  {% if product.has_only_default_variant == false %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
       {% unless forloop.last %},{% endunless %}
