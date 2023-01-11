@@ -5,6 +5,7 @@
       "blocks": {
         "d3f7cad9-6c48-4776-9539-a577d77f82b6": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--price\">"
           }
@@ -14,19 +15,16 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
         "6c544147-a927-42f5-beae-ceeda50c8393": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--price -->"
           }
         },
         "dc63f03c-20ae-43f5-a5ab-ea4b98b52b8c": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--subtitle\">"
           }
@@ -43,8 +41,20 @@
             "text_style": "subtitle"
           }
         },
+        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-box\">"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
         "43898529-b513-41ea-bb08-2eb86603e5a3": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--subtitle -->"
           }
@@ -76,12 +86,6 @@
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
-          }
-        },
-        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"be-box\">"
           }
         },
         "02f120be-a55a-44f0-9ae6-9256d8518630": {
@@ -140,18 +144,18 @@
       "block_order": [
         "d3f7cad9-6c48-4776-9539-a577d77f82b6",
         "title",
-        "price",
         "6c544147-a927-42f5-beae-ceeda50c8393",
         "dc63f03c-20ae-43f5-a5ab-ea4b98b52b8c",
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
         "caption",
+        "aea48dc4-8143-4ee8-9033-259c6041fd13",
+        "price",
         "43898529-b513-41ea-bb08-2eb86603e5a3",
         "variant_picker",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
-        "aea48dc4-8143-4ee8-9033-259c6041fd13",
         "02f120be-a55a-44f0-9ae6-9256d8518630",
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
         "72d76219-e839-4f9c-9867-fbd424124b07",
