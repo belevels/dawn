@@ -27,17 +27,19 @@
   -%}
 
   {% if product.has_only_default_variant %} 
-  {%- assign meta_data_1 = product.metafields.EcoPack.CantidadMinima %}
+  {%- assign meta_data_1 = product.metafields.EcoPack.CantidadMinima -%}
   <script>
     console.log('****producto sin variante****');
   </script>
-  {% endif %}
+  {%- else -%}
   {% capture 'meta_data_1' %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endcapture %}
+  {% for variant in product.variants %}
+    {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+  {%- endif -%}
+
 
   {% capture 'meta_data_2' %}
   {% if product.metafields.EcoPack.PorcentajeDescuento %}
