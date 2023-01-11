@@ -98,7 +98,7 @@
               </div>
               
               <div class="price eco-pack--price ecopack-hide--all">
-                <span id="PriceWithEcoPack" class="ecopack-variant--price price-item"></span>
+                <span class="ecopack-variant--price price-item"></span>
                 {% capture 'ecopack_price' %}
                   {% for variant in product.variants %}
                     {{variant.id}}:{{ variant.metafields.EcoPack.PorcentajeDescuento | json }}
@@ -121,7 +121,7 @@
           </div>
         </details>
       </div>
-      <div class="be-add-to-cart-box ecopack-hide--all">
+      <div class="be-add-to-cart-box">
         <div
           class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
           {{ block.shopify_attributes }}
@@ -130,7 +130,7 @@
             {{ 'products.product.quantity.label' | t }}
           </label>
 
-          <quantity-input class="quantity hiddenx">
+          <quantity-input class="quantity hiddenx  ecopack-hide--all">
             <button class="quantity__button no-js-hidden" name="minus" type="button">
               <span class="visually-hidden">
                 {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
