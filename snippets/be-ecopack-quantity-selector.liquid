@@ -34,7 +34,7 @@
 
   
 
-  {%- if meta_data_1 != null and price_with_discount -%}
+  {%- if meta_data_1 and price_with_discount -%}
     <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
       <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
         <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -232,7 +232,7 @@
     {%- comment -%}
       Be Levels - start mod: agregamos EcoPack
     {%- endcomment -%}
-    {%- if product.has_only_default_variant == false -%}
+    {%- comment -%}{%- i f product.has_only_default_variant == false -%}{%- endcomment -%}
       <script>
         const currentVariantId = {{ product.selected_or_first_available_variant.id }};
         const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
@@ -252,6 +252,6 @@
         }
         extraVariantInfo(currentVariantId);
       </script>
-    {%- endif -%}
+    {%- comment -%}{%- endif -%}{%- endcomment -%}
   {%- endif -%}
 {%- endunless -%}
