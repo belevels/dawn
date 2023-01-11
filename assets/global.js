@@ -800,7 +800,7 @@ class VariantSelects extends HTMLElement {
 
   /*** */
   updateMeta() {
-    //extraVariantInfo(this.currentVariant.id);
+    extraVariantInfo(this.currentVariant.id);
   }
 
   updateMedia() {
