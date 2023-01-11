@@ -1,8 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/belevels_nuevologo2022_negro.png",
+    "logo": "shopify:\/\/shop_images\/logo-belevels_ee84f8b5-81e4-47e8-8f30-446580d11ff8.png",
     "logo_width": 120,
-    "favicon": "shopify:\/\/shop_images\/flavicon.png",
+    "favicon": "shopify:\/\/shop_images\/2.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -24,10 +24,10 @@
     "spacing_grid_vertical": 8,
     "buttons_border_thickness": 0,
     "buttons_border_opacity": 0,
-    "buttons_radius": 20,
+    "buttons_radius": 40,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
-    "buttons_shadow_vertical_offset": 2,
+    "buttons_shadow_vertical_offset": 0,
     "buttons_shadow_blur": 0,
     "variant_pills_border_thickness": 1,
     "variant_pills_border_opacity": 45,
@@ -38,7 +38,7 @@
     "variant_pills_shadow_blur": 0,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 20,
+    "inputs_radius": 40,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
@@ -46,9 +46,9 @@
     "card_style": "card",
     "card_image_padding": 0,
     "card_text_alignment": "left",
-    "card_color_scheme": "background-1",
+    "card_color_scheme": "background-2",
     "card_border_thickness": 1,
-    "card_border_opacity": 5,
+    "card_border_opacity": 10,
     "card_corner_radius": 10,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
@@ -84,7 +84,7 @@
     "text_boxes_shadow_vertical_offset": 4,
     "text_boxes_shadow_blur": 5,
     "media_border_thickness": 0,
-    "media_border_opacity": 10,
+    "media_border_opacity": 0,
     "media_radius": 0,
     "media_shadow_opacity": 0,
     "media_shadow_horizontal_offset": 0,
@@ -92,9 +92,9 @@
     "media_shadow_blur": 5,
     "popup_border_thickness": 1,
     "popup_border_opacity": 10,
-    "popup_corner_radius": 0,
-    "popup_shadow_opacity": 0,
-    "popup_shadow_horizontal_offset": 0,
+    "popup_corner_radius": 10,
+    "popup_shadow_opacity": 10,
+    "popup_shadow_horizontal_offset": 2,
     "popup_shadow_vertical_offset": 4,
     "popup_shadow_blur": 5,
     "drawer_border_thickness": 0,
@@ -122,7 +122,7 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
     "cart_type": "drawer",
-    "show_cart_note": true,
+    "show_cart_note": false,
     "cart_drawer_collection": "formulas-maestras",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo-belevels_ee84f8b5-81e4-47e8-8f30-446580d11ff8.png",
     "checkout_logo_position": "left",
@@ -219,8 +219,8 @@
           "logo_position": "middle-left",
           "enable_language_selector_in_header": true,
           "logo_svg": true,
-          "custom_url": "https:\/\/belevels.com",
-          "menu": "menu-principal",
+          "custom_url": "",
+          "menu": "belevels",
           "menu_type_desktop": "mega-plus",
           "menu_theme": "lightyellow",
           "sticky_header_type": "none",
@@ -229,8 +229,8 @@
           "content_color": "#000000",
           "mobile_logo_position": "left",
           "margin_bottom": 0,
-          "padding_top": 0,
-          "padding_bottom": 0
+          "padding_top": 12,
+          "padding_bottom": 12
         }
       },
       "footer": {
@@ -240,7 +240,7 @@
             "type": "link_list",
             "settings": {
               "heading": "",
-              "menu": "footer-productos"
+              "menu": "footer"
             }
           },
           "51dc5d70-c8a7-425d-adef-de020099c304": {
@@ -254,15 +254,39 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
+              "heading": "",
+              "menu": "footer-info"
+            }
+          },
+          "69202d01-5033-4877-b5a2-6dc63cd8d6c2": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
               "menu": "footer"
+            }
+          },
+          "acd88020-2861-42ae-b03a-2491358aa8e3": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          },
+          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3": {
+            "type": "image",
+            "settings": {
+              "image_width": 100,
+              "alignment": ""
             }
           }
         },
         "block_order": [
           "footer-0",
           "51dc5d70-c8a7-425d-adef-de020099c304",
-          "footer-1"
+          "footer-1",
+          "69202d01-5033-4877-b5a2-6dc63cd8d6c2",
+          "acd88020-2861-42ae-b03a-2491358aa8e3",
+          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3"
         ],
         "settings": {
           "color_scheme": "accent-1",
@@ -343,7 +367,7 @@
           "1085b71b-5ae2-494e-b216-dc0b1fdf6238"
         ],
         "settings": {
-          "enable_sticky_bar": true,
+          "enable_sticky_bar": false,
           "padding_top": 0,
           "padding_bottom": 0
         }
@@ -355,35 +379,6 @@
     "blocks": {
       "127709043890318779": {
         "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "6174324309569838175": {
-        "type": "shopify:\/\/apps\/smile-loyalty-rewards\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "6441254115607727225": {
-        "type": "shopify:\/\/apps\/shop-quiz-product-recommender\/blocks\/automatic-popup\/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
-        "settings": {
-          "quiz_id": "",
-          "quiz_timeout": 20,
-          "quiz_width": "100",
-          "quiz_height": "100",
-          "quiz_exit_intent": false
-        }
-      },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
