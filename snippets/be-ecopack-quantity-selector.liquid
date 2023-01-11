@@ -29,7 +29,7 @@
   {% if product.has_only_default_variant %} 
   {%- assign meta_data_1 = product.metafields.EcoPack.CantidadMinima -%}
   <script>
-    console.log('****producto sin variante****');
+    console.log('***producto sin variante***');
   </script>
   {%- else -%}
   {% capture 'meta_data_1' %}
@@ -42,8 +42,8 @@
 
 
   {% capture 'meta_data_2' %}
-  {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
+  {% if product.has_only_default_variant %}
+    {%- assign meta_data_2 = product.metafields.EcoPack.PorcentajeDescuento -%}
   {% else %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
@@ -53,8 +53,8 @@
   {% endcapture %}
 
   {% capture 'meta_data_3' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
+  {% if product.has_only_default_variant %}
+    {%- assign meta_data_3 = product.metafields.EcoPack.CantidadMinima -%}    
   {% else %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
