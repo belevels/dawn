@@ -24,7 +24,7 @@
   assign variants_option3_arr = product.variants | map: 'option3'
 
   if ecopack
-  assign product_form_id = 'product-form-' | append: section.id
+  assign product_form_id = 'product-form-ecopack-' | append: section.id
   else
   assign product_form_id = 'product-form-' | append: section.id
   endif
