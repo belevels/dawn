@@ -39,7 +39,7 @@
             class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
             {{ block.shopify_attributes }}
           >
-            <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
+            <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
               {{ 'products.product.quantity.label' | t }}
             </label>
   
@@ -54,7 +54,7 @@
                 class="quantity__input ecopack-variant--input" 
                 type="number"
                 name="quantity"
-                id="EcoPack-Quantity-{{ section.id }}"
+                id="Quantity-{{ section.id }}"
                 min="1"
                 value="{{ ecopack_cant_min }}"
                 form="{{ product_form_id }}"
@@ -120,7 +120,7 @@
           class="product-form__input product-form__quantity ecopack-hide--all{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
           {{ block.shopify_attributes }}
         >
-          <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
+          <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
             {{ 'products.product.quantity.label' | t }}
           </label>
 
@@ -135,7 +135,7 @@
               class="quantity__input ecopack-variant--input" 
               type="number"
               name="quantity"
-              id="EcoPack-Quantity-{{ section.id }}"
+              id="Quantity-{{ section.id }}"
               min="1"
               value="{{ ecopack_cant_input }}"
               form="{{ product_form_id }}"
