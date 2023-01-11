@@ -6,277 +6,252 @@
 -%}
 
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
-  {%- liquid
-    assign target = product.selected_or_first_available_variant
-
-    if product.metafields.EcoPack.CantidadMinima
-    assign ecopack_cant = product.metafields.EcoPack.CantidadMinima
+  
+   {%- liquid
+    if product.has_only_default_variant
+      assign target = product
     else
+        assign target = product.selected_or_first_available_variant
+    endif
     assign ecopack_cant = target.metafields.EcoPack.CantidadMinima
-    endif
-
-    if product.metafields.EcoPack.PorcentajeDescuento
-    assign price_with_discount = product.metafields.EcoPack.PorcentajeDescuento | times: 100
-    else
     assign price_with_discount = target.metafields.EcoPack.PorcentajeDescuento | times: 100
-    endif
-
-    comment
-    assign price_without_discount = target.price
-    endcomment
   -%}
 
+  
   {% capture 'meta_data_1' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
     {% for variant in product.variants %}
       {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
-  {% endif %}    
   {% endcapture %}
 
   {% capture 'meta_data_2' %}
-  {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
-  {% else %}
     {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
+      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | times: 100 | json }}
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
-  {% endif %}    
   {% endcapture %}
 
-  {% capture 'meta_data_3' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}  
+  
 
-{%- if meta_data_1 and price_with_discount -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAllx">
-    <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-      <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
-        <summary>
-          <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
-          <div class="summary__title">
-            <div>
-              <p class="h4 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }}</p>
-              <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
-            </div>
-            
-            <div class="price eco-pack--price">
-              <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
-              {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span> {%- endcomment -%}
-              <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- render 'price',
-                  product: product,
-                  use_variant: true,
-                  show_badges: false,
-                  price_class: 'price-item price-item--regular hideAllx'
-                -%}
+  {%- if meta_data_1 != null and price_with_discount -%}
+    <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
+      <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+        <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
+          <summary>
+            <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
+            <div class="summary__title">
+              <div>
+                <p class="h4 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }}</p>
+                <p class="small">{{ 'belevels.general.from' | t }} <span class="variant_info_1">{{ ecopack_cant }}</span> uds.</p>
+              </div>
+              
+              <div class="price eco-pack--price">
+                <span id="PriceWithEcoPack" class="price-item variant_info_2">{{ price_with_discount | money }}</span>
+                {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular">{{ price_without_discount | money }}</span> {%- endcomment -%}
+                {%- comment -%}<span id="PriceWithoutEcoPack" class="price-item price-item--regular hideAll">{{ price_without_discount | money }}</span>{%- endcomment -%}
+                <div class="no-js-hidden" id="price-eco-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: false,
+                    price_class: 'price-item price-item--regular hideAll'
+                  -%}
+                </div>
               </div>
             </div>
+            {%- comment -%}{% render 'icon-caret' %}{%- endcomment -%}
+          </summary>
+          <div class="accordion__content rte" id="EcoPack-ProductAccordion-{{ block.id }}-{{ section.id }}">
+            {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
           </div>
-          {%- comment -%}{% render 'icon-caret' %}{%- endcomment -%}
-        </summary>
-        <div class="accordion__content rte" id="EcoPack-ProductAccordion-{{ block.id }}-{{ section.id }}">
-          {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
-        </div>
-      </details>
-    </div>
-    <div class="be-add-to-cart-box">
-      <div
-        class="hideAllx product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-        {{ block.shopify_attributes }}
-      >
-        <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
-          {{ 'products.product.quantity.label' | t }}
-        </label>
-
-        <quantity-input class="quantity hiddenx">
-          <button class="quantity__button no-js-hidden" name="minus" type="button">
-            <span class="visually-hidden">
-              {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-            </span>
-            {% render 'icon-minus' %}
-          </button>
-          <input
-            class="quantity__input variant_info_3x" 
-            type="number"
-            name="quantity"
-            id="EcoPack-Quantity-{{ section.id }}"
-            min="{{ ecopack_cant }}"
-            value="{{ ecopack_cant }}"
-            form="{{ product_form_id }}"
-          >
-          <button class="quantity__button no-js-hidden" name="plus" type="button">
-            <span class="visually-hidden">
-              {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-            </span>
-            {% render 'icon-plus' %}
-          </button>
-        </quantity-input>
+        </details>
       </div>
-      <div>
-        {% comment %}
-    Renders product buy-buttons.
-    Accepts:
-    - product: {Object} product object.
-    - block: {Object} passing the block information.
-    - product_form_id: {String} product form id.
-    - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional) .
-
-    Usage:
-  
-    {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
-{% endcomment %}  
-
-<div {{ block.shopify_attributes }}>
-  {%- if product != blank -%}
-    <product-form class="product-form">
-      <div class="product-form__error-message-wrapper" role="alert" hidden>
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          class="icon icon-error"
-          viewBox="0 0 13 13"
+      <div class="be-add-to-cart-box">
+        <div
+          class="hideAll product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+          {{ block.shopify_attributes }}
         >
-          <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-          <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-          <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-          <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-        </svg>
-        <span class="product-form__error-message"></span>
-      </div>
+          <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
+            {{ 'products.product.quantity.label' | t }}
+          </label>
 
-      {%- form 'product',
-        product,
-        id: product_form_id,
-        class: 'form',
-        novalidate: 'novalidate',
-        data-type: 'add-to-cart-form'
-      -%}
-        <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
-          disabled
-        >
-        <div class="product-form__buttons">
-          <button
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width button--primary animate-arrow"
-            {% if product.selected_or_first_available_variant.available == false %}
-              disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant.available -%}
-                {{ 'belevels.general.add' | t }} {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
-              {%- else -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- endif -%}
-            </span>
-            <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-            <div class="loading-overlay__spinner hidden">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
-          </button>
-        </div>
-      {%- endform -%}
-    </product-form>
-  {%- else -%}
-    <div class="product-form">
-      <div class="product-form__buttons form">
-        <button
-          type="submit"
-          name="add"
-          class="product-form__submit button button--full-width button--primary"
-          disabled
-        >
-          {{ 'products.product.sold_out' | t }}
-        </button>
-      </div>
-    </div>
-  {%- endif -%}
-
-  {%- if show_pickup_availability -%}
-    {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
-
-    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
-      | where: 'pick_up_enabled', true
-    -%}
-
-    <pickup-availability
-      class="product__pickup-availabilities no-js-hidden quick-add-hidden"
-      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
-        available
-      {% endif %}
-      data-root-url="{{ routes.root_url }}"
-      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-      data-has-only-default-variant="{{ product.has_only_default_variant }}"
-    >
-      <template>
-        <pickup-availability-preview class="pickup-availability-preview">
-          {% render 'icon-unavailable' %}
-          <div class="pickup-availability-info">
-            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-            <button class="pickup-availability-button link link--text underlined-link">
-              {{ 'products.product.pickup_availability.refresh' | t }}
+          <quantity-input class="quantity hiddenx">
+            <button class="quantity__button no-js-hidden" name="minus" type="button">
+              <span class="visually-hidden">
+                {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+              </span>
+              {% render 'icon-minus' %}
             </button>
-          </div>
-        </pickup-availability-preview>
-      </template>
-    </pickup-availability>
+            <input
+              class="quantity__input variant_info_3x" 
+              type="number"
+              name="quantity"
+              id="EcoPack-Quantity-{{ section.id }}"
+              min="{{ ecopack_cant }}"
+              value="{{ ecopack_cant }}"
+              form="{{ product_form_id }}"
+            >
+            <button class="quantity__button no-js-hidden" name="plus" type="button">
+              <span class="visually-hidden">
+                {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+              </span>
+              {% render 'icon-plus' %}
+            </button>
+          </quantity-input>
+        </div>
+        <div>
+          {% comment %}
+        Renders product buy-buttons.
+        Accepts:
+        - product: {Object} product object.
+        - block: {Object} passing the block information.
+        - product_form_id: {String} product form id.
+        - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional) .
 
-    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-  {%- endif -%}
-  
-</div>
-{% comment %}{% endcomment %}
-      </div>  
+        Usage:
+      
+        {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+        {% endcomment %}  
+
+        <div {{ block.shopify_attributes }}>
+          {%- if product != blank -%}
+            <product-form class="product-form">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  class="icon icon-error"
+                  viewBox="0 0 13 13"
+                >
+                  <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                  <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                  <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                </svg>
+                <span class="product-form__error-message"></span>
+              </div>
+
+              {%- form 'product',
+                product,
+                id: product_form_id,
+                class: 'form',
+                novalidate: 'novalidate',
+                data-type: 'add-to-cart-form'
+              -%}
+                <input
+                  type="hidden"
+                  name="id"
+                  value="{{ product.selected_or_first_available_variant.id }}"
+                  disabled
+                >
+                <div class="product-form__buttons">
+                  <button
+                    type="submit"
+                    name="add"
+                    class="product-form__submit button button--full-width button--primary animate-arrow"
+                    {% if product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    <span>
+                      {%- if product.selected_or_first_available_variant.available -%}
+                        {{ 'belevels.general.add' | t }} {{ 'belevels.general.pack_discount_by_quantity.name' | t }}
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="spinner"
+                        viewBox="0 0 66 66"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              {%- endform -%}
+            </product-form>
+          {%- else -%}
+            <div class="product-form">
+              <div class="product-form__buttons form">
+                <button
+                  type="submit"
+                  name="add"
+                  class="product-form__submit button button--full-width button--primary"
+                  disabled
+                >
+                  {{ 'products.product.sold_out' | t }}
+                </button>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if show_pickup_availability -%}
+            {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+
+            {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+              | where: 'pick_up_enabled', true
+            -%}
+
+            <pickup-availability
+              class="product__pickup-availabilities no-js-hidden quick-add-hidden"
+              {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+                available
+              {% endif %}
+              data-root-url="{{ routes.root_url }}"
+              data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+              data-has-only-default-variant="{{ product.has_only_default_variant }}"
+            >
+              <template>
+                <pickup-availability-preview class="pickup-availability-preview">
+                  {% render 'icon-unavailable' %}
+                  <div class="pickup-availability-info">
+                    <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+                    <button class="pickup-availability-button link link--text underlined-link">
+                      {{ 'products.product.pickup_availability.refresh' | t }}
+                    </button>
+                  </div>
+                </pickup-availability-preview>
+              </template>
+            </pickup-availability>
+
+            <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+          {%- endif -%}
+          
+        </div>
+        {% comment %}{% endcomment %}
+        </div>  
+      </div>
     </div>
-  </div>
-  {%- comment -%}
-    Be Levels - start mod: agregamos EcoPack
-  {%- endcomment -%}
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-    const extraVariantInfo = (id) => {
-    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-    const hide = document.querySelectorAll('.hideAll');
-      for(let x = 0; x < metaData.length; x++) {
-        if (metaData[x][id]) {
-            hide[x].style.display = 'inline';
-            selector[x].innerHTML = metaData[x][id];
-        } else {
-          hide[x].style.display = 'none';
-        } 
-      }
-      
-      
-    }
-  extraVariantInfo(currentVariantId);
-
-  
-  
-  </script>
+    {%- comment -%}
+      Be Levels - start mod: agregamos EcoPack
+    {%- endcomment -%}
+    {%- if product.has_only_default_variant == false -%}
+      <script>
+        const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+        const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+        const extraVariantInfo = (id) => {
+        const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+        const hide = document.querySelectorAll('.hideAll');
+          for(let x = 0; x < metaData.length; x++) {
+            if (metaData[x][id]) {
+                hide[x].style.display = 'inline';
+                selector[x].innerHTML = metaData[x][id];
+                //document.querySelector('.variant_info_3').value = metaData[x][id];
+                //console.log('metaData[2][id] = ' + metaData[x][id]);
+            } else {
+              hide[x].style.display = 'none';
+            } 
+          }
+        }
+        extraVariantInfo(currentVariantId);
+      </script>
+    {%- endif -%}
   {%- endif -%}
 {%- endunless -%}
