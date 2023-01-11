@@ -59,7 +59,7 @@
   {% endif %}    
   {% endcapture %}  
 
-{%- if price_with_discount -%}
+{%- if meta_data_1 and price_with_discount -%}
   <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
@@ -257,39 +257,6 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    if (!currentVariantId) {
-      console.error("No se encontró el id de la variante seleccionada o disponible");
-      return;
-    }
-    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-    if (!metaData) {
-      console.error("No se encontraron metadatos");
-      return;
-    }
-    const extraVariantInfo = (id) => {
-        const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-        if (!selector) {
-          console.error("No se encontró los elementos para mostrar la información de variante");
-          return;
-        }
-        const hide = document.querySelectorAll('.hideAll');
-        if (!hide) {
-          console.error("No se encontró los elementos para ocultar la información de variante");
-          return;
-        }
-          for(let x = 0; x < metaData.length; x++) {
-            if (metaData[x][id]) {
-                hide[x].style.display = 'inline';
-                selector[x].innerHTML = metaData[x][id];
-            } else {
-              hide[x].style.display = 'none';
-            } 
-          }
-        }
-      extraVariantInfo(currentVariantId);
-    
-  </script>
+
   {%- endif -%}
 {%- endunless -%}
