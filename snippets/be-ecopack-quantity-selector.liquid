@@ -1,9 +1,4 @@
-{%- comment -%}Be Levels - start mod: agregamos restricción por paises, cantidad minima para EcoPack{%- endcomment -%}
-{%- unless
-  product.metafields.Restricciones.Paises contains "España" and localization.country.iso_code == 'ES' or 
-  product.metafields.Restricciones.Paises contains "Estados Unidos" and localization.country.iso_code == 'US' or 
-  product.metafields.Restricciones.Paises contains "México" and localization.country.iso_code == 'MX' 
--%}
+
   {%- assign product_form_id = 'EcoPack-product-form-' | append: section.id -%}
 
   {% if product.has_only_default_variant %}
@@ -191,7 +186,4 @@
       }
       extraVariantInfo(currentVariantId);
     </script>
-  {% endif %}  
-
-
-{%- endunless -%}
+  {% endif %} 
