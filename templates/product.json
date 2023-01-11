@@ -112,7 +112,7 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>\n<\/div><!-- .be-box -->"
+            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: none;\"><\/div>\n<\/div><!-- .be-box -->"
           }
         },
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
