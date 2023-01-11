@@ -117,6 +117,7 @@
         },
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div>"
           }
