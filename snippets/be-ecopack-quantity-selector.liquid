@@ -26,41 +26,8 @@
     endcomment
   -%}
 
-  {% capture 'meta_data_1' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}
-
-  {% capture 'meta_data_2' %}
-  {% if product.metafields.EcoPack.PorcentajeDescuento %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | prepend: '€' | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}
-
-  {% capture 'meta_data_3' %}
-  {% if product.metafields.EcoPack.CantidadMinima %}
-    {{ variant.id }}:{{ product.metafields.EcoPack.CantidadMinima | json }}
-  {% else %}
-    {% for variant in product.variants %}
-      {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  {% endif %}    
-  {% endcapture %}  
-
 {%- if meta_data_1 and price_with_discount -%}
-  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAll">
+  <div id="EcoPack-be-ecopack-add-to-cart-box"class="hideAllx">
     <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
       <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
         <summary>
@@ -80,7 +47,7 @@
                   product: product,
                   use_variant: true,
                   show_badges: false,
-                  price_class: 'price-item price-item--regular hideAll'
+                  price_class: 'price-item price-item--regular hideAllx'
                 -%}
               </div>
             </div>
@@ -94,7 +61,7 @@
     </div>
     <div class="be-add-to-cart-box">
       <div
-        class="hideAll product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+        class="hideAllx product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
         {{ block.shopify_attributes }}
       >
         <label class="form__label visually-hidden" for="EcoPack-Quantity-{{ section.id }}">
@@ -257,29 +224,6 @@
   {%- comment -%}
     Be Levels - start mod: agregamos EcoPack
   {%- endcomment -%}
-  <script>
-    const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-    const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-    const extraVariantInfo = (id) => {
-    const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
-    const hide = document.querySelectorAll('.hideAll');
-      for(let x = 0; x < metaData.length; x++) {
-        if (metaData[x][id]) {
-            hide[x].style.display = 'inline';
-            selector[x].innerHTML = metaData[x][id];
-            //document.querySelector('.variant_info_3').value = metaData[x][id];
-            //console.log('metaData[2][id] = ' + metaData[x][id]);
-        } else {
-          hide[x].style.display = 'none';
-        } 
-      }
-      
-      
-    }
-  extraVariantInfo(currentVariantId);
 
-  
-  
-  </script>
   {%- endif -%}
 {%- endunless -%}
