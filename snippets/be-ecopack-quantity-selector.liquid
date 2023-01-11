@@ -21,24 +21,18 @@
   
     {% capture 'meta_data_1' %}
       {% for variant in product.variants %}
-        {{ variant.id }}:{{ ecopack_cant | json }}
+        {{ variant.id }}:{{ variant.metafields.EcoPack.CantidadMinima | json }}
         {% unless forloop.last %},{% endunless %}
       {% endfor %}
     {% endcapture %}
 
     {% capture 'meta_data_2' %}
       {% for variant in product.variants %}
-        {{ variant.id }}:{{ price_with_discount | json }}
+        {{ variant.id }}:{{ variant.metafields.EcoPack.PorcentajeDescuento | times: 100 | json }}
         {% unless forloop.last %},{% endunless %}
       {% endfor %}
     {% endcapture %}
 
-    {% capture 'meta_data_3' %}
-      {% for variant in product.variants %}
-        {{ variant.id }}:{{ ecopack_cant | json }}
-        {% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    {% endcapture %}
   
 
 
