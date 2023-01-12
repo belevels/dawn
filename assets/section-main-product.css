@@ -1667,7 +1667,7 @@ a.product__text {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;*/
   text-align: right;
   font-weight: bold;
-  margin-top: -3px;
+  margin-top: -1.5rem;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
   font-size: 2rem;
