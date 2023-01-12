@@ -40,6 +40,9 @@
   margin-bottom: 4rem;
   overflow: visible !important;
 }
+.timeline-event:last-of-type {
+  margin-bottom: 0;
+}
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
