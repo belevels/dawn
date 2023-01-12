@@ -125,6 +125,8 @@
             {{ 'products.product.quantity.label' | t }}
           </label>
 
+          {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
+
           <quantity-input class="quantity hiddenx">
             <button class="quantity__button no-js-hidden" name="minus" type="button">
               <span class="visually-hidden">
