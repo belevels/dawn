@@ -38,6 +38,7 @@
               </button>
               <a href="{{ routes.all_products_collection_url }}" class="button">
                 {{ 'general.continue_shopping' | t }}
+                <span class="wrap-icon">{%- render 'icon-arrow' -%}</span>
               </a>
 
               {%- if shop.customer_accounts_enabled and customer == null -%}
