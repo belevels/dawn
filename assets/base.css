@@ -3081,7 +3081,8 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
 .cart-drawer__empty-content a.button {
   min-width: calc(24rem + var(--buttons-border-width) * 2);
 }
-.cart-drawer__empty-content a.button .wrap-icon {
+.cart-drawer__empty-content a.button .wrap-icon,
+#CartDrawer-Checkout  .wrap-icon {
   margin-left: auto;
 }
 /** colors */
