@@ -3071,4 +3071,8 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
 .multirow.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
   margin-right: -12rem;
 }
+.zed__navbar-dropdown-content .CollectionTab .collectiontablinks.button,
+.collectiontabcontent--footer-left .button {
+  background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
+}
 
