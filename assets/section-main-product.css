@@ -1750,6 +1750,6 @@ a.product__text {
     width: max-content;
   }  
   .be-box--price .price--large {
-    font-size: calc(var(--font-heading-scale) * 3.5rem);
+    font-size: calc(var(--font-heading-scale) * 3rem);
   }
 }
