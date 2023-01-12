@@ -468,6 +468,7 @@
     },
     "e03b2676-27b6-478f-bd55-ee1cb1c59d86": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Fórmulas maestras",
         "heading_size": "h0",
