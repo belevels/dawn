@@ -271,6 +271,12 @@
               "heading": "",
               "menu": "footer-packs"
             }
+          },
+          "f4b0bb07-e823-4874-b210-b450a1c8b3b5": {
+            "type": "custom_liquid",
+            "settings": {
+              "custom_liquid": "<div class=\"copyright__content\">&copy; {{ 'now' | date: \"%Y\" }}, {{ shop.name | link_to: routes.root_url }}<\/div>"
+            }
           }
         },
         "block_order": [
@@ -278,7 +284,8 @@
           "footer-0",
           "footer-1",
           "69202d01-5033-4877-b5a2-6dc63cd8d6c2",
-          "45f0752c-be81-443b-b990-a9dbd8e6dc8e"
+          "45f0752c-be81-443b-b990-a9dbd8e6dc8e",
+          "f4b0bb07-e823-4874-b210-b450a1c8b3b5"
         ],
         "settings": {
           "color_scheme": "accent-1",
