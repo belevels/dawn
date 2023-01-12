@@ -92,6 +92,7 @@
         },
         "aea48dc4-8143-4ee8-9033-259c6041fd13": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box\">"
           }
@@ -119,6 +120,7 @@
         },
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box -->"
           }
