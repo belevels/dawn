@@ -1511,11 +1511,13 @@ a.product__text {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-base-background-1);
+  display: grid;
+  grid-template-columns: auto auto;
 }
 @media screen and (min-width: 1120px) {
   .be-box .product-form__input,
   .be-add-to-cart-box .product-form__input {
-  display: flex;
+  /*display: flex;*/
   }
 }
 .be-add-to-cart-box .product-form__quantity {
