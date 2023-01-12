@@ -5,7 +5,6 @@
       "blocks": {
         "d3f7cad9-6c48-4776-9539-a577d77f82b6": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--price\">"
           }
@@ -22,14 +21,12 @@
         },
         "6c544147-a927-42f5-beae-ceeda50c8393": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--price -->"
           }
         },
         "dc63f03c-20ae-43f5-a5ab-ea4b98b52b8c": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--subtitle\">"
           }
@@ -48,14 +45,12 @@
         },
         "43898529-b513-41ea-bb08-2eb86603e5a3": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--subtitle -->"
           }
         },
         "5346747f-eecb-4138-916e-925834244489": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box\">"
           }
@@ -68,7 +63,6 @@
         },
         "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-add-to-cart-box\">"
           }
@@ -86,39 +80,14 @@
         },
         "5e6c6120-79d4-4443-9d12-7c20817487d7": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
         "1da00743-5e21-4945-9d39-ad23fd92f88e": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box -->"
-          }
-        },
-        "aea48dc4-8143-4ee8-9033-259c6041fd13": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "<div class=\"be-box\">"
-          }
-        },
-        "02f120be-a55a-44f0-9ae6-9256d8518630": {
-          "type": "be_box_buy_button",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "9feb7ff5-3f71-434b-a1a2-7de647f9c904": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "EcoPack",
-            "icon": "question_mark",
-            "content": "<p>La mejor opción para dar continuidad a tus tomas y maximizar tu proceso de mejora. Ahorras en precio, ahorras en envíos y ahorramos impacto de CO₂ al planeta. 😇<\/p>",
-            "page": ""
           }
         },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
@@ -126,16 +95,8 @@
           "settings": {
           }
         },
-        "69d05011-95f0-4e3c-a4a1-1242313116eb": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "<\/div><!-- .be-box -->"
-          }
-        },
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>"
           }
@@ -175,11 +136,7 @@
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
         "1da00743-5e21-4945-9d39-ad23fd92f88e",
-        "aea48dc4-8143-4ee8-9033-259c6041fd13",
-        "02f120be-a55a-44f0-9ae6-9256d8518630",
-        "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
         "72d76219-e839-4f9c-9867-fbd424124b07",
-        "69d05011-95f0-4e3c-a4a1-1242313116eb",
         "c0a9586d-dd6b-4026-8034-a58a095a3051",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
