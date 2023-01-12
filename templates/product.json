@@ -49,6 +49,12 @@
             "custom_liquid": "<\/div><!-- .be-box--subtitle -->"
           }
         },
+        "5346747f-eecb-4138-916e-925834244489": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"be-box\">"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -76,6 +82,12 @@
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
+          }
+        },
+        "1da00743-5e21-4945-9d39-ad23fd92f88e": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/div><!-- .be-box -->"
           }
         },
         "aea48dc4-8143-4ee8-9033-259c6041fd13": {
@@ -108,14 +120,13 @@
         "69d05011-95f0-4e3c-a4a1-1242313116eb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>\n<\/div><!-- .be-box -->"
+            "custom_liquid": "<\/div><!-- .be-box -->"
           }
         },
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
-            "custom_liquid": "<\/div>"
+            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>"
           }
         },
         "description": {
@@ -146,11 +157,13 @@
         "0084fd30-a48b-42cc-ad8c-222e0b527cda",
         "caption",
         "43898529-b513-41ea-bb08-2eb86603e5a3",
+        "5346747f-eecb-4138-916e-925834244489",
         "variant_picker",
         "deb4108e-f194-4e9a-9151-2eb100cc3d37",
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "1da00743-5e21-4945-9d39-ad23fd92f88e",
         "aea48dc4-8143-4ee8-9033-259c6041fd13",
         "02f120be-a55a-44f0-9ae6-9256d8518630",
         "9feb7ff5-3f71-434b-a1a2-7de647f9c904",
