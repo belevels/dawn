@@ -1656,6 +1656,7 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .accordion .summary__title {
   justify-content: space-between;
+  align-items: baseline;
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   /*max-width: fit-content;
