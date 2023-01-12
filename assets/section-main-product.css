@@ -1724,11 +1724,11 @@ a.product__text {
 #EcoPack-be-ecopack-add-to-cart-box .accordion__content {
   margin-bottom: 2.5rem;;
 }
-/*** */
+/** */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
 .be-box--subtitle {
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 .be-box--subtitle  > * + * {
   margin: 0;
@@ -1739,6 +1739,9 @@ a.product__text {
   text-align: right;
 }
 @media screen and (min-width: 990px) {
+  .be-box--subtitle {
+    margin-top: -5rem;
+  }  
   .be-box--pricex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
