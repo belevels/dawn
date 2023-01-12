@@ -344,10 +344,22 @@
               "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
             }
           },
+          "b0eb3ed5-2320-405e-a8bb-f67d8bb27e8b": {
+            "type": "custom_liquid",
+            "settings": {
+              "custom_liquid": "<div class=\"be-box\">"
+            }
+          },
           "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d": {
             "type": "variant_picker",
             "settings": {
               "picker_type": "button"
+            }
+          },
+          "80933e62-8c50-4c2b-b5c1-fe208f102282": {
+            "type": "custom_liquid",
+            "settings": {
+              "custom_liquid": "<\/div><!-- .be-box -->"
             }
           },
           "1085b71b-5ae2-494e-b216-dc0b1fdf6238": {
@@ -362,7 +374,9 @@
           "3acbbe0a-5685-4cdb-bf44-9386f3c8f2aa",
           "58001255-a73b-4009-8244-eb2bbb96c331",
           "c327f331-5d19-43c0-8ac4-9b27658d421c",
+          "b0eb3ed5-2320-405e-a8bb-f67d8bb27e8b",
           "f2a8ffba-ed2b-4c1f-9b94-7d8085b2b12d",
+          "80933e62-8c50-4c2b-b5c1-fe208f102282",
           "1085b71b-5ae2-494e-b216-dc0b1fdf6238"
         ],
         "settings": {
