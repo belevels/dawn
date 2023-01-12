@@ -98,7 +98,7 @@
         <div class="center page-width">
           {%- if popupColumnCount > popupCount -%}
             {%- comment -%}
-            <a class="button button--secondary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
+            <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
               {{ sectionButtonLabel | escape }}
             </a>
             {%- endcomment -%}  
@@ -109,7 +109,7 @@
             >
               <button
                 id="ProductPopup-{{ section.id }}"
-                class="button button--secondary button--fullwidth animate-arrow"
+                class="button button--primary button--fullwidth animate-arrow"
                 type="button"
                 aria-haspopup="dialog"
               >
