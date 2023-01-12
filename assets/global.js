@@ -894,13 +894,13 @@ class VariantSelects extends HTMLElement {
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
-        /** */
+        /** * /
         const destination_eco = document.getElementById(`price-eco-${this.dataset.section}`);        
         const source_eco = html.getElementById(`price-eco-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         if (source_eco && destination_eco) destination_eco.innerHTML = source_eco.innerHTML;
         const price_eco = document.getElementById(`price-eco-${this.dataset.section}`);
         if (price_eco) price_eco.classList.remove('visibility-hidden');
-        /** */
+        / ** */
 
         if (source && destination) destination.innerHTML = source.innerHTML;
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
