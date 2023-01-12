@@ -3063,13 +3063,15 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
 }
 
-.multirow.image-with-text--overlap .image-with-text__content {
-  min-width: min-content;
-  min-width: calc(100% - 22rem);
-  margin-left: -12rem;  
-}
-.multirow.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
-  margin-right: -12rem;
+@media screen and (min-width:750px) {
+  .multirow.image-with-text--overlap .image-with-text__content {
+    min-width: min-content;
+    min-width: calc(100% - 22rem);
+    margin-left: -12rem;  
+  }
+  .multirow.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
+    margin-right: -12rem;
+  }
 }
 .zed__navbar-dropdown-content .CollectionTab .collectiontablinks.button,
 .collectiontabcontent--footer-left .button {
