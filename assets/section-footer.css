@@ -553,6 +553,9 @@ noscript .localization-selector.link {
   }
 }
 /*** */
+.footer .footer-block__details-content {
+  margin: 0;
+}
 @media screen and (min-width: 750px) {
   #shopify-section-footer > footer > div > div > div:nth-child(7) {
     max-width: fit-content;
