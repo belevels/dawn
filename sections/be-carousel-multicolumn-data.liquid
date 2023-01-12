@@ -304,7 +304,7 @@ assign ColumnCount = 0
       <div class="center page-width">
         {%- if sectionButtonLabel != blank -%}
           {%- comment -%}
-          <a class="button button--secondary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
+          <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
             {{ sectionButtonLabel | escape }}
           </a>
           {%- endcomment -%}
@@ -315,7 +315,7 @@ assign ColumnCount = 0
           >
             <button
               id="ProductPopup-{{ section.id }}"
-              class="button button--secondary animate-arrow"
+              class="button button--primary animate-arrow"
               type="button"
               aria-haspopup="dialog"
             >
