@@ -115,9 +115,9 @@
             {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
           </div>
         </details>
+        {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
       </div>
       <div class="be-add-to-cart-box">
-        {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
         <div
           class="product-form__input product-form__quantity ecopack-hide--all{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
           {{ block.shopify_attributes }}
