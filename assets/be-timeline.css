@@ -102,6 +102,7 @@
 .custom-timeline .image-with-text .grid__item {
   margin-bottom: 3.5rem;
 }
+
 @media screen and (max-width: 749px) {
   .custom-timeline .image-with-text__content {
     background-color: rgba(255,255,255,0.85);
