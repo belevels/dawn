@@ -563,4 +563,7 @@ noscript .localization-selector.link {
     display: flex;
   }
 }
+.footer__blocks-wrapper {
+  position: relative;
+}
 
