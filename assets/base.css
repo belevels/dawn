@@ -3062,3 +3062,7 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
   border-radius: 20px;
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
 }
+
+.multirow .image-with-text--overlap .image-with-text__content {
+  min-width: min-content;
+}
