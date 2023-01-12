@@ -68,6 +68,7 @@
         },
         "deb4108e-f194-4e9a-9151-2eb100cc3d37": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-add-to-cart-box\">"
           }
@@ -85,6 +86,7 @@
         },
         "5e6c6120-79d4-4443-9d12-7c20817487d7": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
@@ -133,6 +135,7 @@
         },
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>"
           }
