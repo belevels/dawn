@@ -209,6 +209,11 @@
     display: flex;
     padding: 3rem 0;
   }
+  @media screen and (max-width:749px) {
+    .image-with-text--overlap .image-with-text__text-item {
+      margin-top: -8rem;
+    }
+  }
 
   .image-with-text--overlap .image-with-text__content {
     height: auto;
