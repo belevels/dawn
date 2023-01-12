@@ -3059,6 +3059,7 @@ cart-remove-button .button {
 }
 carousel-component .grid--1-col-desktop .multicolumn-card,
 .multirow.image-with-text--overlap .image-with-text__content {
+  padding: 5rem calc(3rem / var(--font-body-scale)) 4rem;
   border-radius: 20px;
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
   max-width: 85%;
