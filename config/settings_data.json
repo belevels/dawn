@@ -230,7 +230,7 @@
           "mobile_logo_position": "left",
           "margin_bottom": 0,
           "padding_top": 12,
-          "padding_bottom": 12
+          "padding_bottom": 0
         }
       },
       "footer": {
