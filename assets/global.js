@@ -834,6 +834,13 @@ class VariantSelects extends HTMLElement {
       input.value = this.currentVariant.id;
       input.dispatchEvent(new Event('change', { bubbles: true }));
     });
+    /** ecopack */
+    const productFormsEcoPack = document.querySelectorAll(`#product-form-ecopack-${this.dataset.section}, #product-form-installment-ecopack-${this.dataset.section}`);
+    productFormsEcoPack.forEach((productForm) => {
+      const input = productForm.querySelector('input[name="id"]');
+      input.value = this.currentVariant.id;
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+    });    
   }
 
   updateVariantStatuses() {

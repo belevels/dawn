@@ -116,6 +116,7 @@
           </div>
         </details>
         <!-- -->
+        {%- comment -%}
         <variant-radios
           id="variant-radios-{{ section.id }}"
           class="no-js-hidden"
@@ -134,6 +135,7 @@
             {{ product.variants | json }}
           </script>
         </variant-radios>
+      {%- endcomment -%}
         <!-- -->
       </div>
       <div class="be-add-to-cart-box">
