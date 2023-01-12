@@ -275,7 +275,7 @@
           "f4b0bb07-e823-4874-b210-b450a1c8b3b5": {
             "type": "custom_liquid",
             "settings": {
-              "custom_liquid": "<div class=\"copyright__content\">&copy; {{ 'now' | date: \"%Y\" }}, {{ shop.name | link_to: routes.root_url }}<\/div>"
+              "custom_liquid": "<div class=\"copyright__content\">&copy; {{ 'now' | date: \"%Y\" }}, {{ shop.name | link_to: routes.root_url }} | {{ 'belevels.general.all_right_reserved' | t }}.<\/div>"
             }
           }
         },
