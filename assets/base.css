@@ -3057,7 +3057,7 @@ modal-opener .button:not(.card--horizontal__quick-add) {
 cart-remove-button .button {
   border: 0 !important; /* ugly */
 }
-carousel-component .grid--1-col-desktop .multicolumn-card,
+/*carousel-component .grid--1-col-desktop .multicolumn-card,*/
 .multirow.image-with-text--overlap .image-with-text__content {
   padding: 5rem calc(3rem / var(--font-body-scale)) 4rem;
   border-radius: 20px;
