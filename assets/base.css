@@ -3078,3 +3078,8 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
 }
 
+/** colors */
+.footer.color-accent-1 {
+  background-color: #444444;
+}
+
