@@ -115,7 +115,26 @@
             {{ 'belevels.general.pack_discount_by_quantity.content' | t }}
           </div>
         </details>
-        {% render 'be-product-variant-picker', block: block, product: product, picker_type_buttons: true %}
+        <!-- -->
+        <variant-radios
+          id="variant-radios-{{ section.id }}"
+          class="no-js-hidden"
+          data-section="{{ section.id }}"
+          data-url="{{ product.url }}"
+          {% if update_url == false %}data-update-url="false"{% endif %}
+          {{ block.shopify_attributes }}
+        >
+          {%- for option in product.options_with_values -%}
+            <fieldset class="js product-form__input">
+              <legend class="form__label">{{ option.name }}</legend>
+              {% render 'product-variant-options', product: product, option: option, block: block, ecopack: true %}
+            </fieldset>
+          {%- endfor -%}
+          <script type="application/json">
+            {{ product.variants | json }}
+          </script>
+        </variant-radios>
+        <!-- -->
       </div>
       <div class="be-add-to-cart-box">
         <div
