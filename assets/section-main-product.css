@@ -1509,12 +1509,12 @@ a.product__text {
   margin-right: auto;
   background-color: var(--color-base-background-1);
 }
-/*@media screen and (min-width: 1120px) {*/
+@media screen and (min-width: 1120px) {
   .be-box .product-form__input,
   .be-add-to-cart-box .product-form__input {
   display: flex;
   }
-/*}*/
+}
 .be-add-to-cart-box .product-form__quantity {
   flex: 0;
   /*margin: 0;*/
