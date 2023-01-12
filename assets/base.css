@@ -3051,7 +3051,6 @@ modal-opener .button:not(.card--horizontal__quick-add) {
   min-width: 26rem;
   max-width: 37rem;
 }
-.multirow,
 .custom-timeline .image-with-text__content {
   border-radius: 0 0 20px 20px !important;
 }
