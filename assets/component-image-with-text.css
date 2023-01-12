@@ -210,7 +210,7 @@
     padding: 3rem 0;
   }
   @media screen and (max-width:749px) {
-    .multirow.image-with-text--overlap .image-with-text__text-item {
+    .multirow.image-with-text--overlap .image-with-text .grid__item {
       margin-top: -8rem;
     }
   }
