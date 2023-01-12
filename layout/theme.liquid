@@ -393,7 +393,7 @@
     {% if template == 'product' or template == 'product.essentials' %}
       {%- section 'be-sticky-add-to-cart' -%}
       
-    {% if product.has_only_default_variant == false and variant.metafields.EcoPack.CantidadMinima != '' %}
+    {% if product.has_only_default_variant %}
       <script>
         const currentVariantId = {{ product.selected_or_first_available_variant.id }};
         const metaData = [{ {{ ecopack_cant_min }} }, { {{ ecopack_price }} }, { {{ ecopack_cant_input }} }];
