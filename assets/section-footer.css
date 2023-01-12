@@ -554,6 +554,11 @@ noscript .localization-selector.link {
 }
 /*** */
 @media screen and (min-width: 750px) {
+  #shopify-section-footer > footer > div > div > div:nth-child(7) {
+    max-width: fit-content;
+    position: absolute;
+    bottom: 11rem;
+  }
   .footer__content-top.page-width > div > div:nth-child(5) > ul {
     margin-left: auto;
     margin-right: auto;
@@ -565,10 +570,5 @@ noscript .localization-selector.link {
 }
 .footer__blocks-wrapper {
   position: relative;
-}
-#shopify-section-footer > footer > div > div > div:nth-child(7) {
-  max-width: fit-content;
-    position: absolute;
-    bottom: 11rem;
 }
 
