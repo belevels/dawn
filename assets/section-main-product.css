@@ -1634,7 +1634,7 @@ a.product__text {
 */
 
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
-    margin-left: 3px;
+    margin: 0 0 0 4px;
   font-size: 1.75rem;
   }
   #EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
