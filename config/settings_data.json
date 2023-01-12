@@ -236,13 +236,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "heading": "",
-              "menu": "footer"
-            }
-          },
           "51dc5d70-c8a7-425d-adef-de020099c304": {
             "type": "image",
             "settings": {
@@ -251,42 +244,41 @@
               "alignment": "center"
             }
           },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer"
+            }
+          },
           "footer-1": {
             "type": "link_list",
             "settings": {
               "heading": "",
-              "menu": "footer-info"
+              "menu": "menu-legal"
             }
           },
           "69202d01-5033-4877-b5a2-6dc63cd8d6c2": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "",
               "menu": "footer"
             }
           },
-          "acd88020-2861-42ae-b03a-2491358aa8e3": {
-            "type": "text",
+          "45f0752c-be81-443b-b990-a9dbd8e6dc8e": {
+            "type": "link_list",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-            }
-          },
-          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3": {
-            "type": "image",
-            "settings": {
-              "image_width": 100,
-              "alignment": ""
+              "heading": "",
+              "menu": "footer-packs"
             }
           }
         },
         "block_order": [
-          "footer-0",
           "51dc5d70-c8a7-425d-adef-de020099c304",
+          "footer-0",
           "footer-1",
           "69202d01-5033-4877-b5a2-6dc63cd8d6c2",
-          "acd88020-2861-42ae-b03a-2491358aa8e3",
-          "20ed5d87-012f-4ecc-abb5-138bd7efdcd3"
+          "45f0752c-be81-443b-b990-a9dbd8e6dc8e"
         ],
         "settings": {
           "color_scheme": "accent-1",
@@ -298,8 +290,8 @@
           "payment_enable": false,
           "show_policy": false,
           "margin_top": 0,
-          "padding_top": 36,
-          "padding_bottom": 36
+          "padding_top": 52,
+          "padding_bottom": 0
         }
       },
       "main-password-header": {
