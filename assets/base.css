@@ -3065,4 +3065,10 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
 
 .multirow.image-with-text--overlap .image-with-text__content {
   min-width: min-content;
+  min-width: calc(100% + 12rem);
+  margin-left: -12rem;  
 }
+.multirow.image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
+  margin-right: -12rem;
+}
+
