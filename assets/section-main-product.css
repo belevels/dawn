@@ -1488,7 +1488,7 @@ a.product__text {
 }
 @media screen and (max-width:989px) {
   .be-box {
-    padding: calc(3.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2) calc(1.5rem - var(--product-card-border-width) * 2);
+    padding: calc(2rem - var(--product-card-border-width) * 2);
   }
 }
 .be-add-to-cart-box {
