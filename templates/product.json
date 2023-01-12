@@ -455,7 +455,7 @@
       "type": "belevels-custom-judgme",
       "settings": {
         "layout": "grid",
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "heading_size": "h1",
         "content_heading_size": "h2",
         "text_style": "body",
