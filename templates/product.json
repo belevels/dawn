@@ -5,6 +5,7 @@
       "blocks": {
         "d3f7cad9-6c48-4776-9539-a577d77f82b6": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--price\">"
           }
@@ -21,6 +22,7 @@
         },
         "6c544147-a927-42f5-beae-ceeda50c8393": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--price -->"
           }
