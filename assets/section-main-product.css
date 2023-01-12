@@ -1522,7 +1522,7 @@ a.product__text {
 .be-box .product-form__input--dropdown,
 .be-box .quantity,
 .be-box .product-form__input input[type="radio"] + label {
-  flex-basis: 100%;
+  /*flex-basis: 100%;*/
 }
 .be-box .product-form__input input[type="radio"] > label:nth-child(1) { 
   margin-right: 0.5rem;
