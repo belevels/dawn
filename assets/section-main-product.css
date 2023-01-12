@@ -1678,6 +1678,7 @@ a.product__text {
   color: #327544;
   width: max-content;
   font-weight: 700;
+  word-break: normal;
 }
 #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
   font-size: 1.5rem;
@@ -1707,10 +1708,11 @@ a.product__text {
     flex-direction: column;
     width: 100%;
   }
-  #EcoPack-be-ecopack-add-to-cart-box .accordion__title,
+  
+  /*#EcoPack-be-ecopack-add-to-cart-box .accordion__title,
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
     font-size: 1.5rem;
-  }
+  }*/
   #EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
     content: "";
   }
