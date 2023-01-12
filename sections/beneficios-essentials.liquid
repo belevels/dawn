@@ -364,7 +364,7 @@
       {%- if product.metafields.Beneficios.TituloBeneficioSecundario != blank -%}
         <div class="page-width isolate center">
           <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden d-block text-center" data-modal="#PopupModal-{{ slideId }}" {{ block.shopify_attributes }}>
-            <button id="ProductPopup-{{ slideId }}" class="button button--secondary animate-arrow" type="button" aria-haspopup="dialog">
+            <button id="ProductPopup-{{ slideId }}" class="button button--primary animate-arrow" type="button" aria-haspopup="dialog">
               {{ ButtonText }}
               <span class="icon-wrap rotate--45">&nbsp;{% render 'icon-arrow' %}</span>
             </button>
