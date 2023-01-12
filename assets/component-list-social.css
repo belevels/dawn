@@ -11,15 +11,18 @@
 }
 
 .list-social__item .icon {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .list-social__link {
   align-items: center;
   display: flex;
   padding: 1.3rem;
-  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  margin-right: 1rem;
+  border-radius: 100%;
 }
 
 .list-social__link:hover .icon {
