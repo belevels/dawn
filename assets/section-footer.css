@@ -566,4 +566,9 @@ noscript .localization-selector.link {
 .footer__blocks-wrapper {
   position: relative;
 }
+#shopify-section-footer > footer > div > div > div:nth-child(7) {
+  max-width: fit-content;
+    position: absolute;
+    bottom: 11rem;
+}
 
