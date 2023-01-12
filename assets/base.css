@@ -3079,7 +3079,8 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
 }
 
 /** colors */
-.footer.color-accent-1 {
+.footer.color-accent-1,
+.footer.color-accent-1 .field__input {
   background-color: #444444;
 }
 
