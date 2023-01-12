@@ -3091,6 +3091,6 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
   background-color: #444444;
 }
 .full-unstyled-link .icon-wrap {
-  margin-left: 3rem;
+  margin-left: 3rem !important;
 }
 
