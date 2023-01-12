@@ -3090,4 +3090,7 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
 .footer.color-accent-1 .field__input {
   background-color: #444444;
 }
+.full-unstyled-link .icon-wrap {
+  margin-left: 3rem;
+}
 
