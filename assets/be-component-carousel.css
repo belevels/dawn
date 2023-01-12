@@ -34,11 +34,12 @@ carousel-component .slider-button {
 carousel-component .slider-button:not([disabled]):hover {
   background-color: rgba(var(--color-background),.85);
 }
-
+/*
 carousel-component .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
   padding-left: 3rem !important; 
   padding-right: 3rem !important;
 }
+*/
 /*
 @media screen and (min-width: 990px) {
   carousel-component .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
