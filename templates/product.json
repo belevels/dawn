@@ -98,7 +98,7 @@
         "c0a9586d-dd6b-4026-8034-a58a095a3051": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: nonex;\"><\/div>"
+            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: none;\"><\/div>"
           }
         },
         "description": {
