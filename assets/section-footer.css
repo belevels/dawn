@@ -552,3 +552,7 @@ noscript .localization-selector.link {
     }
   }
 }
+
+.footer__content-top.page-width > div > div:nth-child(4) > ul {
+  display: flex;
+}
