@@ -192,9 +192,7 @@
       const selector = document.querySelectorAll('.ecopack-variant--cant, .ecopack-variant--price, .ecopack-variant--input');
       const hide = document.querySelectorAll('.ecopack-hide--all');
         for(let x = 0; x < metaData.length; x++) {
-          console.log('[x] = ' + x);
           if ([x] == 2) {
-            console.log('metaData[x][id] = ' + metaData[x][id]);
             selector[x].value = metaData[x][id];
           } 
           if (metaData[x][id]) {
