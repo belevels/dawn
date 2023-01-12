@@ -1712,6 +1712,9 @@ a.product__text {
   }
 }
 
+#EcoPack-be-ecopack-add-to-cart-box .accordion__content {
+  margin-bottom: 2.5rem;;
+}
 /** */
 .button {min-width: calc(10rem + var(--buttons-border-width) * 2);}
 
