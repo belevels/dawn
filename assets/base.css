@@ -3062,9 +3062,12 @@ carousel-component .grid--1-col-desktop .multicolumn-card,
   padding: 5rem calc(3rem / var(--font-body-scale)) 4rem;
   border-radius: 20px;
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
-  max-width: 85%;
 }
-
+@media screen and (max-width:749px) {
+  .multirow.image-with-text--overlap .image-with-text__content {
+    max-width: 85%;
+  }
+}
 @media screen and (min-width:750px) {
   .multirow.image-with-text--overlap .image-with-text__content {
     min-width: min-content;
