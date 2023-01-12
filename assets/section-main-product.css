@@ -1491,6 +1491,9 @@ a.product__text {
     padding: calc(2rem - var(--product-card-border-width) * 2);
   }
 }
+#EcoPack-be-ecopack-add-to-cart-box .be-add-to-cart-box {
+  margin-top: 0;
+}
 .be-add-to-cart-box {
   display: flex;
   flex-direction: row;
