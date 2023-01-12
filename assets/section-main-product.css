@@ -1533,7 +1533,7 @@ a.product__text {
 }
 .be-box .product__accordion {
   border: 0;
-  margin-top: 1rem;
+  margin: 0;
 }
 #be-buttons-box .accordion__content {
   font-size: 1.5rem;
