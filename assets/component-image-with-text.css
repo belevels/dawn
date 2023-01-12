@@ -209,15 +209,6 @@
     display: flex;
     padding: 3rem 0;
   }
-  .multirow.image-with-text--overlap .image-with-text__text-item.grid__item {
-    margin-top: -8rem;
-  }
-
-  @media screen and (max-width:749px) {
-    .multirow.image-with-text--overlap .image-with-text__text-item.grid__item {
-      margin-top: -8rem;
-    }
-  }
 
   .image-with-text--overlap .image-with-text__content {
     height: auto;
@@ -344,3 +335,12 @@
     margin-left: 0;
   }
 }
+
+  
+@media screen and (max-width:749px) {
+  .multirow.image-with-text--overlap .image-with-text__text-item.grid__item {
+    margin-top: -8rem;
+  }
+}
+
+
