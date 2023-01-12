@@ -29,6 +29,7 @@
         },
         "dc63f03c-20ae-43f5-a5ab-ea4b98b52b8c": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"be-box--subtitle\">"
           }
@@ -47,6 +48,7 @@
         },
         "43898529-b513-41ea-bb08-2eb86603e5a3": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<\/div><!-- .be-box--subtitle -->"
           }
