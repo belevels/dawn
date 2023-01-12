@@ -219,3 +219,8 @@ quick-add-modal .product-media-container.constrain-height {
     --constrained-min-height: 400px;
   }
 }
+
+/** */
+.quick-add__submit {
+  background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
+}
