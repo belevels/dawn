@@ -1706,7 +1706,7 @@ a.product__text {
     margin-top: 0.5rem;  
   }
   #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
-    display: flex;
+    display: flex !important;
   }
 }
 /*
