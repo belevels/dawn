@@ -14,7 +14,7 @@
     %}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
 
-      .{{ product.handle }} .be-main-product {
+      .{{ product.handle }} #MainContent > .section:first-child {
         background-color: aliceblue;
       }
     {% elsif 
