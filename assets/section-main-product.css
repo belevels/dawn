@@ -1661,7 +1661,7 @@ a.product__text {
 }
 #EcoPack-be-ecopack-add-to-cart-box .accordion .summary__title {
   justify-content: space-between;
-  align-items: baseline;
+  /*align-items: baseline;*/
 }
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price {
   /*max-width: fit-content;
@@ -1715,7 +1715,7 @@ a.product__text {
     width: 100%;
   }
   #EcoPack-be-ecopack-add-to-cart-box .accordion .summary__title {
-    align-items: flex-end;
+    /*align-items: flex-end;*/
   }
   /*#EcoPack-be-ecopack-add-to-cart-box .accordion__title,
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
