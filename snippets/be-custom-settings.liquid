@@ -13,7 +13,8 @@
   collection_handles contains 'keto-food'
 %}
   {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-{% elsif
+{% endif %}
+{% if
   collection_handles contains 'essentials' or 
   collection_handles contains 'esenciales' 
 %}
