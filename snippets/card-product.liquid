@@ -327,7 +327,7 @@
                     role="dialog"
                     aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
                     aria-modal="true"
-                    class="quick-add-modal__content global-settings-popup"
+                    class="quick-add-modal__content global-settings-popup {{ card_product.handle }}"
                     tabindex="-1"
                   >
                     <button
