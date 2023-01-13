@@ -39,11 +39,13 @@
       .{{ product.handle }} #MainContent * {
         border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
-      .{{ product.handle }} #MainContent > .section:first-child,
-      .{{ product.handle }} .custom-timeline.image-with-text {}
-      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {
+      .{{ product.handle }} #MainContent > .section:first-child {
         background: {{ customColor3 }};
       }
+      
+      .{{ product.handle }} .custom-timeline.image-with-text,
+      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {}
+
       .{{ product.handle }} .product__info-container .product__description ul li::after {
         background: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
