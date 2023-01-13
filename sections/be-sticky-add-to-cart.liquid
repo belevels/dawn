@@ -243,7 +243,7 @@
                     {% render 'product-variant-picker', block: block, product: product %}
                   {%- comment -%}Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector{%- endcomment -%}
                 {%- when 'ecopack_quantity_selector' -%}
-                  {%- assign product_form_id = 'product-form-ecopack-' | append: section.id | append: '-sticky' -%}
+                  {%- assign product_form_id = 'product-form-ecopack-' | append: '-sticky' | append: section.id -%}
 
                   {% if product.has_only_default_variant %}
                     {% assign ecopack_cant_min = product.metafields.EcoPack.CantidadMinima %}
