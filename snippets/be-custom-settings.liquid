@@ -44,7 +44,7 @@
 
       {%- comment -%}backgrounds{%- endcomment -%}
       .{{ product.handle }} #MainContent > .section:first-child {
-        background: {{ customColor3 }};
+        background-color: {{ customColor3 }};
         background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColora3 | color_to_hex | color_modify: 'alpha', 1 }} 100%); 
       }
       
