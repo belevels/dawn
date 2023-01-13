@@ -327,7 +327,7 @@
                     role="dialog"
                     aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
                     aria-modal="true"
-                    class="quick-add-modal__content global-settings-popup {{ card_product.handle }}"
+                    class="quick-add-modal__content global-settings-popup"
                     tabindex="-1"
                   >
                     <button
@@ -338,7 +338,7 @@
                     >
                       {% render 'icon-close' %}
                     </button>
-                    <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
+                    <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info  {{ card_product.handle }}"></div>
                   </div>
                 </quick-add-modal>
               {%- endif -%}
