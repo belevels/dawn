@@ -43,12 +43,6 @@
       .{{ product.handle }} .custom-timeline.image-with-text {
         background-color: {{ customColor3 }};
       }
-      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event:hover .timeline-event-thumbnail {
-        --color-base-accent-2: {{ customColor1 }};
-        -moz-box-shadow: inset 40em 0 0 0 rgb(var(--color-base-accent-2));
-        -webkit-box-shadow: inset 40em 0 0 0 rgb(var(--color-base-accent-2));
-        box-shadow: inset 40em 0 0 0 rgb(var(--color-base-accent-2));
-      }
       .{{ product.handle }} .product__info-container .product__description ul li::after {
         background-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
