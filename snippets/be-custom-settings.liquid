@@ -47,7 +47,9 @@
         background-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
       .{{ product.handle }} .product__info-container .product__description ul li::before,
-      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-icon {
+      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-icon,
+      .{{ product.handle }} .custom-timeline.image-with-text .timeline::before,
+      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-thumbnail {
           background-color: {{ customColor1 }};
         }
     {% elsif 
