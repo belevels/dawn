@@ -78,10 +78,10 @@
       <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
         <details id="EcoPack-Details-{{ block.id }}-{{ section.id }}">
           <summary>
-            
+            <div class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</div>
             <div class="summary__title">
               <div>
-                <p class="h3 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }} <span class="icon-wrap">{% render 'icon-accordion', icon: 'question_mark' %}</span></p>
+                <p class="h4 accordion__title">{{ 'belevels.general.pack_discount_by_quantity.name' | t }}</p>
                 <p class="small">{{ 'belevels.general.from' | t }} <span class="ecopack-variant--cant"></span> uds.</p>
                 {% capture 'ecopack_cant_min' %}
                   {% for variant in product.variants %}
