@@ -58,6 +58,9 @@
       }
 
       {%- comment -%}backgrounds{%- endcomment -%}
+      .{{ product.handle }} #MainContent > .section-be-sticky-add-to-cart-padding {
+        background-color: {{ customColorHex3 }} !important;
+      }
       .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
       .{{ product.handle }} #MainContent > .section .multirow.image-with-text--overlap,
       .{{ product.handle }} #MainContent > .section .collapsible-row-layout.color-background-1,
