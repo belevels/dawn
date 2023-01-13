@@ -60,7 +60,7 @@
       {%- comment -%}backgrounds{%- endcomment -%}
       .{{ product.handle }} .section-be-sticky-add-to-cart-padding,
       .{{ product.handle }} #StickyFooterBar-be-sticky-add-to-cart .opciones .product__accordion.accordion {
-        background-color: {{ customColorHex3 }} !important;
+        background-color: #ffffff !important;
       }
       .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
       .{{ product.handle }} #MainContent > .section .multirow.image-with-text--overlap,
@@ -98,7 +98,16 @@
       collection_handles contains 'essentials' or 
       collection_handles contains 'esenciales' 
     %}
-      {% assign svgIconUrl = 'esenciales.svg' | asset_url %}    
+      {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
+      .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
+      .{{ product.handle }} #MainContent > .section .multirow.image-with-text--overlap,
+      .{{ product.handle }} #MainContent > .section .collapsible-row-layout.color-background-1,
+      .collection .product-card-wrapper .{{ product.handle }}.card,
+      .zed__navbar-dropdown-content .product-card-wrapper .{{ product.handle }}.card,
+      .{{ product.handle }}.quick-add-modal__content-info {
+        background-color: #F2E8E0 !important;
+        background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, rgba(242, 232, 224, 1) 100%) !important; 
+      }      
     {% else %}
       {% assign svgIconUrl = 'dot.svg' | asset_url %}
     {% endif %}    
