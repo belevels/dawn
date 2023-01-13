@@ -122,7 +122,7 @@
       .{{ product.handle }} .timeline::before,
       .{{ product.handle }} .timeline .timeline-event-thumbnail,
       .{{ product.handle }} .timeline .timeline-event-icon {
-        background: #D6C4BA;
+        background: rgba(var(--color-foreground),.75);
       }      
     {% else %}
       {% assign svgIconUrl = 'dot.svg' | asset_url %}
