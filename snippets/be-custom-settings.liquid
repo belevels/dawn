@@ -90,11 +90,8 @@
       .{{ product.handle }} .timeline .timeline-event-icon {
         background: {{ customColor1 }};
       }
-      .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
-
-      }
-      .{{ product.handle }} .image-with-text--overlap .image-with-text__content * {
-
+      .product-card-wrapper .{{ product.handle }}.card .button--secondary {
+        color: #ffffff;
       }
     {% elsif 
       collection_handles contains 'essentials' or 
