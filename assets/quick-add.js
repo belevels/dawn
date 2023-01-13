@@ -80,6 +80,8 @@ if (!customElements.get('quick-add-modal')) {
 
     preventDuplicatedIDs() {
       const sectionId = this.productElement.dataset.section;
+     /** ecopack */
+      this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(`ecopack-${ sectionId }`, `quickadd-${ sectionId }`);      
       this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${ sectionId }`);
       this.productElement.querySelectorAll('variant-selects, variant-radios').forEach((variantSelect) => {
         variantSelect.dataset.originalSection = sectionId;
