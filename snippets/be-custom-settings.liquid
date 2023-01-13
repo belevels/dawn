@@ -1,55 +1,17 @@
 
 {% style %}
-.product__info-container .product__description ul li::before {
-  -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
-    mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
-}
-{% for product in collections.all.products %}
-{% assign collection_handles = product.collections | map: 'handle' %}
-{% if 
-  collection_handles contains 'formulas-maestras' or 
-  collection_handles contains 'salud-femenina' or 
-  collection_handles contains 'deporte' or 
-  collection_handles contains 'keto-food' or 
-  collection_handles contains 'essentials' or 
-  collection_handles contains 'esenciales' 
-%}
-  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-  .{{ product.handle }} .zed__navbar-main,
-  .{{ product.handle }} .global-media-settings {
-    background-color: transparent !important;
+  .product__info-container .product__description ul li::before {
+    -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
+      mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
   }
-  {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-  .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-  {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-  {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-    content: '';
-    position: absolute;
-    width: calc(var(--font-heading-scale) * 3rem);
-    height: calc(var(--font-heading-scale) * 3rem);
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: rgba(var(--color-foreground),1);
-    -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-    mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-  }
-  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-    width: calc(var(--font-heading-scale) * 1.25rem);
-    height: calc(var(--font-heading-scale) * 1.25rem);
-    margin-left: 0.5rem;
-    margin-top: 0;
-  }
-  @media screen and (max-width:749px) {
-    .{{ product.handle }} .product__info-wrapper .product__title h1::after {
-      width: calc(var(--font-heading-scale) * 2.5rem);
-      height: calc(var(--font-heading-scale) * 2.5rem);
-    }
-  }
-{% endif %}
-  {% if   collection_handles contains 'essentials' or 
+
+  {% assign collection_handles = product.collections | map: 'handle' %}
+  {% if 
+    collection_handles contains 'formulas-maestras' or 
+    collection_handles contains 'salud-femenina' or 
+    collection_handles contains 'deporte' or 
+    collection_handles contains 'keto-food' or 
+    collection_handles contains 'essentials' or 
     collection_handles contains 'esenciales' 
   %}
     {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
@@ -57,192 +19,221 @@
     .{{ product.handle }} .global-media-settings {
       background-color: transparent !important;
     }
+    {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+    .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+    {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+    {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+      content: '';
+      position: absolute;
+      width: calc(var(--font-heading-scale) * 3rem);
+      height: calc(var(--font-heading-scale) * 3rem);
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: rgba(var(--color-foreground),1);
+      -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+      mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+    }
+    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+      width: calc(var(--font-heading-scale) * 1.25rem);
+      height: calc(var(--font-heading-scale) * 1.25rem);
+      margin-left: 0.5rem;
+      margin-top: 0;
+    }
+    @media screen and (max-width:749px) {
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after {
+        width: calc(var(--font-heading-scale) * 2.5rem);
+        height: calc(var(--font-heading-scale) * 2.5rem);
+      }
+    }
   {% endif %}
-{% endfor %}
-{%- comment -%}
-{% for product in collections.all.products %}
-  {% for collection in product.collections %}
-    {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
-      {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
-      {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-      .{{ product.handle }} .zed__navbar-main,
-      .{{ product.handle }} .global-media-settings {
-        background-color: transparent !important;
-      }
-      .{{ product.handle }} .product-card-wrapper .card__heading span {
-        width: fit-content;
-        margin-right: 0.25rem;
-      }
-      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-      {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-        content: '';
-        position: absolute;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: rgba(var(--color-foreground),1);
-        -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-        mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-      }
-    {%- elsif collection.handle == 'esenciales' or collection.handle == 'essentials' -%}
-      {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
-      {%- capture customColor1 -%}#CB9C7A{%- endcapture -%}
-      {%- capture customColor2 -%}#8A6653{%- endcapture -%}
-      {%- capture customColor3 -%}#F2E8E0{%- endcapture -%}
-      .{{ product.handle }} .zed__navbar-main,
-      .{{ product.handle }} .global-media-settings {
-        background-color: transparent;
-      }
-      .{{ product.handle }} .product-card-wrapper .card__heading span {
-        width: fit-content;
-        margin-right: 0.25rem;
-      }
-      {%- comment -%}{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-      {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-      .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-        content: '';
-        position: absolute;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: rgba(var(--color-foreground),1);
-        -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-        mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-      }
-    {%- else -%}
-    {%- liquid
-      assign customColor1 = ''
-      assign customColor2 = ''
-      assign customColor3 = ''
-    -%}
-    {%- endif -%}
-    
 
-    {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
-    {%- if product.metafields.Seccion.CustomColor1 != blank -%}
-      {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
-    {%- endif -%}
-      {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 0.13 %}
-      {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-      .{{ product.handle }} .be-box,
-      .{{ product.handle }} .quantity::before,
-      /*.{{ product.handle }} .be-box .price--large,*/
-      .{{ product.handle }} .product__accordion .accordion__content,
-      .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
-      .{{ product.handle }} .product__info-container .product__description ul li::after, 
-      .{{ product.handle }} .highlight li::after,
-      .collection .product-card-wrapper .{{ product.handle }}.card,
-      .zed__navbar-dropdown-content .product-card-wrapper .{{ product.handle }}.card,
-      .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-      product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
-        background-color: {{ customColorRgba1 }};
-      }
-      .{{ product.handle }} .product-form__input input[type="radio"]:checked + label {
-        background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
-        border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
-      }
-      .{{ product.handle }} .be-box,
-      .{{ product.handle }} .quantity::before,
-      .{{ product.handle }} .be-box .price--large,
-      .{{ product.handle }} .product__accordion,
-      .{{ product.handle }} .slider-counter__link--dots .dot,
-      .product-card-wrapper .{{ product.handle }}.card {
-        border-color: {{ customColorRgba1 }};
-      }
-      {%- comment -%}.{{ product.handle }} .be-box .button--secondary,{%- endcomment -%}
-      .product-card-wrapper .{{ product.handle }}.card .button--secondary,
-      .{{ product.handle }} .timeline::before,
-      .{{ product.handle }} .timeline .timeline-event-thumbnail,
-      .{{ product.handle }} .timeline .timeline-event-icon {
-        background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
-        color: rgba(255, 255, 255, 1);
-        border-color: transparent;
-      }      
-
-    {%- if product.metafields.Seccion.CustomColor2 != blank -%}
-      {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
-    {%- endif -%}      
-      {% assign customColorRgba2 = customColor2 | color_to_hex %}
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-      .{{ product.handle }} .product__info-container .product__description ul li::before {
-        background-color: {{ customColorRgba2 }};
-      }
-
-    {%- if product.metafields.Seccion.CustomColor3 != blank -%}
-      {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-    {%- endif -%}          
-      {% assign customColorRgba3 = customColor3 | color_to_hex %}
-      .{{ product.handle }} #MainContent .gradient {
-        background-color: #ffffff;
-        background-image: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0.9121849423363095) 100%); 
-      }
-      .{{ product.handle }} #MainContent > .section:first-of-type,
-      .{{ product.handle }} #MainContent .section + .section {
-        background-color: {{ customColorRgba3 }};
-        background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%); 
-      }
-      .{{ product.handle }} #MainContent > .section + .section .color-background-2 {
-        background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
-      }
-      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card,
-      .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
-        background-color: rgba(255, 255, 255, 1);
-      }
-      {% if product.metafields.Seccion.TextColor %}
-        .{{ product.handle }} #MainContent .gradient,
-        .{{ product.handle }} #MainContent > .section:first-of-type,
-        .{{ product.handle }} #MainContent .section + .section {
-          background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
+  {%- comment -%}
+  {% for product in collections.all.products %}
+    {% for collection in product.collections %}
+      {% if collection.handle == 'formulas-maestras' or collection.handle == 'salud-femenina' or collection.handle == 'deporte' or collection.handle == 'keto-food' %} 
+        {%- comment -%}Be Levels - start mod: Agregamos pictos svg y estilos asociados{%- endcomment -%}
+        {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+        .{{ product.handle }} .zed__navbar-main,
+        .{{ product.handle }} .global-media-settings {
+          background-color: transparent !important;
         }
+        .{{ product.handle }} .product-card-wrapper .card__heading span {
+          width: fit-content;
+          margin-right: 0.25rem;
+        }
+        {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+        .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+        {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+        {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+        .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+          content: '';
+          position: absolute;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: rgba(var(--color-foreground),1);
+          -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+          mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+        }
+      {%- elsif collection.handle == 'esenciales' or collection.handle == 'essentials' -%}
+        {%- assign svgIconUrl = 'esenciales.svg' | asset_url -%}
+        {%- capture customColor1 -%}#CB9C7A{%- endcapture -%}
+        {%- capture customColor2 -%}#8A6653{%- endcapture -%}
+        {%- capture customColor3 -%}#F2E8E0{%- endcapture -%}
+        .{{ product.handle }} .zed__navbar-main,
+        .{{ product.handle }} .global-media-settings {
+          background-color: transparent;
+        }
+        .{{ product.handle }} .product-card-wrapper .card__heading span {
+          width: fit-content;
+          margin-right: 0.25rem;
+        }
+        {%- comment -%}{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+        .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+        {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+        {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+        .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+          content: '';
+          position: absolute;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: rgba(var(--color-foreground),1);
+          -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+          mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+        }
+      {%- else -%}
+      {%- liquid
+        assign customColor1 = ''
+        assign customColor2 = ''
+        assign customColor3 = ''
+      -%}
+      {%- endif -%}
+      
+
+      {%- comment -%}Be Levels - start mod: Agregamos colores y estilos asociados{%- endcomment -%}
+      {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+        {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
+      {%- endif -%}
+        {% assign customColorRgba1 = customColor1 | color_to_hex | color_modify: 'alpha', 0.13 %}
         {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
         .{{ product.handle }} .be-box,
         .{{ product.handle }} .quantity::before,
+        /*.{{ product.handle }} .be-box .price--large,*/
         .{{ product.handle }} .product__accordion .accordion__content,
         .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
-        .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-        product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
-        .{{ product.handle }} .multicolumn.background-primary .multicolumn-card,
-        .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
-          background-color: rgba(var(--color-foreground),0.05);
-        }
-        .{{ product.handle }} .be-box .price--large {
-          background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
-        }
-        .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-        .{{ product.handle }} .product__info-container .product__description ul li::before {
-          background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
-        }        
         .{{ product.handle }} .product__info-container .product__description ul li::after, 
         .{{ product.handle }} .highlight li::after,
-        .{{ product.handle }} .button {
-          background-color: rgba(var(--color-foreground),0.25);
+        .collection .product-card-wrapper .{{ product.handle }}.card,
+        .zed__navbar-dropdown-content .product-card-wrapper .{{ product.handle }}.card,
+        .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+        product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after {
+          background-color: {{ customColorRgba1 }};
+        }
+        .{{ product.handle }} .product-form__input input[type="radio"]:checked + label {
+          background-color: {{ customColorRgba1 | color_modify: 'alpha', 0.5 }};
+          border-color: {{ customColorRgba1 | color_modify: 'alpha', 0.25 }};
+        }
+        .{{ product.handle }} .be-box,
+        .{{ product.handle }} .quantity::before,
+        .{{ product.handle }} .be-box .price--large,
+        .{{ product.handle }} .product__accordion,
+        .{{ product.handle }} .slider-counter__link--dots .dot,
+        .product-card-wrapper .{{ product.handle }}.card {
+          border-color: {{ customColorRgba1 }};
+        }
+        {%- comment -%}.{{ product.handle }} .be-box .button--secondary,{%- endcomment -%}
+        .product-card-wrapper .{{ product.handle }}.card .button--secondary,
+        .{{ product.handle }} .timeline::before,
+        .{{ product.handle }} .timeline .timeline-event-thumbnail,
+        .{{ product.handle }} .timeline .timeline-event-icon {
+          background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
+          color: rgba(255, 255, 255, 1);
+          border-color: transparent;
+        }      
+
+      {%- if product.metafields.Seccion.CustomColor2 != blank -%}
+        {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
+      {%- endif -%}      
+        {% assign customColorRgba2 = customColor2 | color_to_hex %}
+        .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+        .{{ product.handle }} .product__info-container .product__description ul li::before {
+          background-color: {{ customColorRgba2 }};
         }
 
-        .{{ product.handle }} .zed__navbar-dropdown .zed__navbar-dropbtn,
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
-        .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
-        .{{ product.handle }} #MainContent > section:first-child,
-        .collection .{{ product.handle }}.card .button,
-        .{{ product.handle }} #MainContent .section + .section {
-          --color-base-text: 255, 255, 255;
-          --color-link: rgba(var(--color-foreground),.75);
-          --color-foreground: 255, 255, 255;
-          --color-base-outline-button-labels: 255, 255, 255;
-          color: rgba(var(--color-foreground),.75);
-          fill: rgba(var(--color-foreground),.75);
+      {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+        {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+      {%- endif -%}          
+        {% assign customColorRgba3 = customColor3 | color_to_hex %}
+        .{{ product.handle }} #MainContent .gradient {
+          background-color: #ffffff;
+          background-image: linear-gradient(0deg, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 0%, rgba(255,255,255,0.9121849423363095) 100%); 
         }
-        .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
-          filter: invert(1);
-        }        
-      {% endif %}
+        .{{ product.handle }} #MainContent > .section:first-of-type,
+        .{{ product.handle }} #MainContent .section + .section {
+          background-color: {{ customColorRgba3 }};
+          background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColorRgba3 | color_modify: 'alpha', 1 }} 100%); 
+        }
+        .{{ product.handle }} #MainContent > .section + .section .color-background-2 {
+          background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
+        }
+        .{{ product.handle }} .multicolumn.background-primary .multicolumn-card,
+        .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
+          background-color: rgba(255, 255, 255, 1);
+        }
+        {% if product.metafields.Seccion.TextColor %}
+          .{{ product.handle }} #MainContent .gradient,
+          .{{ product.handle }} #MainContent > .section:first-of-type,
+          .{{ product.handle }} #MainContent .section + .section {
+            background-image: linear-gradient(to right, {{ customColorRgba3 | color_modify: 'alpha', 1 }}, {{ customColorRgba2 | color_modify: 'alpha', 1 }});
+          }
+          {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+          .{{ product.handle }} .be-box,
+          .{{ product.handle }} .quantity::before,
+          .{{ product.handle }} .product__accordion .accordion__content,
+          .{{ product.handle }} .slider-counter__link--active.slider-counter__link--dots .dot,
+          .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,
+          .{{ product.handle }} .multicolumn.background-primary .multicolumn-card,
+          .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
+            background-color: rgba(var(--color-foreground),0.05);
+          }
+          .{{ product.handle }} .be-box .price--large {
+            background-color: {{ customColorRgba3 | color_modify: 'alpha', 1 }};
+          }
+          .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+          .{{ product.handle }} .product__info-container .product__description ul li::before {
+            background-color: {{ customColorRgba1 | color_modify: 'alpha', 1 }};
+          }        
+          .{{ product.handle }} .product__info-container .product__description ul li::after, 
+          .{{ product.handle }} .highlight li::after,
+          .{{ product.handle }} .button {
+            background-color: rgba(var(--color-foreground),0.25);
+          }
+
+          .{{ product.handle }} .zed__navbar-dropdown .zed__navbar-dropbtn,
+          .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__icon,
+          .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .localization-selector,
+          .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__menu-item,
+          .{{ product.handle }} #shopify-section-headerx:not(.scrolled-past-header) *,
+          .{{ product.handle }} #MainContent > section:first-child,
+          .collection .{{ product.handle }}.card .button,
+          .{{ product.handle }} #MainContent .section + .section {
+            --color-base-text: 255, 255, 255;
+            --color-link: rgba(var(--color-foreground),.75);
+            --color-foreground: 255, 255, 255;
+            --color-base-outline-button-labels: 255, 255, 255;
+            color: rgba(var(--color-foreground),.75);
+            fill: rgba(var(--color-foreground),.75);
+          }
+          .{{ product.handle }} #shopify-section-header:not(.scrolled-past-header) .header__heading-logo {
+            filter: invert(1);
+          }        
+        {% endif %}
+    {%- endfor -%}
   {%- endfor -%}
-{%- endfor -%}
-{%- endcomment -%}
+  {%- endcomment -%}
 {% endstyle %}
 
 <style>
