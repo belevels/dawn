@@ -84,10 +84,11 @@
         background: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
       .{{ product.handle }} .product__info-container .product__description ul li::before,
-      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-icon,
-      .{{ product.handle }} .custom-timeline.image-with-text .timeline::before,
-      .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-thumbnail {
-          background: {{ customColor1 }};
+      .product-card-wrapper .{{ product.handle }}.card .button--secondary,
+      .{{ product.handle }} .timeline::before,
+      .{{ product.handle }} .timeline .timeline-event-thumbnail,
+      .{{ product.handle }} .timeline .timeline-event-icon {
+        background: {{ customColor1 }};
       }
       .{{ product.handle }} .image-with-text--overlap .image-with-text__content {
 
