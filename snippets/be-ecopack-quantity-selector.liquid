@@ -95,7 +95,7 @@
                 <span class="ecopack-variant--price price-item"></span>
                 {% capture 'ecopack_price' %}
                   {% for variant in product.variants %}
-                    {{variant.id}}:{{ variant.metafields.EcoPack.PorcentajeDescuento | json }}
+                    {{variant.id}}:{{ variant.metafields.EcoPack.PorcentajeDescuento | money | json }}
                     {% unless forloop.last %},{% endunless %}
                   {% endfor %}
                 {% endcapture %}
