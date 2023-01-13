@@ -26,7 +26,7 @@
         {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
       {%- endif -%}                  
 
-      .{{ product.handle }} #MainContent > * {
+      .{{ product.handle }} #MainContent * {
         border-color: red;
       }
       .{{ product.handle }} #MainContent > .section:first-child {
