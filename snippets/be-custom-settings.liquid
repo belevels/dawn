@@ -58,7 +58,8 @@
       }
 
       {%- comment -%}backgrounds{%- endcomment -%}
-      .{{ product.handle }} .section-be-sticky-add-to-cart-padding {
+      .{{ product.handle }} .section-be-sticky-add-to-cart-padding,
+      .{{ product.handle }} #StickyFooterBar-be-sticky-add-to-cart .opciones .product__accordion.accordion {
         background-color: {{ customColorHex3 }} !important;
       }
       .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
