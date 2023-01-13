@@ -35,6 +35,12 @@
     margin-left: 0.5rem;
     top: auto;
   }
+  @media screen and (max-width:749px) {
+    .{{ product.handle }} .product__info-wrapper .product__title h1::after {
+      width: calc(var(--font-heading-scale) * 2.5rem);
+      height: calc(var(--font-heading-scale) * 2.5rem);
+    }
+  }
 {% endif %}
 {% endfor %}
 {%- comment -%}
