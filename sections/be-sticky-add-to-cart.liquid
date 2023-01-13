@@ -239,9 +239,7 @@
                     </a>
                   </div>
                 {%- when 'variant_picker' -%}
-                  <div class="be-box">
                     {% render 'product-variant-picker', block: block, product: product %}
-                  </div>
                   {%- comment -%}Be Levels - start mod: agregamos bloques personalizados ecopack_quantity_selector{%- endcomment -%}
                 {%- when 'ecopack_quantity_selector' -%}
                   {%- render 'be-ecopack-quantity-selector' -%}
