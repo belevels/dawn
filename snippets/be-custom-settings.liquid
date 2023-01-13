@@ -99,6 +99,13 @@
       collection_handles contains 'esenciales' 
     %}
       {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
+
+      {%- comment -%}borders{%- endcomment -%}
+      .{{ product.handle }} #MainContent * {
+        border-color: rgba(235, 217, 201, 1);
+      }
+
+      {%- comment -%}backgrounds{%- endcomment -%}      
       .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
       .{{ product.handle }} #MainContent > .section .multirow.image-with-text--overlap,
       .{{ product.handle }} #MainContent > .section .collapsible-row-layout.color-background-1,
