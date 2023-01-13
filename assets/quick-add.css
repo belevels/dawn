@@ -224,3 +224,6 @@ quick-add-modal .product-media-container.constrain-height {
 .quick-add__submit {
   background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
 }
+quick-add-modal .be-box #EcoPack-be-ecopack-add-to-cart-box {
+  display: none;
+}
