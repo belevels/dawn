@@ -122,15 +122,25 @@
       .{{ product.handle }} .product__info-container .product__description ul li::after {
         background: rgba(235, 217, 201, 1);
       }
-      .{{ product.handle }} .product__info-container .product__description ul li::before,
+      .{{ product.handle }} .product__info-container .product__description ul li::before {
+        background: rgba(var(--color-foreground),.6);
+      }
       .product-card-wrapper .{{ product.handle }}.card .button--secondary,
       .{{ product.handle }} .timeline::before,
       .{{ product.handle }} .timeline .timeline-event-thumbnail,
       .{{ product.handle }} .timeline .timeline-event-icon {
-        background: rgba(var(--color-foreground),.6);
+        background: rgba(214, 196, 186, 1);
       }      
     {% else %}
       {% assign svgIconUrl = 'dot.svg' | asset_url %}
+
+      .product-card-wrapper .{{ product.handle }}.card .button--secondary,
+      .{{ product.handle }} .timeline::before,
+      .{{ product.handle }} .timeline .timeline-event-thumbnail,
+      .{{ product.handle }} .timeline .timeline-event-icon {
+        background: rgba(0, 0, 0, 1);
+        color: #ffffff;
+      }
     {% endif %}    
       .{{ product.handle }} .zed__navbar-main,
       .{{ product.handle }} .global-media-settings {
