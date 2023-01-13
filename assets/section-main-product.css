@@ -1650,9 +1650,10 @@ a.product__text {
 
 #EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
   margin-right: calc(var(--font-heading-scale) * .5rem);
-  height: 2.25rem;
-  margin-top: -0.25rem;
+  height: 2.0rem;
+  margin-top: -.25rem;
   fill: #327544;
+  vertical-align: text-top;
 }
 @media screen and (max-width:749px) {
   #EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
