@@ -4,7 +4,7 @@
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
-
+{% for product in collections.all.products %}
 {% assign collection_handles = product.collections | map: 'handle' %}
 {% if collection_handles contains 'formulas-maestras' %}
   {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
@@ -30,7 +30,7 @@
     mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
   }  
 {% endif %}
-
+{% endfor %}
 {%- comment -%}
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
