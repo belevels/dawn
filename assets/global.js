@@ -967,10 +967,14 @@ class VariantSelects extends HTMLElement {
 
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
+
     /** ecopack */
     const buttonEcoPack = document.getElementById(`product-form-ecopack-${this.dataset.section}`);
     const addButtonEcoPack = buttonEcoPack.querySelector('[name="add"]');
     const addButtonTextEcoPack = buttonEcoPack.querySelector('[name="add"] > span');
+
+    if (!addButtonEcoPack) return;
+    addButtonTextEcoPack.textContent = window.variantStrings.unavailable;
 
     if (price) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
