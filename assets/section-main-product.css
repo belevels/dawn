@@ -1677,9 +1677,11 @@ a.product__text {
   color: #327544;
   /*margin: 0;*/
 }
+/*
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item > div:first-child {
   margin-top: -2rem;
 }
+*/
 #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
   color: #327544;
   width: max-content;
