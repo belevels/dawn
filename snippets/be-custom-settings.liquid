@@ -16,7 +16,7 @@
   .{{ product.handle }} .product__info-wrapper .product__title h1::after,
   {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
   {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+  .product-card-wrapper .{{ product.handle }}.card .card__heading span::after {
     content: '';
     position: absolute;
     width: calc(var(--font-heading-scale) * 3rem);
