@@ -53,6 +53,7 @@
           background-color: {{ customColor1 }};
       }
       .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {
+        --color-background: {{ customColor3 }};
         background: rgb(var(--color-background)) linear-gradient({{ customColor2 | color_to_hex | color_modify: 'alpha', 0.04 }},{{ customColor2 | color_to_hex | color_modify: 'alpha', 0.04 }});
       }
     {% elsif 
