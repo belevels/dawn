@@ -940,7 +940,20 @@ class VariantSelects extends HTMLElement {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
     }
+    /** ecopack */
+    const productFormEcoPack = document.getElementById(`product-form-ecopack-${this.dataset.section}`);
+    if (!productFormEcoPack) return;
+    const addButtonEcoPack = productForm.querySelector('[name="add"]');
+    const addButtonTextEcoPack = productForm.querySelector('[name="add"] > span');
+    if (!addButtonEcoPack) return;
 
+    if (disable) {
+      addButtonEcoPack.setAttribute('disabled', 'disabled');
+      if (text) addButtonTextEcoPack.textContent = text;
+    } else {
+      addButtonEcoPack.removeAttribute('disabled');
+      addButtonTextEcoPack.textContent = window.variantStrings.addToCart;
+    }
     if (!modifyClass) return;
   }
 
