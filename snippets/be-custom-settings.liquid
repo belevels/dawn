@@ -14,8 +14,20 @@
     %}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
 
+      {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+        {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
+      {%- endif -%}
+
+      {%- if product.metafields.Seccion.CustomColor2 != blank -%}
+        {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
+      {%- endif -%}
+
+      {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+        {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+      {%- endif -%}                  
+
       .{{ product.handle }} #MainContent > .section:first-child {
-        background-color: aliceblue;
+        background-color: {{ customColor3 }};
       }
     {% elsif 
       collection_handles contains 'essentials' or 
