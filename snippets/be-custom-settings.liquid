@@ -18,7 +18,7 @@
   collection_handles contains 'essentials' or 
   collection_handles contains 'esenciales' 
 %}
-  {% assign svgIconUrl = 'esenciales.svg' %}
+  {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
 {% endif %}
 
   .{{ product.handle }} .zed__navbar-main,
