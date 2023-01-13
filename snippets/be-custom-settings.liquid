@@ -24,10 +24,15 @@
 
       {%- if product.metafields.Seccion.CustomColor3 != blank -%}
         {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
-      {%- endif -%}                  
+      {%- endif -%}
 
+      {%- comment -%}
+        ************************************************
+        Be Levels - start mod: asignamos colores 
+        ************************************************
+      {%- endcomment -%}
       .{{ product.handle }} #MainContent * {
-        border-color: red;
+        border-color: {{ customColor1 }};
       }
       .{{ product.handle }} #MainContent > .section:first-child {
         background-color: {{ customColor3 }};
