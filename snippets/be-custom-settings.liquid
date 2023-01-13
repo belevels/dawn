@@ -13,11 +13,13 @@
       collection_handles contains 'keto-food'
     %}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-    {% else if 
+    {% elsif 
       collection_handles contains 'essentials' or 
       collection_handles contains 'esenciales' 
     %}
-      {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
+      {% assign svgIconUrl = 'esenciales.svg' | asset_url %}    
+    {% else %}
+      {% assign svgIconUrl = 'dot.svg' | asset_url %}
     {% endif %}    
       .{{ product.handle }} .zed__navbar-main,
       .{{ product.handle }} .global-media-settings {
