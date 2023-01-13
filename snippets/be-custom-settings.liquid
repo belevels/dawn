@@ -36,16 +36,22 @@
         Be Levels - start mod: asignamos colores 
         ************************************************
       {%- endcomment -%}
+
+      {%- comment -%}borders{%- endcomment -%}
       .{{ product.handle }} #MainContent * {
         border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
+
+      {%- comment -%}backgrounds{%- endcomment -%}
       .{{ product.handle }} #MainContent > .section:first-child {
         background: {{ customColor3 }};
+        background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColora3 | color_to_hex | color_modify: 'alpha', 1 }} 100%); 
       }
       
       .{{ product.handle }} .custom-timeline.image-with-text,
       .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {}
 
+      {%- comment -%}bullets {%- endcomment -%}
       .{{ product.handle }} .product__info-container .product__description ul li::after {
         background: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
