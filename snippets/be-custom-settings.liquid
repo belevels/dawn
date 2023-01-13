@@ -1,8 +1,32 @@
+
 {% style %}
 .product__info-container .product__description ul li::before {
   -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
+
+{% assign collection_handles = product.collections | map: 'handle' %}
+{% if collection_handles contains 'formulas-maestras' %}
+  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+  .{{ product.handle }} .zed__navbar-main,
+  .{{ product.handle }} .global-media-settings {
+    background-color: transparent !important;
+  }
+  {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+  .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+  {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+  {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+    content: '';
+    position: absolute;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-foreground),1);
+    -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+    mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+  }  
+{% endif %}
+
 {%- comment -%}
 {% for product in collections.all.products %}
   {% for collection in product.collections %}
