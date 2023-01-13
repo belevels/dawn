@@ -19,7 +19,6 @@
   collection_handles contains 'esenciales' 
 %}
   {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
-{% endif %}
 
   .{{ product.handle }} .zed__navbar-main,
   .{{ product.handle }} .global-media-settings {
@@ -54,7 +53,8 @@
       height: calc(var(--font-heading-scale) * 2.5rem);
     }
   }
-
+{%else %}
+{% endif %}
 {% endfor %}
 {%- comment -%}
 {% for product in collections.all.products %}
