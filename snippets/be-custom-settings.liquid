@@ -49,6 +49,15 @@
     }
   }
 {% endif %}
+  {% if   collection_handles contains 'essentials' or 
+    collection_handles contains 'esenciales' 
+  %}
+    {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+    .{{ product.handle }} .zed__navbar-main,
+    .{{ product.handle }} .global-media-settings {
+      background-color: transparent !important;
+    }
+  {% endif %}
 {% endfor %}
 {%- comment -%}
 {% for product in collections.all.products %}
