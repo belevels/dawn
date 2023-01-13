@@ -10,16 +10,12 @@
   collection_handles contains 'formulas-maestras' or 
   collection_handles contains 'salud-femenina' or 
   collection_handles contains 'deporte' or 
-  collection_handles contains 'keto-food'
-%}
-  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-
-{% elsif
+  collection_handles contains 'keto-food' or 
   collection_handles contains 'essentials' or 
   collection_handles contains 'esenciales' 
 %}
-  {% assign svgIconUrl = 'esenciales.svg' | asset_url %}
-
+  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+{% endif %}
   .{{ product.handle }} .zed__navbar-main,
   .{{ product.handle }} .global-media-settings {
     background-color: transparent !important;
@@ -53,8 +49,7 @@
       height: calc(var(--font-heading-scale) * 2.5rem);
     }
   }
-{%else %}
-{% endif %}
+
 {% endfor %}
 {%- comment -%}
 {% for product in collections.all.products %}
