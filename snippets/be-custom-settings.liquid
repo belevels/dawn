@@ -48,7 +48,9 @@
       {%- comment -%}backgrounds{%- endcomment -%}
       .{{ product.handle }} #MainContent > .section:nth-child(2n+1),
       .{{ product.handle }} #MainContent > .section .multirow.image-with-text--overlap,
-      .{{ product.handle }} #MainContent > .section .collapsible-row-layout.color-background-1 {
+      .{{ product.handle }} #MainContent > .section .collapsible-row-layout.color-background-1,
+      .collection .product-card-wrapper .{{ product.handle }}.card,
+      .zed__navbar-dropdown-content .product-card-wrapper .{{ product.handle }}.card {
         background-color: {{ customColorHex3 }} !important;
         background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColorHex3 | color_modify: 'alpha', 1 }} 100%) !important; 
       }
