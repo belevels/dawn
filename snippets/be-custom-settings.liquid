@@ -9,35 +9,30 @@
     -webkit-mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
       mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
   }
-
-    {%- for product in collections.all.products -%}
-      {%- assign collection_handles = product.collections | map: 'handle'-%}
-      {%- if 
+  {% for product in collections.all.products %}
+    {% assign collection_handles = product.collections | map: 'handle' %}
+    {% if 
       collection_handles contains 'formulas-maestras' or 
       collection_handles contains 'salud-femenina' or 
       collection_handles contains 'deporte' or 
       collection_handles contains 'keto-food'
-    -%}
-    {%- liquid    
-      capture svgIconUrl product.handle | append: '.svg' | asset_url 
-      endcapture 
-      
-      if product.metafields.Seccion.CustomColor1 != blank
-        capture customColor1 product.metafields.Seccion.CustomColor1 
-        endcapture
-        assign customColorHex1 = customColor1 | color_to_hex
-      endif
-      if product.metafields.Seccion.CustomColor2 != blank
-        capture customColor2 product.metafields.Seccion.CustomColor2 
-        endcapture
-        assign customColorHex2 = customColor2 | color_to_hex
-      endif
-      if product.metafields.Seccion.CustomColor3 != blank
-        capture customColor3 product.metafields.Seccion.CustomColor3 
-        endcapture
-        assign customColorHex3 = customColor3 | color_to_hex
-      endif
-    -%}
+    %}
+      {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+
+      {%- if product.metafields.Seccion.CustomColor1 != blank -%}
+        {%- capture customColor1 -%}{{ product.metafields.Seccion.CustomColor1 }}{%- endcapture -%}
+        {%- assign customColorHex1 = customColor1 | color_to_hex -%}
+      {%- endif -%}
+
+      {%- if product.metafields.Seccion.CustomColor2 != blank -%}
+        {%- capture customColor2 -%}{{ product.metafields.Seccion.CustomColor2 }}{%- endcapture -%}
+        {%- assign customColorHex2 = customColor2 | color_to_hex -%}
+      {%- endif -%}
+
+      {%- if product.metafields.Seccion.CustomColor3 != blank -%}
+        {%- capture customColor3 -%}{{ product.metafields.Seccion.CustomColor3 }}{%- endcapture -%}
+        {%- assign customColorHex3 = customColor3 | color_to_hex -%}
+      {%- endif -%}
 
       {%- comment -%}
         ************************************************
