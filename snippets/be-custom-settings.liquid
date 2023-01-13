@@ -5,50 +5,55 @@
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
 {% for product in collections.all.products %}
-  {% assign collection_handles = product.collections | map: 'handle' %}
-  {% if 
-    collection_handles contains 'formulas-maestras' or 
-    collection_handles contains 'salud-femenina' or 
-    collection_handles contains 'deporte' or 
-    collection_handles contains 'keto-food' or 
-    collection_handles contains 'essentials' or 
-    collection_handles contains 'esenciales' 
-  %}
-    {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
-    .{{ product.handle }} .zed__navbar-main,
-    .{{ product.handle }} .global-media-settings {
-      background-color: transparent !important;
+{% assign collection_handles = product.collections | map: 'handle' %}
+{% if 
+  collection_handles contains 'formulas-maestras' or 
+  collection_handles contains 'salud-femenina' or 
+  collection_handles contains 'deporte' or 
+  collection_handles contains 'keto-food'
+%}
+  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+{% elsif
+  collection_handles contains 'essentials' or 
+  collection_handles contains 'esenciales' 
+%}
+  {% assign svgIconUrl = 'esenciales.svg' %}
+{% endif %}
+
+  .{{ product.handle }} .zed__navbar-main,
+  .{{ product.handle }} .global-media-settings {
+    background-color: transparent !important;
+  }
+  {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
+  .{{ product.handle }} .product__info-wrapper .product__title h1::after,
+  {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+  {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--font-heading-scale) * 3rem);
+    height: calc(var(--font-heading-scale) * 3rem);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: rgba(var(--color-foreground),1);
+    -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+    mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
+  }
+  .product-card-wrapper .{{ product.handle }} .card__heading span::after {
+    width: calc(var(--font-heading-scale) * 1.25rem);
+    height: calc(var(--font-heading-scale) * 1.25rem);
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
+  @media screen and (max-width:749px) {
+    .{{ product.handle }} .product__info-wrapper .product__title h1::after {
+      width: calc(var(--font-heading-scale) * 2.5rem);
+      height: calc(var(--font-heading-scale) * 2.5rem);
     }
-    {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-    .{{ product.handle }} .product__info-wrapper .product__title h1::after,
-    {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-    {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
-    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-      content: '';
-      position: absolute;
-      width: calc(var(--font-heading-scale) * 3rem);
-      height: calc(var(--font-heading-scale) * 3rem);
-      margin-top: 0.5rem;
-      margin-left: 1rem;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: rgba(var(--color-foreground),1);
-      -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-      mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
-    }
-    .product-card-wrapper .{{ product.handle }} .card__heading span::after {
-      width: calc(var(--font-heading-scale) * 1.25rem);
-      height: calc(var(--font-heading-scale) * 1.25rem);
-      margin-left: 0.5rem;
-      margin-top: 0;
-    }
-    @media screen and (max-width:749px) {
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after {
-        width: calc(var(--font-heading-scale) * 2.5rem);
-        height: calc(var(--font-heading-scale) * 2.5rem);
-      }
-    }
-  {% endif %}
+  }
+
 {% endfor %}
 {%- comment -%}
 {% for product in collections.all.products %}
