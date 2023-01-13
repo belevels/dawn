@@ -32,11 +32,14 @@
         ************************************************
       {%- endcomment -%}
       .{{ product.handle }} #MainContent * {
-        border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.13 }};
+        border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
       .{{ product.handle }} #MainContent > .section:first-child {
         background-color: {{ customColor3 }};
       }
+      .{{ product.handle }} .product__info-container .product__description ul li::before {
+          background-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
+        }
     {% elsif 
       collection_handles contains 'essentials' or 
       collection_handles contains 'esenciales' 
