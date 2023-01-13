@@ -1679,7 +1679,10 @@ a.product__text {
 #EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item {
   font-size: 2rem;
   color: #327544;
-  margin: 0;
+  /*margin: 0;*/
+}
+#EcoPack-be-ecopack-add-to-cart-box .eco-pack--price .price-item > div:first-child {
+  margin-top: -2rem;
 }
 #EcoPack-be-ecopack-add-to-cart-box .accordion__title {
   color: #327544;
