@@ -5,9 +5,9 @@
     mask: url({{ 'icon-checkmark.svg' | asset_url }}) no-repeat 100% 100%;
 }
 
-{% assign collection_handles = product.collections | map: 'handle' %}
-{% if collection_handles contains 'formulas-maestras' %}
-  {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+{% for c in product.collections %}
+  {% if c.handle == "collection-handle" %}
+    {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
   .{{ product.handle }} .zed__navbar-main,
   .{{ product.handle }} .global-media-settings {
     background-color: transparent !important;
@@ -25,7 +25,10 @@
     -webkit-mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
     mask: url({{ svgIconUrl }}) no-repeat 100% 100%;
   }  
-{% endif %}
+  {% endif %}
+  {% endfor %}
+
+
 
 {%- comment -%}
 {% for product in collections.all.products %}
