@@ -40,7 +40,8 @@
         border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.25 }};
       }
       .{{ product.handle }} #MainContent > .section:first-child,
-      .{{ product.handle }} .custom-timeline.image-with-text {
+      .{{ product.handle }} .custom-timeline.image-with-text,
+      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {
         background-color: {{ customColor3 }};
       }
       .{{ product.handle }} .product__info-container .product__description ul li::after {
@@ -51,10 +52,6 @@
       .{{ product.handle }} .custom-timeline.image-with-text .timeline::before,
       .{{ product.handle }} .custom-timeline.image-with-text .timeline-event-thumbnail {
           background-color: {{ customColor1 }};
-      }
-      .{{ product.handle }} .multicolumn.background-primary .multicolumn-card {
-        --color-background: {{ customColor3 }};
-        background: rgb(var(--color-background)) linear-gradient({{ customColor2 | color_to_hex | color_modify: 'alpha', 0.04 }},{{ customColor2 | color_to_hex | color_modify: 'alpha', 0.04 }});
       }
     {% elsif 
       collection_handles contains 'essentials' or 
