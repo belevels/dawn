@@ -1718,13 +1718,13 @@ a.product__text {
   #EcoPack-be-ecopack-add-to-cart-box .accordion .summary__title {
     /*align-items: flex-end;*/
   }
-  /*#EcoPack-be-ecopack-add-to-cart-box .accordion__title,
+  #EcoPack-be-ecopack-add-to-cart-box .accordion__title,
   #EcoPack-be-ecopack-add-to-cart-box .summary__title .small {
-    font-size: 1.5rem;
-  }*/
-  /*#EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
+    font-size: 1.25rem;
+  }
+  #EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
     content: "";
-  }*/
+  }
 }
 
 #EcoPack-be-ecopack-add-to-cart-box .accordion__content {
