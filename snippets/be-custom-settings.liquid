@@ -44,8 +44,8 @@
 
       {%- comment -%}backgrounds{%- endcomment -%}
       .{{ product.handle }} #MainContent > .section:first-child {
-
-        background: rgb({{ customColor3 | color_to_rgb }}) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04));
+        background-color: {{ customColor3 }};
+        background-image: linear-gradient(0deg, rgba(255,255,255,0.9121849423363095) 0%, {{ customColora3 | color_to_hex | color_modify: 'alpha', 1 }} 100%); 
       }
       
       .{{ product.handle }} .custom-timeline.image-with-text,
