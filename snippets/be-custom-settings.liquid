@@ -32,7 +32,7 @@
         ************************************************
       {%- endcomment -%}
       .{{ product.handle }} #MainContent * {
-        border-color: {{ customColor2 }};
+        border-color: {{ customColor2 | color_to_hex | color_modify: 'alpha', 0.13 }};
       }
       .{{ product.handle }} #MainContent > .section:first-child {
         background-color: {{ customColor3 }};
