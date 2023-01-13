@@ -1639,13 +1639,13 @@ a.product__text {
   #EcoPack-be-ecopack-add-to-cart-box .summary__title > div:nth-child(1) {
     display: flex;
     justify-content: center;
-  }/*
+  }
   #EcoPack-be-ecopack-add-to-cart-box .accordion__title::after {
     content: "|";
     color: #327544;
     font-weight: normal;
     margin-left: 0.5rem;
-  }*/
+  }
 
 
 #EcoPack-be-ecopack-add-to-cart-box .accordion .icon-accordion {
