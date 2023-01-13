@@ -13,6 +13,10 @@
       collection_handles contains 'keto-food'
     %}
       {% capture svgIconUrl %} {{ product.handle | append: '.svg' | asset_url }}{% endcapture %}
+
+      .{{ product.handle }} .be-main-product {
+        background-color: aliceblue;
+      }
     {% elsif 
       collection_handles contains 'essentials' or 
       collection_handles contains 'esenciales' 
@@ -26,9 +30,9 @@
         background-color: transparent !important;
       }
       {%- comment -%}.{{ product.handle }} #MainContent > section .product .product__media::after,{%- endcomment -%}
-      .{{ product.handle }} .product__info-wrapper .product__title h1::after,
       {%- comment -%}.product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
       {%- comment -%}product-recommendations .product-card-wrapper .{{ product.handle }}.card .card__media::after,{%- endcomment -%}
+      .{{ product.handle }} .product__info-wrapper .product__title h1::after,      
       .product-card-wrapper .{{ product.handle }} .card__heading span::after {
         content: '';
         position: absolute;
