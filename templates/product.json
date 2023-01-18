@@ -84,6 +84,12 @@
             "custom_liquid": "<\/div><!-- .be-add-to-cart-box -->"
           }
         },
+        "c6667abb-c7bd-43f9-8e72-f61e1c3e3cfb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ufe-custom-upsell\"><\/div>"
+          }
+        },
         "72d76219-e839-4f9c-9867-fbd424124b07": {
           "type": "ecopack_quantity_selector",
           "settings": {
@@ -129,6 +135,7 @@
         "quantity_selector",
         "buy_buttons",
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
+        "c6667abb-c7bd-43f9-8e72-f61e1c3e3cfb",
         "72d76219-e839-4f9c-9867-fbd424124b07",
         "1da00743-5e21-4945-9d39-ad23fd92f88e",
         "description",
