@@ -109,9 +109,11 @@
                     </tr>
                   </thead>
 
-                  <tbody role="rowgroup" data-csapp_line_wrapper>
+                  {% comment %}<tbody role="rowgroup" data-csapp_line_wrapper>{% endcomment %}
+                  <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_line_index>
+                      {% comment %}<tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" data-csapp_line_index>{% endcomment %}
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -136,7 +138,7 @@
                             {{- item.product.title | escape -}}
                           </a>
                       
-                        <div data-aiod-volume-discount-line_item-bar></div>
+                        {%- comment -%}<div data-aiod-volume-discount-line_item-bar></div>{%- endcomment -%}
 
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
@@ -158,7 +160,7 @@
                               {{ item.original_price | money }}
                             </div>
                           {%- endif -%}
-                      <div data-csapp_discount_summery></div>
+                      {%- comment -%}<div data-csapp_discount_summery></div>{%- endcomment -%}
 
                           {%- if item.product.has_only_default_variant == false
                             or item.properties.size != 0
@@ -218,7 +220,8 @@
                           </ul>
                         </td>
 
-                        <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal"  data-csapp_line_price>
+                        {%- comment -%}<td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal"  data-csapp_line_price>{%- endcomment -%}
+                          <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
                           <div class="loading-overlay hidden">
                             <div class="loading-overlay__spinner">
                               <svg
@@ -373,7 +376,8 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value"><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span></p>
+            {%- comment -%}<p class="totals__subtotal-value"><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span></p>{%- endcomment -%}
+            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
           <div>

@@ -68,9 +68,11 @@
               </tr>
             </thead>
 
-            <tbody data-csapp_line_wrapper>
+            {%- comment -%}<tbody data-csapp_line_wrapper>{%- endcomment -%}
+              <tbody>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-csapp_line_index>
+                {%- comment -%}<tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-csapp_line_index>{%- endcomment -%}
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -88,7 +90,8 @@
                     {% endif %}
                   </td>
 
-                  <td class="cart-item__details" data-aiod-volume-discount-line_item-bar>
+                  {%- comment -%}<td class="cart-item__details" data-aiod-volume-discount-line_item-bar>{%- endcomment -%}
+                  <td class="cart-item__details">
                     {%- if settings.show_vendor -%}
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
@@ -96,7 +99,8 @@
                     <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
 
                     {%- if item.original_price != item.final_price -%}
-                      <div class="cart-item__discounted-prices" data-csapp_price>
+                      {%- comment -%}<div class="cart-item__discounted-prices" data-csapp_price>{%- endcomment -%}
+                      <div class="cart-item__discounted-prices">
                         <span class="visually-hidden">
                           {{ 'products.product.price.regular_price' | t }}
                         </span>
@@ -111,7 +115,8 @@
                         </strong>
                       </div>
                     {%- else -%}
-                      <div class="product-option" data-csapp_price>
+                      {%- comment -%}<div class="product-option" data-csapp_price>{%- endcomment -%}
+                      <div class="product-option">
                         {{ item.original_price | money }}
                       </div>
                     {%- endif -%}
@@ -291,7 +296,8 @@
                       </div>
                     </div>
 
-                    <div class="cart-item__price-wrapper"  data-csapp_line_price data-csapp_discount_summery>
+                    {%- comment -%}<div class="cart-item__price-wrapper"  data-csapp_line_price data-csapp_discount_summery>{%- endcomment -%}
+                    <div class="cart-item__price-wrapper">
                       {%- if item.original_line_price != item.final_line_price -%}
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
