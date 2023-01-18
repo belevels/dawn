@@ -95,12 +95,6 @@
             "custom_liquid": "<\/div><!-- .be-box -->"
           }
         },
-        "c0a9586d-dd6b-4026-8034-a58a095a3051": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"EcoPack--aiod\" class=\"aiod-volume-discount-wrap\" style=\"display: none;\"><\/div>"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -137,7 +131,6 @@
         "5e6c6120-79d4-4443-9d12-7c20817487d7",
         "72d76219-e839-4f9c-9867-fbd424124b07",
         "1da00743-5e21-4945-9d39-ad23fd92f88e",
-        "c0a9586d-dd6b-4026-8034-a58a095a3051",
         "description",
         "9c5059d1-bdb3-45a7-9e6f-4fea3d2a92f5"
       ],
