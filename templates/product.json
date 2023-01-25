@@ -91,6 +91,7 @@
         },
         "c6667abb-c7bd-43f9-8e72-f61e1c3e3cfb": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"ufe-custom-upsell\"><\/div>"
           }
