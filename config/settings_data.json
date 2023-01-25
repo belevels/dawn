@@ -383,21 +383,21 @@
         "settings": {
         }
       },
+      "127709043890318779": {
+        "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
+        "disabled": true,
+        "settings": {
+        }
+      },
       "10112818894266855621": {
         "type": "shopify:\/\/apps\/ufe-cross-sell-upsell-bundle\/blocks\/app-embed\/588d2ac5-62f3-4ccd-8638-da98ec61fa90",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       },
       "6707720970142525307": {
         "type": "shopify:\/\/apps\/wowcart-slide-cart-drawer\/blocks\/app-embed\/4937864d-0d20-45b2-9969-e04d09531787",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "127709043890318779": {
-        "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }
